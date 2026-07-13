@@ -56,7 +56,7 @@ function renderAnimationSection(item) {
       {renderSectionHeader(item)}
       <div className="mx-auto grid w-full max-w-6xl gap-5 px-6 pb-14 lg:grid-cols-[minmax(0,1fr)_320px]">
         <PreviewComponent />
-        <aside className="rounded-lg border border-white/10 bg-white/[0.03] p-5">
+        <aside className="rounded-lg border border-white/10 bg-white/3 p-5">
           <p className="text-sm font-black uppercase tracking-[0.2em] text-slate-400">
             {item.folder}
           </p>
