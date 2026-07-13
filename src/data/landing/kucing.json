@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "name": "Persian",
+    "quantity": 125,
+    "type": "Cat",
+    "region": "Asia"
+  },
+  {
+    "id": 2,
+    "name": "Maine Coon",
+    "quantity": 86,
+    "type": "Cat",
+    "region": "North America"
+  },
+  {
+    "id": 3,
+    "name": "Siamese",
+    "quantity": 143,
+    "type": "Cat",
+    "region": "Southeast Asia"
+  },
+  {
+    "id": 4,
+    "name": "British Shorthair",
+    "quantity": 98,
+    "type": "Cat",
+    "region": "Europe"
+  },
+  {
+    "id": 5,
+    "name": "Ragdoll",
+    "quantity": 74,
+    "type": "Cat",
+    "region": "North America"
+  },
+  {
+    "id": 6,
+    "name": "Bengal",
+    "quantity": 67,
+    "type": "Cat",
+    "region": "Asia"
+  },
+  {
+    "id": 7,
+    "name": "Sphynx",
+    "quantity": 42,
+    "type": "Cat",
+    "region": "North America"
+  },
+  {
+    "id": 8,
+    "name": "Scottish Fold",
+    "quantity": 79,
+    "type": "Cat",
+    "region": "Europe"
+  },
+  {
+    "id": 9,
+    "name": "Russian Blue",
+    "quantity": 64,
+    "type": "Cat",
+    "region": "Europe"
+  },
+  {
+    "id": 10,
+    "name": "Norwegian Forest",
+    "quantity": 51,
+    "type": "Cat",
+    "region": "Northern Europe"
+  },
+  {
+    "id": 11,
+    "name": "Abyssinian",
+    "quantity": 82,
+    "type": "Cat",
+    "region": "Africa"
+  },
+  {
+    "id": 12,
+    "name": "American Shorthair",
+    "quantity": 112,
+    "type": "Cat",
+    "region": "North America"
+  },
+  {
+    "id": 13,
+    "name": "Birman",
+    "quantity": 56,
+    "type": "Cat",
+    "region": "Southeast Asia"
+  },
+  {
+    "id": 14,
+    "name": "Bombay",
+    "quantity": 47,
+    "type": "Cat",
+    "region": "North America"
+  },
+  {
+    "id": 15,
+    "name": "Burmese",
+    "quantity": 73,
+    "type": "Cat",
+    "region": "Southeast Asia"
+  },
+  {
+    "id": 16,
+    "name": "Chartreux",
+    "quantity": 38,
+    "type": "Cat",
+    "region": "Europe"
+  },
+  {
+    "id": 17,
+    "name": "Devon Rex",
+    "quantity": 44,
+    "type": "Cat",
+    "region": "Europe"
+  },
+  {
+    "id": 18,
+    "name": "Egyptian Mau",
+    "quantity": 35,
+    "type": "Cat",
+    "region": "Africa"
+  },
+  {
+    "id": 19,
+    "name": "Exotic Shorthair",
+    "quantity": 69,
+    "type": "Cat",
+    "region": "North America"
+  },
+  {
+    "id": 20,
+    "name": "Himalayan",
+    "quantity": 58,
+    "type": "Cat",
+    "region": "Asia"
+  },
+  {
+    "id": 21,
+    "name": "Japanese Bobtail",
+    "quantity": 61,
+    "type": "Cat",
+    "region": "East Asia"
+  },
+  {
+    "id": 22,
+    "name": "Korat",
+    "quantity": 33,
+    "type": "Cat",
+    "region": "Southeast Asia"
+  },
+  {
+    "id": 23,
+    "name": "Manx",
+    "quantity": 41,
+    "type": "Cat",
+    "region": "Europe"
+  },
+  {
+    "id": 24,
+    "name": "Munchkin",
+    "quantity": 76,
+    "type": "Cat",
+    "region": "North America"
+  },
+  {
+    "id": 25,
+    "name": "Oriental Shorthair",
+    "quantity": 53,
+    "type": "Cat",
+    "region": "Asia"
+  },
+  {
+    "id": 26,
+    "name": "Savannah",
+    "quantity": 29,
+    "type": "Cat",
+    "region": "North America"
+  },
+  {
+    "id": 27,
+    "name": "Singapura",
+    "quantity": 46,
+    "type": "Cat",
+    "region": "Southeast Asia"
+  },
+  {
+    "id": 28,
+    "name": "Somali",
+    "quantity": 39,
+    "type": "Cat",
+    "region": "Africa"
+  },
+  {
+    "id": 29,
+    "name": "Turkish Angora",
+    "quantity": 62,
+    "type": "Cat",
+    "region": "Western Asia"
+  },
+  {
+    "id": 30,
+    "name": "Domestic Shorthair",
+    "quantity": 185,
+    "type": "Cat",
+    "region": "Worldwide"
+  }
+]

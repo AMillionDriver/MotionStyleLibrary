@@ -1,0 +1,10 @@
+[
+  { "id": 1, "name": "Hiu", "quantity": 125 },
+  { "id": 2, "name": "Paus", "quantity": 80 },
+  { "id": 3, "name": "Lumba-lumba", "quantity": 95 },
+  { "id": 4, "name": "Gurita", "quantity": 60 },
+  { "id": 5, "name": "Penyu", "quantity": 110 },
+  { "id": 6, "name": "Pari", "quantity": 75 },
+  { "id": 7, "name": "Kuda Laut", "quantity": 45 },
+  { "id": 8, "name": "Ikan Badut", "quantity": 150, "type": "Animal" }
+]
