@@ -35,9 +35,7 @@ export default function BentoBoxPreview() {
           <h3 className="mt-3 text-2xl font-black">axo-tall axo-pop</h3>
         </div>
         <div className="axo-card axo-square axo-fade axo-shimmer border-white/10 bg-white/5 text-white">
-          <p className="text-xs font-black uppercase tracking-[0.2em] text-emerald-200">
-            Shimmer
-          </p>
+          <p className="text-xs font-black uppercase tracking-[0.2em] text-emerald-200">Shimmer</p>
           <h3 className="mt-3 text-2xl font-black">axo-shimmer</h3>
         </div>
       </div>

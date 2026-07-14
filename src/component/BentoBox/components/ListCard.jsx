@@ -50,9 +50,7 @@ export default function ListCard() {
     >
       <div className="flex items-start justify-between gap-4">
         <div>
-          <p className="text-xs font-black uppercase tracking-[0.2em] text-slate-400">
-            List Card
-          </p>
+          <p className="text-xs font-black uppercase tracking-[0.2em] text-slate-400">List Card</p>
           <h3 className="mt-2 text-2xl font-black text-white">Compact Data Rows</h3>
         </div>
         <span className="rounded-full border border-white/10 bg-white/10 px-3 py-1 text-xs font-black uppercase tracking-[0.16em] text-slate-200">

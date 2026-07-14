@@ -20,14 +20,13 @@ export default function WideFeatureCard() {
     >
       <div className="absolute right-0 top-0 h-40 w-40 bg-cyan-300/10 blur-3xl" />
       <div className="relative">
-        <p className="text-xs font-black uppercase tracking-[0.2em] text-cyan-200">
-          Wide Feature
-        </p>
+        <p className="text-xs font-black uppercase tracking-[0.2em] text-cyan-200">Wide Feature</p>
         <h3 className="mt-3 max-w-xl text-3xl font-black text-white">
           Mixed animal dataset dashboard
         </h3>
         <p className="mt-4 max-w-xl text-sm font-medium leading-6 text-slate-300">
-          A wide card works well for summaries, key insights, and visual comparison between datasets.
+          A wide card works well for summaries, key insights, and visual comparison between
+          datasets.
         </p>
 
         <div className="mt-8 grid gap-4 sm:grid-cols-2">

@@ -32,17 +32,11 @@ Then use the `axo-*` utility classes in your markup:
 
 ```html
 <div class="axo-bento">
-  <div class="axo-card axo-wide axo-rise axo-lift">
-    Bento wide
-  </div>
+  <div class="axo-card axo-wide axo-rise axo-lift">Bento wide</div>
 
-  <div class="axo-card axo-tall axo-pop axo-glow">
-    Bento tall
-  </div>
+  <div class="axo-card axo-tall axo-pop axo-glow">Bento tall</div>
 
-  <div class="axo-card axo-square axo-fade">
-    Bento square
-  </div>
+  <div class="axo-card axo-square axo-fade">Bento square</div>
 </div>
 ```
 
@@ -82,10 +76,7 @@ npm install @quertys/axoloth-style
 Then load the CSS file in your `<head>`:
 
 ```html
-<link
-  rel="stylesheet"
-  href="./node_modules/@quertys/axoloth-style/src/axoloth.css"
-/>
+<link rel="stylesheet" href="./node_modules/@quertys/axoloth-style/src/axoloth.css" />
 ```
 
 Use `class`, not `className`, in plain HTML:
@@ -111,12 +102,8 @@ React uses `className`:
 export function BentoPreview() {
   return (
     <div className="axo-bento">
-      <div className="axo-card axo-wide axo-rise axo-lift">
-        Wide card
-      </div>
-      <div className="axo-card axo-tall axo-pop axo-glow">
-        Tall card
-      </div>
+      <div className="axo-card axo-wide axo-rise axo-lift">Wide card</div>
+      <div className="axo-card axo-tall axo-pop axo-glow">Tall card</div>
     </div>
   );
 }
@@ -126,9 +113,7 @@ Vue, Svelte, Astro, and normal HTML templates use `class`:
 
 ```html
 <div class="axo-bento">
-  <div class="axo-card axo-large axo-rise axo-shimmer">
-    Large card
-  </div>
+  <div class="axo-card axo-large axo-rise axo-shimmer">Large card</div>
 </div>
 ```
 
@@ -150,10 +135,7 @@ Or register the file in `angular.json`:
 
 ```json
 {
-  "styles": [
-    "src/styles.css",
-    "node_modules/@quertys/axoloth-style/src/axoloth.css"
-  ]
+  "styles": ["src/styles.css", "node_modules/@quertys/axoloth-style/src/axoloth.css"]
 }
 ```
 
@@ -161,9 +143,7 @@ Then use the classes in your component templates:
 
 ```html
 <section class="axo-bento">
-  <article class="axo-card axo-wide axo-rise axo-lift">
-    Angular bento card
-  </article>
+  <article class="axo-card axo-wide axo-rise axo-lift">Angular bento card</article>
 </section>
 ```
 
@@ -203,17 +183,11 @@ Example:
 
 ```html
 <div class="axo-bento">
-  <article class="axo-card axo-wide">
-    Wide content
-  </article>
+  <article class="axo-card axo-wide">Wide content</article>
 
-  <article class="axo-card axo-tall">
-    Tall content
-  </article>
+  <article class="axo-card axo-tall">Tall content</article>
 
-  <article class="axo-card axo-large">
-    Large content
-  </article>
+  <article class="axo-card axo-large">Large content</article>
 </div>
 ```
 
@@ -234,9 +208,7 @@ Hover and ambient effects:
 Example:
 
 ```html
-<button class="axo-card axo-rise axo-lift axo-glow">
-  Animated action
-</button>
+<button class="axo-card axo-rise axo-lift axo-glow">Animated action</button>
 ```
 
 Axoloth Style respects `prefers-reduced-motion: reduce` by disabling the built-in animations for users who prefer less motion.
@@ -283,9 +255,7 @@ Because `axo-card` is intentionally neutral, you can combine it with your own CS
 ```
 
 ```html
-<div class="axo-card axo-wide axo-rise my-surface">
-  Themed by your app
-</div>
+<div class="axo-card axo-wide axo-rise my-surface">Themed by your app</div>
 ```
 
 Or combine it with Tailwind, Bootstrap, UnoCSS, plain CSS modules, Sass, or any existing design system.
@@ -297,10 +267,7 @@ Or combine it with Tailwind, Bootstrap, UnoCSS, plain CSS modules, Sass, or any 
 The CSS is probably not loaded. In plain HTML, installing the package is not enough. Add a `<link>` tag:
 
 ```html
-<link
-  rel="stylesheet"
-  href="./node_modules/@quertys/axoloth-style/src/axoloth.css"
-/>
+<link rel="stylesheet" href="./node_modules/@quertys/axoloth-style/src/axoloth.css" />
 ```
 
 ### I used `className` in HTML and it did not work
@@ -322,10 +289,7 @@ import '@quertys/axoloth-style/axoloth.css';
 Live Server serves static files directly, so use the `node_modules` path in a `<link>` tag:
 
 ```html
-<link
-  rel="stylesheet"
-  href="./node_modules/@quertys/axoloth-style/src/axoloth.css"
-/>
+<link rel="stylesheet" href="./node_modules/@quertys/axoloth-style/src/axoloth.css" />
 ```
 
 ### The animation does not replay after refresh or class changes
