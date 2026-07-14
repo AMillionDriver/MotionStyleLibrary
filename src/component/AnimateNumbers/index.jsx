@@ -61,7 +61,7 @@ export default function AnimateNumbersPreview() {
         <OdometerCard />
       </div>
 
-      <div className="rounded-lg border border-white/10 bg-white/[0.03] p-4">
+      <div className="rounded-lg border border-white/10 bg-white/3 p-4">
         <p className="text-xs font-black uppercase tracking-[0.2em] text-slate-400">
           Next planned models
         </p>
