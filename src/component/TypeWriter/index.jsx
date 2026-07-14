@@ -15,12 +15,8 @@ function renderLine(variant) {
 export default function TypeWriterPreview() {
   return (
     <div className="rounded-lg border border-white/10 bg-slate-900 p-6">
-      <p className="font-mono text-sm uppercase tracking-[0.2em] text-cyan-200">
-        typing...
-      </p>
-      <h3 className="mt-4 font-mono text-3xl font-black text-white">
-        Build animation models_
-      </h3>
+      <p className="font-mono text-sm uppercase tracking-[0.2em] text-cyan-200">typing...</p>
+      <h3 className="mt-4 font-mono text-3xl font-black text-white">Build animation models_</h3>
       <ul className="mt-8 grid gap-3 sm:grid-cols-3">{variants.map(renderLine)}</ul>
     </div>
   );

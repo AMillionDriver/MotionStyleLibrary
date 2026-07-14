@@ -14,9 +14,7 @@ function renderVariant(variant) {
 export default function ScrambleTextPreview() {
   return (
     <div className="rounded-lg border border-violet-200/20 bg-slate-900 p-6">
-      <p className="text-sm font-black uppercase tracking-[0.2em] text-violet-200">
-        S#R@MBL3
-      </p>
+      <p className="text-sm font-black uppercase tracking-[0.2em] text-violet-200">S#R@MBL3</p>
       <h3 className="mt-4 text-4xl font-black text-white">Text reveal lab</h3>
       <div className="mt-8 flex flex-wrap gap-2">{variants.map(renderVariant)}</div>
     </div>

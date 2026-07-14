@@ -4,16 +4,10 @@ function renderSectionHeader(item) {
   return (
     <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 px-6 py-8 sm:flex-row sm:items-end sm:justify-between">
       <div>
-        <p className="text-sm font-bold tracking-[0.25em] text-cyan-200">
-          {item.number}
-        </p>
-        <h2 className="mt-2 text-3xl font-black text-white sm:text-4xl">
-          {item.title}
-        </h2>
+        <p className="text-sm font-bold tracking-[0.25em] text-cyan-200">{item.number}</p>
+        <h2 className="mt-2 text-3xl font-black text-white sm:text-4xl">{item.title}</h2>
       </div>
-      <p className="max-w-xl text-sm font-medium leading-6 text-slate-300">
-        {item.description}
-      </p>
+      <p className="max-w-xl text-sm font-medium leading-6 text-slate-300">{item.description}</p>
     </div>
   );
 }
@@ -34,12 +28,27 @@ function renderStatusBadge(status) {
 }
 
 function renderVariant(variant) {
+  const hasMeta = variant.category || variant.description;
+
   return (
     <li
-      className="flex items-center justify-between gap-4 rounded-lg border border-white/10 bg-white/5 px-4 py-3"
+      className="flex items-start justify-between gap-4 rounded-lg border border-white/10 bg-white/5 px-4 py-3"
       key={variant.id}
     >
-      <span className="font-bold text-white">{variant.name}</span>
+      <span className="min-w-0">
+        <span className="block font-bold text-white">{variant.name}</span>
+        {hasMeta && (
+          <span className="mt-2 block text-xs font-semibold leading-5 text-slate-400">
+            {variant.category && (
+              <span className="font-black uppercase tracking-[0.16em] text-cyan-200">
+                {variant.category}
+              </span>
+            )}
+            {variant.category && variant.description ? ' / ' : ''}
+            {variant.description}
+          </span>
+        )}
+      </span>
       {renderStatusBadge(variant.status)}
     </li>
   );
@@ -49,10 +58,7 @@ function renderAnimationSection(item) {
   const PreviewComponent = item.Component;
 
   return (
-    <section
-      className="border-b border-white/10 bg-slate-950 even:bg-slate-900"
-      key={item.folder}
-    >
+    <section className="border-b border-white/10 bg-slate-950 even:bg-slate-900" key={item.folder}>
       {renderSectionHeader(item)}
       <div className="mx-auto grid w-full max-w-6xl gap-5 px-6 pb-14 lg:grid-cols-[minmax(0,1fr)_320px]">
         <PreviewComponent />

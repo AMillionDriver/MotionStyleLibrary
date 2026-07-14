@@ -21,10 +21,7 @@ function renderFishCard(item) {
 
 function renderCatCard(item) {
   return (
-    <article
-      className="rounded-lg border border-rose-200/20 bg-rose-950/60 p-5"
-      key={item.id}
-    >
+    <article className="rounded-lg border border-rose-200/20 bg-rose-950/60 p-5" key={item.id}>
       <div className="flex items-start justify-between gap-4">
         <div>
           <p className="text-sm font-bold text-rose-200">{item.region}</p>
@@ -44,9 +41,7 @@ function renderCatCard(item) {
 export default function BentoBoxPreview() {
   return (
     <div className="space-y-5">
-      <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-        {DataIkan.map(renderFishCard)}
-      </div>
+      <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">{DataIkan.map(renderFishCard)}</div>
 
       <div className="grid max-h-[420px] gap-3 overflow-y-auto pr-2 sm:grid-cols-2 xl:grid-cols-3">
         {DataKucing.map(renderCatCard)}

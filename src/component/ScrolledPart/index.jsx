@@ -2,13 +2,8 @@ import variants from './variants';
 
 function renderBlock(variant) {
   return (
-    <article
-      className="rounded-lg border border-white/10 bg-white/5 p-5"
-      key={variant.id}
-    >
-      <p className="text-sm font-black uppercase tracking-[0.18em] text-slate-400">
-        planned
-      </p>
+    <article className="rounded-lg border border-white/10 bg-white/5 p-5" key={variant.id}>
+      <p className="text-sm font-black uppercase tracking-[0.18em] text-slate-400">planned</p>
       <h3 className="mt-5 text-2xl font-black text-white">{variant.name}</h3>
     </article>
   );
