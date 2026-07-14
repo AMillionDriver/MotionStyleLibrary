@@ -31,16 +31,16 @@ import '@quertys/axoloth-style/axoloth.css';
 Then use the `axo-*` utility classes in your markup:
 
 ```html
-<div class="axo-bento">
-  <div class="axo-card axo-wide axo-rise axo-lift">Bento wide</div>
+<div class="axo-theme-dark axo-bento">
+  <div class="axo-card axo-surface axo-wide axo-rise axo-lift">Bento wide</div>
 
-  <div class="axo-card axo-tall axo-pop axo-glow">Bento tall</div>
+  <div class="axo-card axo-contrast axo-tall axo-pop axo-glow">Bento tall</div>
 
-  <div class="axo-card axo-square axo-fade">Bento square</div>
+  <div class="axo-card axo-surface axo-square axo-fade">Bento square</div>
 </div>
 ```
 
-Axoloth Style gives these elements structure, responsive grid behavior, transitions, and animations. It intentionally keeps visual color neutral, so add your own app classes or CSS for the final look.
+Axoloth Style gives these elements structure, responsive grid behavior, transitions, animations, and optional surface colors. The surface utilities are intentionally minimal, so you can still use your own CSS, Tailwind, Bootstrap, or design system for the final theme.
 
 ## CSS Entry Points
 
@@ -55,6 +55,7 @@ Use smaller entries when you only need one module:
 ```js
 import '@quertys/axoloth-style/bento.css';
 import '@quertys/axoloth-style/motion.css';
+import '@quertys/axoloth-style/surface.css';
 ```
 
 Available package exports:
@@ -62,6 +63,7 @@ Available package exports:
 - `@quertys/axoloth-style/axoloth.css`: bento layout plus motion utilities.
 - `@quertys/axoloth-style/bento.css`: bento grid and card layout utilities only.
 - `@quertys/axoloth-style/motion.css`: animation and hover motion utilities only.
+- `@quertys/axoloth-style/surface.css`: light/dark surface and contrast utilities only.
 
 ## Framework Setup
 
@@ -154,7 +156,7 @@ For quick prototypes, you can load the published CSS from a CDN:
 ```html
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/@quertys/axoloth-style@0.0.1/src/axoloth.css"
+  href="https://cdn.jsdelivr.net/npm/@quertys/axoloth-style@0.0.3/src/axoloth.css"
 />
 ```
 
@@ -213,6 +215,50 @@ Example:
 
 Axoloth Style respects `prefers-reduced-motion: reduce` by disabling the built-in animations for users who prefer less motion.
 
+## Surface Utilities
+
+Surface utilities are small optional color helpers for cards. They make test layouts visible faster without turning Axoloth Style into a full theme framework.
+
+Theme markers:
+
+- `axo-theme-light`: tells Axoloth Style that the parent area is light.
+- `axo-theme-dark`: tells Axoloth Style that the parent area is dark.
+
+Surface classes:
+
+- `axo-surface`: normal surface for the current theme.
+- `axo-contrast`: inverted surface for the current theme.
+
+Dark theme example:
+
+```html
+<section class="axo-theme-dark axo-bento">
+  <article class="axo-card axo-surface">
+    Soft dark card with light text
+  </article>
+
+  <article class="axo-card axo-contrast">
+    White contrast card with dark text
+  </article>
+</section>
+```
+
+Light theme example:
+
+```html
+<section class="axo-theme-light axo-bento">
+  <article class="axo-card axo-surface">
+    Soft light card with dark text
+  </article>
+
+  <article class="axo-card axo-contrast">
+    Dark contrast card with light text
+  </article>
+</section>
+```
+
+Pure CSS cannot reliably read any random parent background color and automatically invert from it. The stable approach is to put `axo-theme-dark` or `axo-theme-light` on the parent, then use `axo-surface` or `axo-contrast` on the card.
+
 ## Customizing With CSS Variables
 
 You can customize Axoloth Style from any parent wrapper:
@@ -231,6 +277,12 @@ You can customize Axoloth Style from any parent wrapper:
   --axo-glow-shadow: 0 18px 48px rgb(34 211 238 / 0.16);
   --axo-shimmer-duration: 1.6s;
   --axo-shimmer-color: rgb(255 255 255 / 0.16);
+  --axo-surface-bg: rgb(15 23 42 / 0.72);
+  --axo-surface-color: rgb(248 250 252);
+  --axo-surface-border: rgb(255 255 255 / 0.12);
+  --axo-contrast-bg: rgb(248 250 252);
+  --axo-contrast-color: rgb(15 23 42);
+  --axo-contrast-border: rgb(255 255 255 / 0.72);
 }
 ```
 
@@ -244,7 +296,7 @@ Then apply your wrapper:
 
 ## Styling With Your Own Theme
 
-Because `axo-card` is intentionally neutral, you can combine it with your own CSS:
+Because `axo-card` is intentionally structural, you can combine it with `axo-surface`, `axo-contrast`, or your own CSS:
 
 ```css
 .my-surface {
@@ -255,7 +307,7 @@ Because `axo-card` is intentionally neutral, you can combine it with your own CS
 ```
 
 ```html
-<div class="axo-card axo-wide axo-rise my-surface">Themed by your app</div>
+<div class="axo-card axo-surface axo-wide axo-rise my-surface">Themed by your app</div>
 ```
 
 Or combine it with Tailwind, Bootstrap, UnoCSS, plain CSS modules, Sass, or any existing design system.
@@ -276,7 +328,15 @@ Use `className` only in React JSX. Use `class` in HTML, Vue templates, Svelte te
 
 ### The card looks too plain
 
-That is expected. Axoloth Style handles layout and motion, but it does not ship a full color theme. Add your own background, text color, border color, or use your existing style framework.
+Add `axo-surface` or `axo-contrast` for quick visible surfaces:
+
+```html
+<div class="axo-theme-dark">
+  <div class="axo-card axo-surface">Visible dark surface</div>
+</div>
+```
+
+If you need full brand styling, add your own background, text color, border color, or use your existing style framework.
 
 ### The package works in Vite but not in Live Server
 

@@ -1,0 +1,38 @@
+:root,
+.axo-theme-light {
+  color-scheme: light;
+  --axo-surface-bg: rgb(255 255 255 / 0.92);
+  --axo-surface-color: rgb(15 23 42);
+  --axo-surface-border: rgb(15 23 42 / 0.12);
+  --axo-surface-shadow: 0 18px 48px rgb(15 23 42 / 0.08);
+  --axo-contrast-bg: rgb(15 23 42);
+  --axo-contrast-color: rgb(248 250 252);
+  --axo-contrast-border: rgb(15 23 42 / 0.2);
+  --axo-contrast-shadow: 0 18px 48px rgb(15 23 42 / 0.18);
+}
+
+.axo-theme-dark {
+  color-scheme: dark;
+  --axo-surface-bg: rgb(15 23 42 / 0.72);
+  --axo-surface-color: rgb(248 250 252);
+  --axo-surface-border: rgb(255 255 255 / 0.12);
+  --axo-surface-shadow: 0 18px 48px rgb(0 0 0 / 0.2);
+  --axo-contrast-bg: rgb(248 250 252);
+  --axo-contrast-color: rgb(15 23 42);
+  --axo-contrast-border: rgb(255 255 255 / 0.72);
+  --axo-contrast-shadow: 0 18px 48px rgb(255 255 255 / 0.14);
+}
+
+.axo-surface {
+  background: var(--axo-surface-bg);
+  border-color: var(--axo-surface-border);
+  box-shadow: var(--axo-surface-shadow);
+  color: var(--axo-surface-color);
+}
+
+.axo-contrast {
+  background: var(--axo-contrast-bg);
+  border-color: var(--axo-contrast-border);
+  box-shadow: var(--axo-contrast-shadow);
+  color: var(--axo-contrast-color);
+}

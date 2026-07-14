@@ -1,6 +1,6 @@
 {
   "name": "@quertys/axoloth-style",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "CSS-first layout and motion utilities for bento grids and animation presets.",
   "type": "module",
   "sideEffects": [
@@ -13,7 +13,8 @@
   "exports": {
     "./axoloth.css": "./src/axoloth.css",
     "./bento.css": "./src/bento.css",
-    "./motion.css": "./src/motion.css"
+    "./motion.css": "./src/motion.css",
+    "./surface.css": "./src/surface.css"
   },
   "keywords": [
     "css",
@@ -21,7 +22,9 @@
     "bento",
     "layout",
     "animation",
-    "motion"
+    "motion",
+    "surface",
+    "theme"
   ],
   "license": "MIT"
 }

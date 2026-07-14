@@ -21,22 +21,41 @@ export default function BentoBoxPreview() {
         </div>
       </div>
 
-      <div className="axo-bento rounded-lg border border-cyan-200/10 bg-slate-950 p-4">
-        <div className="axo-card axo-wide axo-rise axo-lift border-white/10 bg-white/5 text-white">
+      <div className="axo-theme-dark axo-bento rounded-lg border border-cyan-200/10 bg-slate-950 p-4">
+        <div className="axo-card axo-surface axo-wide axo-rise axo-lift">
           <p className="text-xs font-black uppercase tracking-[0.2em] text-cyan-200">
-            Axoloth Utility
+            Dark Surface
           </p>
-          <h3 className="mt-3 text-2xl font-black">axo-wide axo-rise axo-lift</h3>
+          <h3 className="mt-3 text-2xl font-black">axo-surface</h3>
         </div>
-        <div className="axo-card axo-tall axo-pop axo-glow border-white/10 bg-white/5 text-white">
-          <p className="text-xs font-black uppercase tracking-[0.2em] text-amber-200">
-            Tall Utility
+        <div className="axo-card axo-contrast axo-tall axo-pop axo-glow">
+          <p className="text-xs font-black uppercase tracking-[0.2em] text-slate-500">
+            Dark Contrast
           </p>
-          <h3 className="mt-3 text-2xl font-black">axo-tall axo-pop</h3>
+          <h3 className="mt-3 text-2xl font-black">axo-contrast</h3>
         </div>
-        <div className="axo-card axo-square axo-fade axo-shimmer border-white/10 bg-white/5 text-white">
+        <div className="axo-card axo-surface axo-square axo-fade axo-shimmer">
           <p className="text-xs font-black uppercase tracking-[0.2em] text-emerald-200">Shimmer</p>
           <h3 className="mt-3 text-2xl font-black">axo-shimmer</h3>
+        </div>
+      </div>
+
+      <div className="axo-theme-light axo-bento rounded-lg border border-slate-200 bg-white p-4">
+        <div className="axo-card axo-surface axo-wide axo-rise axo-lift">
+          <p className="text-xs font-black uppercase tracking-[0.2em] text-slate-500">
+            Light Surface
+          </p>
+          <h3 className="mt-3 text-2xl font-black">white bg, soft card</h3>
+        </div>
+        <div className="axo-card axo-contrast axo-tall axo-pop axo-glow">
+          <p className="text-xs font-black uppercase tracking-[0.2em] text-slate-400">
+            Light Contrast
+          </p>
+          <h3 className="mt-3 text-2xl font-black">light bg, dark card</h3>
+        </div>
+        <div className="axo-card axo-surface axo-square axo-fade">
+          <p className="text-xs font-black uppercase tracking-[0.2em] text-slate-500">Neutral</p>
+          <h3 className="mt-3 text-2xl font-black">theme marker</h3>
         </div>
       </div>
     </div>
