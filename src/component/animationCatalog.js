@@ -42,7 +42,7 @@ const animationCatalog = [
     number: '03',
     folder: 'BentoBox',
     title: 'BentoBox Cards',
-    description: 'Contoh grid data ikan dan kucing dalam layout kartu.',
+    description: 'Mixed bento layout untuk metric, feature, profile, dan list cards.',
     Component: BentoBox,
     variants: bentoBoxVariants,
   },
