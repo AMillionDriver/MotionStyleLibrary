@@ -57,8 +57,14 @@
       "description": "Default border value for Axoloth cards.",
       "valueSuggestions": [
         { "value": "0", "description": "No border." },
-        { "value": "1px solid rgb(255 255 255 / 0.1)", "description": "Default subtle light border." },
-        { "value": "1px solid rgb(15 23 42 / 0.12)", "description": "Subtle dark border for light surfaces." },
+        {
+          "value": "1px solid rgb(255 255 255 / 0.1)",
+          "description": "Default subtle light border."
+        },
+        {
+          "value": "1px solid rgb(15 23 42 / 0.12)",
+          "description": "Subtle dark border for light surfaces."
+        },
         { "value": "1px solid currentColor", "description": "Use current text color." }
       ]
     },
