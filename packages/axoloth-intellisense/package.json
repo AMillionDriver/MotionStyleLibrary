@@ -1,0 +1,95 @@
+{
+  "name": "axoloth-intellisense",
+  "displayName": "Axoloth IntelliSense",
+  "description": "IntelliSense support for Axoloth Style utility classes.",
+  "version": "0.0.1",
+  "publisher": "quertys",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.92.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Other"
+  ],
+  "keywords": [
+    "axoloth",
+    "intellisense",
+    "css",
+    "utility",
+    "autocomplete"
+  ],
+  "activationEvents": [
+    "onLanguage:html",
+    "onLanguage:css",
+    "onLanguage:javascriptreact",
+    "onLanguage:typescriptreact",
+    "onLanguage:vue",
+    "onLanguage:svelte",
+    "onLanguage:astro"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Axoloth IntelliSense",
+      "properties": {
+        "axolothIntelliSense.completions.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable Axoloth utility class completions."
+        },
+        "axolothIntelliSense.hover.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable hover documentation for Axoloth utility classes."
+        },
+        "axolothIntelliSense.diagnostics.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Warn when an unknown axo-* class is used in class-like contexts."
+        }
+      }
+    },
+    "snippets": [
+      {
+        "language": "html",
+        "path": "./snippets/html.json"
+      },
+      {
+        "language": "vue",
+        "path": "./snippets/html.json"
+      },
+      {
+        "language": "svelte",
+        "path": "./snippets/html.json"
+      },
+      {
+        "language": "astro",
+        "path": "./snippets/html.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/jsx.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/jsx.json"
+      }
+    ]
+  },
+  "scripts": {
+    "sync:data": "node scripts/sync-data.mjs",
+    "compile": "npm run sync:data && tsc -p ./",
+    "watch": "npm run sync:data && tsc -watch -p ./",
+    "test": "npm run compile && node ./out/test/classContext.test.js",
+    "check": "npm run test",
+    "vscode:prepublish": "npm run compile",
+    "package": "vsce package --allow-missing-repository"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.0",
+    "@types/vscode": "^1.92.0",
+    "@vscode/vsce": "^3.6.0",
+    "typescript": "^5.8.3"
+  }
+}

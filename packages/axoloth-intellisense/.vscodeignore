@@ -1,0 +1,8 @@
+node_modules/
+src/
+out/test/
+scripts/
+.vscode/
+tsconfig.json
+*.vsix
+*.log

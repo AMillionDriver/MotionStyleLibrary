@@ -7,6 +7,7 @@
     "*.css"
   ],
   "files": [
+    "metadata",
     "src",
     "README.md"
   ],
@@ -14,6 +15,7 @@
     "./axoloth.css": "./src/axoloth.css",
     "./bento.css": "./src/bento.css",
     "./layout.css": "./src/layout.css",
+    "./metadata/classes.json": "./metadata/classes.json",
     "./motion.css": "./src/motion.css",
     "./surface.css": "./src/surface.css"
   },

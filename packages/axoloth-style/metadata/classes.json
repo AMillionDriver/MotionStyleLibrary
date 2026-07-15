@@ -1,0 +1,224 @@
+{
+  "name": "@quertys/axoloth-style",
+  "version": "0.0.5",
+  "prefix": "axo-",
+  "classes": [
+    {
+      "name": "axo-bento",
+      "module": "bento",
+      "category": "layout",
+      "description": "Responsive bento grid container with mobile, tablet, and desktop columns.",
+      "usage": "Use on the parent grid element."
+    },
+    {
+      "name": "axo-card",
+      "module": "bento",
+      "category": "layout",
+      "description": "Neutral structural card base with radius, border, padding, and transitions.",
+      "usage": "Combine with size, surface, and motion utilities."
+    },
+    {
+      "name": "axo-square",
+      "module": "bento",
+      "category": "layout",
+      "description": "One-by-one bento item span.",
+      "usage": "Use on an item inside axo-bento."
+    },
+    {
+      "name": "axo-wide",
+      "module": "bento",
+      "category": "layout",
+      "description": "Bento item that spans two columns on tablet and desktop.",
+      "usage": "Use on an item inside axo-bento."
+    },
+    {
+      "name": "axo-tall",
+      "module": "bento",
+      "category": "layout",
+      "description": "Bento item that spans two rows on tablet and desktop.",
+      "usage": "Use on an item inside axo-bento."
+    },
+    {
+      "name": "axo-large",
+      "module": "bento",
+      "category": "layout",
+      "description": "Bento item that spans two columns and two rows on tablet and desktop.",
+      "usage": "Use on an item inside axo-bento."
+    },
+    {
+      "name": "axo-stack",
+      "module": "bento",
+      "category": "layout",
+      "description": "Vertical flex stack for card content.",
+      "usage": "Customize spacing with --axo-stack-gap."
+    },
+    {
+      "name": "axo-row",
+      "module": "bento",
+      "category": "layout",
+      "description": "Horizontal flex row for compact inline content.",
+      "usage": "Customize spacing with --axo-row-gap."
+    },
+    {
+      "name": "axo-header",
+      "module": "layout",
+      "category": "layout",
+      "description": "Base appbar/header container.",
+      "usage": "Combine with axo-header-grid or axo-header-flex."
+    },
+    {
+      "name": "axo-header-grid",
+      "module": "layout",
+      "category": "layout",
+      "description": "Four-slot header grid for left, center, nav, and right areas.",
+      "usage": "Use with axo-header-left, axo-header-center, axo-header-nav, and axo-header-right."
+    },
+    {
+      "name": "axo-header-flex",
+      "module": "layout",
+      "category": "layout",
+      "description": "Simple flex header alternative.",
+      "usage": "Use when a grid appbar is more structure than needed."
+    },
+    {
+      "name": "axo-header-left",
+      "module": "layout",
+      "category": "layout",
+      "description": "Left header slot, usually for logo or brand icon.",
+      "usage": "Use inside axo-header-grid."
+    },
+    {
+      "name": "axo-header-center",
+      "module": "layout",
+      "category": "layout",
+      "description": "Center header slot, usually for search or primary controls.",
+      "usage": "Use inside axo-header-grid."
+    },
+    {
+      "name": "axo-header-nav",
+      "module": "layout",
+      "category": "layout",
+      "description": "Header navigation slot that hides on mobile by default.",
+      "usage": "Use inside axo-header-grid for nav links."
+    },
+    {
+      "name": "axo-header-right",
+      "module": "layout",
+      "category": "layout",
+      "description": "Right header slot, usually for actions or a menu button.",
+      "usage": "Use inside axo-header-grid."
+    },
+    {
+      "name": "axo-searchbar",
+      "module": "layout",
+      "category": "layout",
+      "description": "Inline search layout for icon/text plus input.",
+      "usage": "Use on a label or wrapper around an input."
+    },
+    {
+      "name": "axo-icon-button",
+      "module": "layout",
+      "category": "layout",
+      "description": "Square icon button sizing and alignment.",
+      "usage": "Bring your own icon from Lucide, Heroicons, Google Icons, SVG, or HTML."
+    },
+    {
+      "name": "axo-h-appbar",
+      "module": "layout",
+      "category": "layout",
+      "description": "Appbar height preset.",
+      "usage": "Sets --axo-header-height to 4rem."
+    },
+    {
+      "name": "axo-sticky-top",
+      "module": "layout",
+      "category": "layout",
+      "description": "Sticky top positioning helper.",
+      "usage": "Customize with --axo-sticky-offset and --axo-z-sticky."
+    },
+    {
+      "name": "axo-hide-mobile",
+      "module": "layout",
+      "category": "layout",
+      "description": "Hide an element below 768px.",
+      "usage": "Useful for desktop navigation."
+    },
+    {
+      "name": "axo-show-mobile",
+      "module": "layout",
+      "category": "layout",
+      "description": "Show an element below 768px.",
+      "usage": "Useful for mobile menu buttons."
+    },
+    {
+      "name": "axo-fade",
+      "module": "motion",
+      "category": "motion",
+      "description": "Fade-in entrance animation.",
+      "usage": "Customize timing with --axo-duration and --axo-delay."
+    },
+    {
+      "name": "axo-rise",
+      "module": "motion",
+      "category": "motion",
+      "description": "Fade and move upward into place.",
+      "usage": "Customize distance with --axo-rise-distance."
+    },
+    {
+      "name": "axo-pop",
+      "module": "motion",
+      "category": "motion",
+      "description": "Fade and scale into place.",
+      "usage": "Customize start scale with --axo-pop-start."
+    },
+    {
+      "name": "axo-lift",
+      "module": "motion",
+      "category": "motion",
+      "description": "Lift upward on hover.",
+      "usage": "Customize distance with --axo-lift-distance."
+    },
+    {
+      "name": "axo-glow",
+      "module": "motion",
+      "category": "motion",
+      "description": "Soft hover glow shadow.",
+      "usage": "Customize shadow with --axo-glow-shadow."
+    },
+    {
+      "name": "axo-shimmer",
+      "module": "motion",
+      "category": "motion",
+      "description": "Looping shimmer overlay.",
+      "usage": "Customize with --axo-shimmer-duration and --axo-shimmer-color."
+    },
+    {
+      "name": "axo-theme-light",
+      "module": "surface",
+      "category": "surface",
+      "description": "Light theme marker for Axoloth surface variables.",
+      "usage": "Use on a parent wrapper."
+    },
+    {
+      "name": "axo-theme-dark",
+      "module": "surface",
+      "category": "surface",
+      "description": "Dark theme marker for Axoloth surface variables.",
+      "usage": "Use on a parent wrapper."
+    },
+    {
+      "name": "axo-surface",
+      "module": "surface",
+      "category": "surface",
+      "description": "Normal surface for the current theme marker.",
+      "usage": "Use with axo-card or another structural element."
+    },
+    {
+      "name": "axo-contrast",
+      "module": "surface",
+      "category": "surface",
+      "description": "Inverted contrast surface for the current theme marker.",
+      "usage": "Use with axo-card when the card should stand out from the parent theme."
+    }
+  ]
+}

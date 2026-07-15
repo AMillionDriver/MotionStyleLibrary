@@ -23,7 +23,12 @@ module.exports = {
       },
     },
   },
-  ignorePatterns: ['node_modules/', 'dist/', 'coverage/'],
+  ignorePatterns: [
+    'node_modules/',
+    'dist/',
+    'coverage/',
+    'packages/axoloth-intellisense/out/',
+  ],
   rules: {
     'react/react-in-jsx-scope': 'off',
     'react/jsx-uses-react': 'off',

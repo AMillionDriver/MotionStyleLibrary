@@ -1,0 +1,29 @@
+{
+  "Axoloth Bento": {
+    "prefix": "axo-bento",
+    "description": "Axoloth responsive bento grid.",
+    "body": [
+      "<div class=\"axo-bento\">",
+      "  <div class=\"axo-card axo-surface axo-rise\">$1</div>",
+      "  <div class=\"axo-card axo-wide axo-pop\">$2</div>",
+      "</div>"
+    ]
+  },
+  "Axoloth Header": {
+    "prefix": "axo-header",
+    "description": "Axoloth four-slot app header.",
+    "body": [
+      "<header class=\"axo-header axo-header-grid axo-h-appbar axo-surface\">",
+      "  <div class=\"axo-header-left\">$1</div>",
+      "  <div class=\"axo-header-center\">",
+      "    <label class=\"axo-searchbar\">",
+      "      <span aria-hidden=\"true\">Search</span>",
+      "      <input aria-label=\"Search\" placeholder=\"Search...\" />",
+      "    </label>",
+      "  </div>",
+      "  <nav class=\"axo-header-nav\">$2</nav>",
+      "  <div class=\"axo-header-right\">$3</div>",
+      "</header>"
+    ]
+  }
+}
