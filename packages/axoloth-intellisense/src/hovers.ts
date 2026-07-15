@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
-import { AxolothRegistry, createClassDocumentation } from './data';
+import { AxolothRegistry, createClassDocumentation, createVariableDocumentation } from './data';
 
-const AXO_WORD_RE = /axo-[a-z0-9-]+/;
+const AXO_WORD_RE = /(?:--axo|axo)-[a-z0-9-]+/;
 
 export function createHoverProvider(registry: AxolothRegistry): vscode.HoverProvider {
   return {
@@ -18,8 +18,19 @@ export function createHoverProvider(registry: AxolothRegistry): vscode.HoverProv
         return undefined;
       }
 
-      const className = document.getText(range);
-      const entry = registry.classMap.get(className);
+      const word = document.getText(range);
+
+      if (word.startsWith('--axo-')) {
+        const variableEntry = registry.variableMap.get(word);
+
+        if (!variableEntry) {
+          return undefined;
+        }
+
+        return new vscode.Hover(createVariableDocumentation(variableEntry), range);
+      }
+
+      const entry = registry.classMap.get(word);
 
       if (!entry) {
         return undefined;

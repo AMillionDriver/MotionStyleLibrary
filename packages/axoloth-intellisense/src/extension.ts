@@ -1,7 +1,12 @@
 import * as vscode from 'vscode';
 import { createCompletionProvider } from './completions';
+import {
+  createCssVariableCompletionProvider,
+  createCssVariableValueCompletionProvider,
+} from './cssVariables';
 import { createDiagnosticsScheduler, isSupportedDocument, validateDocument } from './diagnostics';
 import { createHoverProvider } from './hovers';
+import { createCodeActionProvider } from './quickFixes';
 import { loadRegistry } from './data';
 
 const DOCUMENT_SELECTOR: vscode.DocumentSelector = [
@@ -32,7 +37,32 @@ export function activate(context: vscode.ExtensionContext): void {
       createCompletionProvider(registry),
       '-'
     ),
+    vscode.languages.registerCompletionItemProvider(
+      DOCUMENT_SELECTOR,
+      createCssVariableCompletionProvider(registry),
+      '-',
+      'a',
+      'x',
+      'o'
+    ),
+    vscode.languages.registerCompletionItemProvider(
+      DOCUMENT_SELECTOR,
+      createCssVariableValueCompletionProvider(registry),
+      ':',
+      ' ',
+      '-',
+      '0',
+      '1',
+      'r'
+    ),
     vscode.languages.registerHoverProvider(DOCUMENT_SELECTOR, createHoverProvider(registry)),
+    vscode.languages.registerCodeActionsProvider(
+      DOCUMENT_SELECTOR,
+      createCodeActionProvider(registry),
+      {
+        providedCodeActionKinds: [vscode.CodeActionKind.QuickFix],
+      }
+    ),
     diagnostics,
     vscode.workspace.onDidOpenTextDocument((document) => {
       if (isSupportedDocument(document)) {

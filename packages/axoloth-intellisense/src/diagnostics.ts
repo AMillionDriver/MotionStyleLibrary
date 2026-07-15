@@ -3,6 +3,8 @@ import { AxolothRegistry } from './data';
 
 const AXO_CLASS_RE = /\baxo-[a-z0-9-]+\b/g;
 const CLASS_LIKE_LINE_RE = /\bclass(?:Name|:list)?\s*=|\.axo-/;
+export const AXOLOTH_DIAGNOSTIC_SOURCE = 'Axoloth IntelliSense';
+export const UNKNOWN_AXOLOTH_CLASS_CODE = 'unknownAxolothClass';
 const SUPPORTED_LANGUAGES = new Set([
   'html',
   'css',
@@ -62,7 +64,8 @@ export function validateDocument(
         `Unknown Axoloth utility class: ${className}`,
         vscode.DiagnosticSeverity.Warning
       );
-      diagnostic.source = 'Axoloth IntelliSense';
+      diagnostic.code = UNKNOWN_AXOLOTH_CLASS_CODE;
+      diagnostic.source = AXOLOTH_DIAGNOSTIC_SOURCE;
       result.push(diagnostic);
     }
   }

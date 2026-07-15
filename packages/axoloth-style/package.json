@@ -16,6 +16,7 @@
     "./bento.css": "./src/bento.css",
     "./layout.css": "./src/layout.css",
     "./metadata/classes.json": "./metadata/classes.json",
+    "./metadata/variables.json": "./metadata/variables.json",
     "./motion.css": "./src/motion.css",
     "./surface.css": "./src/surface.css"
   },

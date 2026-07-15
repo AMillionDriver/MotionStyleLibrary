@@ -1,5 +1,10 @@
 import assert from 'node:assert/strict';
 import { getCompletionContext } from '../classContext';
+import { findClosestClass } from '../classMatcher';
+import {
+  getCssVariableCompletionContext,
+  getCssVariableValueCompletionContext,
+} from '../cssVariableContext';
 
 function parseCursor(input: string): { line: string; position: number } {
   const position = input.indexOf('|');
@@ -52,4 +57,58 @@ function contextFor(input: string) {
   assert.equal(context, undefined);
 }
 
-console.log('classContext tests passed');
+{
+  const closestClass = findClosestClass('axo-bentoo', ['axo-bento', 'axo-card']);
+  assert.equal(closestClass, 'axo-bento');
+}
+
+{
+  const closestClass = findClosestClass('axo-very-far-away', ['axo-bento', 'axo-card']);
+  assert.equal(closestClass, undefined);
+}
+
+{
+  const { line, position } = parseCursor('--axo-|');
+  const context = getCssVariableCompletionContext(line, position);
+  assert.equal(context?.currentToken, '--axo-');
+}
+
+{
+  const { line, position } = parseCursor(':where(--axo|)');
+  const context = getCssVariableCompletionContext(line, position);
+  assert.equal(context?.currentToken, '--axo');
+}
+
+{
+  const { line, position } = parseCursor('.card { color: red|; }');
+  const context = getCssVariableCompletionContext(line, position);
+  assert.equal(context, undefined);
+}
+
+{
+  const { line, position } = parseCursor('--axo-lift-distance: |');
+  const context = getCssVariableValueCompletionContext(line, position);
+  assert.equal(context?.variableName, '--axo-lift-distance');
+  assert.equal(context?.currentValueToken, '');
+}
+
+{
+  const { line, position } = parseCursor('--axo-delay: 5|');
+  const context = getCssVariableValueCompletionContext(line, position);
+  assert.equal(context?.variableName, '--axo-delay');
+  assert.equal(context?.currentValueToken, '5');
+}
+
+{
+  const { line, position } = parseCursor('--not-axo: |');
+  const context = getCssVariableValueCompletionContext(line, position);
+  assert.equal(context, undefined);
+}
+
+{
+  const { line, position } = parseCursor('color: |');
+  const context = getCssVariableValueCompletionContext(line, position);
+  assert.equal(context, undefined);
+}
+
+console.log('Axoloth IntelliSense tests passed');

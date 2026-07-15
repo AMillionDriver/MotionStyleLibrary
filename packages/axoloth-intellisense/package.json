@@ -2,7 +2,7 @@
   "name": "axoloth-intellisense",
   "displayName": "Axoloth IntelliSense",
   "description": "IntelliSense support for Axoloth Style utility classes.",
-  "version": "0.0.1",
+  "version": "0.0.6",
   "publisher": "quertys",
   "license": "MIT",
   "engines": {
@@ -30,6 +30,9 @@
   ],
   "main": "./out/extension.js",
   "contributes": {
+    "css.customData": [
+      "./data/css.customData.json"
+    ],
     "configuration": {
       "title": "Axoloth IntelliSense",
       "properties": {
