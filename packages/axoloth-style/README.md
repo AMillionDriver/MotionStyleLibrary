@@ -1,8 +1,8 @@
 # Axoloth Style
 
-CSS-first layout and motion utilities for bento grids and simple animation presets.
+CSS-first layout and motion utilities for app shells, sidebars, bento grids, and simple animation presets.
 
-Axoloth Style is a small CSS utility package for reusable layout and animation behavior. It helps you build bento grids, structural cards, and lightweight motion effects without depending on React, Tailwind, Motion, Vite, or any runtime JavaScript.
+Axoloth Style is a small CSS utility package for reusable layout and animation behavior. It helps you build app shells, sidebars, bento grids, structural cards, and lightweight motion effects without depending on React, Tailwind, Motion, Vite, or any runtime JavaScript.
 
 It is not a Tailwind replacement and it does not try to own your full visual theme. Use Axoloth Style for layout and motion, then keep colors, typography, spacing details, and brand styling in your app.
 
@@ -61,9 +61,9 @@ import '@quertys/axoloth-style/surface.css';
 
 Available package exports:
 
-- `@quertys/axoloth-style/axoloth.css`: bento layout plus motion utilities.
+- `@quertys/axoloth-style/axoloth.css`: all Axoloth layout, surface, and motion utilities.
 - `@quertys/axoloth-style/bento.css`: bento grid and card layout utilities only.
-- `@quertys/axoloth-style/layout.css`: app header, searchbar, and structural layout utilities only.
+- `@quertys/axoloth-style/layout.css`: app shell, sidebar, app header, searchbar, and structural layout utilities only.
 - `@quertys/axoloth-style/motion.css`: animation and hover motion utilities only.
 - `@quertys/axoloth-style/surface.css`: light/dark surface and contrast utilities only.
 
@@ -158,7 +158,7 @@ For quick prototypes, you can load the published CSS from a CDN:
 ```html
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/@quertys/axoloth-style@0.0.4/src/axoloth.css"
+  href="https://cdn.jsdelivr.net/npm/@quertys/axoloth-style@0.0.6/src/axoloth.css"
 />
 ```
 
@@ -245,6 +245,78 @@ export function AppHeader() {
         </button>
       </div>
     </header>
+  );
+}
+```
+
+### Sidebar and App Shell
+
+Use `axo-shell` with `axo-sidebar` and `axo-sidebar-main` for a CSS-only app layout:
+
+```html
+<div class="axo-shell axo-theme-dark">
+  <aside class="axo-sidebar axo-sidebar-left axo-surface">
+    <a class="axo-sidebar-item" href="#dashboard">Dashboard</a>
+    <a class="axo-sidebar-item" href="#cards">Cards</a>
+    <a class="axo-sidebar-item" href="#settings">Settings</a>
+  </aside>
+
+  <main class="axo-sidebar-main">
+    <section class="axo-card axo-surface">Main content</section>
+  </main>
+</div>
+```
+
+Sidebar classes:
+
+- `axo-shell`: flexible app shell wrapper.
+- `axo-sidebar`: base sidebar container.
+- `axo-sidebar-left`: places the sidebar before the main content.
+- `axo-sidebar-right`: places the sidebar after the main content.
+- `axo-sidebar-rail`: compact sidebar width.
+- `axo-sidebar-hover`: expands a rail sidebar on hover or focus within.
+- `axo-sidebar-item`: aligned sidebar menu item for links or buttons.
+- `axo-sidebar-main`: main content area.
+- `axo-sidebar-sticky`: sticky sidebar helper.
+
+Hover-expand rail example:
+
+```html
+<div class="axo-shell axo-theme-dark">
+  <aside class="axo-sidebar axo-sidebar-left axo-sidebar-rail axo-sidebar-hover axo-surface">
+    <a class="axo-sidebar-item" href="#dashboard">Dashboard</a>
+    <a class="axo-sidebar-item" href="#cards">Cards</a>
+    <a class="axo-sidebar-item" href="#settings">Settings</a>
+  </aside>
+
+  <main class="axo-sidebar-main">Content</main>
+</div>
+```
+
+React example:
+
+```jsx
+import '@quertys/axoloth-style/axoloth.css';
+
+export function SidebarShell() {
+  return (
+    <div className="axo-shell axo-theme-dark">
+      <aside className="axo-sidebar axo-sidebar-left axo-sidebar-rail axo-sidebar-hover axo-surface">
+        <a className="axo-sidebar-item" href="#dashboard">
+          Dashboard
+        </a>
+        <a className="axo-sidebar-item" href="#cards">
+          Cards
+        </a>
+        <a className="axo-sidebar-item" href="#settings">
+          Settings
+        </a>
+      </aside>
+
+      <main className="axo-sidebar-main">
+        <section className="axo-card axo-surface">Main content</section>
+      </main>
+    </div>
   );
 }
 ```
@@ -354,6 +426,12 @@ You can customize Axoloth Style from any parent wrapper:
   --axo-searchbar-width: 28rem;
   --axo-searchbar-height: 2.5rem;
   --axo-icon-button-size: 2.5rem;
+  --axo-sidebar-width: 16rem;
+  --axo-sidebar-rail-width: 4.5rem;
+  --axo-sidebar-gap: 0.75rem;
+  --axo-sidebar-padding: 1rem;
+  --axo-sidebar-transition: 220ms ease;
+  --axo-sidebar-z: 20;
   --axo-duration: 520ms;
   --axo-delay: 80ms;
   --axo-rise-distance: 18px;

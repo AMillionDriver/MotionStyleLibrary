@@ -1,6 +1,6 @@
 {
   "name": "@quertys/axoloth-style",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "prefix": "axo-",
   "classes": [
     {
@@ -149,6 +149,69 @@
       "category": "layout",
       "description": "Show an element below 768px.",
       "usage": "Useful for mobile menu buttons."
+    },
+    {
+      "name": "axo-shell",
+      "module": "layout",
+      "category": "layout",
+      "description": "Flexible app shell wrapper for sidebar and main content layouts.",
+      "usage": "Use around axo-sidebar and axo-sidebar-main."
+    },
+    {
+      "name": "axo-sidebar",
+      "module": "layout",
+      "category": "layout",
+      "description": "Base sidebar container with column layout, width, padding, overflow, and transitions.",
+      "usage": "Combine with axo-sidebar-left or axo-sidebar-right."
+    },
+    {
+      "name": "axo-sidebar-left",
+      "module": "layout",
+      "category": "layout",
+      "description": "Places a sidebar before the main content inside axo-shell.",
+      "usage": "Use on the same element as axo-sidebar."
+    },
+    {
+      "name": "axo-sidebar-right",
+      "module": "layout",
+      "category": "layout",
+      "description": "Places a sidebar after the main content inside axo-shell.",
+      "usage": "Use on the same element as axo-sidebar."
+    },
+    {
+      "name": "axo-sidebar-rail",
+      "module": "layout",
+      "category": "layout",
+      "description": "Uses the compact rail width for a sidebar.",
+      "usage": "Combine with axo-sidebar-hover for hover expansion."
+    },
+    {
+      "name": "axo-sidebar-hover",
+      "module": "layout",
+      "category": "layout",
+      "description": "Expands a rail sidebar on hover or keyboard focus within.",
+      "usage": "Use with axo-sidebar-rail."
+    },
+    {
+      "name": "axo-sidebar-item",
+      "module": "layout",
+      "category": "layout",
+      "description": "Aligned sidebar menu item for links, buttons, and compact actions.",
+      "usage": "Use inside axo-sidebar."
+    },
+    {
+      "name": "axo-sidebar-main",
+      "module": "layout",
+      "category": "layout",
+      "description": "Main content region that fills the remaining space in axo-shell.",
+      "usage": "Use as the sibling of axo-sidebar."
+    },
+    {
+      "name": "axo-sidebar-sticky",
+      "module": "layout",
+      "category": "layout",
+      "description": "Makes a sidebar stick within the viewport while the main content scrolls.",
+      "usage": "Customize with --axo-sticky-offset and --axo-sidebar-z."
     },
     {
       "name": "axo-fade",

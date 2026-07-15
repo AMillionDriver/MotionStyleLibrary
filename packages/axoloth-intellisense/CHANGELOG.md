@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.0.7
+
+- Added IntelliSense metadata for Axoloth sidebar utilities.
+- Added snippets for static sidebar shells and hover-expand sidebar rails.
+- Added synced CSS variable suggestions for sidebar width, rail width, spacing, transition, and z-index.
+
 ## 0.0.6
 
 - Added value suggestions for known `--axo-*` CSS variables.

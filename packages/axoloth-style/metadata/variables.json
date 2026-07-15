@@ -1,6 +1,6 @@
 {
   "name": "@quertys/axoloth-style",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "prefix": "--axo-",
   "variables": [
     {
@@ -337,6 +337,94 @@
         { "value": "20", "description": "Default sticky layer." },
         { "value": "50", "description": "Above most local UI." },
         { "value": "100", "description": "High sticky layer." }
+      ]
+    },
+    {
+      "name": "--axo-sidebar-width",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "length",
+      "default": "16rem",
+      "description": "Expanded inline size for axo-sidebar.",
+      "valueSuggestions": [
+        { "value": "14rem", "description": "Compact sidebar width." },
+        { "value": "16rem", "description": "Default sidebar width." },
+        { "value": "18rem", "description": "Comfortable sidebar width." },
+        { "value": "20rem", "description": "Large sidebar width." },
+        { "value": "min(20rem, 100%)", "description": "Responsive capped sidebar width." }
+      ]
+    },
+    {
+      "name": "--axo-sidebar-rail-width",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "length",
+      "default": "4.5rem",
+      "description": "Compact rail inline size for axo-sidebar-rail.",
+      "valueSuggestions": [
+        { "value": "3.5rem", "description": "Very compact sidebar rail." },
+        { "value": "4rem", "description": "Compact sidebar rail." },
+        { "value": "4.5rem", "description": "Default sidebar rail." },
+        { "value": "5rem", "description": "Roomy sidebar rail." }
+      ]
+    },
+    {
+      "name": "--axo-sidebar-gap",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "length",
+      "default": "0.75rem",
+      "description": "Gap between sidebar children and shell regions.",
+      "valueSuggestions": [
+        { "value": "0.5rem", "description": "Tight sidebar gap." },
+        { "value": "0.75rem", "description": "Default sidebar gap." },
+        { "value": "1rem", "description": "Comfortable sidebar gap." },
+        { "value": "1.5rem", "description": "Large sidebar gap." }
+      ]
+    },
+    {
+      "name": "--axo-sidebar-padding",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "length",
+      "default": "1rem",
+      "description": "Inner padding for axo-sidebar.",
+      "valueSuggestions": [
+        { "value": "0.5rem", "description": "Compact sidebar padding." },
+        { "value": "0.75rem", "description": "Tight sidebar padding." },
+        { "value": "1rem", "description": "Default sidebar padding." },
+        { "value": "1.5rem", "description": "Roomy sidebar padding." }
+      ]
+    },
+    {
+      "name": "--axo-sidebar-transition",
+      "module": "layout",
+      "category": "motion",
+      "valueType": "transition",
+      "default": "220ms ease",
+      "description": "Transition timing used by sidebar width and item interactions.",
+      "valueSuggestions": [
+        { "value": "160ms ease", "description": "Fast sidebar transition." },
+        { "value": "220ms ease", "description": "Default sidebar transition." },
+        { "value": "320ms ease", "description": "Slower sidebar transition." },
+        {
+          "value": "420ms cubic-bezier(0.22, 1, 0.36, 1)",
+          "description": "Soft emphasized transition."
+        }
+      ]
+    },
+    {
+      "name": "--axo-sidebar-z",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "number",
+      "default": "20",
+      "description": "Z-index value for axo-sidebar.",
+      "valueSuggestions": [
+        { "value": "10", "description": "Low sidebar layer." },
+        { "value": "20", "description": "Default sidebar layer." },
+        { "value": "50", "description": "Above most local UI." },
+        { "value": "100", "description": "High sidebar layer." }
       ]
     },
     {

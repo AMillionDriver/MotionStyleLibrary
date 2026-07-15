@@ -9,7 +9,7 @@ This extension helps you write Axoloth CSS utilities faster in VS Code. It provi
 - Completion for Axoloth utility classes in `class`, `className`, `class:list`, and CSS selectors.
 - Duplicate filtering inside the same class attribute.
 - Hover documentation for known `axo-*` classes.
-- Snippets for common Axoloth structures like bento grids and app headers.
+- Snippets for common Axoloth structures like bento grids, app headers, sidebars, and hover sidebar rails.
 - Lightweight warnings for unknown `axo-*` classes in class-like contexts.
 - Quick fixes for unknown `axo-*` classes, including nearest-class replacement and remove-class actions.
 - CSS custom data for `--axo-*` variables, so VS Code can show native CSS variable completion and hover docs.
@@ -59,6 +59,15 @@ When the cursor is after a known Axoloth variable, the extension suggests common
   --axo-lift-distance: -4px;
   --axo-delay: 120ms;
 }
+```
+
+Use snippets for larger layout blocks:
+
+```txt
+axo-bento
+axo-header
+axo-sidebar
+axo-sidebar-hover
 ```
 
 ## Development

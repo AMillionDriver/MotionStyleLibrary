@@ -25,5 +25,37 @@
       "  <div class=\"axo-header-right\">$3</div>",
       "</header>"
     ]
+  },
+  "Axoloth Sidebar": {
+    "prefix": "axo-sidebar",
+    "description": "Axoloth app shell with sidebar and main content.",
+    "body": [
+      "<div class=\"axo-shell axo-theme-dark\">",
+      "  <aside class=\"axo-sidebar axo-sidebar-left axo-surface\">",
+      "    <a class=\"axo-sidebar-item\" href=\"#dashboard\">Dashboard</a>",
+      "    <a class=\"axo-sidebar-item\" href=\"#cards\">Cards</a>",
+      "    <a class=\"axo-sidebar-item\" href=\"#settings\">Settings</a>",
+      "  </aside>",
+      "",
+      "  <main class=\"axo-sidebar-main\">",
+      "    <section class=\"axo-card axo-surface\">$1</section>",
+      "  </main>",
+      "</div>"
+    ]
+  },
+  "Axoloth Hover Sidebar": {
+    "prefix": "axo-sidebar-hover",
+    "description": "Axoloth hover-expand sidebar rail.",
+    "body": [
+      "<div class=\"axo-shell axo-theme-dark\">",
+      "  <aside class=\"axo-sidebar axo-sidebar-left axo-sidebar-rail axo-sidebar-hover axo-surface\">",
+      "    <a class=\"axo-sidebar-item\" href=\"#dashboard\">Dashboard</a>",
+      "    <a class=\"axo-sidebar-item\" href=\"#cards\">Cards</a>",
+      "    <a class=\"axo-sidebar-item\" href=\"#settings\">Settings</a>",
+      "  </aside>",
+      "",
+      "  <main class=\"axo-sidebar-main\">$1</main>",
+      "</div>"
+    ]
   }
 }
