@@ -57,5 +57,50 @@
       "  <main class=\"axo-sidebar-main\">$1</main>",
       "</div>"
     ]
+  },
+  "Axoloth App Shell": {
+    "prefix": "axo-app",
+    "description": "Axoloth app shell grid with sidebar, header, main, and footer.",
+    "body": [
+      "<div class=\"axo-app axo-theme-dark\">",
+      "  <aside class=\"axo-app-sidebar axo-sidebar axo-surface\">",
+      "    <a class=\"axo-sidebar-item\" href=\"#dashboard\">Dashboard</a>",
+      "    <a class=\"axo-sidebar-item\" href=\"#cards\">Cards</a>",
+      "    <a class=\"axo-sidebar-item\" href=\"#settings\">Settings</a>",
+      "  </aside>",
+      "",
+      "  <header class=\"axo-app-header axo-header axo-header-grid axo-surface\">$1</header>",
+      "  <main class=\"axo-app-main\">$2</main>",
+      "  <footer class=\"axo-app-footer axo-surface\">$3</footer>",
+      "</div>"
+    ]
+  },
+  "Axoloth Fixed Sidebar": {
+    "prefix": "axo-sidebar-fixed",
+    "description": "Axoloth fixed left sidebar with main content offset.",
+    "body": [
+      "<aside class=\"axo-sidebar axo-sidebar-fixed axo-sidebar-fixed-left axo-surface\">",
+      "  <a class=\"axo-sidebar-item\" href=\"#dashboard\">Dashboard</a>",
+      "  <a class=\"axo-sidebar-item\" href=\"#cards\">Cards</a>",
+      "  <a class=\"axo-sidebar-item\" href=\"#settings\">Settings</a>",
+      "</aside>",
+      "",
+      "<main class=\"axo-sidebar-main axo-sidebar-main-offset-left\">",
+      "  <section class=\"axo-card axo-surface\">$1</section>",
+      "</main>"
+    ]
+  },
+  "Axoloth Fixed Rail Sidebar": {
+    "prefix": "axo-sidebar-fixed-rail",
+    "description": "Axoloth fixed hover-expand rail sidebar with rail offset.",
+    "body": [
+      "<aside class=\"axo-sidebar axo-sidebar-fixed axo-sidebar-fixed-left axo-sidebar-rail axo-sidebar-hover axo-surface\">",
+      "  <a class=\"axo-sidebar-item\" href=\"#dashboard\">Dashboard</a>",
+      "  <a class=\"axo-sidebar-item\" href=\"#cards\">Cards</a>",
+      "  <a class=\"axo-sidebar-item\" href=\"#settings\">Settings</a>",
+      "</aside>",
+      "",
+      "<main class=\"axo-sidebar-main axo-sidebar-main-offset-rail-left\">$1</main>"
+    ]
   }
 }

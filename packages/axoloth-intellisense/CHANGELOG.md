@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.0.8
+
+- Added IntelliSense metadata for fixed sidebar and app shell utilities.
+- Added snippets for app shells, fixed sidebars, and fixed hover rail sidebars.
+- Added synced CSS variable suggestions for app shell spacing, header/footer height, padding, and fixed sidebar insets.
+
 ## 0.0.7
 
 - Added IntelliSense metadata for Axoloth sidebar utilities.

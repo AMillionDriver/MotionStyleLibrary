@@ -57,5 +57,50 @@
       "  <main className=\"axo-sidebar-main\">$1</main>",
       "</div>"
     ]
+  },
+  "Axoloth App Shell": {
+    "prefix": "axo-app",
+    "description": "Axoloth app shell grid with sidebar, header, main, and footer.",
+    "body": [
+      "<div className=\"axo-app axo-theme-dark\">",
+      "  <aside className=\"axo-app-sidebar axo-sidebar axo-surface\">",
+      "    <a className=\"axo-sidebar-item\" href=\"#dashboard\">Dashboard</a>",
+      "    <a className=\"axo-sidebar-item\" href=\"#cards\">Cards</a>",
+      "    <a className=\"axo-sidebar-item\" href=\"#settings\">Settings</a>",
+      "  </aside>",
+      "",
+      "  <header className=\"axo-app-header axo-header axo-header-grid axo-surface\">$1</header>",
+      "  <main className=\"axo-app-main\">$2</main>",
+      "  <footer className=\"axo-app-footer axo-surface\">$3</footer>",
+      "</div>"
+    ]
+  },
+  "Axoloth Fixed Sidebar": {
+    "prefix": "axo-sidebar-fixed",
+    "description": "Axoloth fixed left sidebar with main content offset.",
+    "body": [
+      "<aside className=\"axo-sidebar axo-sidebar-fixed axo-sidebar-fixed-left axo-surface\">",
+      "  <a className=\"axo-sidebar-item\" href=\"#dashboard\">Dashboard</a>",
+      "  <a className=\"axo-sidebar-item\" href=\"#cards\">Cards</a>",
+      "  <a className=\"axo-sidebar-item\" href=\"#settings\">Settings</a>",
+      "</aside>",
+      "",
+      "<main className=\"axo-sidebar-main axo-sidebar-main-offset-left\">",
+      "  <section className=\"axo-card axo-surface\">$1</section>",
+      "</main>"
+    ]
+  },
+  "Axoloth Fixed Rail Sidebar": {
+    "prefix": "axo-sidebar-fixed-rail",
+    "description": "Axoloth fixed hover-expand rail sidebar with rail offset.",
+    "body": [
+      "<aside className=\"axo-sidebar axo-sidebar-fixed axo-sidebar-fixed-left axo-sidebar-rail axo-sidebar-hover axo-surface\">",
+      "  <a className=\"axo-sidebar-item\" href=\"#dashboard\">Dashboard</a>",
+      "  <a className=\"axo-sidebar-item\" href=\"#cards\">Cards</a>",
+      "  <a className=\"axo-sidebar-item\" href=\"#settings\">Settings</a>",
+      "</aside>",
+      "",
+      "<main className=\"axo-sidebar-main axo-sidebar-main-offset-rail-left\">$1</main>"
+    ]
   }
 }

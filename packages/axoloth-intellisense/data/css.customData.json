@@ -676,6 +676,142 @@
       ]
     },
     {
+      "name": "--axo-app-gap",
+      "description": "Gap between app shell grid regions.\n\nDefault: 0\n\nValue type: length\n\nModule: layout",
+      "values": [
+        {
+          "name": "0",
+          "description": "No gap between app regions."
+        },
+        {
+          "name": "0.5rem",
+          "description": "Small app region gap."
+        },
+        {
+          "name": "1rem",
+          "description": "Default comfortable app gap."
+        },
+        {
+          "name": "1.5rem",
+          "description": "Large app region gap."
+        }
+      ]
+    },
+    {
+      "name": "--axo-app-header-height",
+      "description": "Grid row height for axo-app-header.\n\nDefault: 4rem\n\nValue type: length\n\nModule: layout",
+      "values": [
+        {
+          "name": "3.5rem",
+          "description": "Compact app header."
+        },
+        {
+          "name": "4rem",
+          "description": "Default app header."
+        },
+        {
+          "name": "4.5rem",
+          "description": "Comfortable app header."
+        },
+        {
+          "name": "5rem",
+          "description": "Large app header."
+        }
+      ]
+    },
+    {
+      "name": "--axo-app-footer-height",
+      "description": "Minimum block size for axo-app-footer.\n\nDefault: auto\n\nValue type: length\n\nModule: layout",
+      "values": [
+        {
+          "name": "auto",
+          "description": "Size footer from content."
+        },
+        {
+          "name": "3rem",
+          "description": "Compact app footer."
+        },
+        {
+          "name": "4rem",
+          "description": "Default app footer."
+        },
+        {
+          "name": "5rem",
+          "description": "Large app footer."
+        }
+      ]
+    },
+    {
+      "name": "--axo-app-padding",
+      "description": "Inner padding for axo-app-main and axo-app-footer.\n\nDefault: 1rem\n\nValue type: length\n\nModule: layout",
+      "values": [
+        {
+          "name": "0",
+          "description": "No app content padding."
+        },
+        {
+          "name": "0.75rem",
+          "description": "Compact app content padding."
+        },
+        {
+          "name": "1rem",
+          "description": "Default app content padding."
+        },
+        {
+          "name": "1.5rem",
+          "description": "Roomy app content padding."
+        },
+        {
+          "name": "2rem",
+          "description": "Large app content padding."
+        }
+      ]
+    },
+    {
+      "name": "--axo-sidebar-fixed-top",
+      "description": "Top inset for axo-sidebar-fixed.\n\nDefault: 0\n\nValue type: length\n\nModule: layout",
+      "values": [
+        {
+          "name": "0",
+          "description": "Pin to the viewport top edge."
+        },
+        {
+          "name": "3.5rem",
+          "description": "Offset below a compact app header."
+        },
+        {
+          "name": "4rem",
+          "description": "Offset below a default app header."
+        },
+        {
+          "name": "5rem",
+          "description": "Offset below a large app header."
+        }
+      ]
+    },
+    {
+      "name": "--axo-sidebar-fixed-bottom",
+      "description": "Bottom inset for axo-sidebar-fixed.\n\nDefault: 0\n\nValue type: length\n\nModule: layout",
+      "values": [
+        {
+          "name": "0",
+          "description": "Pin to the viewport bottom edge."
+        },
+        {
+          "name": "3rem",
+          "description": "Offset above a compact footer."
+        },
+        {
+          "name": "4rem",
+          "description": "Offset above a default footer."
+        },
+        {
+          "name": "5rem",
+          "description": "Offset above a large footer."
+        }
+      ]
+    },
+    {
       "name": "--axo-duration",
       "description": "Shared animation and transition duration for Axoloth motion utilities.\n\nDefault: 480ms\n\nValue type: time\n\nModule: motion",
       "values": [

@@ -158,7 +158,7 @@ For quick prototypes, you can load the published CSS from a CDN:
 ```html
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/@quertys/axoloth-style@0.0.6/src/axoloth.css"
+  href="https://cdn.jsdelivr.net/npm/@quertys/axoloth-style@0.0.7/src/axoloth.css"
 />
 ```
 
@@ -278,6 +278,13 @@ Sidebar classes:
 - `axo-sidebar-item`: aligned sidebar menu item for links or buttons.
 - `axo-sidebar-main`: main content area.
 - `axo-sidebar-sticky`: sticky sidebar helper.
+- `axo-sidebar-fixed`: fixed viewport sidebar.
+- `axo-sidebar-fixed-left`: pin a fixed sidebar to the left edge.
+- `axo-sidebar-fixed-right`: pin a fixed sidebar to the right edge.
+- `axo-sidebar-main-offset-left`: offset main content for a fixed left sidebar.
+- `axo-sidebar-main-offset-right`: offset main content for a fixed right sidebar.
+- `axo-sidebar-main-offset-rail-left`: offset main content for a fixed left rail sidebar.
+- `axo-sidebar-main-offset-rail-right`: offset main content for a fixed right rail sidebar.
 
 Hover-expand rail example:
 
@@ -292,6 +299,44 @@ Hover-expand rail example:
   <main class="axo-sidebar-main">Content</main>
 </div>
 ```
+
+Fixed sidebar example:
+
+```html
+<aside class="axo-sidebar axo-sidebar-fixed axo-sidebar-fixed-left axo-sidebar-rail axo-sidebar-hover axo-surface">
+  <a class="axo-sidebar-item" href="#dashboard">Dashboard</a>
+  <a class="axo-sidebar-item" href="#cards">Cards</a>
+  <a class="axo-sidebar-item" href="#settings">Settings</a>
+</aside>
+
+<main class="axo-sidebar-main axo-sidebar-main-offset-rail-left">
+  <section class="axo-card axo-surface">Main content</section>
+</main>
+```
+
+Use `axo-app` when you want a larger grid app shell with sidebar, header, main, and footer areas:
+
+```html
+<div class="axo-app axo-theme-dark">
+  <aside class="axo-app-sidebar axo-sidebar axo-surface">
+    <a class="axo-sidebar-item" href="#dashboard">Dashboard</a>
+    <a class="axo-sidebar-item" href="#cards">Cards</a>
+  </aside>
+
+  <header class="axo-app-header axo-header axo-header-grid axo-surface">Header</header>
+  <main class="axo-app-main">Main content</main>
+  <footer class="axo-app-footer axo-surface">Footer</footer>
+</div>
+```
+
+App shell classes:
+
+- `axo-app`: grid wrapper for sidebar, header, main, and footer.
+- `axo-app-sidebar`: sidebar area inside `axo-app`.
+- `axo-app-sidebar-right`: moves the app sidebar area to the right.
+- `axo-app-header`: header area inside `axo-app`.
+- `axo-app-main`: main content area inside `axo-app`.
+- `axo-app-footer`: footer area inside `axo-app`.
 
 React example:
 
@@ -432,6 +477,12 @@ You can customize Axoloth Style from any parent wrapper:
   --axo-sidebar-padding: 1rem;
   --axo-sidebar-transition: 220ms ease;
   --axo-sidebar-z: 20;
+  --axo-sidebar-fixed-top: 0;
+  --axo-sidebar-fixed-bottom: 0;
+  --axo-app-gap: 0;
+  --axo-app-header-height: 4rem;
+  --axo-app-footer-height: auto;
+  --axo-app-padding: 1rem;
   --axo-duration: 520ms;
   --axo-delay: 80ms;
   --axo-rise-distance: 18px;

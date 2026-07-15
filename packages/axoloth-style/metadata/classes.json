@@ -1,6 +1,6 @@
 {
   "name": "@quertys/axoloth-style",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "prefix": "axo-",
   "classes": [
     {
@@ -212,6 +212,97 @@
       "category": "layout",
       "description": "Makes a sidebar stick within the viewport while the main content scrolls.",
       "usage": "Customize with --axo-sticky-offset and --axo-sidebar-z."
+    },
+    {
+      "name": "axo-sidebar-fixed",
+      "module": "layout",
+      "category": "layout",
+      "description": "Fixes a sidebar to the viewport instead of the normal document flow.",
+      "usage": "Combine with axo-sidebar-fixed-left or axo-sidebar-fixed-right."
+    },
+    {
+      "name": "axo-sidebar-fixed-left",
+      "module": "layout",
+      "category": "layout",
+      "description": "Pins a fixed sidebar to the left edge of the viewport.",
+      "usage": "Use with axo-sidebar-fixed."
+    },
+    {
+      "name": "axo-sidebar-fixed-right",
+      "module": "layout",
+      "category": "layout",
+      "description": "Pins a fixed sidebar to the right edge of the viewport.",
+      "usage": "Use with axo-sidebar-fixed."
+    },
+    {
+      "name": "axo-sidebar-main-offset-left",
+      "module": "layout",
+      "category": "layout",
+      "description": "Offsets main content by the expanded left sidebar width.",
+      "usage": "Use with a left fixed sidebar."
+    },
+    {
+      "name": "axo-sidebar-main-offset-right",
+      "module": "layout",
+      "category": "layout",
+      "description": "Offsets main content by the expanded right sidebar width.",
+      "usage": "Use with a right fixed sidebar."
+    },
+    {
+      "name": "axo-sidebar-main-offset-rail-left",
+      "module": "layout",
+      "category": "layout",
+      "description": "Offsets main content by the compact left sidebar rail width.",
+      "usage": "Use with a fixed left rail sidebar."
+    },
+    {
+      "name": "axo-sidebar-main-offset-rail-right",
+      "module": "layout",
+      "category": "layout",
+      "description": "Offsets main content by the compact right sidebar rail width.",
+      "usage": "Use with a fixed right rail sidebar."
+    },
+    {
+      "name": "axo-app",
+      "module": "layout",
+      "category": "layout",
+      "description": "Grid app shell for sidebar, header, main, and footer regions.",
+      "usage": "Use with axo-app-sidebar, axo-app-header, axo-app-main, and axo-app-footer."
+    },
+    {
+      "name": "axo-app-sidebar",
+      "module": "layout",
+      "category": "layout",
+      "description": "Sidebar grid area inside axo-app.",
+      "usage": "Combine with axo-sidebar for sidebar sizing and item layout."
+    },
+    {
+      "name": "axo-app-sidebar-right",
+      "module": "layout",
+      "category": "layout",
+      "description": "Moves the axo-app sidebar area to the right side.",
+      "usage": "Use on the same element as axo-app."
+    },
+    {
+      "name": "axo-app-header",
+      "module": "layout",
+      "category": "layout",
+      "description": "Header grid area inside axo-app.",
+      "usage": "Can be combined with axo-header."
+    },
+    {
+      "name": "axo-app-main",
+      "module": "layout",
+      "category": "layout",
+      "description": "Scrollable main content grid area inside axo-app.",
+      "usage": "Customize inner spacing with --axo-app-padding."
+    },
+    {
+      "name": "axo-app-footer",
+      "module": "layout",
+      "category": "layout",
+      "description": "Footer grid area inside axo-app.",
+      "usage": "Customize height with --axo-app-footer-height."
     },
     {
       "name": "axo-fade",

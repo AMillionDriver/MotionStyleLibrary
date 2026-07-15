@@ -1,6 +1,6 @@
 {
   "name": "@quertys/axoloth-style",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "prefix": "--axo-",
   "variables": [
     {
@@ -425,6 +425,91 @@
         { "value": "20", "description": "Default sidebar layer." },
         { "value": "50", "description": "Above most local UI." },
         { "value": "100", "description": "High sidebar layer." }
+      ]
+    },
+    {
+      "name": "--axo-app-gap",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "length",
+      "default": "0",
+      "description": "Gap between app shell grid regions.",
+      "valueSuggestions": [
+        { "value": "0", "description": "No gap between app regions." },
+        { "value": "0.5rem", "description": "Small app region gap." },
+        { "value": "1rem", "description": "Default comfortable app gap." },
+        { "value": "1.5rem", "description": "Large app region gap." }
+      ]
+    },
+    {
+      "name": "--axo-app-header-height",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "length",
+      "default": "4rem",
+      "description": "Grid row height for axo-app-header.",
+      "valueSuggestions": [
+        { "value": "3.5rem", "description": "Compact app header." },
+        { "value": "4rem", "description": "Default app header." },
+        { "value": "4.5rem", "description": "Comfortable app header." },
+        { "value": "5rem", "description": "Large app header." }
+      ]
+    },
+    {
+      "name": "--axo-app-footer-height",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "length",
+      "default": "auto",
+      "description": "Minimum block size for axo-app-footer.",
+      "valueSuggestions": [
+        { "value": "auto", "description": "Size footer from content." },
+        { "value": "3rem", "description": "Compact app footer." },
+        { "value": "4rem", "description": "Default app footer." },
+        { "value": "5rem", "description": "Large app footer." }
+      ]
+    },
+    {
+      "name": "--axo-app-padding",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "length",
+      "default": "1rem",
+      "description": "Inner padding for axo-app-main and axo-app-footer.",
+      "valueSuggestions": [
+        { "value": "0", "description": "No app content padding." },
+        { "value": "0.75rem", "description": "Compact app content padding." },
+        { "value": "1rem", "description": "Default app content padding." },
+        { "value": "1.5rem", "description": "Roomy app content padding." },
+        { "value": "2rem", "description": "Large app content padding." }
+      ]
+    },
+    {
+      "name": "--axo-sidebar-fixed-top",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "length",
+      "default": "0",
+      "description": "Top inset for axo-sidebar-fixed.",
+      "valueSuggestions": [
+        { "value": "0", "description": "Pin to the viewport top edge." },
+        { "value": "3.5rem", "description": "Offset below a compact app header." },
+        { "value": "4rem", "description": "Offset below a default app header." },
+        { "value": "5rem", "description": "Offset below a large app header." }
+      ]
+    },
+    {
+      "name": "--axo-sidebar-fixed-bottom",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "length",
+      "default": "0",
+      "description": "Bottom inset for axo-sidebar-fixed.",
+      "valueSuggestions": [
+        { "value": "0", "description": "Pin to the viewport bottom edge." },
+        { "value": "3rem", "description": "Offset above a compact footer." },
+        { "value": "4rem", "description": "Offset above a default footer." },
+        { "value": "5rem", "description": "Offset above a large footer." }
       ]
     },
     {
