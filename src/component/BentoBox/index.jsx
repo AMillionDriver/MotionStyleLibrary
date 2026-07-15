@@ -58,6 +58,48 @@ export default function BentoBoxPreview() {
           <h3 className="mt-3 text-2xl font-black">theme marker</h3>
         </div>
       </div>
+
+      <div className="axo-theme-dark rounded-lg border border-white/10 bg-slate-950 p-4">
+        <header className="axo-header axo-header-grid axo-h-appbar axo-surface rounded-lg border border-white/10">
+          <div className="axo-header-left">
+            <div className="grid size-9 place-items-center rounded-md bg-cyan-300 text-sm font-black text-slate-950">
+              AX
+            </div>
+          </div>
+
+          <div className="axo-header-center">
+            <label
+              className="axo-searchbar rounded-md border border-white/10 bg-white/5 text-sm text-slate-200"
+              htmlFor="axo-header-search-demo"
+            >
+              <span className="text-slate-400" aria-hidden="true">
+                Search
+              </span>
+              <input id="axo-header-search-demo" placeholder="Search layout..." />
+            </label>
+          </div>
+
+          <nav className="axo-header-nav text-sm font-bold text-slate-300">
+            <a href="#home">Home</a>
+            <a href="#work">Work</a>
+            <a href="#about">About</a>
+          </nav>
+
+          <div className="axo-header-right">
+            <button
+              type="button"
+              className="axo-icon-button rounded-md border border-white/10 bg-white/5 text-xs font-black uppercase tracking-[0.16em] text-slate-100"
+              aria-label="Open menu"
+            >
+              <span className="flex flex-col gap-1" aria-hidden="true">
+                <span className="h-0.5 w-4 rounded bg-current" />
+                <span className="h-0.5 w-4 rounded bg-current" />
+                <span className="h-0.5 w-4 rounded bg-current" />
+              </span>
+            </button>
+          </div>
+        </header>
+      </div>
     </div>
   );
 }

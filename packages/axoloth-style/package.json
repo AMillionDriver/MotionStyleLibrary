@@ -1,7 +1,7 @@
 {
   "name": "@quertys/axoloth-style",
-  "version": "0.0.4",
-  "description": "CSS-first layout and motion utilities for bento grids and animation presets.",
+  "version": "0.0.5",
+  "description": "CSS-first layout and motion utilities for app shells, bento grids, and animation presets.",
   "type": "module",
   "sideEffects": [
     "*.css"
@@ -13,6 +13,7 @@
   "exports": {
     "./axoloth.css": "./src/axoloth.css",
     "./bento.css": "./src/bento.css",
+    "./layout.css": "./src/layout.css",
     "./motion.css": "./src/motion.css",
     "./surface.css": "./src/surface.css"
   },
@@ -20,6 +21,8 @@
     "css",
     "utility",
     "bento",
+    "header",
+    "appbar",
     "layout",
     "animation",
     "motion",

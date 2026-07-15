@@ -54,6 +54,7 @@ Use smaller entries when you only need one module:
 
 ```js
 import '@quertys/axoloth-style/bento.css';
+import '@quertys/axoloth-style/layout.css';
 import '@quertys/axoloth-style/motion.css';
 import '@quertys/axoloth-style/surface.css';
 ```
@@ -62,6 +63,7 @@ Available package exports:
 
 - `@quertys/axoloth-style/axoloth.css`: bento layout plus motion utilities.
 - `@quertys/axoloth-style/bento.css`: bento grid and card layout utilities only.
+- `@quertys/axoloth-style/layout.css`: app header, searchbar, and structural layout utilities only.
 - `@quertys/axoloth-style/motion.css`: animation and hover motion utilities only.
 - `@quertys/axoloth-style/surface.css`: light/dark surface and contrast utilities only.
 
@@ -156,11 +158,96 @@ For quick prototypes, you can load the published CSS from a CDN:
 ```html
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/@quertys/axoloth-style@0.0.3/src/axoloth.css"
+  href="https://cdn.jsdelivr.net/npm/@quertys/axoloth-style@0.0.4/src/axoloth.css"
 />
 ```
 
 Pinning the version is recommended so your page does not change unexpectedly.
+
+## Layout Utilities
+
+Layout utilities are structural helpers for common app sections. They do not ship icons or a full visual design. Bring your own icons from Lucide, Heroicons, Google Material Symbols, inline SVG, or plain HTML.
+
+### Header and Appbar
+
+Use `axo-header` with `axo-header-grid` to create a four-slot app header:
+
+```html
+<header class="axo-header axo-header-grid axo-h-appbar axo-surface">
+  <div class="axo-header-left">
+    <a href="/">AX</a>
+  </div>
+
+  <div class="axo-header-center">
+    <label class="axo-searchbar">
+      <span aria-hidden="true">Search</span>
+      <input aria-label="Search" placeholder="Search..." />
+    </label>
+  </div>
+
+  <nav class="axo-header-nav">
+    <a href="#home">Home</a>
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+  </nav>
+
+  <div class="axo-header-right">
+    <button class="axo-icon-button" type="button" aria-label="Open menu">Menu</button>
+  </div>
+</header>
+```
+
+Header classes:
+
+- `axo-header`: base appbar container.
+- `axo-header-grid`: grid layout with `left`, `center`, `nav`, and `right` slots.
+- `axo-header-flex`: simple flex header alternative.
+- `axo-header-left`: left slot, usually logo or brand icon.
+- `axo-header-center`: center slot, usually search or primary control.
+- `axo-header-nav`: navigation slot; hidden on mobile by default.
+- `axo-header-right`: right slot, usually actions or menu button.
+- `axo-h-appbar`: appbar height preset.
+- `axo-sticky-top`: sticky top helper.
+
+Small structural helpers:
+
+- `axo-searchbar`: inline search layout for icon/text plus input.
+- `axo-icon-button`: square icon button sizing and alignment.
+- `axo-hide-mobile`: hide an element below `768px`.
+- `axo-show-mobile`: show an element below `768px`.
+
+React example with your own icon components:
+
+```jsx
+import { Menu, Search } from 'lucide-react';
+import '@quertys/axoloth-style/axoloth.css';
+
+export function AppHeader() {
+  return (
+    <header className="axo-header axo-header-grid axo-h-appbar axo-surface">
+      <div className="axo-header-left">AX</div>
+
+      <div className="axo-header-center">
+        <label className="axo-searchbar">
+          <Search size={18} aria-hidden="true" />
+          <input aria-label="Search" placeholder="Search..." />
+        </label>
+      </div>
+
+      <nav className="axo-header-nav">
+        <a href="#home">Home</a>
+        <a href="#work">Work</a>
+      </nav>
+
+      <div className="axo-header-right">
+        <button className="axo-icon-button" type="button" aria-label="Open menu">
+          <Menu size={20} aria-hidden="true" />
+        </button>
+      </div>
+    </header>
+  );
+}
+```
 
 ## Bento Utilities
 
@@ -233,13 +320,9 @@ Dark theme example:
 
 ```html
 <section class="axo-theme-dark axo-bento">
-  <article class="axo-card axo-surface">
-    Soft dark card with light text
-  </article>
+  <article class="axo-card axo-surface">Soft dark card with light text</article>
 
-  <article class="axo-card axo-contrast">
-    White contrast card with dark text
-  </article>
+  <article class="axo-card axo-contrast">White contrast card with dark text</article>
 </section>
 ```
 
@@ -247,13 +330,9 @@ Light theme example:
 
 ```html
 <section class="axo-theme-light axo-bento">
-  <article class="axo-card axo-surface">
-    Soft light card with dark text
-  </article>
+  <article class="axo-card axo-surface">Soft light card with dark text</article>
 
-  <article class="axo-card axo-contrast">
-    Dark contrast card with light text
-  </article>
+  <article class="axo-card axo-contrast">Dark contrast card with light text</article>
 </section>
 ```
 
@@ -269,6 +348,12 @@ You can customize Axoloth Style from any parent wrapper:
   --axo-row-min: 180px;
   --axo-radius: 0.75rem;
   --axo-card-padding: 1rem;
+  --axo-header-height: 4rem;
+  --axo-header-gap: 0.75rem;
+  --axo-header-center-width: 28rem;
+  --axo-searchbar-width: 28rem;
+  --axo-searchbar-height: 2.5rem;
+  --axo-icon-button-size: 2.5rem;
   --axo-duration: 520ms;
   --axo-delay: 80ms;
   --axo-rise-distance: 18px;
