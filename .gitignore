@@ -28,3 +28,6 @@ packages/**/*.vsix
 
 # Secret
 .env
+
+#folder and file
+web_examples
