@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../packages/axoloth-style/src/axoloth.css" />
+    <title>Axoloth Bento Example</title>
+    <style>
+      body {
+        margin: 0;
+        color: #172033;
+        background: #f6f8fb;
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      }
+
+      .demo-page {
+        width: min(1100px, calc(100% - 2rem));
+        margin: 0 auto;
+        padding: 2rem 0;
+      }
+
+      .muted {
+        color: #667085;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="demo-page">
+      <header class="axo-section">
+        <a class="axo-link" href="../../index.html">Back to docs</a>
+        <h1>Bento utilities</h1>
+        <p class="muted">
+          Square, wide, tall, and large cards using the same responsive bento
+          grid.
+        </p>
+      </header>
+
+      <section class="axo-bento" aria-label="Bento grid example">
+        <article class="axo-card axo-surface axo-square axo-rise axo-lift">
+          <h2>Square</h2>
+          <p class="muted">Default compact content block.</p>
+        </article>
+
+        <article class="axo-card axo-surface axo-wide axo-rise axo-lift">
+          <h2>Wide</h2>
+          <p class="muted">Spans two columns on wider screens.</p>
+        </article>
+
+        <article class="axo-card axo-contrast axo-tall axo-pop axo-glow">
+          <h2>Tall</h2>
+          <p>Good for side notes, navigation panels, or summaries.</p>
+        </article>
+
+        <article class="axo-card axo-surface axo-large axo-rise axo-shimmer">
+          <h2>Large</h2>
+          <p class="muted">Spans two columns and two rows when space allows.</p>
+        </article>
+
+        <article class="axo-card axo-surface axo-square axo-fade">
+          <h2>Fade</h2>
+          <p class="muted">Simple entrance preset.</p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

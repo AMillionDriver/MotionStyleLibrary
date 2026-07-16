@@ -1,0 +1,32 @@
+[
+  {
+    "id": "app-shell",
+    "name": "App Shell",
+    "category": "Layout",
+    "version": "0.0.8",
+    "status": "ready",
+    "previewUrl": "./examples/app-shell/",
+    "sourceUrl": "./examples/app-shell/index.html",
+    "description": "App layout with sidebar, header, main content, bento blocks, and footer."
+  },
+  {
+    "id": "bento",
+    "name": "Bento",
+    "category": "Layout",
+    "version": "0.0.8",
+    "status": "ready",
+    "previewUrl": "./examples/bento/",
+    "sourceUrl": "./examples/bento/index.html",
+    "description": "Responsive bento grid using square, wide, tall, and large cards."
+  },
+  {
+    "id": "semantic-form",
+    "name": "Semantic Form",
+    "category": "Semantic Controls",
+    "version": "0.0.8",
+    "status": "ready",
+    "previewUrl": "./examples/semantic-form/",
+    "sourceUrl": "./examples/semantic-form/index.html",
+    "description": "Form, input, button, nav, section, and page utilities in plain HTML."
+  }
+]

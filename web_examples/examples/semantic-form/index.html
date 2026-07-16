@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../packages/axoloth-style/src/axoloth.css" />
+    <title>Axoloth Semantic Form Example</title>
+    <style>
+      body {
+        margin: 0;
+        color: #111827;
+        background: #f8fafc;
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      }
+
+      .muted {
+        color: #64748b;
+      }
+    </style>
+  </head>
+  <body class="axo-page axo-theme-light">
+    <main class="axo-container">
+      <header class="axo-section">
+        <nav class="axo-nav" aria-label="Example navigation">
+          <ul class="axo-nav-list">
+            <li><a class="axo-link" href="../../index.html">Docs</a></li>
+            <li><a class="axo-link" href="#form">Form</a></li>
+            <li><a class="axo-link" href="#notes">Notes</a></li>
+          </ul>
+        </nav>
+
+        <h1>Semantic controls</h1>
+        <p class="muted">
+          A plain HTML form using Axoloth structural utilities for spacing,
+          alignment, controls, and focus states.
+        </p>
+      </header>
+
+      <section id="form" class="axo-section">
+        <form class="axo-card axo-surface axo-form">
+          <div class="axo-form-grid">
+            <label class="axo-field">
+              <span class="axo-label">Name</span>
+              <input class="axo-input" name="name" placeholder="Nanang" />
+            </label>
+
+            <label class="axo-field">
+              <span class="axo-label">Email</span>
+              <input
+                class="axo-input"
+                name="email"
+                type="email"
+                placeholder="hello@example.com"
+              />
+            </label>
+          </div>
+
+          <label class="axo-field">
+            <span class="axo-label">Project type</span>
+            <select class="axo-input" name="type">
+              <option>Documentation</option>
+              <option>Dashboard</option>
+              <option>Landing page</option>
+            </select>
+          </label>
+
+          <label class="axo-field">
+            <span class="axo-label">Message</span>
+            <textarea
+              class="axo-input"
+              name="message"
+              rows="5"
+              placeholder="Write a short note..."
+            ></textarea>
+          </label>
+
+          <button class="axo-button axo-button-block" type="button">
+            Send test message
+          </button>
+        </form>
+      </section>
+
+      <section id="notes" class="axo-section axo-card axo-contrast">
+        <h2>What this proves</h2>
+        <ul>
+          <li>Form spacing is handled by <code>axo-form</code>.</li>
+          <li>Responsive fields are handled by <code>axo-form-grid</code>.</li>
+          <li>Controls stay neutral and can be themed by project CSS.</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../packages/axoloth-style/src/axoloth.css" />
+    <title>Axoloth App Shell Example</title>
+    <style>
+      :root {
+        --demo-bg: #eef2f7;
+        --demo-dark: #111827;
+        --demo-muted: #64748b;
+        --demo-accent: #14b8a6;
+        --axo-sidebar-width: 16rem;
+      }
+
+      body {
+        margin: 0;
+        color: var(--demo-dark);
+        background: var(--demo-bg);
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      }
+
+      .brand {
+        font-weight: 850;
+      }
+
+      .muted {
+        color: var(--demo-muted);
+      }
+
+      .metric {
+        font-size: 2rem;
+        font-weight: 850;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="axo-app axo-theme-light">
+      <aside class="axo-app-sidebar axo-sidebar axo-contrast">
+        <a class="axo-link brand" href="../../index.html">Axoloth</a>
+        <nav class="axo-nav" aria-label="App shell sections">
+          <ul class="axo-nav-list axo-stack">
+            <li><a class="axo-sidebar-item axo-link" href="#overview">Overview</a></li>
+            <li><a class="axo-sidebar-item axo-link" href="#metrics">Metrics</a></li>
+            <li><a class="axo-sidebar-item axo-link" href="#settings">Settings</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <header class="axo-app-header axo-header axo-header-grid axo-surface">
+        <a class="axo-link brand" href="#overview">Control Deck</a>
+        <label class="axo-searchbar">
+          <input aria-label="Search" placeholder="Search workspace..." />
+        </label>
+        <nav class="axo-nav axo-hide-mobile" aria-label="Header navigation">
+          <ul class="axo-nav-list">
+            <li><a class="axo-link" href="#overview">Intro</a></li>
+            <li><a class="axo-link" href="#metrics">Cards</a></li>
+            <li><a class="axo-link" href="#settings">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="axo-app-main axo-page">
+        <section id="overview" class="axo-section">
+          <div class="axo-card axo-contrast axo-rise">
+            <p class="muted">Layout Example</p>
+            <h1>App shell with sidebar, header, main content, and footer.</h1>
+            <p>
+              This page demonstrates the larger Axoloth layout primitives
+              without adding a JavaScript framework.
+            </p>
+          </div>
+        </section>
+
+        <section id="metrics" class="axo-section axo-bento">
+          <article class="axo-card axo-surface axo-square axo-lift">
+            <p class="muted">Projects</p>
+            <strong class="metric">12</strong>
+          </article>
+          <article class="axo-card axo-surface axo-wide axo-lift">
+            <p class="muted">Active layout</p>
+            <h2>Dashboard shell</h2>
+            <p>Sidebar and main content stay aligned by the app grid.</p>
+          </article>
+          <article class="axo-card axo-surface axo-tall axo-lift">
+            <p class="muted">Notes</p>
+            <p>Use app shell for admin, dashboard, editor, and docs layouts.</p>
+          </article>
+        </section>
+
+        <section id="settings" class="axo-section">
+          <form class="axo-card axo-surface axo-form">
+            <label class="axo-field">
+              <span class="axo-label">Workspace name</span>
+              <input class="axo-input" value="Axoloth Lab" />
+            </label>
+            <button class="axo-button" type="button">Save settings</button>
+          </form>
+        </section>
+      </main>
+
+      <footer class="axo-app-footer axo-contrast">
+        <span>App shell example</span>
+        <a class="axo-link" href="../../index.html">Back to docs</a>
+      </footer>
+    </div>
+  </body>
+</html>
