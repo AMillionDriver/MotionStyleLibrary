@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.0.9
+
+- Added IntelliSense metadata for Axoloth semantic utilities.
+- Added snippets for semantic pages, nav lists, forms, and form grids.
+- Added synced CSS variable suggestions for page, container, section, control, and focus-ring variables.
+
 ## 0.0.8
 
 - Added IntelliSense metadata for fixed sidebar and app shell utilities.

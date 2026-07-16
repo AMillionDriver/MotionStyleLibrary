@@ -102,5 +102,67 @@
       "",
       "<main class=\"axo-sidebar-main axo-sidebar-main-offset-rail-left\">$1</main>"
     ]
+  },
+  "Axoloth Page": {
+    "prefix": "axo-page",
+    "description": "Axoloth semantic page wrapper with container and section.",
+    "body": [
+      "<main class=\"axo-page axo-theme-light\">",
+      "  <section class=\"axo-container axo-section\">",
+      "    $1",
+      "  </section>",
+      "</main>"
+    ]
+  },
+  "Axoloth Nav": {
+    "prefix": "axo-nav",
+    "description": "Axoloth semantic navigation list.",
+    "body": [
+      "<nav class=\"axo-nav\" aria-label=\"$1\">",
+      "  <ul class=\"axo-nav-list\">",
+      "    <li><a class=\"axo-link\" href=\"#intro\">Intro</a></li>",
+      "    <li><a class=\"axo-link\" href=\"#cards\">Cards</a></li>",
+      "    <li><a class=\"axo-link\" href=\"#contact\">Contact</a></li>",
+      "  </ul>",
+      "</nav>"
+    ]
+  },
+  "Axoloth Form": {
+    "prefix": "axo-form",
+    "description": "Axoloth semantic vertical form.",
+    "body": [
+      "<form class=\"axo-form axo-card axo-surface\">",
+      "  <label class=\"axo-field\">",
+      "    <span class=\"axo-label\">Name</span>",
+      "    <input class=\"axo-input\" name=\"name\" />",
+      "  </label>",
+      "",
+      "  <label class=\"axo-field\">",
+      "    <span class=\"axo-label\">Message</span>",
+      "    <textarea class=\"axo-input\" name=\"message\"></textarea>",
+      "  </label>",
+      "",
+      "  <button class=\"axo-button\" type=\"submit\">Send</button>",
+      "</form>"
+    ]
+  },
+  "Axoloth Form Grid": {
+    "prefix": "axo-form-grid",
+    "description": "Axoloth semantic responsive form grid.",
+    "body": [
+      "<form class=\"axo-form-grid axo-card axo-surface\">",
+      "  <label class=\"axo-field\">",
+      "    <span class=\"axo-label\">First name</span>",
+      "    <input class=\"axo-input\" name=\"firstName\" />",
+      "  </label>",
+      "",
+      "  <label class=\"axo-field\">",
+      "    <span class=\"axo-label\">Last name</span>",
+      "    <input class=\"axo-input\" name=\"lastName\" />",
+      "  </label>",
+      "",
+      "  <button class=\"axo-button axo-button-block\" type=\"submit\">Save</button>",
+      "</form>"
+    ]
   }
 }

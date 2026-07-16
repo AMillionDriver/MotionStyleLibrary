@@ -1,0 +1,185 @@
+:where(.axo-page) {
+  box-sizing: border-box;
+  inline-size: 100%;
+  min-block-size: 100dvh;
+  padding: var(--axo-page-padding, 1rem);
+}
+
+:where(.axo-container) {
+  box-sizing: border-box;
+  inline-size: min(100%, var(--axo-container-width, 72rem));
+  margin-inline: auto;
+}
+
+:where(.axo-section) {
+  box-sizing: border-box;
+  padding-block: var(--axo-section-gap, 2rem);
+}
+
+:where(.axo-cluster) {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--axo-control-gap, 0.75rem);
+}
+
+:where(.axo-list-reset) {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+:where(.axo-nav) {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  gap: var(--axo-control-gap, 0.75rem);
+  min-inline-size: 0;
+}
+
+:where(.axo-nav-list) {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--axo-control-gap, 0.75rem);
+  list-style: none;
+  margin: 0;
+  min-inline-size: 0;
+  padding: 0;
+}
+
+:where(.axo-link) {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    color var(--axo-duration, 220ms) ease,
+    opacity var(--axo-duration, 220ms) ease,
+    text-decoration-color var(--axo-duration, 220ms) ease;
+}
+
+:where(.axo-link:hover) {
+  opacity: 0.78;
+}
+
+:where(.axo-link:focus-visible) {
+  outline: var(--axo-focus-ring, 2px solid currentColor);
+  outline-offset: 3px;
+}
+
+:where(.axo-button) {
+  align-items: center;
+  appearance: none;
+  background: transparent;
+  border: var(--axo-border, 1px solid currentColor);
+  border-radius: var(--axo-radius, 0.75rem);
+  box-sizing: border-box;
+  color: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  gap: var(--axo-control-gap, 0.75rem);
+  justify-content: center;
+  min-block-size: var(--axo-control-height, 2.5rem);
+  min-inline-size: 0;
+  padding-block: 0.5rem;
+  padding-inline: var(--axo-control-padding-inline, 1rem);
+  text-align: center;
+  text-decoration: none;
+  transition:
+    background-color var(--axo-duration, 220ms) ease,
+    border-color var(--axo-duration, 220ms) ease,
+    color var(--axo-duration, 220ms) ease,
+    opacity var(--axo-duration, 220ms) ease,
+    transform var(--axo-duration, 220ms) ease;
+  user-select: none;
+}
+
+:where(.axo-button:hover) {
+  transform: translateY(var(--axo-icon-button-lift, -1px));
+}
+
+:where(.axo-button:focus-visible) {
+  outline: var(--axo-focus-ring, 2px solid currentColor);
+  outline-offset: 3px;
+}
+
+:where(.axo-button:disabled),
+:where(.axo-button[aria-disabled='true']) {
+  cursor: not-allowed;
+  opacity: 0.55;
+  transform: none;
+}
+
+:where(.axo-button-block) {
+  inline-size: 100%;
+}
+
+:where(.axo-form) {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: var(--axo-control-gap, 0.75rem);
+}
+
+:where(.axo-form-grid) {
+  box-sizing: border-box;
+  display: grid;
+  gap: var(--axo-control-gap, 0.75rem);
+  grid-template-columns: 1fr;
+}
+
+:where(.axo-field) {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  min-inline-size: 0;
+}
+
+:where(.axo-label) {
+  color: inherit;
+  display: inline-flex;
+  font: inherit;
+  line-height: 1.2;
+}
+
+:where(.axo-input) {
+  appearance: none;
+  background: transparent;
+  border: var(--axo-border, 1px solid currentColor);
+  border-radius: var(--axo-radius, 0.75rem);
+  box-sizing: border-box;
+  color: inherit;
+  font: inherit;
+  inline-size: 100%;
+  min-block-size: var(--axo-control-height, 2.5rem);
+  min-inline-size: 0;
+  padding-block: 0.5rem;
+  padding-inline: var(--axo-control-padding-inline, 1rem);
+  transition:
+    background-color var(--axo-duration, 220ms) ease,
+    border-color var(--axo-duration, 220ms) ease,
+    box-shadow var(--axo-duration, 220ms) ease;
+}
+
+:where(textarea.axo-input) {
+  min-block-size: calc(var(--axo-control-height, 2.5rem) * 2.5);
+  resize: vertical;
+}
+
+:where(.axo-input::placeholder) {
+  color: currentColor;
+  opacity: 0.52;
+}
+
+:where(.axo-input:focus-visible) {
+  outline: var(--axo-focus-ring, 2px solid currentColor);
+  outline-offset: 3px;
+}
+
+@media (min-width: 768px) {
+  :where(.axo-form-grid) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

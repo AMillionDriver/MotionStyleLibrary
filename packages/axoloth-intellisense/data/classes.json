@@ -1,6 +1,6 @@
 {
   "name": "@quertys/axoloth-style",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "prefix": "axo-",
   "classes": [
     {
@@ -303,6 +303,111 @@
       "category": "layout",
       "description": "Footer grid area inside axo-app.",
       "usage": "Customize height with --axo-app-footer-height."
+    },
+    {
+      "name": "axo-page",
+      "module": "semantic",
+      "category": "layout",
+      "description": "Page wrapper with full-width sizing, minimum viewport height, and page padding.",
+      "usage": "Use as a top-level page or main wrapper."
+    },
+    {
+      "name": "axo-container",
+      "module": "semantic",
+      "category": "layout",
+      "description": "Centered content container with configurable max width.",
+      "usage": "Customize width with --axo-container-width."
+    },
+    {
+      "name": "axo-section",
+      "module": "semantic",
+      "category": "layout",
+      "description": "Vertical section spacing helper.",
+      "usage": "Customize spacing with --axo-section-gap."
+    },
+    {
+      "name": "axo-cluster",
+      "module": "semantic",
+      "category": "layout",
+      "description": "Wrapping inline group for nav items, tags, and action rows.",
+      "usage": "Customize spacing with --axo-control-gap."
+    },
+    {
+      "name": "axo-list-reset",
+      "module": "semantic",
+      "category": "layout",
+      "description": "Removes list margin, padding, and markers from ul or ol elements.",
+      "usage": "Use when semantic lists should behave like layout groups."
+    },
+    {
+      "name": "axo-nav",
+      "module": "semantic",
+      "category": "layout",
+      "description": "Structural navigation container.",
+      "usage": "Use with axo-nav-list and axo-link."
+    },
+    {
+      "name": "axo-nav-list",
+      "module": "semantic",
+      "category": "layout",
+      "description": "Reset and row layout for semantic nav lists.",
+      "usage": "Use on ul or ol inside nav."
+    },
+    {
+      "name": "axo-link",
+      "module": "semantic",
+      "category": "surface",
+      "description": "Neutral link reset with inherited color, hover transition, and focus-visible ring.",
+      "usage": "Use on anchors when browser default blue underline should be removed."
+    },
+    {
+      "name": "axo-button",
+      "module": "semantic",
+      "category": "surface",
+      "description": "Neutral button structure with sizing, border, alignment, hover, and focus-visible ring.",
+      "usage": "Use on button or anchor elements."
+    },
+    {
+      "name": "axo-button-block",
+      "module": "semantic",
+      "category": "layout",
+      "description": "Makes an axo-button fill the available inline size.",
+      "usage": "Use with axo-button."
+    },
+    {
+      "name": "axo-field",
+      "module": "semantic",
+      "category": "layout",
+      "description": "Vertical form field wrapper.",
+      "usage": "Use around axo-label and axo-input."
+    },
+    {
+      "name": "axo-label",
+      "module": "semantic",
+      "category": "layout",
+      "description": "Label text layout helper for forms.",
+      "usage": "Use inside axo-field."
+    },
+    {
+      "name": "axo-input",
+      "module": "semantic",
+      "category": "surface",
+      "description": "Neutral input, select, or textarea structure with border, padding, sizing, and focus-visible ring.",
+      "usage": "Use on input, select, or textarea elements."
+    },
+    {
+      "name": "axo-form",
+      "module": "semantic",
+      "category": "layout",
+      "description": "Vertical form layout with consistent control gaps.",
+      "usage": "Customize spacing with --axo-control-gap."
+    },
+    {
+      "name": "axo-form-grid",
+      "module": "semantic",
+      "category": "layout",
+      "description": "Responsive form grid: one column on mobile and two columns on wider screens.",
+      "usage": "Use for grouped field layouts."
     },
     {
       "name": "axo-fade",

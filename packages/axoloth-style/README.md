@@ -1,8 +1,8 @@
 # Axoloth Style
 
-CSS-first layout and motion utilities for app shells, sidebars, bento grids, and simple animation presets.
+CSS-first layout and motion utilities for app shells, sidebars, bento grids, semantic controls, and simple animation presets.
 
-Axoloth Style is a small CSS utility package for reusable layout and animation behavior. It helps you build app shells, sidebars, bento grids, structural cards, and lightweight motion effects without depending on React, Tailwind, Motion, Vite, or any runtime JavaScript.
+Axoloth Style is a small CSS utility package for reusable layout and animation behavior. It helps you build app shells, sidebars, bento grids, structural cards, semantic controls, and lightweight motion effects without depending on React, Tailwind, Motion, Vite, or any runtime JavaScript.
 
 It is not a Tailwind replacement and it does not try to own your full visual theme. Use Axoloth Style for layout and motion, then keep colors, typography, spacing details, and brand styling in your app.
 
@@ -56,6 +56,7 @@ Use smaller entries when you only need one module:
 import '@quertys/axoloth-style/bento.css';
 import '@quertys/axoloth-style/layout.css';
 import '@quertys/axoloth-style/motion.css';
+import '@quertys/axoloth-style/semantic.css';
 import '@quertys/axoloth-style/surface.css';
 ```
 
@@ -65,6 +66,7 @@ Available package exports:
 - `@quertys/axoloth-style/bento.css`: bento grid and card layout utilities only.
 - `@quertys/axoloth-style/layout.css`: app shell, sidebar, app header, searchbar, and structural layout utilities only.
 - `@quertys/axoloth-style/motion.css`: animation and hover motion utilities only.
+- `@quertys/axoloth-style/semantic.css`: page, container, nav, list, button, and form utilities only.
 - `@quertys/axoloth-style/surface.css`: light/dark surface and contrast utilities only.
 
 ## Framework Setup
@@ -303,7 +305,9 @@ Hover-expand rail example:
 Fixed sidebar example:
 
 ```html
-<aside class="axo-sidebar axo-sidebar-fixed axo-sidebar-fixed-left axo-sidebar-rail axo-sidebar-hover axo-surface">
+<aside
+  class="axo-sidebar axo-sidebar-fixed axo-sidebar-fixed-left axo-sidebar-rail axo-sidebar-hover axo-surface"
+>
   <a class="axo-sidebar-item" href="#dashboard">Dashboard</a>
   <a class="axo-sidebar-item" href="#cards">Cards</a>
   <a class="axo-sidebar-item" href="#settings">Settings</a>
@@ -419,6 +423,58 @@ Example:
 
 Axoloth Style respects `prefers-reduced-motion: reduce` by disabling the built-in animations for users who prefer less motion.
 
+## Semantic Utilities
+
+Semantic utilities make plain HTML controls and structure look usable without custom CSS. They stay neutral and inherit color from the current surface or your own styles.
+
+Page and layout helpers:
+
+- `axo-page`: top-level page wrapper with padding and viewport height.
+- `axo-container`: centered content container.
+- `axo-section`: vertical section spacing.
+- `axo-cluster`: wrapping inline group for nav items, tags, and actions.
+- `axo-list-reset`: removes default list markers, margin, and padding.
+
+Navigation and links:
+
+- `axo-nav`: structural nav container.
+- `axo-nav-list`: semantic list reset plus row/wrap layout.
+- `axo-link`: neutral link with inherited color and focus-visible ring.
+
+Controls and forms:
+
+- `axo-button`: neutral button or action link structure.
+- `axo-button-block`: full-width button.
+- `axo-form`: vertical form layout.
+- `axo-form-grid`: responsive form grid.
+- `axo-field`: field wrapper.
+- `axo-label`: label text helper.
+- `axo-input`: input, select, or textarea structure.
+
+Example:
+
+```html
+<main class="axo-page axo-theme-light">
+  <section class="axo-container axo-section">
+    <nav class="axo-nav" aria-label="Primary">
+      <ul class="axo-nav-list">
+        <li><a class="axo-link" href="#intro">Intro</a></li>
+        <li><a class="axo-link" href="#cards">Cards</a></li>
+      </ul>
+    </nav>
+
+    <form class="axo-form axo-card axo-surface">
+      <label class="axo-field">
+        <span class="axo-label">Name</span>
+        <input class="axo-input" name="name" />
+      </label>
+
+      <button class="axo-button" type="submit">Send</button>
+    </form>
+  </section>
+</main>
+```
+
 ## Surface Utilities
 
 Surface utilities are small optional color helpers for cards. They make test layouts visible faster without turning Axoloth Style into a full theme framework.
@@ -483,6 +539,13 @@ You can customize Axoloth Style from any parent wrapper:
   --axo-app-header-height: 4rem;
   --axo-app-footer-height: auto;
   --axo-app-padding: 1rem;
+  --axo-page-padding: 1rem;
+  --axo-container-width: 72rem;
+  --axo-section-gap: 2rem;
+  --axo-control-height: 2.5rem;
+  --axo-control-padding-inline: 1rem;
+  --axo-control-gap: 0.75rem;
+  --axo-focus-ring: 2px solid currentColor;
   --axo-duration: 520ms;
   --axo-delay: 80ms;
   --axo-rise-distance: 18px;

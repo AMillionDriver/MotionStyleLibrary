@@ -812,6 +812,172 @@
       ]
     },
     {
+      "name": "--axo-page-padding",
+      "description": "Page padding used by axo-page.\n\nDefault: 1rem\n\nValue type: length\n\nModule: semantic",
+      "values": [
+        {
+          "name": "0",
+          "description": "No page padding."
+        },
+        {
+          "name": "0.75rem",
+          "description": "Compact page padding."
+        },
+        {
+          "name": "1rem",
+          "description": "Default page padding."
+        },
+        {
+          "name": "1.5rem",
+          "description": "Roomy page padding."
+        },
+        {
+          "name": "2rem",
+          "description": "Large page padding."
+        }
+      ]
+    },
+    {
+      "name": "--axo-container-width",
+      "description": "Maximum inline size used by axo-container.\n\nDefault: 72rem\n\nValue type: length\n\nModule: semantic",
+      "values": [
+        {
+          "name": "48rem",
+          "description": "Narrow content container."
+        },
+        {
+          "name": "64rem",
+          "description": "Medium content container."
+        },
+        {
+          "name": "72rem",
+          "description": "Default content container."
+        },
+        {
+          "name": "80rem",
+          "description": "Wide content container."
+        },
+        {
+          "name": "100%",
+          "description": "Fill available width."
+        }
+      ]
+    },
+    {
+      "name": "--axo-section-gap",
+      "description": "Vertical padding used by axo-section.\n\nDefault: 2rem\n\nValue type: length\n\nModule: semantic",
+      "values": [
+        {
+          "name": "1rem",
+          "description": "Compact section spacing."
+        },
+        {
+          "name": "1.5rem",
+          "description": "Small section spacing."
+        },
+        {
+          "name": "2rem",
+          "description": "Default section spacing."
+        },
+        {
+          "name": "3rem",
+          "description": "Large section spacing."
+        },
+        {
+          "name": "4rem",
+          "description": "Extra large section spacing."
+        }
+      ]
+    },
+    {
+      "name": "--axo-control-height",
+      "description": "Minimum block size for axo-button and axo-input.\n\nDefault: 2.5rem\n\nValue type: length\n\nModule: semantic",
+      "values": [
+        {
+          "name": "2.25rem",
+          "description": "Compact control height."
+        },
+        {
+          "name": "2.5rem",
+          "description": "Default control height."
+        },
+        {
+          "name": "2.75rem",
+          "description": "Comfortable control height."
+        },
+        {
+          "name": "3rem",
+          "description": "Large control height."
+        }
+      ]
+    },
+    {
+      "name": "--axo-control-padding-inline",
+      "description": "Horizontal padding for axo-button and axo-input.\n\nDefault: 1rem\n\nValue type: length\n\nModule: semantic",
+      "values": [
+        {
+          "name": "0.75rem",
+          "description": "Compact control padding."
+        },
+        {
+          "name": "1rem",
+          "description": "Default control padding."
+        },
+        {
+          "name": "1.25rem",
+          "description": "Comfortable control padding."
+        },
+        {
+          "name": "1.5rem",
+          "description": "Large control padding."
+        }
+      ]
+    },
+    {
+      "name": "--axo-control-gap",
+      "description": "Gap used by semantic controls, nav lists, clusters, and forms.\n\nDefault: 0.75rem\n\nValue type: length\n\nModule: semantic",
+      "values": [
+        {
+          "name": "0.5rem",
+          "description": "Tight control gap."
+        },
+        {
+          "name": "0.75rem",
+          "description": "Default control gap."
+        },
+        {
+          "name": "1rem",
+          "description": "Comfortable control gap."
+        },
+        {
+          "name": "1.5rem",
+          "description": "Large control gap."
+        }
+      ]
+    },
+    {
+      "name": "--axo-focus-ring",
+      "description": "Focus-visible outline used by semantic links, buttons, and inputs.\n\nDefault: 2px solid currentColor\n\nValue type: outline\n\nModule: semantic",
+      "values": [
+        {
+          "name": "2px solid currentColor",
+          "description": "Default inherited focus ring."
+        },
+        {
+          "name": "2px solid rgb(34 211 238)",
+          "description": "Cyan focus ring."
+        },
+        {
+          "name": "2px solid rgb(16 185 129)",
+          "description": "Emerald focus ring."
+        },
+        {
+          "name": "3px solid currentColor",
+          "description": "Strong inherited focus ring."
+        }
+      ]
+    },
+    {
       "name": "--axo-duration",
       "description": "Shared animation and transition duration for Axoloth motion utilities.\n\nDefault: 480ms\n\nValue type: time\n\nModule: motion",
       "values": [

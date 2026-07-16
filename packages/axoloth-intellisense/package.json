@@ -2,7 +2,7 @@
   "name": "axoloth-intellisense",
   "displayName": "Axoloth IntelliSense",
   "description": "IntelliSense support for Axoloth Style utility classes.",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "publisher": "quertys",
   "license": "MIT",
   "engines": {

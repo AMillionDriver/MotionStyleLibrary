@@ -1,7 +1,7 @@
 {
   "name": "@quertys/axoloth-style",
-  "version": "0.0.7",
-  "description": "CSS-first layout and motion utilities for app shells, bento grids, and animation presets.",
+  "version": "0.0.8",
+  "description": "CSS-first layout and motion utilities for app shells, bento grids, semantic controls, and animation presets.",
   "type": "module",
   "sideEffects": [
     "*.css"
@@ -18,6 +18,7 @@
     "./metadata/classes.json": "./metadata/classes.json",
     "./metadata/variables.json": "./metadata/variables.json",
     "./motion.css": "./src/motion.css",
+    "./semantic.css": "./src/semantic.css",
     "./surface.css": "./src/surface.css"
   },
   "keywords": [
@@ -28,6 +29,10 @@
     "appbar",
     "sidebar",
     "shell",
+    "semantic",
+    "form",
+    "button",
+    "nav",
     "layout",
     "animation",
     "motion",

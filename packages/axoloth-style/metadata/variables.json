@@ -1,6 +1,6 @@
 {
   "name": "@quertys/axoloth-style",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "prefix": "--axo-",
   "variables": [
     {
@@ -510,6 +510,107 @@
         { "value": "3rem", "description": "Offset above a compact footer." },
         { "value": "4rem", "description": "Offset above a default footer." },
         { "value": "5rem", "description": "Offset above a large footer." }
+      ]
+    },
+    {
+      "name": "--axo-page-padding",
+      "module": "semantic",
+      "category": "layout",
+      "valueType": "length",
+      "default": "1rem",
+      "description": "Page padding used by axo-page.",
+      "valueSuggestions": [
+        { "value": "0", "description": "No page padding." },
+        { "value": "0.75rem", "description": "Compact page padding." },
+        { "value": "1rem", "description": "Default page padding." },
+        { "value": "1.5rem", "description": "Roomy page padding." },
+        { "value": "2rem", "description": "Large page padding." }
+      ]
+    },
+    {
+      "name": "--axo-container-width",
+      "module": "semantic",
+      "category": "layout",
+      "valueType": "length",
+      "default": "72rem",
+      "description": "Maximum inline size used by axo-container.",
+      "valueSuggestions": [
+        { "value": "48rem", "description": "Narrow content container." },
+        { "value": "64rem", "description": "Medium content container." },
+        { "value": "72rem", "description": "Default content container." },
+        { "value": "80rem", "description": "Wide content container." },
+        { "value": "100%", "description": "Fill available width." }
+      ]
+    },
+    {
+      "name": "--axo-section-gap",
+      "module": "semantic",
+      "category": "layout",
+      "valueType": "length",
+      "default": "2rem",
+      "description": "Vertical padding used by axo-section.",
+      "valueSuggestions": [
+        { "value": "1rem", "description": "Compact section spacing." },
+        { "value": "1.5rem", "description": "Small section spacing." },
+        { "value": "2rem", "description": "Default section spacing." },
+        { "value": "3rem", "description": "Large section spacing." },
+        { "value": "4rem", "description": "Extra large section spacing." }
+      ]
+    },
+    {
+      "name": "--axo-control-height",
+      "module": "semantic",
+      "category": "layout",
+      "valueType": "length",
+      "default": "2.5rem",
+      "description": "Minimum block size for axo-button and axo-input.",
+      "valueSuggestions": [
+        { "value": "2.25rem", "description": "Compact control height." },
+        { "value": "2.5rem", "description": "Default control height." },
+        { "value": "2.75rem", "description": "Comfortable control height." },
+        { "value": "3rem", "description": "Large control height." }
+      ]
+    },
+    {
+      "name": "--axo-control-padding-inline",
+      "module": "semantic",
+      "category": "layout",
+      "valueType": "length",
+      "default": "1rem",
+      "description": "Horizontal padding for axo-button and axo-input.",
+      "valueSuggestions": [
+        { "value": "0.75rem", "description": "Compact control padding." },
+        { "value": "1rem", "description": "Default control padding." },
+        { "value": "1.25rem", "description": "Comfortable control padding." },
+        { "value": "1.5rem", "description": "Large control padding." }
+      ]
+    },
+    {
+      "name": "--axo-control-gap",
+      "module": "semantic",
+      "category": "layout",
+      "valueType": "length",
+      "default": "0.75rem",
+      "description": "Gap used by semantic controls, nav lists, clusters, and forms.",
+      "valueSuggestions": [
+        { "value": "0.5rem", "description": "Tight control gap." },
+        { "value": "0.75rem", "description": "Default control gap." },
+        { "value": "1rem", "description": "Comfortable control gap." },
+        { "value": "1.5rem", "description": "Large control gap." }
+      ]
+    },
+    {
+      "name": "--axo-focus-ring",
+      "module": "semantic",
+      "category": "surface",
+      "valueType": "outline",
+      "default": "2px solid currentColor",
+      "description": "Focus-visible outline used by semantic links, buttons, and inputs.",
+      "valueSuggestions": [
+        { "value": "2px solid currentColor", "description": "Default inherited focus ring." },
+        { "value": "2px solid rgb(34 211 238)", "description": "Cyan focus ring." },
+        { "value": "2px solid rgb(16 185 129)", "description": "Emerald focus ring." },
+        { "value": "3px solid currentColor", "description": "Strong inherited focus ring." }
       ]
     },
     {
