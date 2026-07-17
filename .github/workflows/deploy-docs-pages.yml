@@ -1,0 +1,71 @@
+name: Deploy Axoloth Docs
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'web_examples/**'
+      - 'packages/axoloth-style/src/**'
+      - 'packages/axoloth-style/metadata/**'
+      - '.github/workflows/deploy-docs-pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy-docs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web_examples/package-lock.json
+
+      - name: Install docs dependencies
+        working-directory: web_examples
+        run: npm ci --ignore-scripts
+
+      - name: Verify docs catalog
+        working-directory: web_examples
+        run: npm run check
+
+      - name: Prepare Pages artifact
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf dist-pages
+          mkdir -p dist-pages/packages/axoloth-style
+          cp -R web_examples/. dist-pages/
+          cp -R packages/axoloth-style/src dist-pages/packages/axoloth-style/src
+          sed -i 's#../packages/axoloth-style/src/axoloth.css#./packages/axoloth-style/src/axoloth.css#g' dist-pages/index.html
+          find dist-pages/examples -name index.html -print0 | xargs -0 sed -i 's#../../../packages/axoloth-style/src/axoloth.css#../../packages/axoloth-style/src/axoloth.css#g'
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist-pages
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
