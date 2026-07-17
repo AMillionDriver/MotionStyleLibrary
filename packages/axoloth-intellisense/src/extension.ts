@@ -1,4 +1,5 @@
 import * as vscode from 'vscode';
+import { createBehaviorAttributeCompletionProvider } from './behaviorCompletions';
 import { createCompletionProvider } from './completions';
 import {
   createCssVariableCompletionProvider,
@@ -36,6 +37,15 @@ export function activate(context: vscode.ExtensionContext): void {
       DOCUMENT_SELECTOR,
       createCompletionProvider(registry),
       '-'
+    ),
+    vscode.languages.registerCompletionItemProvider(
+      DOCUMENT_SELECTOR,
+      createBehaviorAttributeCompletionProvider(registry),
+      '-',
+      'd',
+      'a',
+      'x',
+      'o'
     ),
     vscode.languages.registerCompletionItemProvider(
       DOCUMENT_SELECTOR,

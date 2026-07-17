@@ -1,4 +1,7 @@
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+import { getDataAttributeCompletionContext } from '../behaviorContext';
 import { getCompletionContext } from '../classContext';
 import { findClosestClass } from '../classMatcher';
 import {
@@ -125,6 +128,54 @@ function contextFor(input: string) {
   assert.equal(
     summary,
     'Deprecated since 1.1.0. Use axo-new. Earliest removal: 1.2.0. Use the new layout primitive.'
+  );
+}
+
+{
+  const { line, position } = parseCursor('<button data-axo-|></button>');
+  const context = getDataAttributeCompletionContext(line, position);
+  assert.equal(context?.currentToken, 'data-axo-');
+}
+
+{
+  const { line, position } = parseCursor('<div data-axo-tabs data-axo-|></div>');
+  const context = getDataAttributeCompletionContext(line, position);
+  assert.deepEqual(context?.usedAttributes, ['data-axo-tabs']);
+}
+
+{
+  const { line, position } = parseCursor('<div class="data-axo-|"></div>');
+  const context = getDataAttributeCompletionContext(line, position);
+  assert.equal(context, undefined);
+}
+
+{
+  const { line, position } = parseCursor('const attr = "data-axo-|";');
+  const context = getDataAttributeCompletionContext(line, position);
+  assert.equal(context, undefined);
+}
+
+{
+  const { line, position } = parseCursor('</div data-axo-|');
+  const context = getDataAttributeCompletionContext(line, position);
+  assert.equal(context, undefined);
+}
+
+{
+  const registry = JSON.parse(
+    readFileSync(resolve(process.cwd(), 'data/behavior.registry.json'), 'utf8')
+  );
+  assert.equal(
+    registry.dataAttributes.some((entry: { name: string }) => entry.name === 'data-axo-tabs'),
+    true
+  );
+  assert.equal(
+    registry.events.some((entry: { name: string }) => entry.name === 'axo:dialog-open'),
+    true
+  );
+  assert.equal(
+    registry.initializers.some((entry: { name: string }) => entry.name === 'initDialog'),
+    true
   );
 }
 

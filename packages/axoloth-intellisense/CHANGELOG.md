@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.0.19
+
+- Added `data-axo-*` behavior attribute completions inside HTML-like opening tags.
+- Added hover documentation for behavior data attributes, custom events, and initializer functions.
+- Synchronized Axoloth Behavior registry and deprecation metadata into the extension data set.
+
 ## 0.0.18
 
 - Added strike-through completion tags for deprecated Axoloth classes and variables.

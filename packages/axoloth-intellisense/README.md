@@ -1,8 +1,8 @@
 # Axoloth IntelliSense
 
-IntelliSense support for `@quertys/axoloth-style` utility classes.
+IntelliSense support for `@quertys/axoloth-style` utility classes and `@quertys/axoloth-behavior` declarative attributes.
 
-This extension helps you write Axoloth CSS utilities faster in VS Code. It provides class completions, hover documentation, snippets, and lightweight diagnostics for `axo-*` classes.
+This extension helps you write Axoloth CSS utilities and behavior markup faster in VS Code. It provides class completions, behavior attribute completions, hover documentation, snippets, and lightweight diagnostics for `axo-*` classes.
 
 Deprecated utilities remain discoverable during their compatibility window, but
 their completions are struck through and hover documentation shows the supported
@@ -11,14 +11,16 @@ replacement and earliest removal version.
 ## Features
 
 - Completion for Axoloth utility classes in `class`, `className`, `class:list`, and CSS selectors.
+- Completion for known `data-axo-*` behavior attributes inside HTML-like opening tags.
 - Duplicate filtering inside the same class attribute.
-- Hover documentation for known `axo-*` classes.
+- Hover documentation for known `axo-*` classes, `--axo-*` variables, `data-axo-*` attributes, `axo:*` events, and `init*` behavior initializers.
 - Snippets for common Axoloth structures like container-aware grids, off-canvas sidebars, dialogs, tabs, accordions, dropdowns, toast regions, forms, validation states, loading states, alerts, and data tables.
 - Lightweight warnings for unknown `axo-*` classes in class-like contexts.
 - Quick fixes for unknown `axo-*` classes, including nearest-class replacement and remove-class actions.
 - CSS custom data for `--axo-*` variables, so VS Code can show native CSS variable completion and hover docs.
 - Value suggestions for known `--axo-*` variables, such as motion durations, layout gaps, lift distances, colors, and shadows.
 - Deprecation-aware completion and hover details synchronized from the Axoloth Style API contract.
+- Behavior metadata synchronized from the Axoloth Behavior registry and deprecation contract.
 
 ## Supported Languages
 
@@ -101,6 +103,22 @@ axo-choice-controls
 axo-skip-link
 ```
 
+When building interactive markup, type a behavior attribute inside an opening tag:
+
+```html
+<button class="axo-button" data-axo-></button>
+```
+
+The extension suggests known attributes such as `data-axo-toggle`, `data-axo-dialog-toggle`, `data-axo-tab`, and `data-axo-toast-region`. It filters duplicate `data-axo-*` attributes already used on the same tag.
+
+Hover known behavior APIs to see their registry documentation:
+
+```js
+import { initDialog } from '@quertys/axoloth-behavior/dialog';
+
+dialogElement.addEventListener('axo:dialog-open', () => {});
+```
+
 ## Development
 
 ```bash
@@ -125,6 +143,13 @@ The canonical utility source is:
 
 ```txt
 ../axoloth-style/metadata/registry.json
+```
+
+Behavior completions and hovers are synchronized from:
+
+```txt
+../axoloth-behavior/metadata/registry.json
+../axoloth-behavior/metadata/deprecations.json
 ```
 
 Run `npm run sync:data` to generate the latest Axoloth Style metadata, copy the class and variable projections into this extension, and rebuild CSS Custom Data.

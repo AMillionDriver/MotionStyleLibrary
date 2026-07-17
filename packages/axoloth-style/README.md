@@ -1086,169 +1086,169 @@ Registry 0.6.0: **161 classes**, **168 CSS variables**, and **10 modules**.
 
 ### Class Registry
 
-| Class                                | Module    | Category      | Status | Description                                                                                        |
-| ------------------------------------ | --------- | ------------- | ------ | -------------------------------------------------------------------------------------------------- |
-| `axo-bento`                          | bento     | layout        | Active | Responsive bento grid container with mobile, tablet, and desktop columns.                          |
-| `axo-container-responsive`           | bento     | responsive    | Active | Makes axo-bento respond to an axo-container-query parent instead of the viewport.                  |
-| `axo-card`                           | bento     | layout        | Active | Neutral structural card base with radius, border, padding, and transitions.                        |
-| `axo-square`                         | bento     | layout        | Active | One-by-one bento item span.                                                                        |
-| `axo-wide`                           | bento     | layout        | Active | Bento item that spans two columns on tablet and desktop.                                           |
-| `axo-tall`                           | bento     | layout        | Active | Bento item that spans two rows on tablet and desktop.                                              |
-| `axo-large`                          | bento     | layout        | Active | Bento item that spans two columns and two rows on tablet and desktop.                              |
-| `axo-stack`                          | bento     | layout        | Active | Vertical flex stack for card content.                                                              |
-| `axo-row`                            | bento     | layout        | Active | Horizontal flex row for compact inline content.                                                    |
-| `axo-header`                         | layout    | layout        | Active | Base appbar/header container.                                                                      |
-| `axo-header-grid`                    | layout    | layout        | Active | Four-slot header grid for left, center, nav, and right areas.                                      |
-| `axo-header-flex`                    | layout    | layout        | Active | Simple flex header alternative.                                                                    |
-| `axo-header-left`                    | layout    | layout        | Active | Left header slot, usually for logo or brand icon.                                                  |
-| `axo-header-center`                  | layout    | layout        | Active | Center header slot, usually for search or primary controls.                                        |
-| `axo-header-nav`                     | layout    | layout        | Active | Header navigation slot that hides on mobile by default.                                            |
-| `axo-header-right`                   | layout    | layout        | Active | Right header slot, usually for actions or a menu button.                                           |
-| `axo-searchbar`                      | layout    | layout        | Active | Inline search layout for icon/text plus input.                                                     |
-| `axo-icon-button`                    | layout    | layout        | Active | Square icon button sizing and alignment.                                                           |
-| `axo-h-appbar`                       | layout    | layout        | Active | Appbar height preset.                                                                              |
-| `axo-sticky-top`                     | layout    | layout        | Active | Sticky top positioning helper.                                                                     |
-| `axo-hide-mobile`                    | layout    | layout        | Active | Hide an element below 768px.                                                                       |
-| `axo-show-mobile`                    | layout    | layout        | Active | Show an element below 768px.                                                                       |
-| `axo-shell`                          | layout    | layout        | Active | Flexible app shell wrapper for sidebar and main content layouts.                                   |
-| `axo-sidebar`                        | layout    | layout        | Active | Base sidebar container with column layout, width, padding, overflow, and transitions.              |
-| `axo-sidebar-left`                   | layout    | layout        | Active | Places a sidebar before the main content inside axo-shell.                                         |
-| `axo-sidebar-right`                  | layout    | layout        | Active | Places a sidebar after the main content inside axo-shell.                                          |
-| `axo-sidebar-rail`                   | layout    | layout        | Active | Uses the compact rail width for a sidebar.                                                         |
-| `axo-sidebar-hover`                  | layout    | layout        | Active | Expands a rail sidebar on hover or keyboard focus within.                                          |
-| `axo-sidebar-item`                   | layout    | layout        | Active | Aligned sidebar menu item for links, buttons, and compact actions.                                 |
-| `axo-sidebar-main`                   | layout    | layout        | Active | Main content region that fills the remaining space in axo-shell.                                   |
-| `axo-sidebar-sticky`                 | layout    | layout        | Active | Makes a sidebar stick within the viewport while the main content scrolls.                          |
-| `axo-sidebar-fixed`                  | layout    | layout        | Active | Fixes a sidebar to the viewport instead of the normal document flow.                               |
-| `axo-sidebar-fixed-left`             | layout    | layout        | Active | Pins a fixed sidebar to the left edge of the viewport.                                             |
-| `axo-sidebar-fixed-right`            | layout    | layout        | Active | Pins a fixed sidebar to the right edge of the viewport.                                            |
-| `axo-sidebar-offcanvas`              | layout    | behavior      | Active | Viewport drawer foundation hidden beyond the left edge until opened.                               |
-| `axo-sidebar-offcanvas-right`        | layout    | behavior      | Active | Moves an off-canvas sidebar to the right viewport edge.                                            |
-| `axo-sidebar-open`                   | layout    | state         | Active | Open state applied to an off-canvas sidebar by Axoloth Behavior.                                   |
-| `axo-sidebar-backdrop`               | layout    | behavior      | Active | Fixed dismiss layer behind an off-canvas sidebar.                                                  |
-| `axo-sidebar-backdrop-open`          | layout    | state         | Active | Visible backdrop state applied by Axoloth Behavior.                                                |
-| `axo-offcanvas-active`               | layout    | state         | Active | Body state that locks document scrolling while a drawer is open.                                   |
-| `axo-dialog`                         | dialog    | behavior      | Active | Fixed viewport layer that centers an accessible dialog panel.                                      |
-| `axo-dialog-open`                    | dialog    | state         | Active | Visible dialog state applied by Axoloth Behavior.                                                  |
-| `axo-dialog-backdrop`                | dialog    | behavior      | Active | Full viewport dismiss layer behind a dialog panel.                                                 |
-| `axo-dialog-backdrop-open`           | dialog    | state         | Active | Visible dialog backdrop state applied by Axoloth Behavior.                                         |
-| `axo-dialog-panel`                   | dialog    | layout        | Active | Scrollable, width-constrained content panel inside axo-dialog.                                     |
-| `axo-dialog-header`                  | dialog    | layout        | Active | Dialog heading row with space for a title and close action.                                        |
-| `axo-dialog-body`                    | dialog    | layout        | Active | Main content region inside a dialog panel.                                                         |
-| `axo-dialog-footer`                  | dialog    | layout        | Active | Wrapping action row aligned to the end of a dialog panel.                                          |
-| `axo-dialog-sm`                      | dialog    | sizing        | Active | Sets a compact dialog panel width.                                                                 |
-| `axo-dialog-lg`                      | dialog    | sizing        | Active | Sets a wide dialog panel width.                                                                    |
-| `axo-dialog-full`                    | dialog    | sizing        | Active | Expands a dialog panel to the available viewport width.                                            |
-| `axo-dialog-active`                  | dialog    | state         | Active | Body state that locks document scrolling while a dialog is open.                                   |
-| `axo-tabs`                           | tabs      | behavior      | Active | Layout boundary for an accessible tabbed interface.                                                |
-| `axo-tabs-vertical`                  | tabs      | layout        | Active | Places the tab list beside its active panel on wide containers.                                    |
-| `axo-tab-list`                       | tabs      | layout        | Active | Scrollable row or column containing Axoloth tab controls.                                          |
-| `axo-tab`                            | tabs      | control       | Active | Neutral tab control with selected and focus-visible states.                                        |
-| `axo-tab-active`                     | tabs      | state         | Active | Selected tab state managed by Axoloth Behavior.                                                    |
-| `axo-tab-panel`                      | tabs      | layout        | Active | Content region controlled by an Axoloth tab.                                                       |
-| `axo-tab-panel-active`               | tabs      | state         | Active | Visible tab panel state managed by Axoloth Behavior.                                               |
-| `axo-accordion`                      | accordion | behavior      | Active | Layout boundary for an accessible accordion group.                                                 |
-| `axo-accordion-item`                 | accordion | layout        | Active | Structural wrapper for one accordion trigger and panel.                                            |
-| `axo-accordion-item-open`            | accordion | state         | Active | Expanded accordion item state managed by Axoloth Behavior.                                         |
-| `axo-accordion-trigger`              | accordion | control       | Active | Full-width disclosure button for an accordion item.                                                |
-| `axo-accordion-indicator`            | accordion | control       | Active | Fixed-size indicator that rotates while an item is expanded.                                       |
-| `axo-accordion-panel`                | accordion | layout        | Active | Collapsible content region controlled by an accordion trigger.                                     |
-| `axo-accordion-panel-open`           | accordion | state         | Active | Visible accordion panel state managed by Axoloth Behavior.                                         |
-| `axo-dropdown`                       | dropdown  | behavior      | Active | Positioning boundary for an accessible dropdown menu.                                              |
-| `axo-dropdown-open`                  | dropdown  | state         | Active | Open dropdown group state managed by Axoloth Behavior.                                             |
-| `axo-dropdown-trigger`               | dropdown  | control       | Active | Inline trigger alignment for a dropdown menu button.                                               |
-| `axo-dropdown-menu`                  | dropdown  | layout        | Active | Absolutely positioned menu surface below a dropdown trigger.                                       |
-| `axo-dropdown-menu-open`             | dropdown  | state         | Active | Visible menu state managed by Axoloth Behavior.                                                    |
-| `axo-dropdown-item`                  | dropdown  | control       | Active | Full-width action or link inside a dropdown menu.                                                  |
-| `axo-dropdown-label`                 | dropdown  | layout        | Active | Non-interactive group label inside a dropdown menu.                                                |
-| `axo-dropdown-separator`             | dropdown  | layout        | Active | Subtle separator between groups of dropdown actions.                                               |
-| `axo-dropdown-end`                   | dropdown  | position      | Active | Aligns a dropdown menu to the trigger's inline end edge.                                           |
-| `axo-dropdown-up`                    | dropdown  | position      | Active | Places a dropdown menu above its trigger.                                                          |
-| `axo-toast-region`                   | toast     | behavior      | Active | Fixed live region that stacks Axoloth toast notifications.                                         |
-| `axo-toast-region-top-start`         | toast     | position      | Active | Positions a toast region at the viewport top-start corner.                                         |
-| `axo-toast-region-top-end`           | toast     | position      | Active | Positions a toast region at the viewport top-end corner.                                           |
-| `axo-toast-region-bottom-start`      | toast     | position      | Active | Positions a toast region at the viewport bottom-start corner.                                      |
-| `axo-toast-region-bottom-end`        | toast     | position      | Active | Positions a toast region at the viewport bottom-end corner.                                        |
-| `axo-toast`                          | toast     | behavior      | Active | Responsive notification layout inside a toast region.                                              |
-| `axo-toast-open`                     | toast     | state         | Active | Visible toast state managed by Axoloth Behavior.                                                   |
-| `axo-toast-closing`                  | toast     | state         | Active | Dismiss transition state managed by Axoloth Behavior.                                              |
-| `axo-toast-content`                  | toast     | layout        | Active | Flexible text content column inside a toast.                                                       |
-| `axo-toast-title`                    | toast     | content       | Active | Short emphasized toast heading.                                                                    |
-| `axo-toast-message`                  | toast     | content       | Active | Wrapping notification message inside a toast.                                                      |
-| `axo-toast-actions`                  | toast     | layout        | Active | Inline action group inside a toast.                                                                |
-| `axo-toast-dismiss`                  | toast     | control       | Active | Compact toast dismissal control.                                                                   |
-| `axo-sidebar-main-offset-left`       | layout    | layout        | Active | Offsets main content by the expanded left sidebar width.                                           |
-| `axo-sidebar-main-offset-right`      | layout    | layout        | Active | Offsets main content by the expanded right sidebar width.                                          |
-| `axo-sidebar-main-offset-rail-left`  | layout    | layout        | Active | Offsets main content by the compact left sidebar rail width.                                       |
-| `axo-sidebar-main-offset-rail-right` | layout    | layout        | Active | Offsets main content by the compact right sidebar rail width.                                      |
-| `axo-app`                            | layout    | layout        | Active | Grid app shell for sidebar, header, main, and footer regions.                                      |
-| `axo-app-sidebar`                    | layout    | layout        | Active | Sidebar grid area inside axo-app.                                                                  |
-| `axo-app-sidebar-right`              | layout    | layout        | Active | Moves the axo-app sidebar area to the right side.                                                  |
-| `axo-app-header`                     | layout    | layout        | Active | Header grid area inside axo-app.                                                                   |
-| `axo-app-main`                       | layout    | layout        | Active | Scrollable main content grid area inside axo-app.                                                  |
-| `axo-app-footer`                     | layout    | layout        | Active | Footer grid area inside axo-app.                                                                   |
-| `axo-container-query`                | layout    | responsive    | Active | Named inline-size query container for adaptive Axoloth child layouts.                              |
-| `axo-auto-grid`                      | layout    | primitive     | Active | Auto-fitting grid that creates columns from available space without media queries.                 |
-| `axo-switcher`                       | layout    | primitive     | Active | Container-aware flex layout that switches between rows and stacked items.                          |
-| `axo-center`                         | layout    | primitive     | Active | Horizontally centered content region with a configurable maximum width and gutter.                 |
-| `axo-cover`                          | layout    | primitive     | Active | Full-height flex section that vertically centers its content group.                                |
-| `axo-reel`                           | layout    | primitive     | Active | Horizontal scrolling row with stable item widths and scroll snapping.                              |
-| `axo-scroll-snap`                    | layout    | behavior      | Active | Adds mandatory inline scroll snapping to a custom overflow container.                              |
-| `axo-snap-start`                     | layout    | behavior      | Active | Aligns an item to the start edge of a scroll-snap container.                                       |
-| `axo-page`                           | semantic  | layout        | Active | Page wrapper with full-width sizing, minimum viewport height, and page padding.                    |
-| `axo-container`                      | semantic  | layout        | Active | Centered content container with configurable max width.                                            |
-| `axo-section`                        | semantic  | layout        | Active | Vertical section spacing helper.                                                                   |
-| `axo-cluster`                        | semantic  | layout        | Active | Wrapping inline group for nav items, tags, and action rows.                                        |
-| `axo-list-reset`                     | semantic  | layout        | Active | Removes list margin, padding, and markers from ul or ol elements.                                  |
-| `axo-nav`                            | semantic  | layout        | Active | Structural navigation container.                                                                   |
-| `axo-nav-list`                       | semantic  | layout        | Active | Reset and row layout for semantic nav lists.                                                       |
-| `axo-link`                           | semantic  | surface       | Active | Neutral link reset with inherited color, hover transition, and focus-visible ring.                 |
-| `axo-button`                         | semantic  | surface       | Active | Neutral button structure with sizing, border, alignment, hover, and focus-visible ring.            |
-| `axo-button-block`                   | semantic  | layout        | Active | Makes an axo-button fill the available inline size.                                                |
-| `axo-field`                          | semantic  | layout        | Active | Vertical form field wrapper.                                                                       |
-| `axo-label`                          | semantic  | layout        | Active | Label text layout helper for forms.                                                                |
-| `axo-input`                          | semantic  | surface       | Active | Neutral input, select, or textarea structure with border, padding, sizing, and focus-visible ring. |
-| `axo-form`                           | semantic  | layout        | Active | Vertical form layout with consistent control gaps.                                                 |
-| `axo-form-grid`                      | semantic  | layout        | Active | Responsive form grid: one column on mobile and two columns on wider screens.                       |
-| `axo-badge`                          | semantic  | status        | Active | Compact inline status or metadata label with neutral structure.                                    |
-| `axo-badge-dot`                      | semantic  | status        | Active | Current-color status dot sized for axo-badge.                                                      |
-| `axo-alert`                          | semantic  | status        | Active | Neutral alert or notice container with structured spacing and border.                              |
-| `axo-alert-title`                    | semantic  | status        | Active | Strong title treatment for an Axoloth alert.                                                       |
-| `axo-empty`                          | semantic  | state         | Active | Centered empty-state layout for icon, title, description, and actions.                             |
-| `axo-empty-state`                    | semantic  | state         | Active | Descriptive alias for the centered axo-empty layout.                                               |
-| `axo-empty-icon`                     | semantic  | state         | Active | Centered circular icon slot for an empty state.                                                    |
-| `axo-empty-title`                    | semantic  | state         | Active | Title typography for an empty state.                                                               |
-| `axo-empty-description`              | semantic  | state         | Active | Readable muted description for an empty state.                                                     |
-| `axo-table-wrap`                     | semantic  | data          | Active | Responsive table wrapper with horizontal overflow safety.                                          |
-| `axo-table`                          | semantic  | data          | Active | Neutral full-width data table with consistent cell structure.                                      |
-| `axo-table-compact`                  | semantic  | data          | Active | Compact cell-density preset for axo-table.                                                         |
-| `axo-table-sticky`                   | semantic  | data          | Active | Keeps table header cells visible inside a scrolling table wrapper.                                 |
-| `axo-visually-hidden`                | semantic  | accessibility | Active | Visually hides content while keeping it available to assistive technology.                         |
-| `axo-skip-link`                      | semantic  | accessibility | Active | Keyboard skip link that becomes visible when focused.                                              |
-| `axo-divider`                        | semantic  | layout        | Active | Neutral full-width divider with configurable thickness, spacing, and opacity.                      |
-| `axo-progress`                       | semantic  | state         | Active | Accessible progress track wrapper for a child axo-progress-bar.                                    |
-| `axo-progress-bar`                   | semantic  | state         | Active | Progress fill controlled by --axo-progress-value.                                                  |
-| `axo-progress-indeterminate`         | semantic  | state         | Active | Looping indeterminate state for axo-progress with reduced-motion support.                          |
-| `axo-skeleton`                       | semantic  | state         | Active | Neutral loading placeholder with a reduced-motion-safe pulse.                                      |
-| `axo-skeleton-text`                  | semantic  | state         | Active | Text-line width preset for axo-skeleton.                                                           |
-| `axo-skeleton-circle`                | semantic  | state         | Active | Circular avatar-style preset for axo-skeleton.                                                     |
-| `axo-help`                           | semantic  | form          | Active | Muted helper text for a form field.                                                                |
-| `axo-error`                          | semantic  | form          | Active | Readable validation error text with configurable error color.                                      |
-| `axo-required`                       | semantic  | form          | Active | Adds a visual required marker after label text.                                                    |
-| `axo-invalid`                        | semantic  | form          | Active | Validation border and ring for an invalid axo-input.                                               |
-| `axo-checkbox`                       | semantic  | form          | Active | Aligned label layout for a native checkbox and its text.                                           |
-| `axo-radio`                          | semantic  | form          | Active | Aligned label layout for a native radio and its text.                                              |
-| `axo-switch`                         | semantic  | form          | Active | Accessible switch layout built from a native checkbox.                                             |
-| `axo-fade`                           | motion    | motion        | Active | Fade-in entrance animation.                                                                        |
-| `axo-rise`                           | motion    | motion        | Active | Fade and move upward into place.                                                                   |
-| `axo-pop`                            | motion    | motion        | Active | Fade and scale into place.                                                                         |
-| `axo-lift`                           | motion    | motion        | Active | Lift upward on hover.                                                                              |
-| `axo-glow`                           | motion    | motion        | Active | Soft hover glow shadow.                                                                            |
-| `axo-shimmer`                        | motion    | motion        | Active | Looping shimmer overlay.                                                                           |
-| `axo-theme-light`                    | surface   | surface       | Active | Light theme marker for Axoloth surface variables.                                                  |
-| `axo-theme-dark`                     | surface   | surface       | Active | Dark theme marker for Axoloth surface variables.                                                   |
-| `axo-surface`                        | surface   | surface       | Active | Normal surface for the current theme marker.                                                       |
-| `axo-contrast`                       | surface   | surface       | Active | Inverted contrast surface for the current theme marker.                                            |
+| Class | Module | Category | Status | Description |
+| --- | --- | --- | --- | --- |
+| `axo-bento` | bento | layout | Active | Responsive bento grid container with mobile, tablet, and desktop columns. |
+| `axo-container-responsive` | bento | responsive | Active | Makes axo-bento respond to an axo-container-query parent instead of the viewport. |
+| `axo-card` | bento | layout | Active | Neutral structural card base with radius, border, padding, and transitions. |
+| `axo-square` | bento | layout | Active | One-by-one bento item span. |
+| `axo-wide` | bento | layout | Active | Bento item that spans two columns on tablet and desktop. |
+| `axo-tall` | bento | layout | Active | Bento item that spans two rows on tablet and desktop. |
+| `axo-large` | bento | layout | Active | Bento item that spans two columns and two rows on tablet and desktop. |
+| `axo-stack` | bento | layout | Active | Vertical flex stack for card content. |
+| `axo-row` | bento | layout | Active | Horizontal flex row for compact inline content. |
+| `axo-header` | layout | layout | Active | Base appbar/header container. |
+| `axo-header-grid` | layout | layout | Active | Four-slot header grid for left, center, nav, and right areas. |
+| `axo-header-flex` | layout | layout | Active | Simple flex header alternative. |
+| `axo-header-left` | layout | layout | Active | Left header slot, usually for logo or brand icon. |
+| `axo-header-center` | layout | layout | Active | Center header slot, usually for search or primary controls. |
+| `axo-header-nav` | layout | layout | Active | Header navigation slot that hides on mobile by default. |
+| `axo-header-right` | layout | layout | Active | Right header slot, usually for actions or a menu button. |
+| `axo-searchbar` | layout | layout | Active | Inline search layout for icon/text plus input. |
+| `axo-icon-button` | layout | layout | Active | Square icon button sizing and alignment. |
+| `axo-h-appbar` | layout | layout | Active | Appbar height preset. |
+| `axo-sticky-top` | layout | layout | Active | Sticky top positioning helper. |
+| `axo-hide-mobile` | layout | layout | Active | Hide an element below 768px. |
+| `axo-show-mobile` | layout | layout | Active | Show an element below 768px. |
+| `axo-shell` | layout | layout | Active | Flexible app shell wrapper for sidebar and main content layouts. |
+| `axo-sidebar` | layout | layout | Active | Base sidebar container with column layout, width, padding, overflow, and transitions. |
+| `axo-sidebar-left` | layout | layout | Active | Places a sidebar before the main content inside axo-shell. |
+| `axo-sidebar-right` | layout | layout | Active | Places a sidebar after the main content inside axo-shell. |
+| `axo-sidebar-rail` | layout | layout | Active | Uses the compact rail width for a sidebar. |
+| `axo-sidebar-hover` | layout | layout | Active | Expands a rail sidebar on hover or keyboard focus within. |
+| `axo-sidebar-item` | layout | layout | Active | Aligned sidebar menu item for links, buttons, and compact actions. |
+| `axo-sidebar-main` | layout | layout | Active | Main content region that fills the remaining space in axo-shell. |
+| `axo-sidebar-sticky` | layout | layout | Active | Makes a sidebar stick within the viewport while the main content scrolls. |
+| `axo-sidebar-fixed` | layout | layout | Active | Fixes a sidebar to the viewport instead of the normal document flow. |
+| `axo-sidebar-fixed-left` | layout | layout | Active | Pins a fixed sidebar to the left edge of the viewport. |
+| `axo-sidebar-fixed-right` | layout | layout | Active | Pins a fixed sidebar to the right edge of the viewport. |
+| `axo-sidebar-offcanvas` | layout | behavior | Active | Viewport drawer foundation hidden beyond the left edge until opened. |
+| `axo-sidebar-offcanvas-right` | layout | behavior | Active | Moves an off-canvas sidebar to the right viewport edge. |
+| `axo-sidebar-open` | layout | state | Active | Open state applied to an off-canvas sidebar by Axoloth Behavior. |
+| `axo-sidebar-backdrop` | layout | behavior | Active | Fixed dismiss layer behind an off-canvas sidebar. |
+| `axo-sidebar-backdrop-open` | layout | state | Active | Visible backdrop state applied by Axoloth Behavior. |
+| `axo-offcanvas-active` | layout | state | Active | Body state that locks document scrolling while a drawer is open. |
+| `axo-dialog` | dialog | behavior | Active | Fixed viewport layer that centers an accessible dialog panel. |
+| `axo-dialog-open` | dialog | state | Active | Visible dialog state applied by Axoloth Behavior. |
+| `axo-dialog-backdrop` | dialog | behavior | Active | Full viewport dismiss layer behind a dialog panel. |
+| `axo-dialog-backdrop-open` | dialog | state | Active | Visible dialog backdrop state applied by Axoloth Behavior. |
+| `axo-dialog-panel` | dialog | layout | Active | Scrollable, width-constrained content panel inside axo-dialog. |
+| `axo-dialog-header` | dialog | layout | Active | Dialog heading row with space for a title and close action. |
+| `axo-dialog-body` | dialog | layout | Active | Main content region inside a dialog panel. |
+| `axo-dialog-footer` | dialog | layout | Active | Wrapping action row aligned to the end of a dialog panel. |
+| `axo-dialog-sm` | dialog | sizing | Active | Sets a compact dialog panel width. |
+| `axo-dialog-lg` | dialog | sizing | Active | Sets a wide dialog panel width. |
+| `axo-dialog-full` | dialog | sizing | Active | Expands a dialog panel to the available viewport width. |
+| `axo-dialog-active` | dialog | state | Active | Body state that locks document scrolling while a dialog is open. |
+| `axo-tabs` | tabs | behavior | Active | Layout boundary for an accessible tabbed interface. |
+| `axo-tabs-vertical` | tabs | layout | Active | Places the tab list beside its active panel on wide containers. |
+| `axo-tab-list` | tabs | layout | Active | Scrollable row or column containing Axoloth tab controls. |
+| `axo-tab` | tabs | control | Active | Neutral tab control with selected and focus-visible states. |
+| `axo-tab-active` | tabs | state | Active | Selected tab state managed by Axoloth Behavior. |
+| `axo-tab-panel` | tabs | layout | Active | Content region controlled by an Axoloth tab. |
+| `axo-tab-panel-active` | tabs | state | Active | Visible tab panel state managed by Axoloth Behavior. |
+| `axo-accordion` | accordion | behavior | Active | Layout boundary for an accessible accordion group. |
+| `axo-accordion-item` | accordion | layout | Active | Structural wrapper for one accordion trigger and panel. |
+| `axo-accordion-item-open` | accordion | state | Active | Expanded accordion item state managed by Axoloth Behavior. |
+| `axo-accordion-trigger` | accordion | control | Active | Full-width disclosure button for an accordion item. |
+| `axo-accordion-indicator` | accordion | control | Active | Fixed-size indicator that rotates while an item is expanded. |
+| `axo-accordion-panel` | accordion | layout | Active | Collapsible content region controlled by an accordion trigger. |
+| `axo-accordion-panel-open` | accordion | state | Active | Visible accordion panel state managed by Axoloth Behavior. |
+| `axo-dropdown` | dropdown | behavior | Active | Positioning boundary for an accessible dropdown menu. |
+| `axo-dropdown-open` | dropdown | state | Active | Open dropdown group state managed by Axoloth Behavior. |
+| `axo-dropdown-trigger` | dropdown | control | Active | Inline trigger alignment for a dropdown menu button. |
+| `axo-dropdown-menu` | dropdown | layout | Active | Absolutely positioned menu surface below a dropdown trigger. |
+| `axo-dropdown-menu-open` | dropdown | state | Active | Visible menu state managed by Axoloth Behavior. |
+| `axo-dropdown-item` | dropdown | control | Active | Full-width action or link inside a dropdown menu. |
+| `axo-dropdown-label` | dropdown | layout | Active | Non-interactive group label inside a dropdown menu. |
+| `axo-dropdown-separator` | dropdown | layout | Active | Subtle separator between groups of dropdown actions. |
+| `axo-dropdown-end` | dropdown | position | Active | Aligns a dropdown menu to the trigger's inline end edge. |
+| `axo-dropdown-up` | dropdown | position | Active | Places a dropdown menu above its trigger. |
+| `axo-toast-region` | toast | behavior | Active | Fixed live region that stacks Axoloth toast notifications. |
+| `axo-toast-region-top-start` | toast | position | Active | Positions a toast region at the viewport top-start corner. |
+| `axo-toast-region-top-end` | toast | position | Active | Positions a toast region at the viewport top-end corner. |
+| `axo-toast-region-bottom-start` | toast | position | Active | Positions a toast region at the viewport bottom-start corner. |
+| `axo-toast-region-bottom-end` | toast | position | Active | Positions a toast region at the viewport bottom-end corner. |
+| `axo-toast` | toast | behavior | Active | Responsive notification layout inside a toast region. |
+| `axo-toast-open` | toast | state | Active | Visible toast state managed by Axoloth Behavior. |
+| `axo-toast-closing` | toast | state | Active | Dismiss transition state managed by Axoloth Behavior. |
+| `axo-toast-content` | toast | layout | Active | Flexible text content column inside a toast. |
+| `axo-toast-title` | toast | content | Active | Short emphasized toast heading. |
+| `axo-toast-message` | toast | content | Active | Wrapping notification message inside a toast. |
+| `axo-toast-actions` | toast | layout | Active | Inline action group inside a toast. |
+| `axo-toast-dismiss` | toast | control | Active | Compact toast dismissal control. |
+| `axo-sidebar-main-offset-left` | layout | layout | Active | Offsets main content by the expanded left sidebar width. |
+| `axo-sidebar-main-offset-right` | layout | layout | Active | Offsets main content by the expanded right sidebar width. |
+| `axo-sidebar-main-offset-rail-left` | layout | layout | Active | Offsets main content by the compact left sidebar rail width. |
+| `axo-sidebar-main-offset-rail-right` | layout | layout | Active | Offsets main content by the compact right sidebar rail width. |
+| `axo-app` | layout | layout | Active | Grid app shell for sidebar, header, main, and footer regions. |
+| `axo-app-sidebar` | layout | layout | Active | Sidebar grid area inside axo-app. |
+| `axo-app-sidebar-right` | layout | layout | Active | Moves the axo-app sidebar area to the right side. |
+| `axo-app-header` | layout | layout | Active | Header grid area inside axo-app. |
+| `axo-app-main` | layout | layout | Active | Scrollable main content grid area inside axo-app. |
+| `axo-app-footer` | layout | layout | Active | Footer grid area inside axo-app. |
+| `axo-container-query` | layout | responsive | Active | Named inline-size query container for adaptive Axoloth child layouts. |
+| `axo-auto-grid` | layout | primitive | Active | Auto-fitting grid that creates columns from available space without media queries. |
+| `axo-switcher` | layout | primitive | Active | Container-aware flex layout that switches between rows and stacked items. |
+| `axo-center` | layout | primitive | Active | Horizontally centered content region with a configurable maximum width and gutter. |
+| `axo-cover` | layout | primitive | Active | Full-height flex section that vertically centers its content group. |
+| `axo-reel` | layout | primitive | Active | Horizontal scrolling row with stable item widths and scroll snapping. |
+| `axo-scroll-snap` | layout | behavior | Active | Adds mandatory inline scroll snapping to a custom overflow container. |
+| `axo-snap-start` | layout | behavior | Active | Aligns an item to the start edge of a scroll-snap container. |
+| `axo-page` | semantic | layout | Active | Page wrapper with full-width sizing, minimum viewport height, and page padding. |
+| `axo-container` | semantic | layout | Active | Centered content container with configurable max width. |
+| `axo-section` | semantic | layout | Active | Vertical section spacing helper. |
+| `axo-cluster` | semantic | layout | Active | Wrapping inline group for nav items, tags, and action rows. |
+| `axo-list-reset` | semantic | layout | Active | Removes list margin, padding, and markers from ul or ol elements. |
+| `axo-nav` | semantic | layout | Active | Structural navigation container. |
+| `axo-nav-list` | semantic | layout | Active | Reset and row layout for semantic nav lists. |
+| `axo-link` | semantic | surface | Active | Neutral link reset with inherited color, hover transition, and focus-visible ring. |
+| `axo-button` | semantic | surface | Active | Neutral button structure with sizing, border, alignment, hover, and focus-visible ring. |
+| `axo-button-block` | semantic | layout | Active | Makes an axo-button fill the available inline size. |
+| `axo-field` | semantic | layout | Active | Vertical form field wrapper. |
+| `axo-label` | semantic | layout | Active | Label text layout helper for forms. |
+| `axo-input` | semantic | surface | Active | Neutral input, select, or textarea structure with border, padding, sizing, and focus-visible ring. |
+| `axo-form` | semantic | layout | Active | Vertical form layout with consistent control gaps. |
+| `axo-form-grid` | semantic | layout | Active | Responsive form grid: one column on mobile and two columns on wider screens. |
+| `axo-badge` | semantic | status | Active | Compact inline status or metadata label with neutral structure. |
+| `axo-badge-dot` | semantic | status | Active | Current-color status dot sized for axo-badge. |
+| `axo-alert` | semantic | status | Active | Neutral alert or notice container with structured spacing and border. |
+| `axo-alert-title` | semantic | status | Active | Strong title treatment for an Axoloth alert. |
+| `axo-empty` | semantic | state | Active | Centered empty-state layout for icon, title, description, and actions. |
+| `axo-empty-state` | semantic | state | Active | Descriptive alias for the centered axo-empty layout. |
+| `axo-empty-icon` | semantic | state | Active | Centered circular icon slot for an empty state. |
+| `axo-empty-title` | semantic | state | Active | Title typography for an empty state. |
+| `axo-empty-description` | semantic | state | Active | Readable muted description for an empty state. |
+| `axo-table-wrap` | semantic | data | Active | Responsive table wrapper with horizontal overflow safety. |
+| `axo-table` | semantic | data | Active | Neutral full-width data table with consistent cell structure. |
+| `axo-table-compact` | semantic | data | Active | Compact cell-density preset for axo-table. |
+| `axo-table-sticky` | semantic | data | Active | Keeps table header cells visible inside a scrolling table wrapper. |
+| `axo-visually-hidden` | semantic | accessibility | Active | Visually hides content while keeping it available to assistive technology. |
+| `axo-skip-link` | semantic | accessibility | Active | Keyboard skip link that becomes visible when focused. |
+| `axo-divider` | semantic | layout | Active | Neutral full-width divider with configurable thickness, spacing, and opacity. |
+| `axo-progress` | semantic | state | Active | Accessible progress track wrapper for a child axo-progress-bar. |
+| `axo-progress-bar` | semantic | state | Active | Progress fill controlled by --axo-progress-value. |
+| `axo-progress-indeterminate` | semantic | state | Active | Looping indeterminate state for axo-progress with reduced-motion support. |
+| `axo-skeleton` | semantic | state | Active | Neutral loading placeholder with a reduced-motion-safe pulse. |
+| `axo-skeleton-text` | semantic | state | Active | Text-line width preset for axo-skeleton. |
+| `axo-skeleton-circle` | semantic | state | Active | Circular avatar-style preset for axo-skeleton. |
+| `axo-help` | semantic | form | Active | Muted helper text for a form field. |
+| `axo-error` | semantic | form | Active | Readable validation error text with configurable error color. |
+| `axo-required` | semantic | form | Active | Adds a visual required marker after label text. |
+| `axo-invalid` | semantic | form | Active | Validation border and ring for an invalid axo-input. |
+| `axo-checkbox` | semantic | form | Active | Aligned label layout for a native checkbox and its text. |
+| `axo-radio` | semantic | form | Active | Aligned label layout for a native radio and its text. |
+| `axo-switch` | semantic | form | Active | Accessible switch layout built from a native checkbox. |
+| `axo-fade` | motion | motion | Active | Fade-in entrance animation. |
+| `axo-rise` | motion | motion | Active | Fade and move upward into place. |
+| `axo-pop` | motion | motion | Active | Fade and scale into place. |
+| `axo-lift` | motion | motion | Active | Lift upward on hover. |
+| `axo-glow` | motion | motion | Active | Soft hover glow shadow. |
+| `axo-shimmer` | motion | motion | Active | Looping shimmer overlay. |
+| `axo-theme-light` | surface | surface | Active | Light theme marker for Axoloth surface variables. |
+| `axo-theme-dark` | surface | surface | Active | Dark theme marker for Axoloth surface variables. |
+| `axo-surface` | surface | surface | Active | Normal surface for the current theme marker. |
+| `axo-contrast` | surface | surface | Active | Inverted contrast surface for the current theme marker. |
 
 <!-- AXOLOTH-REGISTRY:END -->
 
