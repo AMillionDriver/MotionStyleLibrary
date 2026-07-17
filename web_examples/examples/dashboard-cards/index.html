@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../packages/axoloth-style/src/axoloth.css" />
+    <title>Axoloth Dashboard Cards Example</title>
+    <style>
+      :root {
+        --demo-bg: #eef3f8;
+        --demo-text: #172033;
+        --demo-muted: #667085;
+        --demo-accent: #2563eb;
+      }
+
+      body {
+        margin: 0;
+        color: var(--demo-text);
+        background: var(--demo-bg);
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      }
+
+      .metric {
+        display: block;
+        margin-top: 0.5rem;
+        font-size: clamp(2rem, 6vw, 4rem);
+        font-weight: 850;
+        line-height: 1;
+      }
+
+      .muted {
+        color: var(--demo-muted);
+      }
+
+      .accent {
+        color: var(--demo-accent);
+      }
+
+      .success {
+        color: #087a55;
+      }
+    </style>
+  </head>
+  <body class="axo-page axo-theme-light">
+    <main class="axo-container">
+      <header class="axo-section">
+        <nav class="axo-nav" aria-label="Dashboard links">
+          <ul class="axo-nav-list">
+            <li><a class="axo-link" href="../../index.html">Docs</a></li>
+            <li><a class="axo-link" href="#metrics">Metrics</a></li>
+            <li><a class="axo-link" href="#activity">Activity</a></li>
+          </ul>
+        </nav>
+
+        <div class="axo-card axo-contrast axo-rise">
+          <p>Dashboard Cards</p>
+          <h1>Metrics, toolbar, and panels using bento utilities.</h1>
+        </div>
+
+        <div class="axo-alert axo-surface" role="status">
+          <strong class="axo-alert-title">Workspace synced</strong>
+          <p>All layout examples and IntelliSense metadata are up to date.</p>
+        </div>
+      </header>
+
+      <section id="metrics" class="axo-section axo-bento">
+        <article class="axo-card axo-surface axo-square axo-lift">
+          <span class="muted">Revenue</span>
+          <strong class="metric">$42k</strong>
+          <span class="axo-badge success"><span class="axo-badge-dot"></span>+12%</span>
+        </article>
+        <article class="axo-card axo-surface axo-square axo-lift">
+          <span class="muted">Users</span>
+          <strong class="metric">8.4k</strong>
+          <span class="accent">+824</span>
+          <div
+            class="axo-progress accent"
+            role="progressbar"
+            aria-label="Monthly user target"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="84"
+            style="--axo-progress-value: 84%"
+          >
+            <span class="axo-progress-bar"></span>
+          </div>
+        </article>
+        <article class="axo-card axo-surface axo-wide axo-rise">
+          <span class="muted">Toolbar</span>
+          <div class="axo-cluster">
+            <button class="axo-button" type="button">Export</button>
+            <button class="axo-button" type="button">Filter</button>
+            <button class="axo-button" type="button">Refresh</button>
+          </div>
+        </article>
+        <article class="axo-card axo-contrast axo-tall axo-pop">
+          <h2>Operations</h2>
+          <p>Five active boards, two alerts, and one layout review.</p>
+        </article>
+      </section>
+
+      <section id="activity" class="axo-section">
+        <h2>Recent activity</h2>
+        <div class="axo-table-wrap axo-surface">
+          <table class="axo-table axo-table-sticky">
+            <thead>
+              <tr>
+                <th scope="col">Feature</th>
+                <th scope="col">Owner</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Sidebar layout</td>
+                <td>Layout</td>
+                <td>
+                  <span class="axo-badge success"><span class="axo-badge-dot"></span>Ready</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Semantic controls</td>
+                <td>Core CSS</td>
+                <td><span class="axo-badge">Review</span></td>
+              </tr>
+              <tr>
+                <td>Motion presets</td>
+                <td>Motion</td>
+                <td><span class="axo-badge">Planned</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="axo-section">
+        <div class="axo-empty axo-surface">
+          <span class="axo-empty-icon" aria-hidden="true">0</span>
+          <h2 class="axo-empty-title">No pending reviews</h2>
+          <p class="axo-empty-description">
+            New layout reviews will appear here when a contributor opens one.
+          </p>
+          <button class="axo-button" type="button">Create review</button>
+        </div>
+      </section>
+
+      <section class="axo-section" aria-labelledby="loading-title">
+        <h2 id="loading-title">Loading states</h2>
+        <div class="axo-card axo-surface axo-stack" aria-hidden="true">
+          <span class="axo-skeleton axo-skeleton-circle"></span>
+          <span class="axo-skeleton axo-skeleton-text"></span>
+          <span
+            class="axo-skeleton axo-skeleton-text"
+            style="--axo-skeleton-text-width: 15rem"
+          ></span>
+          <hr class="axo-divider" />
+          <div class="axo-progress axo-progress-indeterminate">
+            <span class="axo-progress-bar"></span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

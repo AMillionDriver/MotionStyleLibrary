@@ -12,7 +12,11 @@
     "format": "prettier . --write",
     "format:check": "prettier . --check",
     "fix": "npm run format && npm run lint:fix",
-    "check": "npm run format:check && npm run lint"
+    "check": "npm run format:check && npm run lint",
+    "test:a11y": "playwright test --config=playwright.accessibility.config.mjs",
+    "test:visual": "playwright test",
+    "test:visual:update": "playwright test --update-snapshots",
+    "verify:axoloth": "node scripts/verify-axoloth.mjs"
   },
   "dependencies": {
     "leaflet": "^1.9.4",
@@ -22,6 +26,8 @@
     "react-leaflet": "^5.0.0"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.12.1",
+    "@playwright/test": "^1.61.1",
     "@tailwindcss/vite": "^4.3.2",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",

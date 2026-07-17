@@ -9,6 +9,7 @@ import {
   AxolothVariableValueSuggestion,
   createVariableDocumentation,
 } from './data';
+import { formatDeprecationSummary } from './deprecation';
 
 function createVariableValueDocumentation(
   entry: AxolothVariableEntry,
@@ -21,6 +22,8 @@ function createVariableValueDocumentation(
   markdown.appendMarkdown(`Variable: \`${entry.name}\`  \n`);
   markdown.appendMarkdown(`Default: \`${entry.default}\`  \n`);
   markdown.appendMarkdown(`Value type: \`${entry.valueType ?? 'css'}\``);
+  const deprecation = formatDeprecationSummary(entry);
+  if (deprecation) markdown.appendMarkdown(`\n\n> **Deprecated:** ${deprecation}`);
 
   return markdown;
 }
@@ -74,6 +77,12 @@ export function createCssVariableCompletionProvider(
           item.range = range;
           item.preselect = true;
           item.sortText = `!${entry.name}`;
+
+          if (entry.status === 'deprecated') {
+            item.tags = [vscode.CompletionItemTag.Deprecated];
+            item.detail = `Deprecated Axoloth variable; use ${entry.deprecation?.replacement}`;
+            item.sortText = `~${entry.name}`;
+          }
 
           return item;
         });

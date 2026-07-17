@@ -16,23 +16,38 @@
       .muted {
         color: #64748b;
       }
+
+      .component-heading,
+      .manual-tabs-heading,
+      .accordion-heading,
+      .dropdown-heading,
+      .toast-heading,
+      .panel-copy {
+        margin: 0;
+      }
     </style>
   </head>
   <body class="axo-page axo-theme-light">
-    <main class="axo-container">
+    <a class="axo-skip-link" href="#main-content">Skip to main content</a>
+
+    <main id="main-content" class="axo-container" tabindex="-1">
       <header class="axo-section">
         <nav class="axo-nav" aria-label="Example navigation">
           <ul class="axo-nav-list">
             <li><a class="axo-link" href="../../index.html">Docs</a></li>
             <li><a class="axo-link" href="#form">Form</a></li>
+            <li><a class="axo-link" href="#tabs">Tabs</a></li>
+            <li><a class="axo-link" href="#accordion">Accordion</a></li>
+            <li><a class="axo-link" href="#dropdown">Dropdown</a></li>
+            <li><a class="axo-link" href="#toast">Toast</a></li>
             <li><a class="axo-link" href="#notes">Notes</a></li>
           </ul>
         </nav>
 
         <h1>Semantic controls</h1>
         <p class="muted">
-          A plain HTML form using Axoloth structural utilities for spacing,
-          alignment, controls, and focus states.
+          A plain HTML form using Axoloth structural utilities for spacing, alignment, controls, and
+          focus states.
         </p>
       </header>
 
@@ -45,13 +60,20 @@
             </label>
 
             <label class="axo-field">
-              <span class="axo-label">Email</span>
+              <span class="axo-label axo-required">Email</span>
               <input
-                class="axo-input"
+                class="axo-input axo-invalid"
                 name="email"
                 type="email"
                 placeholder="hello@example.com"
+                aria-invalid="true"
+                aria-describedby="email-help email-error"
+                required
               />
+              <small id="email-help" class="axo-help"
+                >Used only for this local demonstration.</small
+              >
+              <small id="email-error" class="axo-error">Enter a valid email address.</small>
             </label>
           </div>
 
@@ -74,10 +96,230 @@
             ></textarea>
           </label>
 
-          <button class="axo-button axo-button-block" type="button">
-            Send test message
-          </button>
+          <hr class="axo-divider" />
+
+          <fieldset class="axo-form">
+            <legend>Preferences</legend>
+
+            <label class="axo-checkbox">
+              <input type="checkbox" checked />
+              <span>Send layout release updates</span>
+            </label>
+
+            <label class="axo-radio">
+              <input type="radio" name="density" checked />
+              <span>Comfortable density</span>
+            </label>
+
+            <label class="axo-radio">
+              <input type="radio" name="density" />
+              <span>Compact density</span>
+            </label>
+
+            <label class="axo-switch">
+              <input id="motion-switch" type="checkbox" checked />
+              <span>Enable simple motion</span>
+            </label>
+          </fieldset>
+
+          <button class="axo-button axo-button-block" type="button">Send test message</button>
         </form>
+      </section>
+
+      <section id="tabs" class="axo-section axo-stack">
+        <div>
+          <h2 class="component-heading">Tabbed content</h2>
+          <p class="muted">Use Arrow Left, Arrow Right, Home, and End while a tab has focus.</p>
+        </div>
+
+        <div id="control-tabs" class="axo-tabs" data-axo-tabs>
+          <div class="axo-tab-list" aria-label="Control documentation">
+            <button class="axo-tab" type="button" data-axo-tab="overview" aria-selected="true">
+              Overview
+            </button>
+            <button class="axo-tab" type="button" data-axo-tab="keyboard">Keyboard</button>
+            <button class="axo-tab" type="button" data-axo-tab="frameworks">Frameworks</button>
+          </div>
+
+          <article class="axo-tab-panel axo-card axo-surface" data-axo-tab-panel="overview">
+            <h3>Semantic structure</h3>
+            <p class="panel-copy">
+              Axoloth links every tab to its panel and keeps only one panel visible.
+            </p>
+          </article>
+
+          <article class="axo-tab-panel axo-card axo-surface" data-axo-tab-panel="keyboard">
+            <h3>Roving focus</h3>
+            <p class="panel-copy">
+              Arrow keys move through tabs while Home and End jump to the edges.
+            </p>
+          </article>
+
+          <article class="axo-tab-panel axo-card axo-surface" data-axo-tab-panel="frameworks">
+            <h3>Framework neutral</h3>
+            <p class="panel-copy">
+              The same data attributes work in HTML, React, Vue, Svelte, and Angular.
+            </p>
+          </article>
+        </div>
+
+        <div class="axo-stack">
+          <div>
+            <h3 class="manual-tabs-heading">Manual activation</h3>
+            <p class="muted">Arrow keys move focus; Enter or Space activates the panel.</p>
+          </div>
+
+          <div id="manual-tabs" class="axo-tabs" data-axo-tabs data-axo-tabs-activation="manual">
+            <div class="axo-tab-list" aria-label="Manual tab demonstration">
+              <button class="axo-tab" type="button" data-axo-tab="preview" aria-selected="true">
+                Preview
+              </button>
+              <button class="axo-tab" type="button" data-axo-tab="source">Source</button>
+            </div>
+
+            <article class="axo-tab-panel axo-card axo-surface" data-axo-tab-panel="preview">
+              <p class="panel-copy">Preview remains selected while focus moves.</p>
+            </article>
+            <article class="axo-tab-panel axo-card axo-surface" data-axo-tab-panel="source">
+              <p class="panel-copy">Source activates only after confirmation.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="accordion" class="axo-section axo-stack">
+        <div>
+          <h2 class="component-heading">Accordion</h2>
+          <p class="muted">
+            This group keeps one item open at a time and allows every item to collapse.
+          </p>
+        </div>
+
+        <div id="control-accordion" class="axo-accordion" data-axo-accordion>
+          <section class="axo-accordion-item axo-surface">
+            <h3 class="accordion-heading">
+              <button
+                class="axo-accordion-trigger"
+                type="button"
+                data-axo-accordion-trigger="install"
+                aria-expanded="true"
+              >
+                How is Axoloth initialized?
+                <span class="axo-accordion-indicator" aria-hidden="true">+</span>
+              </button>
+            </h3>
+            <div class="axo-accordion-panel" data-axo-accordion-panel="install">
+              <p class="panel-copy">Import the CSS, then initialize only the behaviors you use.</p>
+            </div>
+          </section>
+
+          <section class="axo-accordion-item axo-surface">
+            <h3 class="accordion-heading">
+              <button
+                class="axo-accordion-trigger"
+                type="button"
+                data-axo-accordion-trigger="multiple"
+              >
+                Can several panels stay open?
+                <span class="axo-accordion-indicator" aria-hidden="true">+</span>
+              </button>
+            </h3>
+            <div class="axo-accordion-panel" data-axo-accordion-panel="multiple">
+              <p class="panel-copy">Yes. Add data-axo-accordion-multiple to the group.</p>
+            </div>
+          </section>
+
+          <section class="axo-accordion-item axo-surface">
+            <h3 class="accordion-heading">
+              <button
+                class="axo-accordion-trigger"
+                type="button"
+                data-axo-accordion-trigger="keyboard"
+              >
+                Which keyboard keys are supported?
+                <span class="axo-accordion-indicator" aria-hidden="true">+</span>
+              </button>
+            </h3>
+            <div class="axo-accordion-panel" data-axo-accordion-panel="keyboard">
+              <p class="panel-copy">Arrow Up, Arrow Down, Home, End, Enter, and Space.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section id="dropdown" class="axo-section axo-stack">
+        <div>
+          <h2 class="dropdown-heading">Dropdown menu</h2>
+          <p class="muted">
+            Open the menu with click, Enter, Space, Arrow Down, or Arrow Up. Navigate its actions
+            with Arrow keys, Home, End, and Escape.
+          </p>
+        </div>
+
+        <div id="control-dropdown" class="axo-dropdown axo-dropdown-end" data-axo-dropdown>
+          <button
+            class="axo-button axo-dropdown-trigger"
+            type="button"
+            data-axo-dropdown-toggle="project-actions"
+          >
+            Project actions
+          </button>
+
+          <div
+            class="axo-dropdown-menu axo-surface"
+            data-axo-dropdown-menu="project-actions"
+            hidden
+          >
+            <span class="axo-dropdown-label">Project</span>
+            <button
+              class="axo-dropdown-item"
+              type="button"
+              data-axo-dropdown-item
+              data-demo-toast-title="Snapshot saved"
+              data-demo-toast-message="The current layout snapshot is ready."
+            >
+              Save snapshot
+            </button>
+            <button
+              class="axo-dropdown-item"
+              type="button"
+              data-axo-dropdown-item
+              data-demo-toast-title="Layout duplicated"
+              data-demo-toast-message="A duplicate layout was created locally."
+            >
+              Duplicate layout
+            </button>
+            <hr class="axo-dropdown-separator" role="separator" />
+            <button
+              class="axo-dropdown-item"
+              type="button"
+              data-axo-dropdown-item
+              data-demo-toast-title="Draft archived"
+              data-demo-toast-message="The demo draft moved to the archive."
+            >
+              Archive draft
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="toast" class="axo-section axo-stack">
+        <div>
+          <h2 class="toast-heading">Toast notifications</h2>
+          <p class="muted">
+            Toasts announce updates through a live region, pause while focused or hovered, and can
+            be dismissed without a framework.
+          </p>
+        </div>
+
+        <div class="axo-cluster">
+          <button class="axo-button" type="button" data-demo-show-toast>
+            Show persistent toast
+          </button>
+          <button class="axo-button" type="button" data-demo-clear-toasts>
+            Clear notifications
+          </button>
+        </div>
       </section>
 
       <section id="notes" class="axo-section axo-card axo-contrast">
@@ -86,8 +328,57 @@
           <li>Form spacing is handled by <code>axo-form</code>.</li>
           <li>Responsive fields are handled by <code>axo-form-grid</code>.</li>
           <li>Controls stay neutral and can be themed by project CSS.</li>
+          <li>
+            <span class="axo-visually-hidden">Accessibility note: </span>Invalid states include text
+            and ARIA, not color alone.
+          </li>
         </ul>
       </section>
     </main>
+
+    <div
+      id="demo-toast-region"
+      class="axo-toast-region axo-toast-region-top-end"
+      data-axo-toast-region
+      aria-label="Demo notifications"
+    ></div>
+
+    <script type="module">
+      import {
+        initAccordion,
+        initDropdown,
+        initTabs,
+        initToast,
+      } from '../../../packages/axoloth-behavior/src/index.js';
+
+      window.axolothAccordion = initAccordion();
+      window.axolothDropdown = initDropdown();
+      window.axolothTabs = initTabs();
+      window.axolothToast = initToast(document, { duration: 4500, limit: 3 });
+
+      document.addEventListener('click', (event) => {
+        const dropdownAction = event.target.closest('[data-demo-toast-title]');
+        if (dropdownAction) {
+          window.axolothToast.show({
+            region: 'demo-toast-region',
+            title: dropdownAction.dataset.demoToastTitle,
+            message: dropdownAction.dataset.demoToastMessage,
+          });
+        }
+
+        if (event.target.closest('[data-demo-show-toast]')) {
+          window.axolothToast.show({
+            region: 'demo-toast-region',
+            title: 'Utilities ready',
+            message: 'This persistent toast remains until you dismiss it.',
+            duration: 0,
+          });
+        }
+
+        if (event.target.closest('[data-demo-clear-toasts]')) {
+          window.axolothToast.clear('demo-toast-region');
+        }
+      });
+    </script>
   </body>
 </html>

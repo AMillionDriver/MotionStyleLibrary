@@ -1,6 +1,6 @@
 {
   "name": "@quertys/axoloth-style",
-  "version": "0.0.8",
+  "version": "0.6.0",
   "prefix": "--axo-",
   "variables": [
     {
@@ -11,12 +11,28 @@
       "default": "1rem",
       "description": "Gap between items inside an Axoloth bento grid.",
       "valueSuggestions": [
-        { "value": "0.5rem", "description": "Compact spacing." },
-        { "value": "0.75rem", "description": "Tight spacing." },
-        { "value": "1rem", "description": "Default spacing." },
-        { "value": "1.5rem", "description": "Roomy spacing." },
-        { "value": "2rem", "description": "Large spacing." }
-      ]
+        {
+          "value": "0.5rem",
+          "description": "Compact spacing."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Tight spacing."
+        },
+        {
+          "value": "1rem",
+          "description": "Default spacing."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Roomy spacing."
+        },
+        {
+          "value": "2rem",
+          "description": "Large spacing."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-row-min",
@@ -26,12 +42,28 @@
       "default": "160px",
       "description": "Minimum auto row height for the bento grid.",
       "valueSuggestions": [
-        { "value": "120px", "description": "Compact bento rows." },
-        { "value": "160px", "description": "Default bento rows." },
-        { "value": "200px", "description": "Roomy bento rows." },
-        { "value": "240px", "description": "Large bento rows." },
-        { "value": "18rem", "description": "Responsive rem-based rows." }
-      ]
+        {
+          "value": "120px",
+          "description": "Compact bento rows."
+        },
+        {
+          "value": "160px",
+          "description": "Default bento rows."
+        },
+        {
+          "value": "200px",
+          "description": "Roomy bento rows."
+        },
+        {
+          "value": "240px",
+          "description": "Large bento rows."
+        },
+        {
+          "value": "18rem",
+          "description": "Responsive rem-based rows."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-radius",
@@ -41,12 +73,28 @@
       "default": "0.75rem",
       "description": "Default border radius for Axoloth cards.",
       "valueSuggestions": [
-        { "value": "0.25rem", "description": "Small radius." },
-        { "value": "0.5rem", "description": "Medium radius." },
-        { "value": "0.75rem", "description": "Default radius." },
-        { "value": "1rem", "description": "Large radius." },
-        { "value": "1.5rem", "description": "Soft radius." }
-      ]
+        {
+          "value": "0.25rem",
+          "description": "Small radius."
+        },
+        {
+          "value": "0.5rem",
+          "description": "Medium radius."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Default radius."
+        },
+        {
+          "value": "1rem",
+          "description": "Large radius."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Soft radius."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-border",
@@ -56,7 +104,10 @@
       "default": "1px solid rgb(255 255 255 / 0.1)",
       "description": "Default border value for Axoloth cards.",
       "valueSuggestions": [
-        { "value": "0", "description": "No border." },
+        {
+          "value": "0",
+          "description": "No border."
+        },
         {
           "value": "1px solid rgb(255 255 255 / 0.1)",
           "description": "Default subtle light border."
@@ -65,8 +116,12 @@
           "value": "1px solid rgb(15 23 42 / 0.12)",
           "description": "Subtle dark border for light surfaces."
         },
-        { "value": "1px solid currentColor", "description": "Use current text color." }
-      ]
+        {
+          "value": "1px solid currentColor",
+          "description": "Use current text color."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-card-padding",
@@ -76,12 +131,28 @@
       "default": "1rem",
       "description": "Default padding for Axoloth cards.",
       "valueSuggestions": [
-        { "value": "0.75rem", "description": "Compact card padding." },
-        { "value": "1rem", "description": "Default card padding." },
-        { "value": "1.25rem", "description": "Comfortable card padding." },
-        { "value": "1.5rem", "description": "Large card padding." },
-        { "value": "2rem", "description": "Spacious card padding." }
-      ]
+        {
+          "value": "0.75rem",
+          "description": "Compact card padding."
+        },
+        {
+          "value": "1rem",
+          "description": "Default card padding."
+        },
+        {
+          "value": "1.25rem",
+          "description": "Comfortable card padding."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Large card padding."
+        },
+        {
+          "value": "2rem",
+          "description": "Spacious card padding."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-stack-gap",
@@ -91,12 +162,28 @@
       "default": "0.75rem",
       "description": "Gap between children inside axo-stack.",
       "valueSuggestions": [
-        { "value": "0.25rem", "description": "Very tight stack gap." },
-        { "value": "0.5rem", "description": "Tight stack gap." },
-        { "value": "0.75rem", "description": "Default stack gap." },
-        { "value": "1rem", "description": "Comfortable stack gap." },
-        { "value": "1.5rem", "description": "Large stack gap." }
-      ]
+        {
+          "value": "0.25rem",
+          "description": "Very tight stack gap."
+        },
+        {
+          "value": "0.5rem",
+          "description": "Tight stack gap."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Default stack gap."
+        },
+        {
+          "value": "1rem",
+          "description": "Comfortable stack gap."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Large stack gap."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-row-gap",
@@ -106,12 +193,28 @@
       "default": "0.75rem",
       "description": "Gap between children inside axo-row.",
       "valueSuggestions": [
-        { "value": "0.25rem", "description": "Very tight row gap." },
-        { "value": "0.5rem", "description": "Tight row gap." },
-        { "value": "0.75rem", "description": "Default row gap." },
-        { "value": "1rem", "description": "Comfortable row gap." },
-        { "value": "1.5rem", "description": "Large row gap." }
-      ]
+        {
+          "value": "0.25rem",
+          "description": "Very tight row gap."
+        },
+        {
+          "value": "0.5rem",
+          "description": "Tight row gap."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Default row gap."
+        },
+        {
+          "value": "1rem",
+          "description": "Comfortable row gap."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Large row gap."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-header-height",
@@ -121,11 +224,24 @@
       "default": "4rem",
       "description": "Minimum block size for Axoloth header/appbar layouts.",
       "valueSuggestions": [
-        { "value": "3.5rem", "description": "Compact appbar height." },
-        { "value": "4rem", "description": "Default appbar height." },
-        { "value": "4.5rem", "description": "Comfortable appbar height." },
-        { "value": "5rem", "description": "Large appbar height." }
-      ]
+        {
+          "value": "3.5rem",
+          "description": "Compact appbar height."
+        },
+        {
+          "value": "4rem",
+          "description": "Default appbar height."
+        },
+        {
+          "value": "4.5rem",
+          "description": "Comfortable appbar height."
+        },
+        {
+          "value": "5rem",
+          "description": "Large appbar height."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-header-gap",
@@ -135,11 +251,24 @@
       "default": "0.75rem",
       "description": "Gap between top-level header grid/flex areas.",
       "valueSuggestions": [
-        { "value": "0.5rem", "description": "Tight header gap." },
-        { "value": "0.75rem", "description": "Default header gap." },
-        { "value": "1rem", "description": "Comfortable header gap." },
-        { "value": "1.5rem", "description": "Large header gap." }
-      ]
+        {
+          "value": "0.5rem",
+          "description": "Tight header gap."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Default header gap."
+        },
+        {
+          "value": "1rem",
+          "description": "Comfortable header gap."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Large header gap."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-header-center-width",
@@ -149,12 +278,28 @@
       "default": "28rem",
       "description": "Preferred max width for the center slot of axo-header-grid.",
       "valueSuggestions": [
-        { "value": "20rem", "description": "Compact center slot." },
-        { "value": "24rem", "description": "Medium center slot." },
-        { "value": "28rem", "description": "Default center slot." },
-        { "value": "36rem", "description": "Wide center slot." },
-        { "value": "min(42rem, 100%)", "description": "Responsive wide center slot." }
-      ]
+        {
+          "value": "20rem",
+          "description": "Compact center slot."
+        },
+        {
+          "value": "24rem",
+          "description": "Medium center slot."
+        },
+        {
+          "value": "28rem",
+          "description": "Default center slot."
+        },
+        {
+          "value": "36rem",
+          "description": "Wide center slot."
+        },
+        {
+          "value": "min(42rem, 100%)",
+          "description": "Responsive wide center slot."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-header-nav-gap",
@@ -164,11 +309,24 @@
       "default": "0.75rem",
       "description": "Gap between links or items inside axo-header-nav.",
       "valueSuggestions": [
-        { "value": "0.5rem", "description": "Tight nav gap." },
-        { "value": "0.75rem", "description": "Default nav gap." },
-        { "value": "1rem", "description": "Comfortable nav gap." },
-        { "value": "1.25rem", "description": "Large nav gap." }
-      ]
+        {
+          "value": "0.5rem",
+          "description": "Tight nav gap."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Default nav gap."
+        },
+        {
+          "value": "1rem",
+          "description": "Comfortable nav gap."
+        },
+        {
+          "value": "1.25rem",
+          "description": "Large nav gap."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-header-padding-block",
@@ -178,11 +336,24 @@
       "default": "0.625rem",
       "description": "Vertical padding for Axoloth header layouts.",
       "valueSuggestions": [
-        { "value": "0.5rem", "description": "Compact vertical padding." },
-        { "value": "0.625rem", "description": "Default vertical padding." },
-        { "value": "0.75rem", "description": "Comfortable vertical padding." },
-        { "value": "1rem", "description": "Large vertical padding." }
-      ]
+        {
+          "value": "0.5rem",
+          "description": "Compact vertical padding."
+        },
+        {
+          "value": "0.625rem",
+          "description": "Default vertical padding."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Comfortable vertical padding."
+        },
+        {
+          "value": "1rem",
+          "description": "Large vertical padding."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-header-padding-inline",
@@ -192,11 +363,24 @@
       "default": "1rem",
       "description": "Horizontal padding for Axoloth header layouts.",
       "valueSuggestions": [
-        { "value": "0.75rem", "description": "Compact horizontal padding." },
-        { "value": "1rem", "description": "Default horizontal padding." },
-        { "value": "1.5rem", "description": "Comfortable horizontal padding." },
-        { "value": "2rem", "description": "Large horizontal padding." }
-      ]
+        {
+          "value": "0.75rem",
+          "description": "Compact horizontal padding."
+        },
+        {
+          "value": "1rem",
+          "description": "Default horizontal padding."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Comfortable horizontal padding."
+        },
+        {
+          "value": "2rem",
+          "description": "Large horizontal padding."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-header-slot-gap",
@@ -206,11 +390,24 @@
       "default": "0.5rem",
       "description": "Gap between children inside header slots.",
       "valueSuggestions": [
-        { "value": "0.25rem", "description": "Very tight slot gap." },
-        { "value": "0.5rem", "description": "Default slot gap." },
-        { "value": "0.75rem", "description": "Comfortable slot gap." },
-        { "value": "1rem", "description": "Large slot gap." }
-      ]
+        {
+          "value": "0.25rem",
+          "description": "Very tight slot gap."
+        },
+        {
+          "value": "0.5rem",
+          "description": "Default slot gap."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Comfortable slot gap."
+        },
+        {
+          "value": "1rem",
+          "description": "Large slot gap."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-searchbar-width",
@@ -220,12 +417,28 @@
       "default": "28rem",
       "description": "Preferred width for axo-searchbar.",
       "valueSuggestions": [
-        { "value": "16rem", "description": "Compact searchbar width." },
-        { "value": "20rem", "description": "Medium searchbar width." },
-        { "value": "28rem", "description": "Default searchbar width." },
-        { "value": "36rem", "description": "Wide searchbar width." },
-        { "value": "100%", "description": "Fill available width." }
-      ]
+        {
+          "value": "16rem",
+          "description": "Compact searchbar width."
+        },
+        {
+          "value": "20rem",
+          "description": "Medium searchbar width."
+        },
+        {
+          "value": "28rem",
+          "description": "Default searchbar width."
+        },
+        {
+          "value": "36rem",
+          "description": "Wide searchbar width."
+        },
+        {
+          "value": "100%",
+          "description": "Fill available width."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-searchbar-height",
@@ -235,11 +448,24 @@
       "default": "2.5rem",
       "description": "Minimum block size for axo-searchbar.",
       "valueSuggestions": [
-        { "value": "2.25rem", "description": "Compact searchbar height." },
-        { "value": "2.5rem", "description": "Default searchbar height." },
-        { "value": "2.75rem", "description": "Comfortable searchbar height." },
-        { "value": "3rem", "description": "Large searchbar height." }
-      ]
+        {
+          "value": "2.25rem",
+          "description": "Compact searchbar height."
+        },
+        {
+          "value": "2.5rem",
+          "description": "Default searchbar height."
+        },
+        {
+          "value": "2.75rem",
+          "description": "Comfortable searchbar height."
+        },
+        {
+          "value": "3rem",
+          "description": "Large searchbar height."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-searchbar-gap",
@@ -249,11 +475,24 @@
       "default": "0.5rem",
       "description": "Gap between icon/text and input inside axo-searchbar.",
       "valueSuggestions": [
-        { "value": "0.25rem", "description": "Very tight searchbar gap." },
-        { "value": "0.5rem", "description": "Default searchbar gap." },
-        { "value": "0.75rem", "description": "Comfortable searchbar gap." },
-        { "value": "1rem", "description": "Large searchbar gap." }
-      ]
+        {
+          "value": "0.25rem",
+          "description": "Very tight searchbar gap."
+        },
+        {
+          "value": "0.5rem",
+          "description": "Default searchbar gap."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Comfortable searchbar gap."
+        },
+        {
+          "value": "1rem",
+          "description": "Large searchbar gap."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-searchbar-padding-inline",
@@ -263,11 +502,24 @@
       "default": "0.75rem",
       "description": "Horizontal padding for axo-searchbar.",
       "valueSuggestions": [
-        { "value": "0.5rem", "description": "Compact searchbar padding." },
-        { "value": "0.75rem", "description": "Default searchbar padding." },
-        { "value": "1rem", "description": "Comfortable searchbar padding." },
-        { "value": "1.25rem", "description": "Large searchbar padding." }
-      ]
+        {
+          "value": "0.5rem",
+          "description": "Compact searchbar padding."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Default searchbar padding."
+        },
+        {
+          "value": "1rem",
+          "description": "Comfortable searchbar padding."
+        },
+        {
+          "value": "1.25rem",
+          "description": "Large searchbar padding."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-icon-button-size",
@@ -277,11 +529,24 @@
       "default": "2.5rem",
       "description": "Inline size and minimum inline size for axo-icon-button.",
       "valueSuggestions": [
-        { "value": "2rem", "description": "Compact icon button." },
-        { "value": "2.5rem", "description": "Default icon button." },
-        { "value": "2.75rem", "description": "Comfortable icon button." },
-        { "value": "3rem", "description": "Large icon button." }
-      ]
+        {
+          "value": "2rem",
+          "description": "Compact icon button."
+        },
+        {
+          "value": "2.5rem",
+          "description": "Default icon button."
+        },
+        {
+          "value": "2.75rem",
+          "description": "Comfortable icon button."
+        },
+        {
+          "value": "3rem",
+          "description": "Large icon button."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-icon-button-radius",
@@ -291,11 +556,24 @@
       "default": "0.625rem",
       "description": "Border radius for axo-icon-button.",
       "valueSuggestions": [
-        { "value": "0.375rem", "description": "Small icon button radius." },
-        { "value": "0.625rem", "description": "Default icon button radius." },
-        { "value": "0.875rem", "description": "Large icon button radius." },
-        { "value": "999px", "description": "Circular icon button." }
-      ]
+        {
+          "value": "0.375rem",
+          "description": "Small icon button radius."
+        },
+        {
+          "value": "0.625rem",
+          "description": "Default icon button radius."
+        },
+        {
+          "value": "0.875rem",
+          "description": "Large icon button radius."
+        },
+        {
+          "value": "999px",
+          "description": "Circular icon button."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-icon-button-lift",
@@ -305,11 +583,24 @@
       "default": "-1px",
       "description": "Hover lift distance for axo-icon-button.",
       "valueSuggestions": [
-        { "value": "0", "description": "Disable icon button lift." },
-        { "value": "-1px", "description": "Default subtle lift." },
-        { "value": "-2px", "description": "Medium lift." },
-        { "value": "-4px", "description": "Strong lift." }
-      ]
+        {
+          "value": "0",
+          "description": "Disable icon button lift."
+        },
+        {
+          "value": "-1px",
+          "description": "Default subtle lift."
+        },
+        {
+          "value": "-2px",
+          "description": "Medium lift."
+        },
+        {
+          "value": "-4px",
+          "description": "Strong lift."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-sticky-offset",
@@ -319,11 +610,24 @@
       "default": "0",
       "description": "Top offset for axo-sticky-top.",
       "valueSuggestions": [
-        { "value": "0", "description": "Stick to the top edge." },
-        { "value": "0.5rem", "description": "Small sticky offset." },
-        { "value": "1rem", "description": "Default page gutter offset." },
-        { "value": "4rem", "description": "Offset below an appbar." }
-      ]
+        {
+          "value": "0",
+          "description": "Stick to the top edge."
+        },
+        {
+          "value": "0.5rem",
+          "description": "Small sticky offset."
+        },
+        {
+          "value": "1rem",
+          "description": "Default page gutter offset."
+        },
+        {
+          "value": "4rem",
+          "description": "Offset below an appbar."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-z-sticky",
@@ -333,11 +637,24 @@
       "default": "20",
       "description": "Z-index value for axo-sticky-top.",
       "valueSuggestions": [
-        { "value": "10", "description": "Low sticky layer." },
-        { "value": "20", "description": "Default sticky layer." },
-        { "value": "50", "description": "Above most local UI." },
-        { "value": "100", "description": "High sticky layer." }
-      ]
+        {
+          "value": "10",
+          "description": "Low sticky layer."
+        },
+        {
+          "value": "20",
+          "description": "Default sticky layer."
+        },
+        {
+          "value": "50",
+          "description": "Above most local UI."
+        },
+        {
+          "value": "100",
+          "description": "High sticky layer."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-sidebar-width",
@@ -347,12 +664,28 @@
       "default": "16rem",
       "description": "Expanded inline size for axo-sidebar.",
       "valueSuggestions": [
-        { "value": "14rem", "description": "Compact sidebar width." },
-        { "value": "16rem", "description": "Default sidebar width." },
-        { "value": "18rem", "description": "Comfortable sidebar width." },
-        { "value": "20rem", "description": "Large sidebar width." },
-        { "value": "min(20rem, 100%)", "description": "Responsive capped sidebar width." }
-      ]
+        {
+          "value": "14rem",
+          "description": "Compact sidebar width."
+        },
+        {
+          "value": "16rem",
+          "description": "Default sidebar width."
+        },
+        {
+          "value": "18rem",
+          "description": "Comfortable sidebar width."
+        },
+        {
+          "value": "20rem",
+          "description": "Large sidebar width."
+        },
+        {
+          "value": "min(20rem, 100%)",
+          "description": "Responsive capped sidebar width."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-sidebar-rail-width",
@@ -362,11 +695,24 @@
       "default": "4.5rem",
       "description": "Compact rail inline size for axo-sidebar-rail.",
       "valueSuggestions": [
-        { "value": "3.5rem", "description": "Very compact sidebar rail." },
-        { "value": "4rem", "description": "Compact sidebar rail." },
-        { "value": "4.5rem", "description": "Default sidebar rail." },
-        { "value": "5rem", "description": "Roomy sidebar rail." }
-      ]
+        {
+          "value": "3.5rem",
+          "description": "Very compact sidebar rail."
+        },
+        {
+          "value": "4rem",
+          "description": "Compact sidebar rail."
+        },
+        {
+          "value": "4.5rem",
+          "description": "Default sidebar rail."
+        },
+        {
+          "value": "5rem",
+          "description": "Roomy sidebar rail."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-sidebar-gap",
@@ -376,11 +722,24 @@
       "default": "0.75rem",
       "description": "Gap between sidebar children and shell regions.",
       "valueSuggestions": [
-        { "value": "0.5rem", "description": "Tight sidebar gap." },
-        { "value": "0.75rem", "description": "Default sidebar gap." },
-        { "value": "1rem", "description": "Comfortable sidebar gap." },
-        { "value": "1.5rem", "description": "Large sidebar gap." }
-      ]
+        {
+          "value": "0.5rem",
+          "description": "Tight sidebar gap."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Default sidebar gap."
+        },
+        {
+          "value": "1rem",
+          "description": "Comfortable sidebar gap."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Large sidebar gap."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-sidebar-padding",
@@ -390,11 +749,24 @@
       "default": "1rem",
       "description": "Inner padding for axo-sidebar.",
       "valueSuggestions": [
-        { "value": "0.5rem", "description": "Compact sidebar padding." },
-        { "value": "0.75rem", "description": "Tight sidebar padding." },
-        { "value": "1rem", "description": "Default sidebar padding." },
-        { "value": "1.5rem", "description": "Roomy sidebar padding." }
-      ]
+        {
+          "value": "0.5rem",
+          "description": "Compact sidebar padding."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Tight sidebar padding."
+        },
+        {
+          "value": "1rem",
+          "description": "Default sidebar padding."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Roomy sidebar padding."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-sidebar-transition",
@@ -404,14 +776,24 @@
       "default": "220ms ease",
       "description": "Transition timing used by sidebar width and item interactions.",
       "valueSuggestions": [
-        { "value": "160ms ease", "description": "Fast sidebar transition." },
-        { "value": "220ms ease", "description": "Default sidebar transition." },
-        { "value": "320ms ease", "description": "Slower sidebar transition." },
+        {
+          "value": "160ms ease",
+          "description": "Fast sidebar transition."
+        },
+        {
+          "value": "220ms ease",
+          "description": "Default sidebar transition."
+        },
+        {
+          "value": "320ms ease",
+          "description": "Slower sidebar transition."
+        },
         {
           "value": "420ms cubic-bezier(0.22, 1, 0.36, 1)",
           "description": "Soft emphasized transition."
         }
-      ]
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-sidebar-z",
@@ -421,11 +803,1523 @@
       "default": "20",
       "description": "Z-index value for axo-sidebar.",
       "valueSuggestions": [
-        { "value": "10", "description": "Low sidebar layer." },
-        { "value": "20", "description": "Default sidebar layer." },
-        { "value": "50", "description": "Above most local UI." },
-        { "value": "100", "description": "High sidebar layer." }
-      ]
+        {
+          "value": "10",
+          "description": "Low sidebar layer."
+        },
+        {
+          "value": "20",
+          "description": "Default sidebar layer."
+        },
+        {
+          "value": "50",
+          "description": "Above most local UI."
+        },
+        {
+          "value": "100",
+          "description": "High sidebar layer."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-offcanvas-width",
+      "module": "layout",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "var(--axo-sidebar-width, 16rem)",
+      "description": "Preferred inline size for axo-sidebar-offcanvas.",
+      "valueSuggestions": [
+        {
+          "value": "14rem",
+          "description": "Compact off-canvas sidebar."
+        },
+        {
+          "value": "16rem",
+          "description": "Default off-canvas sidebar."
+        },
+        {
+          "value": "20rem",
+          "description": "Wide off-canvas sidebar."
+        },
+        {
+          "value": "24rem",
+          "description": "Extra-wide off-canvas sidebar."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-offcanvas-max-width",
+      "module": "layout",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "calc(100vw - 2rem)",
+      "description": "Maximum viewport-safe width for an off-canvas sidebar.",
+      "valueSuggestions": [
+        {
+          "value": "calc(100vw - 1rem)",
+          "description": "Small viewport edge gap."
+        },
+        {
+          "value": "calc(100vw - 2rem)",
+          "description": "Default viewport edge gap."
+        },
+        {
+          "value": "90vw",
+          "description": "Ten-percent viewport reveal."
+        },
+        {
+          "value": "24rem",
+          "description": "Fixed maximum width."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-offcanvas-inset-top",
+      "module": "layout",
+      "category": "position",
+      "valueType": "length",
+      "default": "0",
+      "description": "Top viewport inset for an off-canvas sidebar.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "Start at the viewport top."
+        },
+        {
+          "value": "3.5rem",
+          "description": "Start below a compact header."
+        },
+        {
+          "value": "4rem",
+          "description": "Start below a default app header."
+        },
+        {
+          "value": "5rem",
+          "description": "Start below a large header."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-offcanvas-inset-bottom",
+      "module": "layout",
+      "category": "position",
+      "valueType": "length",
+      "default": "0",
+      "description": "Bottom viewport inset for an off-canvas sidebar.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "End at the viewport bottom."
+        },
+        {
+          "value": "3rem",
+          "description": "End above a compact footer."
+        },
+        {
+          "value": "4rem",
+          "description": "End above a default footer."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-offcanvas-backdrop",
+      "module": "layout",
+      "category": "surface",
+      "valueType": "color",
+      "default": "rgb(2 6 23 / 0.55)",
+      "description": "Backdrop color behind an open off-canvas sidebar.",
+      "valueSuggestions": [
+        {
+          "value": "rgb(2 6 23 / 0.35)",
+          "description": "Light dark backdrop."
+        },
+        {
+          "value": "rgb(2 6 23 / 0.55)",
+          "description": "Default dark backdrop."
+        },
+        {
+          "value": "rgb(2 6 23 / 0.72)",
+          "description": "Strong dark backdrop."
+        },
+        {
+          "value": "transparent",
+          "description": "Invisible dismiss layer."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-offcanvas-duration",
+      "module": "layout",
+      "category": "motion",
+      "valueType": "time",
+      "default": "220ms",
+      "description": "Open and close transition duration for the drawer and backdrop.",
+      "valueSuggestions": [
+        {
+          "value": "120ms",
+          "description": "Fast off-canvas transition."
+        },
+        {
+          "value": "220ms",
+          "description": "Default off-canvas transition."
+        },
+        {
+          "value": "320ms",
+          "description": "Slow off-canvas transition."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-offcanvas-easing",
+      "module": "layout",
+      "category": "motion",
+      "valueType": "timing-function",
+      "default": "ease",
+      "description": "Timing function for drawer and backdrop transitions.",
+      "valueSuggestions": [
+        {
+          "value": "ease",
+          "description": "Default browser easing."
+        },
+        {
+          "value": "ease-out",
+          "description": "Quick open and soft finish."
+        },
+        {
+          "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+          "description": "Soft emphasized easing."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-offcanvas-z",
+      "module": "layout",
+      "category": "position",
+      "valueType": "number",
+      "default": "50",
+      "description": "Stacking level for the off-canvas sidebar.",
+      "valueSuggestions": [
+        {
+          "value": "30",
+          "description": "Low overlay layer."
+        },
+        {
+          "value": "50",
+          "description": "Default off-canvas layer."
+        },
+        {
+          "value": "100",
+          "description": "High app overlay layer."
+        },
+        {
+          "value": "1000",
+          "description": "Global overlay layer."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-dialog-inset",
+      "module": "dialog",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "1rem",
+      "description": "Viewport edge spacing around an Axoloth dialog panel.",
+      "valueSuggestions": [
+        {
+          "value": "0.5rem",
+          "description": "Compact viewport inset."
+        },
+        {
+          "value": "1rem",
+          "description": "Default viewport inset."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Roomy viewport inset."
+        },
+        {
+          "value": "2rem",
+          "description": "Large viewport inset."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-dialog-width",
+      "module": "dialog",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "32rem",
+      "description": "Preferred inline size for axo-dialog-panel.",
+      "valueSuggestions": [
+        {
+          "value": "24rem",
+          "description": "Compact confirmation dialog."
+        },
+        {
+          "value": "32rem",
+          "description": "Default dialog width."
+        },
+        {
+          "value": "48rem",
+          "description": "Wide dialog workflow."
+        },
+        {
+          "value": "min(64rem, 100%)",
+          "description": "Large responsive dialog."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-dialog-padding",
+      "module": "dialog",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "1.25rem",
+      "description": "Internal padding for axo-dialog-panel.",
+      "valueSuggestions": [
+        {
+          "value": "0.75rem",
+          "description": "Compact dialog padding."
+        },
+        {
+          "value": "1rem",
+          "description": "Tight dialog padding."
+        },
+        {
+          "value": "1.25rem",
+          "description": "Default dialog padding."
+        },
+        {
+          "value": "2rem",
+          "description": "Roomy dialog padding."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-dialog-gap",
+      "module": "dialog",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "1rem",
+      "description": "Gap between dialog regions and actions.",
+      "valueSuggestions": [
+        {
+          "value": "0.5rem",
+          "description": "Compact dialog gap."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Tight dialog gap."
+        },
+        {
+          "value": "1rem",
+          "description": "Default dialog gap."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Roomy dialog gap."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-dialog-radius",
+      "module": "dialog",
+      "category": "shape",
+      "valueType": "length",
+      "default": "var(--axo-radius, 0.5rem)",
+      "description": "Border radius for axo-dialog-panel.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "Square dialog corners."
+        },
+        {
+          "value": "0.25rem",
+          "description": "Subtle dialog radius."
+        },
+        {
+          "value": "0.5rem",
+          "description": "Default dialog radius."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Soft dialog radius."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-dialog-border",
+      "module": "dialog",
+      "category": "surface",
+      "valueType": "border",
+      "default": "var(--axo-border, 1px solid currentColor)",
+      "description": "Border applied to axo-dialog-panel.",
+      "valueSuggestions": [
+        {
+          "value": "none",
+          "description": "Remove the dialog border."
+        },
+        {
+          "value": "1px solid currentColor",
+          "description": "Neutral dialog border."
+        },
+        {
+          "value": "1px solid rgb(148 163 184 / 0.35)",
+          "description": "Soft slate border."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-dialog-backdrop",
+      "module": "dialog",
+      "category": "surface",
+      "valueType": "color",
+      "default": "rgb(2 6 23 / 0.58)",
+      "description": "Backdrop color behind an open dialog.",
+      "valueSuggestions": [
+        {
+          "value": "rgb(2 6 23 / 0.35)",
+          "description": "Light dark backdrop."
+        },
+        {
+          "value": "rgb(2 6 23 / 0.58)",
+          "description": "Default dark backdrop."
+        },
+        {
+          "value": "rgb(2 6 23 / 0.75)",
+          "description": "Strong dark backdrop."
+        },
+        {
+          "value": "transparent",
+          "description": "Invisible dismiss layer."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-dialog-duration",
+      "module": "dialog",
+      "category": "motion",
+      "valueType": "time",
+      "default": "180ms",
+      "description": "Open and close transition duration for a dialog.",
+      "valueSuggestions": [
+        {
+          "value": "0ms",
+          "description": "Disable dialog transitions."
+        },
+        {
+          "value": "120ms",
+          "description": "Fast dialog transition."
+        },
+        {
+          "value": "180ms",
+          "description": "Default dialog transition."
+        },
+        {
+          "value": "280ms",
+          "description": "Slow dialog transition."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-dialog-easing",
+      "module": "dialog",
+      "category": "motion",
+      "valueType": "timing-function",
+      "default": "ease-out",
+      "description": "Timing function for dialog and backdrop transitions.",
+      "valueSuggestions": [
+        {
+          "value": "ease-out",
+          "description": "Default quick open and soft finish."
+        },
+        {
+          "value": "ease",
+          "description": "Balanced browser easing."
+        },
+        {
+          "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+          "description": "Soft emphasized easing."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-dialog-enter-distance",
+      "module": "dialog",
+      "category": "motion",
+      "valueType": "length",
+      "default": "0.75rem",
+      "description": "Vertical distance used while the dialog enters.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "No vertical entrance movement."
+        },
+        {
+          "value": "0.5rem",
+          "description": "Subtle entrance movement."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Default entrance movement."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Strong entrance movement."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-dialog-enter-scale",
+      "module": "dialog",
+      "category": "motion",
+      "valueType": "number",
+      "default": "0.98",
+      "description": "Initial panel scale used while the dialog enters.",
+      "valueSuggestions": [
+        {
+          "value": "0.92",
+          "description": "Strong scale entrance."
+        },
+        {
+          "value": "0.96",
+          "description": "Visible scale entrance."
+        },
+        {
+          "value": "0.98",
+          "description": "Default subtle scale entrance."
+        },
+        {
+          "value": "1",
+          "description": "Disable scale entrance."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-dialog-z",
+      "module": "dialog",
+      "category": "position",
+      "valueType": "number",
+      "default": "60",
+      "description": "Stacking level for the dialog layer.",
+      "valueSuggestions": [
+        {
+          "value": "50",
+          "description": "Standard overlay layer."
+        },
+        {
+          "value": "60",
+          "description": "Default dialog layer."
+        },
+        {
+          "value": "100",
+          "description": "High app dialog layer."
+        },
+        {
+          "value": "1000",
+          "description": "Global dialog layer."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-tabs-gap",
+      "module": "tabs",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "1rem",
+      "description": "Gap between the tab list and active panel.",
+      "valueSuggestions": [
+        {
+          "value": "0.5rem",
+          "description": "Compact tabs gap."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Tight tabs gap."
+        },
+        {
+          "value": "1rem",
+          "description": "Default tabs gap."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Roomy tabs gap."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-tab-list-gap",
+      "module": "tabs",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "0.25rem",
+      "description": "Gap between adjacent tab controls.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "Joined tab controls."
+        },
+        {
+          "value": "0.25rem",
+          "description": "Default tab control gap."
+        },
+        {
+          "value": "0.5rem",
+          "description": "Comfortable tab control gap."
+        },
+        {
+          "value": "1rem",
+          "description": "Wide tab control gap."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-tab-min-height",
+      "module": "tabs",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "2.75rem",
+      "description": "Minimum block size for an Axoloth tab control.",
+      "valueSuggestions": [
+        {
+          "value": "2.25rem",
+          "description": "Compact tab height."
+        },
+        {
+          "value": "2.75rem",
+          "description": "Default tab height."
+        },
+        {
+          "value": "3rem",
+          "description": "Comfortable tab height."
+        },
+        {
+          "value": "3.5rem",
+          "description": "Large tab height."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-tab-padding-inline",
+      "module": "tabs",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "1rem",
+      "description": "Horizontal padding inside each tab control.",
+      "valueSuggestions": [
+        {
+          "value": "0.5rem",
+          "description": "Compact tab padding."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Tight tab padding."
+        },
+        {
+          "value": "1rem",
+          "description": "Default tab padding."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Wide tab padding."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-tab-indicator-size",
+      "module": "tabs",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "2px",
+      "description": "Thickness of the selected tab indicator.",
+      "valueSuggestions": [
+        {
+          "value": "1px",
+          "description": "Subtle tab indicator."
+        },
+        {
+          "value": "2px",
+          "description": "Default tab indicator."
+        },
+        {
+          "value": "3px",
+          "description": "Strong tab indicator."
+        },
+        {
+          "value": "0.25rem",
+          "description": "Bold tab indicator."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-tab-indicator-color",
+      "module": "tabs",
+      "category": "surface",
+      "valueType": "color",
+      "default": "currentColor",
+      "description": "Color of the selected tab indicator.",
+      "valueSuggestions": [
+        {
+          "value": "currentColor",
+          "description": "Follow the current text color."
+        },
+        {
+          "value": "rgb(15 118 110)",
+          "description": "Teal indicator example."
+        },
+        {
+          "value": "rgb(37 99 235)",
+          "description": "Blue indicator example."
+        },
+        {
+          "value": "transparent",
+          "description": "Hide the visual indicator."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-tab-panel-padding",
+      "module": "tabs",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "0",
+      "description": "Internal padding applied to tab panels.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "No panel padding."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Compact panel padding."
+        },
+        {
+          "value": "1rem",
+          "description": "Default panel padding."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Roomy panel padding."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-tab-vertical-width",
+      "module": "tabs",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "14rem",
+      "description": "Preferred width of a vertical tab list.",
+      "valueSuggestions": [
+        {
+          "value": "10rem",
+          "description": "Compact vertical tab list."
+        },
+        {
+          "value": "14rem",
+          "description": "Default vertical tab list."
+        },
+        {
+          "value": "18rem",
+          "description": "Wide vertical tab list."
+        },
+        {
+          "value": "25%",
+          "description": "Proportional vertical tab list."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-accordion-gap",
+      "module": "accordion",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "0.75rem",
+      "description": "Gap between accordion items.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "Joined accordion items."
+        },
+        {
+          "value": "0.5rem",
+          "description": "Compact accordion gap."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Default accordion gap."
+        },
+        {
+          "value": "1rem",
+          "description": "Comfortable accordion gap."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-accordion-border",
+      "module": "accordion",
+      "category": "surface",
+      "valueType": "border",
+      "default": "1px solid currentColor",
+      "description": "Border applied to each accordion item.",
+      "valueSuggestions": [
+        {
+          "value": "none",
+          "description": "Remove accordion item borders."
+        },
+        {
+          "value": "1px solid currentColor",
+          "description": "Neutral accordion border."
+        },
+        {
+          "value": "1px solid rgb(148 163 184 / 0.35)",
+          "description": "Soft slate border."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-accordion-radius",
+      "module": "accordion",
+      "category": "shape",
+      "valueType": "length",
+      "default": "var(--axo-radius, 0.5rem)",
+      "description": "Border radius for accordion items.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "Square accordion items."
+        },
+        {
+          "value": "0.25rem",
+          "description": "Subtle accordion radius."
+        },
+        {
+          "value": "0.5rem",
+          "description": "Default accordion radius."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Soft accordion radius."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-accordion-trigger-min-height",
+      "module": "accordion",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "3rem",
+      "description": "Minimum block size for accordion triggers.",
+      "valueSuggestions": [
+        {
+          "value": "2.5rem",
+          "description": "Compact accordion trigger."
+        },
+        {
+          "value": "3rem",
+          "description": "Default accordion trigger."
+        },
+        {
+          "value": "3.5rem",
+          "description": "Comfortable accordion trigger."
+        },
+        {
+          "value": "4rem",
+          "description": "Large accordion trigger."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-accordion-trigger-padding",
+      "module": "accordion",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "0.75rem 1rem",
+      "description": "Padding inside accordion trigger controls.",
+      "valueSuggestions": [
+        {
+          "value": "0.5rem 0.75rem",
+          "description": "Compact trigger padding."
+        },
+        {
+          "value": "0.75rem 1rem",
+          "description": "Default trigger padding."
+        },
+        {
+          "value": "1rem 1.25rem",
+          "description": "Roomy trigger padding."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-accordion-panel-padding",
+      "module": "accordion",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "0 1rem 1rem",
+      "description": "Padding inside expanded accordion panels.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "No accordion panel padding."
+        },
+        {
+          "value": "0 0.75rem 0.75rem",
+          "description": "Compact panel padding."
+        },
+        {
+          "value": "0 1rem 1rem",
+          "description": "Default panel padding."
+        },
+        {
+          "value": "0 1.5rem 1.5rem",
+          "description": "Roomy panel padding."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-accordion-transition",
+      "module": "accordion",
+      "category": "motion",
+      "valueType": "transition",
+      "default": "180ms ease",
+      "description": "Timing used by accordion panel and indicator motion.",
+      "valueSuggestions": [
+        {
+          "value": "0ms linear",
+          "description": "Disable accordion motion."
+        },
+        {
+          "value": "120ms ease",
+          "description": "Fast accordion motion."
+        },
+        {
+          "value": "180ms ease",
+          "description": "Default accordion motion."
+        },
+        {
+          "value": "280ms ease-out",
+          "description": "Slow accordion motion."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-dropdown-gap",
+      "module": "dropdown",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "0.375rem",
+      "description": "Space between a dropdown trigger and its menu.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "Attach the menu to its trigger."
+        },
+        {
+          "value": "0.25rem",
+          "description": "Tight dropdown gap."
+        },
+        {
+          "value": "0.375rem",
+          "description": "Default dropdown gap."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Roomy dropdown gap."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-dropdown-min-width",
+      "module": "dropdown",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "12rem",
+      "description": "Minimum inline size of a dropdown menu.",
+      "valueSuggestions": [
+        {
+          "value": "10rem",
+          "description": "Compact dropdown menu."
+        },
+        {
+          "value": "12rem",
+          "description": "Default dropdown menu."
+        },
+        {
+          "value": "16rem",
+          "description": "Wide dropdown menu."
+        },
+        {
+          "value": "20rem",
+          "description": "Extra-wide dropdown menu."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-dropdown-max-height",
+      "module": "dropdown",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "20rem",
+      "description": "Maximum block size before a dropdown menu scrolls.",
+      "valueSuggestions": [
+        {
+          "value": "12rem",
+          "description": "Short dropdown viewport."
+        },
+        {
+          "value": "20rem",
+          "description": "Default dropdown viewport."
+        },
+        {
+          "value": "24rem",
+          "description": "Tall dropdown viewport."
+        },
+        {
+          "value": "50vh",
+          "description": "Viewport-relative menu height."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-dropdown-padding",
+      "module": "dropdown",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "0.375rem",
+      "description": "Internal padding around dropdown menu items.",
+      "valueSuggestions": [
+        {
+          "value": "0.25rem",
+          "description": "Compact menu padding."
+        },
+        {
+          "value": "0.375rem",
+          "description": "Default menu padding."
+        },
+        {
+          "value": "0.5rem",
+          "description": "Comfortable menu padding."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Roomy menu padding."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-dropdown-radius",
+      "module": "dropdown",
+      "category": "shape",
+      "valueType": "length",
+      "default": "var(--axo-radius, 0.5rem)",
+      "description": "Border radius for dropdown menus and items.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "Square dropdown menu."
+        },
+        {
+          "value": "0.25rem",
+          "description": "Subtle dropdown radius."
+        },
+        {
+          "value": "0.5rem",
+          "description": "Default dropdown radius."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Soft dropdown radius."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-dropdown-border",
+      "module": "dropdown",
+      "category": "surface",
+      "valueType": "border",
+      "default": "1px solid currentColor",
+      "description": "Border applied to a dropdown menu.",
+      "valueSuggestions": [
+        {
+          "value": "none",
+          "description": "Remove the menu border."
+        },
+        {
+          "value": "1px solid currentColor",
+          "description": "Neutral menu border."
+        },
+        {
+          "value": "1px solid rgb(148 163 184 / 0.35)",
+          "description": "Soft slate border."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-dropdown-shadow",
+      "module": "dropdown",
+      "category": "surface",
+      "valueType": "shadow",
+      "default": "0 18px 48px rgb(15 23 42 / 0.16)",
+      "description": "Shadow below a dropdown menu.",
+      "valueSuggestions": [
+        {
+          "value": "none",
+          "description": "Disable the menu shadow."
+        },
+        {
+          "value": "0 8px 24px rgb(15 23 42 / 0.12)",
+          "description": "Small menu shadow."
+        },
+        {
+          "value": "0 18px 48px rgb(15 23 42 / 0.16)",
+          "description": "Default menu shadow."
+        },
+        {
+          "value": "0 24px 64px rgb(15 23 42 / 0.22)",
+          "description": "Large menu shadow."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-dropdown-z",
+      "module": "dropdown",
+      "category": "position",
+      "valueType": "number",
+      "default": "40",
+      "description": "Stacking level for dropdown menus.",
+      "valueSuggestions": [
+        {
+          "value": "20",
+          "description": "Local menu layer."
+        },
+        {
+          "value": "40",
+          "description": "Default dropdown layer."
+        },
+        {
+          "value": "100",
+          "description": "High app menu layer."
+        },
+        {
+          "value": "1000",
+          "description": "Global menu layer."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-dropdown-duration",
+      "module": "dropdown",
+      "category": "motion",
+      "valueType": "time",
+      "default": "160ms",
+      "description": "Open and close transition duration for dropdown menus.",
+      "valueSuggestions": [
+        {
+          "value": "0ms",
+          "description": "Disable dropdown transitions."
+        },
+        {
+          "value": "120ms",
+          "description": "Fast dropdown transition."
+        },
+        {
+          "value": "160ms",
+          "description": "Default dropdown transition."
+        },
+        {
+          "value": "240ms",
+          "description": "Slow dropdown transition."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-dropdown-item-min-height",
+      "module": "dropdown",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "2.5rem",
+      "description": "Minimum block size for dropdown menu items.",
+      "valueSuggestions": [
+        {
+          "value": "2rem",
+          "description": "Compact menu item."
+        },
+        {
+          "value": "2.5rem",
+          "description": "Default menu item."
+        },
+        {
+          "value": "2.75rem",
+          "description": "Comfortable menu item."
+        },
+        {
+          "value": "3rem",
+          "description": "Large menu item."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-dropdown-item-padding",
+      "module": "dropdown",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "0.5rem 0.75rem",
+      "description": "Padding inside dropdown menu items.",
+      "valueSuggestions": [
+        {
+          "value": "0.375rem 0.5rem",
+          "description": "Compact item padding."
+        },
+        {
+          "value": "0.5rem 0.75rem",
+          "description": "Default item padding."
+        },
+        {
+          "value": "0.75rem 1rem",
+          "description": "Roomy item padding."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-toast-region-gap",
+      "module": "toast",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "0.75rem",
+      "description": "Gap between stacked toast notifications.",
+      "valueSuggestions": [
+        {
+          "value": "0.5rem",
+          "description": "Compact toast stack."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Default toast stack."
+        },
+        {
+          "value": "1rem",
+          "description": "Comfortable toast stack."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Roomy toast stack."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-toast-region-inset",
+      "module": "toast",
+      "category": "position",
+      "valueType": "length",
+      "default": "1rem",
+      "description": "Viewport edge inset for toast regions.",
+      "valueSuggestions": [
+        {
+          "value": "0.5rem",
+          "description": "Compact viewport inset."
+        },
+        {
+          "value": "1rem",
+          "description": "Default viewport inset."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Roomy viewport inset."
+        },
+        {
+          "value": "max(1rem, env(safe-area-inset-top))",
+          "description": "Safe-area aware inset."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-toast-width",
+      "module": "toast",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "24rem",
+      "description": "Preferred inline size for toast notifications.",
+      "valueSuggestions": [
+        {
+          "value": "18rem",
+          "description": "Compact toast width."
+        },
+        {
+          "value": "24rem",
+          "description": "Default toast width."
+        },
+        {
+          "value": "30rem",
+          "description": "Wide toast width."
+        },
+        {
+          "value": "calc(100vw - 2rem)",
+          "description": "Viewport-safe toast width."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-toast-padding",
+      "module": "toast",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "1rem",
+      "description": "Internal padding for a toast notification.",
+      "valueSuggestions": [
+        {
+          "value": "0.75rem",
+          "description": "Compact toast padding."
+        },
+        {
+          "value": "1rem",
+          "description": "Default toast padding."
+        },
+        {
+          "value": "1.25rem",
+          "description": "Comfortable toast padding."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Roomy toast padding."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-toast-gap",
+      "module": "toast",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "0.75rem",
+      "description": "Gap between toast content, actions, and dismiss control.",
+      "valueSuggestions": [
+        {
+          "value": "0.5rem",
+          "description": "Compact toast gap."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Default toast gap."
+        },
+        {
+          "value": "1rem",
+          "description": "Comfortable toast gap."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Wide toast gap."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-toast-radius",
+      "module": "toast",
+      "category": "shape",
+      "valueType": "length",
+      "default": "var(--axo-radius, 0.5rem)",
+      "description": "Border radius for toast notifications.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "Square toast corners."
+        },
+        {
+          "value": "0.25rem",
+          "description": "Subtle toast radius."
+        },
+        {
+          "value": "0.5rem",
+          "description": "Default toast radius."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Soft toast radius."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-toast-border",
+      "module": "toast",
+      "category": "surface",
+      "valueType": "border",
+      "default": "1px solid currentColor",
+      "description": "Border applied to toast notifications.",
+      "valueSuggestions": [
+        {
+          "value": "none",
+          "description": "Remove the toast border."
+        },
+        {
+          "value": "1px solid currentColor",
+          "description": "Neutral toast border."
+        },
+        {
+          "value": "1px solid rgb(148 163 184 / 0.35)",
+          "description": "Soft slate border."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-toast-shadow",
+      "module": "toast",
+      "category": "surface",
+      "valueType": "shadow",
+      "default": "0 18px 48px rgb(15 23 42 / 0.16)",
+      "description": "Shadow below toast notifications.",
+      "valueSuggestions": [
+        {
+          "value": "none",
+          "description": "Disable the toast shadow."
+        },
+        {
+          "value": "0 8px 24px rgb(15 23 42 / 0.12)",
+          "description": "Small toast shadow."
+        },
+        {
+          "value": "0 18px 48px rgb(15 23 42 / 0.16)",
+          "description": "Default toast shadow."
+        },
+        {
+          "value": "0 24px 64px rgb(15 23 42 / 0.22)",
+          "description": "Large toast shadow."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-toast-z",
+      "module": "toast",
+      "category": "position",
+      "valueType": "number",
+      "default": "80",
+      "description": "Stacking level for toast regions.",
+      "valueSuggestions": [
+        {
+          "value": "50",
+          "description": "Standard overlay level."
+        },
+        {
+          "value": "80",
+          "description": "Default toast level."
+        },
+        {
+          "value": "100",
+          "description": "High app notification level."
+        },
+        {
+          "value": "1000",
+          "description": "Global notification level."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-toast-duration",
+      "module": "toast",
+      "category": "motion",
+      "valueType": "time",
+      "default": "180ms",
+      "description": "Show and dismiss transition duration for toast notifications.",
+      "valueSuggestions": [
+        {
+          "value": "0ms",
+          "description": "Disable toast transitions."
+        },
+        {
+          "value": "120ms",
+          "description": "Fast toast transition."
+        },
+        {
+          "value": "180ms",
+          "description": "Default toast transition."
+        },
+        {
+          "value": "280ms",
+          "description": "Slow toast transition."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-toast-distance",
+      "module": "toast",
+      "category": "motion",
+      "valueType": "length",
+      "default": "0.75rem",
+      "description": "Vertical entrance and dismissal distance for a toast.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "Disable toast movement."
+        },
+        {
+          "value": "0.5rem",
+          "description": "Subtle toast movement."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Default toast movement."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Strong toast movement."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-app-gap",
@@ -435,11 +2329,24 @@
       "default": "0",
       "description": "Gap between app shell grid regions.",
       "valueSuggestions": [
-        { "value": "0", "description": "No gap between app regions." },
-        { "value": "0.5rem", "description": "Small app region gap." },
-        { "value": "1rem", "description": "Default comfortable app gap." },
-        { "value": "1.5rem", "description": "Large app region gap." }
-      ]
+        {
+          "value": "0",
+          "description": "No gap between app regions."
+        },
+        {
+          "value": "0.5rem",
+          "description": "Small app region gap."
+        },
+        {
+          "value": "1rem",
+          "description": "Default comfortable app gap."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Large app region gap."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-app-header-height",
@@ -449,11 +2356,24 @@
       "default": "4rem",
       "description": "Grid row height for axo-app-header.",
       "valueSuggestions": [
-        { "value": "3.5rem", "description": "Compact app header." },
-        { "value": "4rem", "description": "Default app header." },
-        { "value": "4.5rem", "description": "Comfortable app header." },
-        { "value": "5rem", "description": "Large app header." }
-      ]
+        {
+          "value": "3.5rem",
+          "description": "Compact app header."
+        },
+        {
+          "value": "4rem",
+          "description": "Default app header."
+        },
+        {
+          "value": "4.5rem",
+          "description": "Comfortable app header."
+        },
+        {
+          "value": "5rem",
+          "description": "Large app header."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-app-footer-height",
@@ -463,11 +2383,24 @@
       "default": "auto",
       "description": "Minimum block size for axo-app-footer.",
       "valueSuggestions": [
-        { "value": "auto", "description": "Size footer from content." },
-        { "value": "3rem", "description": "Compact app footer." },
-        { "value": "4rem", "description": "Default app footer." },
-        { "value": "5rem", "description": "Large app footer." }
-      ]
+        {
+          "value": "auto",
+          "description": "Size footer from content."
+        },
+        {
+          "value": "3rem",
+          "description": "Compact app footer."
+        },
+        {
+          "value": "4rem",
+          "description": "Default app footer."
+        },
+        {
+          "value": "5rem",
+          "description": "Large app footer."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-app-padding",
@@ -477,12 +2410,28 @@
       "default": "1rem",
       "description": "Inner padding for axo-app-main and axo-app-footer.",
       "valueSuggestions": [
-        { "value": "0", "description": "No app content padding." },
-        { "value": "0.75rem", "description": "Compact app content padding." },
-        { "value": "1rem", "description": "Default app content padding." },
-        { "value": "1.5rem", "description": "Roomy app content padding." },
-        { "value": "2rem", "description": "Large app content padding." }
-      ]
+        {
+          "value": "0",
+          "description": "No app content padding."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Compact app content padding."
+        },
+        {
+          "value": "1rem",
+          "description": "Default app content padding."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Roomy app content padding."
+        },
+        {
+          "value": "2rem",
+          "description": "Large app content padding."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-sidebar-fixed-top",
@@ -492,11 +2441,24 @@
       "default": "0",
       "description": "Top inset for axo-sidebar-fixed.",
       "valueSuggestions": [
-        { "value": "0", "description": "Pin to the viewport top edge." },
-        { "value": "3.5rem", "description": "Offset below a compact app header." },
-        { "value": "4rem", "description": "Offset below a default app header." },
-        { "value": "5rem", "description": "Offset below a large app header." }
-      ]
+        {
+          "value": "0",
+          "description": "Pin to the viewport top edge."
+        },
+        {
+          "value": "3.5rem",
+          "description": "Offset below a compact app header."
+        },
+        {
+          "value": "4rem",
+          "description": "Offset below a default app header."
+        },
+        {
+          "value": "5rem",
+          "description": "Offset below a large app header."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-sidebar-fixed-bottom",
@@ -506,11 +2468,371 @@
       "default": "0",
       "description": "Bottom inset for axo-sidebar-fixed.",
       "valueSuggestions": [
-        { "value": "0", "description": "Pin to the viewport bottom edge." },
-        { "value": "3rem", "description": "Offset above a compact footer." },
-        { "value": "4rem", "description": "Offset above a default footer." },
-        { "value": "5rem", "description": "Offset above a large footer." }
-      ]
+        {
+          "value": "0",
+          "description": "Pin to the viewport bottom edge."
+        },
+        {
+          "value": "3rem",
+          "description": "Offset above a compact footer."
+        },
+        {
+          "value": "4rem",
+          "description": "Offset above a default footer."
+        },
+        {
+          "value": "5rem",
+          "description": "Offset above a large footer."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-sidebar-main-offset-start",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "length",
+      "default": "0px",
+      "description": "Logical start offset used by fixed sidebar main-content helpers.",
+      "valueSuggestions": [
+        {
+          "value": "0px",
+          "description": "No logical start offset."
+        },
+        {
+          "value": "var(--axo-sidebar-rail-width, 4.5rem)",
+          "description": "Match the configured sidebar rail."
+        },
+        {
+          "value": "var(--axo-sidebar-width, 16rem)",
+          "description": "Match the configured expanded sidebar."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-sidebar-main-offset-end",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "length",
+      "default": "0px",
+      "description": "Logical end offset used by fixed sidebar main-content helpers.",
+      "valueSuggestions": [
+        {
+          "value": "0px",
+          "description": "No logical end offset."
+        },
+        {
+          "value": "var(--axo-sidebar-rail-width, 4.5rem)",
+          "description": "Match the configured sidebar rail."
+        },
+        {
+          "value": "var(--axo-sidebar-width, 16rem)",
+          "description": "Match the configured expanded sidebar."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-grid-gap",
+      "module": "layout",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "var(--axo-gap, 1rem)",
+      "description": "Gap between items in axo-auto-grid.",
+      "valueSuggestions": [
+        {
+          "value": "0.5rem",
+          "description": "Compact grid gap."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Small grid gap."
+        },
+        {
+          "value": "1rem",
+          "description": "Default grid gap."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Large grid gap."
+        },
+        {
+          "value": "2rem",
+          "description": "Extra-large grid gap."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-item-min",
+      "module": "layout",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "16rem",
+      "description": "Minimum item width before axo-auto-grid creates another column.",
+      "valueSuggestions": [
+        {
+          "value": "12rem",
+          "description": "Compact auto-grid items."
+        },
+        {
+          "value": "16rem",
+          "description": "Default auto-grid item width."
+        },
+        {
+          "value": "20rem",
+          "description": "Wide auto-grid items."
+        },
+        {
+          "value": "24rem",
+          "description": "Extra-wide auto-grid items."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-switcher-gap",
+      "module": "layout",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "1rem",
+      "description": "Gap between children of axo-switcher.",
+      "valueSuggestions": [
+        {
+          "value": "0.5rem",
+          "description": "Compact switcher gap."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Small switcher gap."
+        },
+        {
+          "value": "1rem",
+          "description": "Default switcher gap."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Large switcher gap."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-switcher-threshold",
+      "module": "layout",
+      "category": "responsive",
+      "valueType": "length",
+      "default": "40rem",
+      "description": "Available width where axo-switcher changes between stacked and row layout.",
+      "valueSuggestions": [
+        {
+          "value": "30rem",
+          "description": "Switch at a compact width."
+        },
+        {
+          "value": "40rem",
+          "description": "Default switch threshold."
+        },
+        {
+          "value": "48rem",
+          "description": "Tablet-sized switch threshold."
+        },
+        {
+          "value": "64rem",
+          "description": "Wide switch threshold."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-center-width",
+      "module": "layout",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "40rem",
+      "description": "Maximum inline size for axo-center.",
+      "valueSuggestions": [
+        {
+          "value": "32rem",
+          "description": "Narrow centered content."
+        },
+        {
+          "value": "40rem",
+          "description": "Default centered content."
+        },
+        {
+          "value": "56rem",
+          "description": "Wide centered content."
+        },
+        {
+          "value": "72rem",
+          "description": "Page-width centered content."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-center-gutter",
+      "module": "layout",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "0",
+      "description": "Inline padding inside axo-center.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "No inner gutter."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Compact inner gutter."
+        },
+        {
+          "value": "1rem",
+          "description": "Default page gutter."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Large inner gutter."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-cover-height",
+      "module": "layout",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "100dvh",
+      "description": "Minimum block size for axo-cover.",
+      "valueSuggestions": [
+        {
+          "value": "50dvh",
+          "description": "Half-viewport cover."
+        },
+        {
+          "value": "75dvh",
+          "description": "Large cover section."
+        },
+        {
+          "value": "100dvh",
+          "description": "Default full viewport cover."
+        },
+        {
+          "value": "40rem",
+          "description": "Fixed minimum cover height."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-cover-padding",
+      "module": "layout",
+      "category": "spacing",
+      "valueType": "spacing",
+      "default": "1rem",
+      "description": "Inner padding for axo-cover.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "No cover padding."
+        },
+        {
+          "value": "1rem",
+          "description": "Default cover padding."
+        },
+        {
+          "value": "2rem",
+          "description": "Large cover padding."
+        },
+        {
+          "value": "clamp(1rem, 5vw, 4rem)",
+          "description": "Fluid cover padding."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-reel-gap",
+      "module": "layout",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "1rem",
+      "description": "Gap between items in axo-reel.",
+      "valueSuggestions": [
+        {
+          "value": "0.5rem",
+          "description": "Compact reel gap."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Small reel gap."
+        },
+        {
+          "value": "1rem",
+          "description": "Default reel gap."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Large reel gap."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-reel-padding",
+      "module": "layout",
+      "category": "spacing",
+      "valueType": "spacing",
+      "default": "0",
+      "description": "Inline edge padding and scroll padding for axo-reel.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "No reel edge padding."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Compact reel edge padding."
+        },
+        {
+          "value": "1rem",
+          "description": "Default page-aligned reel padding."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Large reel edge padding."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-reel-item-width",
+      "module": "layout",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "18rem",
+      "description": "Preferred item width in axo-reel, capped to 85 percent on narrow screens.",
+      "valueSuggestions": [
+        {
+          "value": "14rem",
+          "description": "Compact reel items."
+        },
+        {
+          "value": "18rem",
+          "description": "Default reel item width."
+        },
+        {
+          "value": "22rem",
+          "description": "Wide reel items."
+        },
+        {
+          "value": "28rem",
+          "description": "Feature reel items."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-page-padding",
@@ -520,12 +2842,28 @@
       "default": "1rem",
       "description": "Page padding used by axo-page.",
       "valueSuggestions": [
-        { "value": "0", "description": "No page padding." },
-        { "value": "0.75rem", "description": "Compact page padding." },
-        { "value": "1rem", "description": "Default page padding." },
-        { "value": "1.5rem", "description": "Roomy page padding." },
-        { "value": "2rem", "description": "Large page padding." }
-      ]
+        {
+          "value": "0",
+          "description": "No page padding."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Compact page padding."
+        },
+        {
+          "value": "1rem",
+          "description": "Default page padding."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Roomy page padding."
+        },
+        {
+          "value": "2rem",
+          "description": "Large page padding."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-container-width",
@@ -535,12 +2873,28 @@
       "default": "72rem",
       "description": "Maximum inline size used by axo-container.",
       "valueSuggestions": [
-        { "value": "48rem", "description": "Narrow content container." },
-        { "value": "64rem", "description": "Medium content container." },
-        { "value": "72rem", "description": "Default content container." },
-        { "value": "80rem", "description": "Wide content container." },
-        { "value": "100%", "description": "Fill available width." }
-      ]
+        {
+          "value": "48rem",
+          "description": "Narrow content container."
+        },
+        {
+          "value": "64rem",
+          "description": "Medium content container."
+        },
+        {
+          "value": "72rem",
+          "description": "Default content container."
+        },
+        {
+          "value": "80rem",
+          "description": "Wide content container."
+        },
+        {
+          "value": "100%",
+          "description": "Fill available width."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-section-gap",
@@ -550,12 +2904,28 @@
       "default": "2rem",
       "description": "Vertical padding used by axo-section.",
       "valueSuggestions": [
-        { "value": "1rem", "description": "Compact section spacing." },
-        { "value": "1.5rem", "description": "Small section spacing." },
-        { "value": "2rem", "description": "Default section spacing." },
-        { "value": "3rem", "description": "Large section spacing." },
-        { "value": "4rem", "description": "Extra large section spacing." }
-      ]
+        {
+          "value": "1rem",
+          "description": "Compact section spacing."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Small section spacing."
+        },
+        {
+          "value": "2rem",
+          "description": "Default section spacing."
+        },
+        {
+          "value": "3rem",
+          "description": "Large section spacing."
+        },
+        {
+          "value": "4rem",
+          "description": "Extra large section spacing."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-control-height",
@@ -565,11 +2935,24 @@
       "default": "2.5rem",
       "description": "Minimum block size for axo-button and axo-input.",
       "valueSuggestions": [
-        { "value": "2.25rem", "description": "Compact control height." },
-        { "value": "2.5rem", "description": "Default control height." },
-        { "value": "2.75rem", "description": "Comfortable control height." },
-        { "value": "3rem", "description": "Large control height." }
-      ]
+        {
+          "value": "2.25rem",
+          "description": "Compact control height."
+        },
+        {
+          "value": "2.5rem",
+          "description": "Default control height."
+        },
+        {
+          "value": "2.75rem",
+          "description": "Comfortable control height."
+        },
+        {
+          "value": "3rem",
+          "description": "Large control height."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-control-padding-inline",
@@ -579,11 +2962,24 @@
       "default": "1rem",
       "description": "Horizontal padding for axo-button and axo-input.",
       "valueSuggestions": [
-        { "value": "0.75rem", "description": "Compact control padding." },
-        { "value": "1rem", "description": "Default control padding." },
-        { "value": "1.25rem", "description": "Comfortable control padding." },
-        { "value": "1.5rem", "description": "Large control padding." }
-      ]
+        {
+          "value": "0.75rem",
+          "description": "Compact control padding."
+        },
+        {
+          "value": "1rem",
+          "description": "Default control padding."
+        },
+        {
+          "value": "1.25rem",
+          "description": "Comfortable control padding."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Large control padding."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-control-gap",
@@ -593,11 +2989,24 @@
       "default": "0.75rem",
       "description": "Gap used by semantic controls, nav lists, clusters, and forms.",
       "valueSuggestions": [
-        { "value": "0.5rem", "description": "Tight control gap." },
-        { "value": "0.75rem", "description": "Default control gap." },
-        { "value": "1rem", "description": "Comfortable control gap." },
-        { "value": "1.5rem", "description": "Large control gap." }
-      ]
+        {
+          "value": "0.5rem",
+          "description": "Tight control gap."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Default control gap."
+        },
+        {
+          "value": "1rem",
+          "description": "Comfortable control gap."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Large control gap."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-focus-ring",
@@ -607,11 +3016,1000 @@
       "default": "2px solid currentColor",
       "description": "Focus-visible outline used by semantic links, buttons, and inputs.",
       "valueSuggestions": [
-        { "value": "2px solid currentColor", "description": "Default inherited focus ring." },
-        { "value": "2px solid rgb(34 211 238)", "description": "Cyan focus ring." },
-        { "value": "2px solid rgb(16 185 129)", "description": "Emerald focus ring." },
-        { "value": "3px solid currentColor", "description": "Strong inherited focus ring." }
-      ]
+        {
+          "value": "2px solid currentColor",
+          "description": "Default inherited focus ring."
+        },
+        {
+          "value": "2px solid rgb(34 211 238)",
+          "description": "Cyan focus ring."
+        },
+        {
+          "value": "2px solid rgb(16 185 129)",
+          "description": "Emerald focus ring."
+        },
+        {
+          "value": "3px solid currentColor",
+          "description": "Strong inherited focus ring."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-badge-gap",
+      "module": "semantic",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "0.375rem",
+      "description": "Gap between content inside axo-badge.",
+      "valueSuggestions": [
+        {
+          "value": "0.25rem",
+          "description": "Tight badge gap."
+        },
+        {
+          "value": "0.375rem",
+          "description": "Default badge gap."
+        },
+        {
+          "value": "0.5rem",
+          "description": "Relaxed badge gap."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-badge-padding",
+      "module": "semantic",
+      "category": "spacing",
+      "valueType": "spacing",
+      "default": "0.35rem 0.625rem",
+      "description": "Block and inline padding for axo-badge.",
+      "valueSuggestions": [
+        {
+          "value": "0.25rem 0.5rem",
+          "description": "Compact badge padding."
+        },
+        {
+          "value": "0.35rem 0.625rem",
+          "description": "Default badge padding."
+        },
+        {
+          "value": "0.5rem 0.75rem",
+          "description": "Large badge padding."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-badge-radius",
+      "module": "semantic",
+      "category": "shape",
+      "valueType": "length",
+      "default": "999px",
+      "description": "Border radius for axo-badge.",
+      "valueSuggestions": [
+        {
+          "value": "0.375rem",
+          "description": "Compact rounded badge."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Soft rounded badge."
+        },
+        {
+          "value": "999px",
+          "description": "Default pill badge."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-alert-padding",
+      "module": "semantic",
+      "category": "spacing",
+      "valueType": "spacing",
+      "default": "1rem",
+      "description": "Inner padding for axo-alert.",
+      "valueSuggestions": [
+        {
+          "value": "0.75rem",
+          "description": "Compact alert padding."
+        },
+        {
+          "value": "1rem",
+          "description": "Default alert padding."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Large alert padding."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-alert-gap",
+      "module": "semantic",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "0.5rem",
+      "description": "Vertical gap between alert content.",
+      "valueSuggestions": [
+        {
+          "value": "0.25rem",
+          "description": "Tight alert gap."
+        },
+        {
+          "value": "0.5rem",
+          "description": "Default alert gap."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Relaxed alert gap."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-empty-padding",
+      "module": "semantic",
+      "category": "spacing",
+      "valueType": "spacing",
+      "default": "2rem",
+      "description": "Inner padding for axo-empty and axo-empty-state.",
+      "valueSuggestions": [
+        {
+          "value": "1.5rem",
+          "description": "Compact empty-state padding."
+        },
+        {
+          "value": "2rem",
+          "description": "Default empty-state padding."
+        },
+        {
+          "value": "3rem",
+          "description": "Large empty-state padding."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-empty-gap",
+      "module": "semantic",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "0.75rem",
+      "description": "Vertical gap between empty-state content.",
+      "valueSuggestions": [
+        {
+          "value": "0.5rem",
+          "description": "Compact empty-state gap."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Default empty-state gap."
+        },
+        {
+          "value": "1rem",
+          "description": "Relaxed empty-state gap."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-table-cell-padding",
+      "module": "semantic",
+      "category": "spacing",
+      "valueType": "spacing",
+      "default": "0.75rem 1rem",
+      "description": "Cell padding for axo-table.",
+      "valueSuggestions": [
+        {
+          "value": "0.5rem 0.75rem",
+          "description": "Compact table cells."
+        },
+        {
+          "value": "0.75rem 1rem",
+          "description": "Default table cells."
+        },
+        {
+          "value": "1rem 1.25rem",
+          "description": "Spacious table cells."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-table-border",
+      "module": "semantic",
+      "category": "surface",
+      "valueType": "border",
+      "default": "1px solid rgb(127 127 127 / 0.24)",
+      "description": "Border used by the table wrapper and table rows.",
+      "valueSuggestions": [
+        {
+          "value": "none",
+          "description": "Remove table borders."
+        },
+        {
+          "value": "1px solid rgb(127 127 127 / 0.24)",
+          "description": "Default neutral table border."
+        },
+        {
+          "value": "1px solid currentColor",
+          "description": "Use the current text color."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-table-header-bg",
+      "module": "semantic",
+      "category": "surface",
+      "valueType": "color",
+      "default": "var(--axo-surface-bg, Canvas)",
+      "description": "Background color for sticky axo-table header cells.",
+      "valueSuggestions": [
+        {
+          "value": "var(--axo-surface-bg, Canvas)",
+          "description": "Follow the current Axoloth surface."
+        },
+        {
+          "value": "Canvas",
+          "description": "Use the browser canvas color."
+        },
+        {
+          "value": "transparent",
+          "description": "Use a transparent sticky header."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-skip-link-offset",
+      "module": "semantic",
+      "category": "accessibility",
+      "valueType": "length",
+      "default": "0.75rem",
+      "description": "Top and inline offset for axo-skip-link.",
+      "valueSuggestions": [
+        {
+          "value": "0.5rem",
+          "description": "Compact skip-link offset."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Default skip-link offset."
+        },
+        {
+          "value": "1rem",
+          "description": "Large skip-link offset."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-skip-link-z",
+      "module": "semantic",
+      "category": "accessibility",
+      "valueType": "number",
+      "default": "1000",
+      "description": "Stacking level for the focused skip link.",
+      "valueSuggestions": [
+        {
+          "value": "100",
+          "description": "Normal overlay level."
+        },
+        {
+          "value": "1000",
+          "description": "Default skip-link level."
+        },
+        {
+          "value": "9999",
+          "description": "Maximum app overlay level."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-divider-size",
+      "module": "semantic",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "1px",
+      "description": "Block thickness for axo-divider.",
+      "valueSuggestions": [
+        {
+          "value": "1px",
+          "description": "Default thin divider."
+        },
+        {
+          "value": "2px",
+          "description": "Strong divider."
+        },
+        {
+          "value": "0.125rem",
+          "description": "Bold divider."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-divider-gap",
+      "module": "semantic",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "1rem",
+      "description": "Vertical margin around axo-divider.",
+      "valueSuggestions": [
+        {
+          "value": "0.5rem",
+          "description": "Compact divider gap."
+        },
+        {
+          "value": "1rem",
+          "description": "Default divider gap."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Large divider gap."
+        },
+        {
+          "value": "2rem",
+          "description": "Section divider gap."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-divider-opacity",
+      "module": "semantic",
+      "category": "surface",
+      "valueType": "number",
+      "default": "0.16",
+      "description": "Opacity for axo-divider.",
+      "valueSuggestions": [
+        {
+          "value": "0.08",
+          "description": "Very subtle divider."
+        },
+        {
+          "value": "0.16",
+          "description": "Default divider opacity."
+        },
+        {
+          "value": "0.3",
+          "description": "Strong divider opacity."
+        },
+        {
+          "value": "1",
+          "description": "Fully opaque divider."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-progress-track",
+      "module": "semantic",
+      "category": "surface",
+      "valueType": "color",
+      "default": "color-mix(in srgb, currentColor 14%, transparent)",
+      "description": "Track color for axo-progress.",
+      "valueSuggestions": [
+        {
+          "value": "color-mix(in srgb, currentColor 14%, transparent)",
+          "description": "Default inherited track."
+        },
+        {
+          "value": "rgb(226 232 240)",
+          "description": "Light neutral track."
+        },
+        {
+          "value": "rgb(51 65 85)",
+          "description": "Dark neutral track."
+        },
+        {
+          "value": "transparent",
+          "description": "Transparent track."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-progress-fill",
+      "module": "semantic",
+      "category": "surface",
+      "valueType": "color",
+      "default": "currentColor",
+      "description": "Fill color for axo-progress-bar.",
+      "valueSuggestions": [
+        {
+          "value": "currentColor",
+          "description": "Follow inherited text color."
+        },
+        {
+          "value": "rgb(37 99 235)",
+          "description": "Blue progress fill."
+        },
+        {
+          "value": "rgb(5 150 105)",
+          "description": "Emerald progress fill."
+        },
+        {
+          "value": "rgb(220 38 38)",
+          "description": "Red progress fill."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-progress-size",
+      "module": "semantic",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "0.625rem",
+      "description": "Block thickness for axo-progress.",
+      "valueSuggestions": [
+        {
+          "value": "0.25rem",
+          "description": "Thin progress track."
+        },
+        {
+          "value": "0.5rem",
+          "description": "Compact progress track."
+        },
+        {
+          "value": "0.625rem",
+          "description": "Default progress track."
+        },
+        {
+          "value": "1rem",
+          "description": "Large progress track."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-progress-radius",
+      "module": "semantic",
+      "category": "shape",
+      "valueType": "length",
+      "default": "999px",
+      "description": "Border radius for axo-progress.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "Square progress track."
+        },
+        {
+          "value": "0.25rem",
+          "description": "Slightly rounded progress track."
+        },
+        {
+          "value": "999px",
+          "description": "Default pill progress track."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-progress-value",
+      "module": "semantic",
+      "category": "state",
+      "valueType": "percentage",
+      "default": "0%",
+      "description": "Visible completion width for axo-progress-bar.",
+      "valueSuggestions": [
+        {
+          "value": "0%",
+          "description": "No completion."
+        },
+        {
+          "value": "25%",
+          "description": "Quarter complete."
+        },
+        {
+          "value": "50%",
+          "description": "Half complete."
+        },
+        {
+          "value": "75%",
+          "description": "Three quarters complete."
+        },
+        {
+          "value": "100%",
+          "description": "Complete."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-progress-duration",
+      "module": "semantic",
+      "category": "motion",
+      "valueType": "time",
+      "default": "480ms",
+      "description": "Fill transition or indeterminate loop duration for progress utilities.",
+      "valueSuggestions": [
+        {
+          "value": "220ms",
+          "description": "Fast progress transition."
+        },
+        {
+          "value": "480ms",
+          "description": "Default progress transition."
+        },
+        {
+          "value": "1.2s",
+          "description": "Default indeterminate loop."
+        },
+        {
+          "value": "2s",
+          "description": "Slow indeterminate loop."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-progress-indeterminate-duration",
+      "module": "semantic",
+      "category": "motion",
+      "valueType": "time",
+      "default": "1.2s",
+      "description": "Loop duration for axo-progress-indeterminate.",
+      "valueSuggestions": [
+        {
+          "value": "720ms",
+          "description": "Fast indeterminate loop."
+        },
+        {
+          "value": "1.2s",
+          "description": "Default indeterminate loop."
+        },
+        {
+          "value": "1.8s",
+          "description": "Slow indeterminate loop."
+        },
+        {
+          "value": "2.4s",
+          "description": "Very slow indeterminate loop."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-skeleton-color",
+      "module": "semantic",
+      "category": "surface",
+      "valueType": "color",
+      "default": "color-mix(in srgb, currentColor 14%, transparent)",
+      "description": "Fill color for axo-skeleton.",
+      "valueSuggestions": [
+        {
+          "value": "color-mix(in srgb, currentColor 14%, transparent)",
+          "description": "Default inherited skeleton."
+        },
+        {
+          "value": "rgb(226 232 240)",
+          "description": "Light skeleton."
+        },
+        {
+          "value": "rgb(51 65 85)",
+          "description": "Dark skeleton."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-skeleton-height",
+      "module": "semantic",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "1rem",
+      "description": "Block size for axo-skeleton.",
+      "valueSuggestions": [
+        {
+          "value": "0.75rem",
+          "description": "Small text skeleton."
+        },
+        {
+          "value": "1rem",
+          "description": "Default text skeleton."
+        },
+        {
+          "value": "2rem",
+          "description": "Heading skeleton."
+        },
+        {
+          "value": "8rem",
+          "description": "Card media skeleton."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-skeleton-radius",
+      "module": "semantic",
+      "category": "shape",
+      "valueType": "length",
+      "default": "0.5rem",
+      "description": "Border radius for axo-skeleton.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "Square skeleton."
+        },
+        {
+          "value": "0.5rem",
+          "description": "Default skeleton radius."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Card-style skeleton radius."
+        },
+        {
+          "value": "999px",
+          "description": "Pill skeleton radius."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-skeleton-duration",
+      "module": "semantic",
+      "category": "motion",
+      "valueType": "time",
+      "default": "1.4s",
+      "description": "Pulse duration for axo-skeleton.",
+      "valueSuggestions": [
+        {
+          "value": "900ms",
+          "description": "Fast skeleton pulse."
+        },
+        {
+          "value": "1.4s",
+          "description": "Default skeleton pulse."
+        },
+        {
+          "value": "2s",
+          "description": "Slow skeleton pulse."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-skeleton-text-width",
+      "module": "semantic",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "24rem",
+      "description": "Maximum inline size for axo-skeleton-text.",
+      "valueSuggestions": [
+        {
+          "value": "8rem",
+          "description": "Short text line."
+        },
+        {
+          "value": "16rem",
+          "description": "Medium text line."
+        },
+        {
+          "value": "24rem",
+          "description": "Default text line."
+        },
+        {
+          "value": "100%",
+          "description": "Full-width text line."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-skeleton-size",
+      "module": "semantic",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "3rem",
+      "description": "Inline and block size for axo-skeleton-circle.",
+      "valueSuggestions": [
+        {
+          "value": "2rem",
+          "description": "Small avatar skeleton."
+        },
+        {
+          "value": "3rem",
+          "description": "Default avatar skeleton."
+        },
+        {
+          "value": "4rem",
+          "description": "Large avatar skeleton."
+        },
+        {
+          "value": "6rem",
+          "description": "Profile skeleton."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-error-color",
+      "module": "semantic",
+      "category": "form",
+      "valueType": "color",
+      "default": "rgb(180 35 24)",
+      "description": "Validation color for axo-error, axo-required, and axo-invalid.",
+      "valueSuggestions": [
+        {
+          "value": "rgb(180 35 24)",
+          "description": "Default accessible red."
+        },
+        {
+          "value": "rgb(220 38 38)",
+          "description": "Bright red."
+        },
+        {
+          "value": "rgb(190 24 93)",
+          "description": "Rose validation color."
+        },
+        {
+          "value": "currentColor",
+          "description": "Use inherited text color."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-state-gap",
+      "module": "semantic",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "0.625rem",
+      "description": "Gap between checkbox, radio, or switch controls and label text.",
+      "valueSuggestions": [
+        {
+          "value": "0.375rem",
+          "description": "Tight control gap."
+        },
+        {
+          "value": "0.625rem",
+          "description": "Default control gap."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Relaxed control gap."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-control-accent",
+      "module": "semantic",
+      "category": "form",
+      "valueType": "color",
+      "default": "currentColor",
+      "description": "Native accent color for Axoloth checkbox and radio controls.",
+      "valueSuggestions": [
+        {
+          "value": "currentColor",
+          "description": "Follow inherited text color."
+        },
+        {
+          "value": "rgb(37 99 235)",
+          "description": "Blue accent."
+        },
+        {
+          "value": "rgb(5 150 105)",
+          "description": "Emerald accent."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-check-size",
+      "module": "semantic",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "1.125rem",
+      "description": "Native checkbox and radio control size.",
+      "valueSuggestions": [
+        {
+          "value": "1rem",
+          "description": "Compact check control."
+        },
+        {
+          "value": "1.125rem",
+          "description": "Default check control."
+        },
+        {
+          "value": "1.25rem",
+          "description": "Large check control."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-switch-track",
+      "module": "semantic",
+      "category": "form",
+      "valueType": "color",
+      "default": "color-mix(in srgb, currentColor 14%, transparent)",
+      "description": "Unchecked track color for axo-switch.",
+      "valueSuggestions": [
+        {
+          "value": "color-mix(in srgb, currentColor 14%, transparent)",
+          "description": "Default inherited switch track."
+        },
+        {
+          "value": "rgb(203 213 225)",
+          "description": "Light neutral switch track."
+        },
+        {
+          "value": "rgb(71 85 105)",
+          "description": "Dark neutral switch track."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-switch-active",
+      "module": "semantic",
+      "category": "form",
+      "valueType": "color",
+      "default": "currentColor",
+      "description": "Checked track color for axo-switch.",
+      "valueSuggestions": [
+        {
+          "value": "currentColor",
+          "description": "Follow inherited text color."
+        },
+        {
+          "value": "rgb(37 99 235)",
+          "description": "Blue active switch."
+        },
+        {
+          "value": "rgb(5 150 105)",
+          "description": "Emerald active switch."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-switch-thumb",
+      "module": "semantic",
+      "category": "form",
+      "valueType": "color",
+      "default": "Canvas",
+      "description": "Thumb fill color for axo-switch.",
+      "valueSuggestions": [
+        {
+          "value": "Canvas",
+          "description": "Follow the current color scheme."
+        },
+        {
+          "value": "white",
+          "description": "White switch thumb."
+        },
+        {
+          "value": "rgb(15 23 42)",
+          "description": "Dark switch thumb."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-switch-width",
+      "module": "semantic",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "2.75rem",
+      "description": "Inline size for axo-switch input.",
+      "valueSuggestions": [
+        {
+          "value": "2.25rem",
+          "description": "Compact switch width."
+        },
+        {
+          "value": "2.75rem",
+          "description": "Default switch width."
+        },
+        {
+          "value": "3.25rem",
+          "description": "Large switch width."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-switch-height",
+      "module": "semantic",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "1.5rem",
+      "description": "Block size for axo-switch input.",
+      "valueSuggestions": [
+        {
+          "value": "1.25rem",
+          "description": "Compact switch height."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Default switch height."
+        },
+        {
+          "value": "1.75rem",
+          "description": "Large switch height."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-switch-padding",
+      "module": "semantic",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "0.125rem",
+      "description": "Inner edge padding used to position the switch thumb.",
+      "valueSuggestions": [
+        {
+          "value": "1px",
+          "description": "Tight switch padding."
+        },
+        {
+          "value": "0.125rem",
+          "description": "Default switch padding."
+        },
+        {
+          "value": "0.1875rem",
+          "description": "Large switch padding."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-switch-thumb-size",
+      "module": "semantic",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "1rem",
+      "description": "Inline and block size for the switch thumb.",
+      "valueSuggestions": [
+        {
+          "value": "0.875rem",
+          "description": "Compact switch thumb."
+        },
+        {
+          "value": "1rem",
+          "description": "Default switch thumb."
+        },
+        {
+          "value": "1.25rem",
+          "description": "Large switch thumb."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-switch-duration",
+      "module": "semantic",
+      "category": "motion",
+      "valueType": "time",
+      "default": "220ms",
+      "description": "Track and thumb transition duration for axo-switch.",
+      "valueSuggestions": [
+        {
+          "value": "120ms",
+          "description": "Fast switch transition."
+        },
+        {
+          "value": "220ms",
+          "description": "Default switch transition."
+        },
+        {
+          "value": "360ms",
+          "description": "Slow switch transition."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-duration",
@@ -621,12 +4019,28 @@
       "default": "480ms",
       "description": "Shared animation and transition duration for Axoloth motion utilities.",
       "valueSuggestions": [
-        { "value": "120ms", "description": "Very fast motion." },
-        { "value": "220ms", "description": "Fast motion." },
-        { "value": "480ms", "description": "Default motion duration." },
-        { "value": "720ms", "description": "Slow motion." },
-        { "value": "1s", "description": "Long motion." }
-      ]
+        {
+          "value": "120ms",
+          "description": "Very fast motion."
+        },
+        {
+          "value": "220ms",
+          "description": "Fast motion."
+        },
+        {
+          "value": "480ms",
+          "description": "Default motion duration."
+        },
+        {
+          "value": "720ms",
+          "description": "Slow motion."
+        },
+        {
+          "value": "1s",
+          "description": "Long motion."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-delay",
@@ -636,13 +4050,32 @@
       "default": "0ms",
       "description": "Animation delay for Axoloth entrance utilities.",
       "valueSuggestions": [
-        { "value": "0ms", "description": "No delay." },
-        { "value": "120ms", "description": "Small stagger delay." },
-        { "value": "220ms", "description": "Medium stagger delay." },
-        { "value": "480ms", "description": "Large stagger delay." },
-        { "value": "1s", "description": "Long delay." },
-        { "value": "5s", "description": "Very long demo delay." }
-      ]
+        {
+          "value": "0ms",
+          "description": "No delay."
+        },
+        {
+          "value": "120ms",
+          "description": "Small stagger delay."
+        },
+        {
+          "value": "220ms",
+          "description": "Medium stagger delay."
+        },
+        {
+          "value": "480ms",
+          "description": "Large stagger delay."
+        },
+        {
+          "value": "1s",
+          "description": "Long delay."
+        },
+        {
+          "value": "5s",
+          "description": "Very long demo delay."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-rise-distance",
@@ -652,12 +4085,28 @@
       "default": "18px",
       "description": "Starting translateY distance for axo-rise.",
       "valueSuggestions": [
-        { "value": "8px", "description": "Subtle rise distance." },
-        { "value": "12px", "description": "Small rise distance." },
-        { "value": "18px", "description": "Default rise distance." },
-        { "value": "24px", "description": "Strong rise distance." },
-        { "value": "32px", "description": "Large rise distance." }
-      ]
+        {
+          "value": "8px",
+          "description": "Subtle rise distance."
+        },
+        {
+          "value": "12px",
+          "description": "Small rise distance."
+        },
+        {
+          "value": "18px",
+          "description": "Default rise distance."
+        },
+        {
+          "value": "24px",
+          "description": "Strong rise distance."
+        },
+        {
+          "value": "32px",
+          "description": "Large rise distance."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-pop-start",
@@ -667,11 +4116,24 @@
       "default": "0.92",
       "description": "Starting scale value for axo-pop.",
       "valueSuggestions": [
-        { "value": "0.88", "description": "Strong pop scale." },
-        { "value": "0.92", "description": "Default pop scale." },
-        { "value": "0.96", "description": "Subtle pop scale." },
-        { "value": "1", "description": "No scale change." }
-      ]
+        {
+          "value": "0.88",
+          "description": "Strong pop scale."
+        },
+        {
+          "value": "0.92",
+          "description": "Default pop scale."
+        },
+        {
+          "value": "0.96",
+          "description": "Subtle pop scale."
+        },
+        {
+          "value": "1",
+          "description": "No scale change."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-lift-distance",
@@ -681,12 +4143,28 @@
       "default": "-4px",
       "description": "Hover translateY distance for axo-lift.",
       "valueSuggestions": [
-        { "value": "-1px", "description": "Subtle lift." },
-        { "value": "-2px", "description": "Small lift." },
-        { "value": "-4px", "description": "Default lift." },
-        { "value": "-8px", "description": "Strong lift." },
-        { "value": "0", "description": "Disable lift movement." }
-      ]
+        {
+          "value": "-1px",
+          "description": "Subtle lift."
+        },
+        {
+          "value": "-2px",
+          "description": "Small lift."
+        },
+        {
+          "value": "-4px",
+          "description": "Default lift."
+        },
+        {
+          "value": "-8px",
+          "description": "Strong lift."
+        },
+        {
+          "value": "0",
+          "description": "Disable lift movement."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-glow-shadow",
@@ -696,12 +4174,28 @@
       "default": "0 18px 48px rgb(34 211 238 / 0.16)",
       "description": "Hover box-shadow used by axo-glow.",
       "valueSuggestions": [
-        { "value": "none", "description": "Disable glow shadow." },
-        { "value": "0 18px 48px rgb(34 211 238 / 0.16)", "description": "Default cyan glow." },
-        { "value": "0 18px 48px rgb(16 185 129 / 0.16)", "description": "Emerald glow." },
-        { "value": "0 18px 48px rgb(244 114 182 / 0.16)", "description": "Pink glow." },
-        { "value": "0 20px 60px rgb(15 23 42 / 0.18)", "description": "Neutral shadow glow." }
-      ]
+        {
+          "value": "none",
+          "description": "Disable glow shadow."
+        },
+        {
+          "value": "0 18px 48px rgb(34 211 238 / 0.16)",
+          "description": "Default cyan glow."
+        },
+        {
+          "value": "0 18px 48px rgb(16 185 129 / 0.16)",
+          "description": "Emerald glow."
+        },
+        {
+          "value": "0 18px 48px rgb(244 114 182 / 0.16)",
+          "description": "Pink glow."
+        },
+        {
+          "value": "0 20px 60px rgb(15 23 42 / 0.18)",
+          "description": "Neutral shadow glow."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-shimmer-duration",
@@ -711,12 +4205,28 @@
       "default": "1.6s",
       "description": "Loop duration for axo-shimmer overlay.",
       "valueSuggestions": [
-        { "value": "900ms", "description": "Fast shimmer loop." },
-        { "value": "1.2s", "description": "Medium shimmer loop." },
-        { "value": "1.6s", "description": "Default shimmer loop." },
-        { "value": "2.4s", "description": "Slow shimmer loop." },
-        { "value": "3s", "description": "Very slow shimmer loop." }
-      ]
+        {
+          "value": "900ms",
+          "description": "Fast shimmer loop."
+        },
+        {
+          "value": "1.2s",
+          "description": "Medium shimmer loop."
+        },
+        {
+          "value": "1.6s",
+          "description": "Default shimmer loop."
+        },
+        {
+          "value": "2.4s",
+          "description": "Slow shimmer loop."
+        },
+        {
+          "value": "3s",
+          "description": "Very slow shimmer loop."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-shimmer-color",
@@ -726,11 +4236,24 @@
       "default": "rgb(255 255 255 / 0.16)",
       "description": "Highlight color for axo-shimmer overlay.",
       "valueSuggestions": [
-        { "value": "rgb(255 255 255 / 0.16)", "description": "Default light shimmer." },
-        { "value": "rgb(255 255 255 / 0.28)", "description": "Stronger light shimmer." },
-        { "value": "rgb(34 211 238 / 0.18)", "description": "Cyan shimmer." },
-        { "value": "rgb(15 23 42 / 0.12)", "description": "Dark shimmer for light surfaces." }
-      ]
+        {
+          "value": "rgb(255 255 255 / 0.16)",
+          "description": "Default light shimmer."
+        },
+        {
+          "value": "rgb(255 255 255 / 0.28)",
+          "description": "Stronger light shimmer."
+        },
+        {
+          "value": "rgb(34 211 238 / 0.18)",
+          "description": "Cyan shimmer."
+        },
+        {
+          "value": "rgb(15 23 42 / 0.12)",
+          "description": "Dark shimmer for light surfaces."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-surface-bg",
@@ -740,11 +4263,24 @@
       "default": "rgb(255 255 255 / 0.92)",
       "description": "Background color for axo-surface.",
       "valueSuggestions": [
-        { "value": "rgb(255 255 255 / 0.92)", "description": "Default light surface." },
-        { "value": "rgb(248 250 252)", "description": "Solid slate-50 surface." },
-        { "value": "rgb(15 23 42 / 0.92)", "description": "Dark glass surface." },
-        { "value": "transparent", "description": "No surface fill." }
-      ]
+        {
+          "value": "rgb(255 255 255 / 0.92)",
+          "description": "Default light surface."
+        },
+        {
+          "value": "rgb(248 250 252)",
+          "description": "Solid slate-50 surface."
+        },
+        {
+          "value": "rgb(15 23 42 / 0.92)",
+          "description": "Dark glass surface."
+        },
+        {
+          "value": "transparent",
+          "description": "No surface fill."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-surface-color",
@@ -754,11 +4290,24 @@
       "default": "rgb(15 23 42)",
       "description": "Text color for axo-surface.",
       "valueSuggestions": [
-        { "value": "rgb(15 23 42)", "description": "Default dark text." },
-        { "value": "rgb(51 65 85)", "description": "Soft dark text." },
-        { "value": "rgb(248 250 252)", "description": "Light text for dark surfaces." },
-        { "value": "currentColor", "description": "Inherit current text color." }
-      ]
+        {
+          "value": "rgb(15 23 42)",
+          "description": "Default dark text."
+        },
+        {
+          "value": "rgb(51 65 85)",
+          "description": "Soft dark text."
+        },
+        {
+          "value": "rgb(248 250 252)",
+          "description": "Light text for dark surfaces."
+        },
+        {
+          "value": "currentColor",
+          "description": "Inherit current text color."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-surface-border",
@@ -768,11 +4317,24 @@
       "default": "rgb(15 23 42 / 0.12)",
       "description": "Border color for axo-surface.",
       "valueSuggestions": [
-        { "value": "transparent", "description": "No visible border." },
-        { "value": "rgb(15 23 42 / 0.12)", "description": "Default dark subtle border." },
-        { "value": "rgb(255 255 255 / 0.14)", "description": "Light border for dark surfaces." },
-        { "value": "currentColor", "description": "Use current text color." }
-      ]
+        {
+          "value": "transparent",
+          "description": "No visible border."
+        },
+        {
+          "value": "rgb(15 23 42 / 0.12)",
+          "description": "Default dark subtle border."
+        },
+        {
+          "value": "rgb(255 255 255 / 0.14)",
+          "description": "Light border for dark surfaces."
+        },
+        {
+          "value": "currentColor",
+          "description": "Use current text color."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-surface-shadow",
@@ -782,11 +4344,24 @@
       "default": "0 18px 48px rgb(15 23 42 / 0.08)",
       "description": "Box-shadow for axo-surface.",
       "valueSuggestions": [
-        { "value": "none", "description": "Disable surface shadow." },
-        { "value": "0 8px 24px rgb(15 23 42 / 0.08)", "description": "Small surface shadow." },
-        { "value": "0 18px 48px rgb(15 23 42 / 0.08)", "description": "Default surface shadow." },
-        { "value": "0 24px 64px rgb(15 23 42 / 0.14)", "description": "Large surface shadow." }
-      ]
+        {
+          "value": "none",
+          "description": "Disable surface shadow."
+        },
+        {
+          "value": "0 8px 24px rgb(15 23 42 / 0.08)",
+          "description": "Small surface shadow."
+        },
+        {
+          "value": "0 18px 48px rgb(15 23 42 / 0.08)",
+          "description": "Default surface shadow."
+        },
+        {
+          "value": "0 24px 64px rgb(15 23 42 / 0.14)",
+          "description": "Large surface shadow."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-contrast-bg",
@@ -796,11 +4371,24 @@
       "default": "rgb(15 23 42)",
       "description": "Background color for axo-contrast.",
       "valueSuggestions": [
-        { "value": "rgb(15 23 42)", "description": "Default dark contrast surface." },
-        { "value": "rgb(2 6 23)", "description": "Near-black contrast surface." },
-        { "value": "rgb(255 255 255)", "description": "Light contrast surface." },
-        { "value": "currentColor", "description": "Use current text color as the fill." }
-      ]
+        {
+          "value": "rgb(15 23 42)",
+          "description": "Default dark contrast surface."
+        },
+        {
+          "value": "rgb(2 6 23)",
+          "description": "Near-black contrast surface."
+        },
+        {
+          "value": "rgb(255 255 255)",
+          "description": "Light contrast surface."
+        },
+        {
+          "value": "currentColor",
+          "description": "Use current text color as the fill."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-contrast-color",
@@ -810,11 +4398,24 @@
       "default": "rgb(248 250 252)",
       "description": "Text color for axo-contrast.",
       "valueSuggestions": [
-        { "value": "rgb(248 250 252)", "description": "Default light text." },
-        { "value": "rgb(226 232 240)", "description": "Soft light text." },
-        { "value": "rgb(15 23 42)", "description": "Dark text for light contrast surfaces." },
-        { "value": "currentColor", "description": "Inherit current text color." }
-      ]
+        {
+          "value": "rgb(248 250 252)",
+          "description": "Default light text."
+        },
+        {
+          "value": "rgb(226 232 240)",
+          "description": "Soft light text."
+        },
+        {
+          "value": "rgb(15 23 42)",
+          "description": "Dark text for light contrast surfaces."
+        },
+        {
+          "value": "currentColor",
+          "description": "Inherit current text color."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-contrast-border",
@@ -824,11 +4425,24 @@
       "default": "rgb(15 23 42 / 0.2)",
       "description": "Border color for axo-contrast.",
       "valueSuggestions": [
-        { "value": "transparent", "description": "No visible border." },
-        { "value": "rgb(15 23 42 / 0.2)", "description": "Default dark contrast border." },
-        { "value": "rgb(255 255 255 / 0.18)", "description": "Light contrast border." },
-        { "value": "currentColor", "description": "Use current text color." }
-      ]
+        {
+          "value": "transparent",
+          "description": "No visible border."
+        },
+        {
+          "value": "rgb(15 23 42 / 0.2)",
+          "description": "Default dark contrast border."
+        },
+        {
+          "value": "rgb(255 255 255 / 0.18)",
+          "description": "Light contrast border."
+        },
+        {
+          "value": "currentColor",
+          "description": "Use current text color."
+        }
+      ],
+      "status": "active"
     },
     {
       "name": "--axo-contrast-shadow",
@@ -838,11 +4452,24 @@
       "default": "0 18px 48px rgb(15 23 42 / 0.18)",
       "description": "Box-shadow for axo-contrast.",
       "valueSuggestions": [
-        { "value": "none", "description": "Disable contrast shadow." },
-        { "value": "0 8px 24px rgb(15 23 42 / 0.12)", "description": "Small contrast shadow." },
-        { "value": "0 18px 48px rgb(15 23 42 / 0.18)", "description": "Default contrast shadow." },
-        { "value": "0 24px 64px rgb(15 23 42 / 0.24)", "description": "Large contrast shadow." }
-      ]
+        {
+          "value": "none",
+          "description": "Disable contrast shadow."
+        },
+        {
+          "value": "0 8px 24px rgb(15 23 42 / 0.12)",
+          "description": "Small contrast shadow."
+        },
+        {
+          "value": "0 18px 48px rgb(15 23 42 / 0.18)",
+          "description": "Default contrast shadow."
+        },
+        {
+          "value": "0 24px 64px rgb(15 23 42 / 0.24)",
+          "description": "Large contrast shadow."
+        }
+      ],
+      "status": "active"
     }
   ]
 }

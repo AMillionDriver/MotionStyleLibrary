@@ -1,0 +1,53 @@
+{
+  "name": "@quertys/axoloth-behavior",
+  "version": "0.5.0",
+  "description": "Optional zero-dependency JavaScript behaviors for Axoloth Style.",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "src",
+    "metadata",
+    "scripts",
+    "CHANGELOG.md",
+    "MIGRATION.md",
+    "LICENSE",
+    "README.md"
+  ],
+  "exports": {
+    ".": "./src/index.js",
+    "./accordion": "./src/accordion.js",
+    "./dialog": "./src/dialog.js",
+    "./dropdown": "./src/dropdown.js",
+    "./offcanvas": "./src/offcanvas.js",
+    "./tabs": "./src/tabs.js",
+    "./toast": "./src/toast.js",
+    "./metadata/api-baseline.json": "./metadata/api-baseline.json",
+    "./metadata/deprecations.json": "./metadata/deprecations.json",
+    "./metadata/registry.json": "./metadata/registry.json"
+  },
+  "scripts": {
+    "test:syntax": "node --check src/internal/collection.js && node --check src/internal/createDismissibleLayer.js && node --check src/accordion.js && node --check src/dialog.js && node --check src/dropdown.js && node --check src/offcanvas.js && node --check src/tabs.js && node --check src/toast.js && node --check src/index.js",
+    "test:contract": "node --test scripts/api-contract.test.mjs",
+    "test": "npm run test:syntax && npm run test:contract",
+    "check:api": "node scripts/check-api.mjs",
+    "check": "npm run test && npm run check:api",
+    "snapshot:api": "node scripts/snapshot-api.mjs"
+  },
+  "keywords": [
+    "axoloth",
+    "javascript",
+    "behavior",
+    "dialog",
+    "modal",
+    "offcanvas",
+    "sidebar",
+    "drawer",
+    "accessibility",
+    "accordion",
+    "tabs",
+    "dropdown",
+    "toast",
+    "notification"
+  ],
+  "license": "MIT"
+}

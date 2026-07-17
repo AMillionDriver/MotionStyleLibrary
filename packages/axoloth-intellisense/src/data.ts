@@ -1,8 +1,9 @@
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 import * as vscode from 'vscode';
+import { DeprecatableEntry, formatDeprecationSummary } from './deprecation';
 
-export interface AxolothClassEntry {
+export interface AxolothClassEntry extends DeprecatableEntry {
   name: string;
   module: string;
   category: string;
@@ -15,7 +16,7 @@ export interface AxolothVariableValueSuggestion {
   description: string;
 }
 
-export interface AxolothVariableEntry {
+export interface AxolothVariableEntry extends DeprecatableEntry {
   name: string;
   module: string;
   category: string;
@@ -72,6 +73,8 @@ export function createClassDocumentation(entry: AxolothClassEntry): vscode.Markd
   markdown.isTrusted = false;
   markdown.appendMarkdown(`**${entry.name}**\n\n`);
   markdown.appendMarkdown(`${entry.description}\n\n`);
+  const deprecation = formatDeprecationSummary(entry);
+  if (deprecation) markdown.appendMarkdown(`> **Deprecated:** ${deprecation}\n\n`);
   markdown.appendMarkdown(`Category: \`${entry.category}\`  \n`);
   markdown.appendMarkdown(`Module: \`${entry.module}\``);
 
@@ -87,6 +90,8 @@ export function createVariableDocumentation(entry: AxolothVariableEntry): vscode
   markdown.isTrusted = false;
   markdown.appendMarkdown(`**${entry.name}**\n\n`);
   markdown.appendMarkdown(`${entry.description}\n\n`);
+  const deprecation = formatDeprecationSummary(entry);
+  if (deprecation) markdown.appendMarkdown(`> **Deprecated:** ${deprecation}\n\n`);
   markdown.appendMarkdown(`Default: \`${entry.default}\`  \n`);
 
   if (entry.valueType) {

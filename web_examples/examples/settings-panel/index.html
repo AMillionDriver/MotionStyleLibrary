@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../packages/axoloth-style/src/axoloth.css" />
+    <title>Axoloth Settings Panel Example</title>
+    <style>
+      :root {
+        --demo-bg: #f3f6fb;
+        --demo-text: #111827;
+        --demo-muted: #667085;
+        --demo-accent: #059669;
+      }
+
+      body {
+        margin: 0;
+        color: var(--demo-text);
+        background: var(--demo-bg);
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      }
+
+      .muted {
+        color: var(--demo-muted);
+      }
+
+      .status-pill {
+        display: inline-flex;
+        padding: 0.25rem 0.65rem;
+        border-radius: 999px;
+        color: var(--demo-accent);
+        background: rgba(5, 150, 105, 0.12);
+        font-size: 0.85rem;
+        font-weight: 800;
+      }
+
+      .axo-contrast .status-pill {
+        color: #a7f3d0;
+        background: rgba(16, 185, 129, 0.18);
+      }
+    </style>
+  </head>
+  <body class="axo-page axo-theme-light">
+    <main class="axo-container">
+      <header class="axo-section">
+        <nav class="axo-nav" aria-label="Settings navigation">
+          <ul class="axo-nav-list">
+            <li><a class="axo-link" href="../../index.html">Docs</a></li>
+            <li><a class="axo-link" href="#profile">Profile</a></li>
+            <li><a class="axo-link" href="#preferences">Preferences</a></li>
+          </ul>
+        </nav>
+        <h1>Settings panel</h1>
+        <p class="muted">
+          A practical admin form layout with cards, grids, labels, inputs, and action buttons.
+        </p>
+      </header>
+
+      <section class="axo-section axo-bento">
+        <aside class="axo-card axo-contrast axo-tall">
+          <h2>Account</h2>
+          <p>Workspace owner</p>
+          <span class="status-pill">Active</span>
+        </aside>
+
+        <form id="profile" class="axo-card axo-surface axo-large axo-form">
+          <h2>Profile</h2>
+          <div class="axo-form-grid">
+            <label class="axo-field">
+              <span class="axo-label">Display name</span>
+              <input class="axo-input" value="Axoloth Lab" />
+            </label>
+            <label class="axo-field">
+              <span class="axo-label">Handle</span>
+              <input class="axo-input" value="@axoloth" />
+            </label>
+          </div>
+          <label class="axo-field">
+            <span class="axo-label">Bio</span>
+            <textarea class="axo-input" rows="4">CSS-first layout utilities.</textarea>
+          </label>
+          <button class="axo-button" type="button">Save profile</button>
+        </form>
+
+        <form id="preferences" class="axo-card axo-surface axo-wide axo-form">
+          <h2>Preferences</h2>
+          <label class="axo-field">
+            <span class="axo-label">Default page type</span>
+            <select class="axo-input">
+              <option>Dashboard</option>
+              <option>Documentation</option>
+              <option>Landing page</option>
+            </select>
+          </label>
+          <button class="axo-button axo-button-block" type="button">Update settings</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

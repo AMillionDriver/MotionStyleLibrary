@@ -22,6 +22,19 @@
       .muted {
         color: #667085;
       }
+
+      .narrow-panel {
+        box-sizing: border-box;
+        inline-size: min(100%, 34rem);
+        margin-top: 1rem;
+        padding: 1rem;
+        border: 1px dashed #98a2b3;
+        border-radius: 0.75rem;
+      }
+
+      .demo-block {
+        margin-top: 3rem;
+      }
     </style>
   </head>
   <body>
@@ -30,8 +43,7 @@
         <a class="axo-link" href="../../index.html">Back to docs</a>
         <h1>Bento utilities</h1>
         <p class="muted">
-          Square, wide, tall, and large cards using the same responsive bento
-          grid.
+          Square, wide, tall, and large cards using the same responsive bento grid.
         </p>
       </header>
 
@@ -60,6 +72,56 @@
           <h2>Fade</h2>
           <p class="muted">Simple entrance preset.</p>
         </article>
+      </section>
+
+      <section class="demo-block" aria-labelledby="container-bento-title">
+        <h2 id="container-bento-title">Container-aware Bento</h2>
+        <p class="muted">
+          This panel stays one column on a wide desktop because its own width is below 40rem.
+        </p>
+
+        <div class="axo-container-query narrow-panel">
+          <div id="container-bento" class="axo-bento axo-container-responsive">
+            <article class="axo-card axo-surface axo-wide">
+              <h3>Panel-aware wide card</h3>
+              <p class="muted">It only spans when this wrapper has enough room.</p>
+            </article>
+            <article class="axo-card axo-contrast axo-square">
+              <h3>Compact card</h3>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="demo-block" aria-labelledby="primitive-title">
+        <h2 id="primitive-title">Adaptive primitives</h2>
+
+        <h3>Auto grid</h3>
+        <div id="auto-grid" class="axo-auto-grid" style="--axo-item-min: 14rem">
+          <article class="axo-card axo-surface">Grid one</article>
+          <article class="axo-card axo-surface">Grid two</article>
+          <article class="axo-card axo-surface">Grid three</article>
+        </div>
+
+        <h3>Switcher</h3>
+        <div id="switcher" class="axo-switcher" style="--axo-switcher-threshold: 36rem">
+          <article class="axo-card axo-surface">Primary content</article>
+          <aside class="axo-card axo-surface">Secondary content</aside>
+        </div>
+
+        <h3>Horizontal reel</h3>
+        <div
+          id="reel"
+          class="axo-reel"
+          role="region"
+          aria-label="Horizontal reel example"
+          tabindex="0"
+        >
+          <article class="axo-card axo-surface">Reel one</article>
+          <article class="axo-card axo-surface">Reel two</article>
+          <article class="axo-card axo-surface">Reel three</article>
+          <article class="axo-card axo-surface">Reel four</article>
+        </div>
       </section>
     </main>
   </body>

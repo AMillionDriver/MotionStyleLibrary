@@ -13,20 +13,90 @@
     "id": "bento",
     "name": "Bento",
     "category": "Layout",
-    "version": "0.0.8",
+    "version": "0.0.10",
     "status": "ready",
     "previewUrl": "./examples/bento/",
     "sourceUrl": "./examples/bento/index.html",
-    "description": "Responsive bento grid using square, wide, tall, and large cards."
+    "description": "Viewport and container-aware Bento grids plus auto-grid, switcher, and reel primitives."
   },
   {
     "id": "semantic-form",
     "name": "Semantic Form",
     "category": "Semantic Controls",
-    "version": "0.0.8",
+    "version": "0.4.0",
     "status": "ready",
     "previewUrl": "./examples/semantic-form/",
     "sourceUrl": "./examples/semantic-form/index.html",
-    "description": "Form, input, button, nav, section, and page utilities in plain HTML."
+    "description": "Accessible forms, Tabs, Accordion, Dropdown, Toast notifications, keyboard navigation, and semantic layout utilities."
+  },
+  {
+    "id": "fixed-sidebar",
+    "name": "Fixed Sidebar",
+    "category": "Layout",
+    "version": "0.2.0",
+    "status": "ready",
+    "previewUrl": "./examples/fixed-sidebar/",
+    "sourceUrl": "./examples/fixed-sidebar/index.html",
+    "description": "Fixed rail, accessible off-canvas drawer, and nested modal with top-layer focus and Escape behavior."
+  },
+  {
+    "id": "dashboard-cards",
+    "name": "Dashboard Cards",
+    "category": "Layout",
+    "version": "0.1.0",
+    "status": "ready",
+    "previewUrl": "./examples/dashboard-cards/",
+    "sourceUrl": "./examples/dashboard-cards/index.html",
+    "description": "Dashboard metrics, progress, skeletons, badges, alerts, empty states, and a responsive table."
+  },
+  {
+    "id": "pricing-table",
+    "name": "Pricing Table",
+    "category": "Layout",
+    "version": "0.0.8",
+    "status": "ready",
+    "previewUrl": "./examples/pricing-table/",
+    "sourceUrl": "./examples/pricing-table/index.html",
+    "description": "Pricing cards with equal rhythm, semantic buttons, and comparison copy."
+  },
+  {
+    "id": "landing-simple",
+    "name": "Simple Landing",
+    "category": "Layout",
+    "version": "0.0.8",
+    "status": "ready",
+    "previewUrl": "./examples/landing-simple/",
+    "sourceUrl": "./examples/landing-simple/index.html",
+    "description": "A small landing page with nav, hero, sections, bento cards, and call-to-action links."
+  },
+  {
+    "id": "portfolio-grid",
+    "name": "Portfolio Grid",
+    "category": "Layout",
+    "version": "0.0.8",
+    "status": "ready",
+    "previewUrl": "./examples/portfolio-grid/",
+    "sourceUrl": "./examples/portfolio-grid/index.html",
+    "description": "Project gallery using bento sizing, cards, and simple dark visual polish."
+  },
+  {
+    "id": "settings-panel",
+    "name": "Settings Panel",
+    "category": "Semantic Controls",
+    "version": "0.0.8",
+    "status": "ready",
+    "previewUrl": "./examples/settings-panel/",
+    "sourceUrl": "./examples/settings-panel/index.html",
+    "description": "Admin settings layout with cards, form grid, labels, inputs, select, and buttons."
+  },
+  {
+    "id": "motion-showcase",
+    "name": "Motion Showcase",
+    "category": "Motion",
+    "version": "0.0.8",
+    "status": "ready",
+    "previewUrl": "./examples/motion-showcase/",
+    "sourceUrl": "./examples/motion-showcase/index.html",
+    "description": "Rise, fade, pop, lift, glow, and shimmer utilities shown as static page examples."
   }
 ]

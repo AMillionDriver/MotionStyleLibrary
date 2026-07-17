@@ -114,6 +114,78 @@
   z-index: var(--axo-z-sticky, 20);
 }
 
+:where(.axo-container-query) {
+  container-name: axo-layout;
+  container-type: inline-size;
+  min-inline-size: 0;
+}
+
+:where(.axo-auto-grid) {
+  box-sizing: border-box;
+  display: grid;
+  gap: var(--axo-grid-gap, var(--axo-gap, 1rem));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--axo-item-min, 16rem)), 1fr));
+  inline-size: 100%;
+}
+
+:where(.axo-switcher) {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--axo-switcher-gap, 1rem);
+  inline-size: 100%;
+}
+
+:where(.axo-switcher > *) {
+  flex-basis: calc((var(--axo-switcher-threshold, 40rem) - 100%) * 999);
+  flex-grow: 1;
+  min-inline-size: 0;
+}
+
+:where(.axo-center) {
+  box-sizing: border-box;
+  inline-size: min(100%, var(--axo-center-width, 40rem));
+  margin-inline: auto;
+  padding-inline: var(--axo-center-gutter, 0);
+}
+
+:where(.axo-cover) {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  inline-size: 100%;
+  justify-content: center;
+  min-block-size: var(--axo-cover-height, 100dvh);
+  padding: var(--axo-cover-padding, 1rem);
+}
+
+:where(.axo-reel) {
+  box-sizing: border-box;
+  display: flex;
+  gap: var(--axo-reel-gap, 1rem);
+  inline-size: 100%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  padding-inline: var(--axo-reel-padding, 0);
+  scroll-padding-inline: var(--axo-reel-padding, 0);
+  scroll-snap-type: inline mandatory;
+}
+
+:where(.axo-reel > *) {
+  flex: 0 0 min(85%, var(--axo-reel-item-width, 18rem));
+  min-inline-size: 0;
+  scroll-snap-align: start;
+}
+
+:where(.axo-scroll-snap) {
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
+}
+
+:where(.axo-snap-start) {
+  scroll-snap-align: start;
+}
+
 :where(.axo-shell) {
   align-items: stretch;
   box-sizing: border-box;
@@ -218,19 +290,51 @@
 }
 
 :where(.axo-sidebar-main-offset-left) {
-  margin-inline-start: var(--axo-sidebar-width, 16rem);
+  --axo-sidebar-main-offset-start: var(--axo-sidebar-width, 16rem);
+
+  inline-size: calc(
+    100% - var(--axo-sidebar-main-offset-start) - var(--axo-sidebar-main-offset-end, 0px)
+  );
+  margin-inline-start: var(--axo-sidebar-main-offset-start);
+  max-inline-size: calc(
+    100% - var(--axo-sidebar-main-offset-start) - var(--axo-sidebar-main-offset-end, 0px)
+  );
 }
 
 :where(.axo-sidebar-main-offset-right) {
-  margin-inline-end: var(--axo-sidebar-width, 16rem);
+  --axo-sidebar-main-offset-end: var(--axo-sidebar-width, 16rem);
+
+  inline-size: calc(
+    100% - var(--axo-sidebar-main-offset-start, 0px) - var(--axo-sidebar-main-offset-end)
+  );
+  margin-inline-end: var(--axo-sidebar-main-offset-end);
+  max-inline-size: calc(
+    100% - var(--axo-sidebar-main-offset-start, 0px) - var(--axo-sidebar-main-offset-end)
+  );
 }
 
 :where(.axo-sidebar-main-offset-rail-left) {
-  margin-inline-start: var(--axo-sidebar-rail-width, 4.5rem);
+  --axo-sidebar-main-offset-start: var(--axo-sidebar-rail-width, 4.5rem);
+
+  inline-size: calc(
+    100% - var(--axo-sidebar-main-offset-start) - var(--axo-sidebar-main-offset-end, 0px)
+  );
+  margin-inline-start: var(--axo-sidebar-main-offset-start);
+  max-inline-size: calc(
+    100% - var(--axo-sidebar-main-offset-start) - var(--axo-sidebar-main-offset-end, 0px)
+  );
 }
 
 :where(.axo-sidebar-main-offset-rail-right) {
-  margin-inline-end: var(--axo-sidebar-rail-width, 4.5rem);
+  --axo-sidebar-main-offset-end: var(--axo-sidebar-rail-width, 4.5rem);
+
+  inline-size: calc(
+    100% - var(--axo-sidebar-main-offset-start, 0px) - var(--axo-sidebar-main-offset-end)
+  );
+  margin-inline-end: var(--axo-sidebar-main-offset-end);
+  max-inline-size: calc(
+    100% - var(--axo-sidebar-main-offset-start, 0px) - var(--axo-sidebar-main-offset-end)
+  );
 }
 
 :where(.axo-app) {
@@ -310,7 +414,9 @@
   :where(.axo-sidebar-main-offset-right),
   :where(.axo-sidebar-main-offset-rail-left),
   :where(.axo-sidebar-main-offset-rail-right) {
+    inline-size: 100%;
     margin-inline: 0;
+    max-inline-size: 100%;
   }
 
   :where(.axo-app),
@@ -337,5 +443,77 @@
 
   :where(.axo-show-mobile) {
     display: inline-flex;
+  }
+}
+
+:where(.axo-sidebar-offcanvas) {
+  flex-basis: auto;
+  inline-size: min(
+    var(--axo-offcanvas-width, var(--axo-sidebar-width, 16rem)),
+    var(--axo-offcanvas-max-width, calc(100vw - 2rem))
+  );
+  inset-block-end: var(--axo-offcanvas-inset-bottom, 0);
+  inset-block-start: var(--axo-offcanvas-inset-top, 0);
+  inset-inline-start: 0;
+  max-block-size: none;
+  max-inline-size: var(--axo-offcanvas-max-width, calc(100vw - 2rem));
+  overscroll-behavior: contain;
+  pointer-events: none;
+  position: fixed;
+  transform: translateX(-100%);
+  transition:
+    transform var(--axo-offcanvas-duration, 220ms) var(--axo-offcanvas-easing, ease),
+    visibility 0s linear var(--axo-offcanvas-duration, 220ms);
+  visibility: hidden;
+  will-change: transform;
+  z-index: var(--axo-offcanvas-z, 50);
+}
+
+:where(.axo-sidebar-offcanvas-right) {
+  inset-inline-end: 0;
+  inset-inline-start: auto;
+  transform: translateX(100%);
+}
+
+:where(.axo-sidebar-offcanvas.axo-sidebar-open) {
+  pointer-events: auto;
+  transform: translateX(0);
+  transition-delay: 0s;
+  visibility: visible;
+}
+
+:where(.axo-sidebar-backdrop) {
+  background: var(--axo-offcanvas-backdrop, rgb(2 6 23 / 0.55));
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  transition:
+    opacity var(--axo-offcanvas-duration, 220ms) var(--axo-offcanvas-easing, ease),
+    visibility 0s linear var(--axo-offcanvas-duration, 220ms);
+  visibility: hidden;
+  z-index: calc(var(--axo-offcanvas-z, 50) - 1);
+}
+
+:where(.axo-sidebar-backdrop.axo-sidebar-backdrop-open) {
+  opacity: 1;
+  pointer-events: auto;
+  transition-delay: 0s;
+  visibility: visible;
+}
+
+:where(body.axo-offcanvas-active) {
+  overflow: hidden;
+}
+
+@media (forced-colors: active) {
+  :where(.axo-sidebar-backdrop) {
+    background: CanvasText;
+    forced-color-adjust: none;
+    opacity: 0;
+  }
+
+  :where(.axo-sidebar-backdrop.axo-sidebar-backdrop-open) {
+    opacity: 0.5;
   }
 }

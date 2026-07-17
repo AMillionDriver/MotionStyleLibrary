@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../packages/axoloth-style/src/axoloth.css" />
+    <title>Axoloth Motion Showcase Example</title>
+    <style>
+      :root {
+        --demo-bg: #0f172a;
+        --demo-panel: #111c32;
+        --demo-text: #f8fafc;
+        --demo-muted: #a3b1c6;
+        --demo-accent: #2dd4bf;
+        --axo-glow-shadow: 0 0 42px rgba(45, 212, 191, 0.28);
+      }
+
+      body {
+        margin: 0;
+        color: var(--demo-text);
+        background: var(--demo-bg);
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      }
+
+      .motion-card {
+        background: var(--demo-panel);
+      }
+
+      .muted {
+        color: var(--demo-muted);
+      }
+    </style>
+  </head>
+  <body class="axo-page">
+    <main class="axo-container">
+      <header class="axo-section">
+        <nav class="axo-nav" aria-label="Motion navigation">
+          <ul class="axo-nav-list">
+            <li><a class="axo-link" href="../../index.html">Docs</a></li>
+            <li><a class="axo-link" href="#presets">Presets</a></li>
+          </ul>
+        </nav>
+
+        <h1>Motion showcase</h1>
+        <p class="muted">Small CSS motion utilities for static pages and quick prototypes.</p>
+      </header>
+
+      <section id="presets" class="axo-section axo-bento">
+        <article class="axo-card motion-card axo-square axo-fade">
+          <h2>Fade</h2>
+          <p class="muted">Soft opacity entrance.</p>
+        </article>
+
+        <article class="axo-card motion-card axo-square axo-rise">
+          <h2>Rise</h2>
+          <p class="muted">Moves into place vertically.</p>
+        </article>
+
+        <article class="axo-card motion-card axo-square axo-pop">
+          <h2>Pop</h2>
+          <p class="muted">Scale entrance for compact cards.</p>
+        </article>
+
+        <article class="axo-card motion-card axo-wide axo-lift">
+          <h2>Lift</h2>
+          <p class="muted">Hover interaction for clickable surfaces.</p>
+        </article>
+
+        <article class="axo-card motion-card axo-wide axo-glow">
+          <h2>Glow</h2>
+          <p class="muted">Subtle emphasis for featured panels.</p>
+        </article>
+
+        <article class="axo-card motion-card axo-large axo-shimmer">
+          <h2>Shimmer</h2>
+          <p class="muted">A lightweight highlight pass over the card.</p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

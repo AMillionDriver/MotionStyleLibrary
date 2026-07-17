@@ -1,25 +1,41 @@
 {
   "name": "@quertys/axoloth-style",
-  "version": "0.0.8",
+  "version": "0.6.0",
   "description": "CSS-first layout and motion utilities for app shells, bento grids, semantic controls, and animation presets.",
   "type": "module",
   "sideEffects": [
-    "*.css"
+    "**/*.css"
   ],
+  "style": "./src/axoloth.css",
+  "unpkg": "./src/axoloth.css",
+  "jsdelivr": "./src/axoloth.css",
   "files": [
+    "CHANGELOG.md",
+    "MIGRATION.md",
+    "NAMING.md",
     "metadata",
+    "scripts",
     "src",
     "README.md"
   ],
   "exports": {
+    "./accordion.css": "./src/accordion.css",
     "./axoloth.css": "./src/axoloth.css",
     "./bento.css": "./src/bento.css",
+    "./dialog.css": "./src/dialog.css",
+    "./dropdown.css": "./src/dropdown.css",
     "./layout.css": "./src/layout.css",
     "./metadata/classes.json": "./metadata/classes.json",
+    "./metadata/api-baseline.json": "./metadata/api-baseline.json",
+    "./metadata/deprecations.json": "./metadata/deprecations.json",
+    "./metadata/registry.json": "./metadata/registry.json",
+    "./metadata/utility-index.json": "./metadata/utility-index.json",
     "./metadata/variables.json": "./metadata/variables.json",
     "./motion.css": "./src/motion.css",
     "./semantic.css": "./src/semantic.css",
-    "./surface.css": "./src/surface.css"
+    "./surface.css": "./src/surface.css",
+    "./tabs.css": "./src/tabs.css",
+    "./toast.css": "./src/toast.css"
   },
   "keywords": [
     "css",
@@ -32,12 +48,27 @@
     "semantic",
     "form",
     "button",
+    "dialog",
+    "modal",
     "nav",
     "layout",
     "animation",
     "motion",
     "surface",
-    "theme"
+    "theme",
+    "accordion",
+    "tabs",
+    "dropdown",
+    "toast",
+    "notification"
   ],
+  "scripts": {
+    "generate": "node scripts/generate-metadata.mjs",
+    "check:metadata": "node scripts/generate-metadata.mjs --check",
+    "check:api": "node scripts/check-api.mjs",
+    "test": "node --test scripts/api-contract.test.mjs",
+    "check": "npm run check:metadata && npm run check:api && npm test",
+    "snapshot:api": "node scripts/snapshot-api.mjs"
+  },
   "license": "MIT"
 }

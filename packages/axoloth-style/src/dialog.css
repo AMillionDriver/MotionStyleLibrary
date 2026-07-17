@@ -1,0 +1,118 @@
+:where(.axo-dialog) {
+  align-items: center;
+  display: grid;
+  inset: 0;
+  justify-items: center;
+  opacity: 0;
+  overflow: auto;
+  padding: var(--axo-dialog-inset, 1rem);
+  pointer-events: none;
+  position: fixed;
+  transition:
+    opacity var(--axo-dialog-duration, 180ms) var(--axo-dialog-easing, ease-out),
+    visibility 0s linear var(--axo-dialog-duration, 180ms);
+  visibility: hidden;
+  z-index: var(--axo-dialog-z, 60);
+}
+
+:where(.axo-dialog.axo-dialog-open) {
+  opacity: 1;
+  pointer-events: auto;
+  transition-delay: 0s;
+  visibility: visible;
+}
+
+:where(.axo-dialog-backdrop) {
+  background: var(--axo-dialog-backdrop, rgb(2 6 23 / 0.58));
+  inset: 0;
+  opacity: 0;
+  position: fixed;
+  transition: opacity var(--axo-dialog-duration, 180ms) var(--axo-dialog-easing, ease-out);
+  z-index: 0;
+}
+
+:where(.axo-dialog-backdrop.axo-dialog-backdrop-open) {
+  opacity: 1;
+}
+
+:where(.axo-dialog-panel) {
+  border: var(--axo-dialog-border, var(--axo-border, 1px solid currentColor));
+  border-radius: var(--axo-dialog-radius, var(--axo-radius, 0.5rem));
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: var(--axo-dialog-gap, 1rem);
+  inline-size: min(100%, var(--axo-dialog-width, 32rem));
+  max-block-size: calc(100dvh - (var(--axo-dialog-inset, 1rem) * 2));
+  overflow: auto;
+  padding: var(--axo-dialog-padding, 1.25rem);
+  position: relative;
+  transform: translateY(var(--axo-dialog-enter-distance, 0.75rem))
+    scale(var(--axo-dialog-enter-scale, 0.98));
+  transition: transform var(--axo-dialog-duration, 180ms) var(--axo-dialog-easing, ease-out);
+  z-index: 1;
+}
+
+:where(.axo-dialog-open .axo-dialog-panel) {
+  transform: translateY(0) scale(1);
+}
+
+:where(.axo-dialog-header),
+:where(.axo-dialog-body),
+:where(.axo-dialog-footer) {
+  min-inline-size: 0;
+}
+
+:where(.axo-dialog-header) {
+  align-items: start;
+  display: flex;
+  gap: var(--axo-dialog-gap, 1rem);
+  justify-content: space-between;
+}
+
+:where(.axo-dialog-body) {
+  overflow-wrap: anywhere;
+}
+
+:where(.axo-dialog-footer) {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--axo-dialog-gap, 1rem);
+  justify-content: flex-end;
+}
+
+:where(.axo-dialog-sm) {
+  --axo-dialog-width: 24rem;
+}
+
+:where(.axo-dialog-lg) {
+  --axo-dialog-width: 48rem;
+}
+
+:where(.axo-dialog-full) {
+  --axo-dialog-width: calc(100vw - (var(--axo-dialog-inset, 1rem) * 2));
+}
+
+:where(body.axo-dialog-active) {
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :where(.axo-dialog),
+  :where(.axo-dialog-backdrop),
+  :where(.axo-dialog-panel) {
+    transition: none;
+  }
+}
+
+@media (forced-colors: active) {
+  :where(.axo-dialog-backdrop) {
+    background: CanvasText;
+    forced-color-adjust: none;
+  }
+
+  :where(.axo-dialog-panel) {
+    border-color: CanvasText;
+  }
+}

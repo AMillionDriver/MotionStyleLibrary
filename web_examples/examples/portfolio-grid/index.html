@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../packages/axoloth-style/src/axoloth.css" />
+    <title>Axoloth Portfolio Grid Example</title>
+    <style>
+      :root {
+        --demo-bg: #101827;
+        --demo-panel: #172033;
+        --demo-text: #f8fafc;
+        --demo-muted: #a3b1c6;
+        --demo-accent: #38bdf8;
+      }
+
+      body {
+        margin: 0;
+        color: var(--demo-text);
+        background: var(--demo-bg);
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      }
+
+      .project-card {
+        background: var(--demo-panel);
+      }
+
+      .muted {
+        color: var(--demo-muted);
+      }
+
+      .project-tag {
+        color: var(--demo-accent);
+        font-size: 0.85rem;
+        font-weight: 800;
+      }
+    </style>
+  </head>
+  <body class="axo-page">
+    <main class="axo-container">
+      <header class="axo-section">
+        <nav class="axo-nav" aria-label="Portfolio navigation">
+          <ul class="axo-nav-list">
+            <li><a class="axo-link" href="../../index.html">Docs</a></li>
+            <li><a class="axo-link" href="#projects">Projects</a></li>
+            <li><a class="axo-link" href="#profile">Profile</a></li>
+          </ul>
+        </nav>
+
+        <h1>Portfolio grid</h1>
+        <p class="muted">A project gallery using bento sizing and neutral card structure.</p>
+      </header>
+
+      <section id="projects" class="axo-section axo-bento">
+        <article class="axo-card project-card axo-large axo-rise axo-lift">
+          <span class="project-tag">Featured</span>
+          <h2>Axoloth Docs Hub</h2>
+          <p class="muted">Static documentation, examples, JSON index, and theme toggle.</p>
+        </article>
+        <article class="axo-card project-card axo-square axo-fade">
+          <span class="project-tag">Layout</span>
+          <h2>App Shell</h2>
+          <p class="muted">Sidebar, header, main, and footer.</p>
+        </article>
+        <article class="axo-card project-card axo-wide axo-rise">
+          <span class="project-tag">Semantic</span>
+          <h2>Form System</h2>
+          <p class="muted">Inputs, labels, button, and responsive form grid.</p>
+        </article>
+        <article class="axo-card project-card axo-tall axo-pop">
+          <span class="project-tag">Motion</span>
+          <h2>Motion Presets</h2>
+          <p class="muted">Small animation utilities for quick demos.</p>
+        </article>
+      </section>
+
+      <section id="profile" class="axo-section">
+        <div class="axo-card project-card">
+          <h2>Use case</h2>
+          <p class="muted">
+            Portfolio grids need responsive sizing more than heavy components. Axoloth provides the
+            structure and leaves the visual language open.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

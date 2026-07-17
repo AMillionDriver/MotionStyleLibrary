@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../packages/axoloth-style/src/axoloth.css" />
+    <title>Axoloth Simple Landing Example</title>
+    <style>
+      :root {
+        --demo-bg: #f8fafc;
+        --demo-text: #132033;
+        --demo-muted: #64748b;
+        --demo-accent: #f97316;
+      }
+
+      body {
+        margin: 0;
+        color: var(--demo-text);
+        background: var(--demo-bg);
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      }
+
+      .hero {
+        min-height: 62dvh;
+        display: grid;
+        align-items: center;
+      }
+
+      .hero h1 {
+        max-width: 780px;
+        font-size: clamp(2.5rem, 8vw, 5.75rem);
+        line-height: 0.95;
+        letter-spacing: 0;
+      }
+
+      .muted {
+        color: var(--demo-muted);
+      }
+
+      .accent-card {
+        border-color: color-mix(in srgb, var(--demo-accent) 35%, transparent);
+      }
+    </style>
+  </head>
+  <body class="axo-page axo-theme-light">
+    <header class="axo-container axo-section">
+      <nav class="axo-nav" aria-label="Landing navigation">
+        <ul class="axo-nav-list">
+          <li><a class="axo-link" href="../../index.html">Docs</a></li>
+          <li><a class="axo-link" href="#features">Features</a></li>
+          <li><a class="axo-link" href="#start">Start</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="axo-container">
+      <section class="hero">
+        <div class="axo-card axo-contrast axo-rise">
+          <p>Simple Landing</p>
+          <h1>Build the page structure first, polish it later.</h1>
+          <p>
+            Axoloth gives the landing page a clear layout skeleton without owning the brand design.
+          </p>
+          <div class="axo-cluster">
+            <a class="axo-button" href="#features">View features</a>
+            <a class="axo-button" href="#start">Start section</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="axo-section axo-bento">
+        <article class="axo-card axo-surface axo-square axo-lift">
+          <h2>Sections</h2>
+          <p class="muted">Consistent vertical rhythm.</p>
+        </article>
+        <article class="axo-card axo-surface axo-wide axo-lift accent-card">
+          <h2>Actions</h2>
+          <p class="muted">Buttons and links stay structurally aligned.</p>
+        </article>
+        <article class="axo-card axo-surface axo-square axo-lift">
+          <h2>Cards</h2>
+          <p class="muted">Content groups remain readable.</p>
+        </article>
+      </section>
+
+      <section id="start" class="axo-section">
+        <div class="axo-card axo-surface">
+          <h2>Ready to customize</h2>
+          <p class="muted">
+            Add your colors, copy, and media while keeping the Axoloth layout utilities intact.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

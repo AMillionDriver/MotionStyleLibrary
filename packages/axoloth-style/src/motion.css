@@ -1,15 +1,15 @@
 .axo-fade {
-  animation: axo-fade var(--axo-duration, 480ms) ease both;
+  animation: axo-fade var(--axo-duration, 480ms) ease backwards;
   animation-delay: var(--axo-delay, 0ms);
 }
 
 .axo-rise {
-  animation: axo-rise var(--axo-duration, 520ms) cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: axo-rise var(--axo-duration, 520ms) cubic-bezier(0.22, 1, 0.36, 1) backwards;
   animation-delay: var(--axo-delay, 0ms);
 }
 
 .axo-pop {
-  animation: axo-pop var(--axo-duration, 420ms) cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: axo-pop var(--axo-duration, 420ms) cubic-bezier(0.22, 1, 0.36, 1) backwards;
   animation-delay: var(--axo-delay, 0ms);
 }
 
@@ -17,11 +17,15 @@
   will-change: transform;
 }
 
-.axo-lift:hover {
+.axo-lift:hover,
+.axo-lift:focus-visible,
+.axo-lift:focus-within {
   transform: translateY(var(--axo-lift-distance, -4px));
 }
 
-.axo-glow:hover {
+.axo-glow:hover,
+.axo-glow:focus-visible,
+.axo-glow:focus-within {
   box-shadow: var(--axo-glow-shadow, 0 18px 48px rgb(34 211 238 / 0.16));
 }
 
@@ -95,5 +99,25 @@
 
   .axo-card {
     transition: none;
+  }
+
+  .axo-button,
+  .axo-icon-button,
+  .axo-link,
+  .axo-sidebar,
+  .axo-sidebar-item,
+  .axo-input {
+    transition: none;
+  }
+
+  .axo-sidebar-offcanvas,
+  .axo-sidebar-backdrop {
+    transition: none;
+  }
+
+  .axo-lift:hover,
+  .axo-lift:focus-visible,
+  .axo-lift:focus-within {
+    transform: none;
   }
 }

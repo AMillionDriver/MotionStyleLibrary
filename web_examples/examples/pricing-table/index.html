@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../packages/axoloth-style/src/axoloth.css" />
+    <title>Axoloth Pricing Table Example</title>
+    <style>
+      :root {
+        --demo-bg: #fbfcff;
+        --demo-text: #111827;
+        --demo-muted: #6b7280;
+        --demo-accent: #7c3aed;
+      }
+
+      body {
+        margin: 0;
+        color: var(--demo-text);
+        background: var(--demo-bg);
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      }
+
+      .price {
+        margin: 1rem 0;
+        font-size: 2.5rem;
+        font-weight: 850;
+      }
+
+      .muted {
+        color: var(--demo-muted);
+      }
+
+      .featured {
+        border-color: color-mix(in srgb, var(--demo-accent) 45%, transparent);
+      }
+    </style>
+  </head>
+  <body class="axo-page axo-theme-light">
+    <main class="axo-container">
+      <header class="axo-section">
+        <nav class="axo-nav" aria-label="Pricing navigation">
+          <ul class="axo-nav-list">
+            <li><a class="axo-link" href="../../index.html">Docs</a></li>
+            <li><a class="axo-link" href="#plans">Plans</a></li>
+            <li><a class="axo-link" href="#compare">Compare</a></li>
+          </ul>
+        </nav>
+
+        <h1>Pricing table</h1>
+        <p class="muted">
+          A simple pricing layout built from cards, clusters, and semantic buttons.
+        </p>
+      </header>
+
+      <section id="plans" class="axo-section axo-bento">
+        <article class="axo-card axo-surface axo-tall axo-rise">
+          <h2>Starter</h2>
+          <p class="muted">For small experiments.</p>
+          <p class="price">$9</p>
+          <ul>
+            <li>Three pages</li>
+            <li>Basic layout utilities</li>
+            <li>Email support</li>
+          </ul>
+          <button class="axo-button axo-button-block" type="button">Choose Starter</button>
+        </article>
+
+        <article class="axo-card axo-surface axo-tall axo-pop axo-glow featured">
+          <h2>Studio</h2>
+          <p class="muted">For docs, dashboards, and product pages.</p>
+          <p class="price">$29</p>
+          <ul>
+            <li>Unlimited static pages</li>
+            <li>Sidebar and app shell utilities</li>
+            <li>Priority examples</li>
+          </ul>
+          <button class="axo-button axo-button-block" type="button">Choose Studio</button>
+        </article>
+
+        <article class="axo-card axo-surface axo-tall axo-rise">
+          <h2>Team</h2>
+          <p class="muted">For reusable internal layouts.</p>
+          <p class="price">$79</p>
+          <ul>
+            <li>Shared documentation</li>
+            <li>Design review workflow</li>
+            <li>Team support</li>
+          </ul>
+          <button class="axo-button axo-button-block" type="button">Choose Team</button>
+        </article>
+      </section>
+
+      <section id="compare" class="axo-section axo-card axo-contrast">
+        <h2>Why this example exists</h2>
+        <p>
+          Pricing pages need clean alignment, equal card rhythm, and clear actions. Axoloth handles
+          the structure while the project owns the visual identity.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

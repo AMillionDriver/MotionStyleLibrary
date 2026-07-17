@@ -5,6 +5,7 @@ import {
   getCssVariableCompletionContext,
   getCssVariableValueCompletionContext,
 } from '../cssVariableContext';
+import { formatDeprecationSummary } from '../deprecation';
 
 function parseCursor(input: string): { line: string; position: number } {
   const position = input.indexOf('|');
@@ -109,6 +110,22 @@ function contextFor(input: string) {
   const { line, position } = parseCursor('color: |');
   const context = getCssVariableValueCompletionContext(line, position);
   assert.equal(context, undefined);
+}
+
+{
+  const summary = formatDeprecationSummary({
+    status: 'deprecated',
+    deprecation: {
+      replacement: 'axo-new',
+      deprecatedIn: '1.1.0',
+      removeIn: '1.2.0',
+      note: 'Use the new layout primitive.',
+    },
+  });
+  assert.equal(
+    summary,
+    'Deprecated since 1.1.0. Use axo-new. Earliest removal: 1.2.0. Use the new layout primitive.'
+  );
 }
 
 console.log('Axoloth IntelliSense tests passed');

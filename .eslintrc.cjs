@@ -49,13 +49,25 @@ module.exports = {
     'import/no-extraneous-dependencies': [
       'error',
       {
-        devDependencies: ['*.config.js', '*.config.cjs', 'vite.config.js', '.eslintrc.cjs'],
+        devDependencies: [
+          '*.config.js',
+          '*.config.cjs',
+          'vite.config.js',
+          '.eslintrc.cjs',
+          'tests/**/*.js',
+        ],
       },
     ],
     'linebreak-style': 'off',
     'no-console': 'off',
   },
   overrides: [
+    {
+      files: ['packages/axoloth-behavior/src/**/*.js'],
+      rules: {
+        'import/extensions': 'off',
+      },
+    },
     {
       files: ['vite.config.js'],
       rules: {

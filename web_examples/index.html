@@ -3,10 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Axoloth Style documentation hub and live example index."
-    />
+    <meta name="description" content="Axoloth Style documentation hub and live example index." />
     <meta property="og:title" content="Axoloth Style Docs" />
     <meta
       property="og:description"
@@ -22,18 +19,11 @@
       <a class="brand axo-link" href="#introduction">Axoloth Style</a>
 
       <label class="docs-search">
-        <span class="sr-only">Search examples</span>
-        <input
-          id="example-search"
-          type="search"
-          placeholder="Search"
-          autocomplete="off"
-        />
+        <span class="sr-only">Search examples and utilities</span>
+        <input id="example-search" type="search" placeholder="Search docs" autocomplete="off" />
       </label>
 
-      <button id="theme-toggle" class="docs-button" type="button">
-        Dark Mode
-      </button>
+      <button id="theme-toggle" class="docs-button" type="button">Dark Mode</button>
     </header>
 
     <main class="docs-layout">
@@ -41,6 +31,7 @@
         <a class="axo-link" href="#introduction">Introduction</a>
         <a class="axo-link" href="#install">Install</a>
         <a class="axo-link" href="#layout-examples">Layout Examples</a>
+        <a class="axo-link" href="#utility-reference">Utility Reference</a>
         <a class="axo-link" href="#motion-examples">Motion Examples</a>
         <a class="axo-link" href="#semantic-controls">Semantic Controls</a>
       </nav>
@@ -49,8 +40,8 @@
         <p class="eyebrow">Introduction</p>
         <h1>CSS-first utilities for layout and simple motion.</h1>
         <p>
-          This page is the root index for Axoloth Style examples. Keep this page
-          simple; each example folder can be more visual and specific.
+          This page is the root index for Axoloth Style examples. Keep this page simple; each
+          example folder can be more visual and specific.
         </p>
       </section>
 
@@ -58,8 +49,16 @@
         <p class="eyebrow">Install</p>
         <h2>Use npm or a CDN link.</h2>
         <div class="code-grid">
-          <pre><code>npm install @quertys/axoloth-style</code></pre>
-          <pre><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@quertys/axoloth-style@0.0.8/src/axoloth.css"&gt;</code></pre>
+          <pre
+            role="region"
+            aria-label="npm install command"
+            tabindex="0"
+          ><code>npm install @quertys/axoloth-style</code></pre>
+          <pre
+            role="region"
+            aria-label="CDN stylesheet example"
+            tabindex="0"
+          ><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@quertys/axoloth-style@0.6.0/src/axoloth.css"&gt;</code></pre>
         </div>
       </section>
 
@@ -70,7 +69,7 @@
           <p id="example-count">Loading examples...</p>
         </div>
 
-        <div class="table-wrap">
+        <div class="table-wrap" role="region" aria-label="Example catalog" tabindex="0">
           <table>
             <thead>
               <tr>
@@ -89,12 +88,42 @@
         </div>
       </section>
 
+      <section id="utility-reference" class="docs-section">
+        <p class="eyebrow">Generated Reference</p>
+        <div class="section-heading">
+          <h2>Classes and CSS variables</h2>
+          <p id="utility-count">Loading utilities...</p>
+        </div>
+
+        <p>
+          This searchable table is generated from the same registry used by Axoloth IntelliSense.
+        </p>
+
+        <div class="table-wrap" role="region" aria-label="Utility reference" tabindex="0">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Utility</th>
+                <th scope="col">Type</th>
+                <th scope="col">Module</th>
+                <th scope="col">Description</th>
+              </tr>
+            </thead>
+            <tbody id="utilities-table-body">
+              <tr>
+                <td colspan="4">Loading utilities...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
       <section id="motion-examples" class="docs-section">
         <p class="eyebrow">Motion Examples</p>
         <h2>Simple animation presets stay in the example folders.</h2>
         <p>
-          Use this section as the anchor for motion examples such as rise, fade,
-          pop, lift, glow, and shimmer.
+          Use this section as the anchor for motion examples such as rise, fade, pop, lift, glow,
+          and shimmer.
         </p>
       </section>
 
@@ -102,8 +131,8 @@
         <p class="eyebrow">Semantic Controls</p>
         <h2>Forms, buttons, nav, and page structure.</h2>
         <p>
-          Semantic examples should prove that plain HTML can look organized with
-          Axoloth utilities while still allowing project-specific styling.
+          Semantic examples should prove that plain HTML can look organized with Axoloth utilities
+          while still allowing project-specific styling.
         </p>
       </section>
     </main>

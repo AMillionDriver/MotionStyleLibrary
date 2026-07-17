@@ -1,0 +1,99 @@
+:where(.axo-accordion) {
+  display: grid;
+  gap: var(--axo-accordion-gap, 0.75rem);
+  min-inline-size: 0;
+}
+
+:where(.axo-accordion-item) {
+  border: var(--axo-accordion-border, 1px solid currentColor);
+  border-radius: var(--axo-accordion-radius, var(--axo-radius, 0.5rem));
+  box-sizing: border-box;
+  min-inline-size: 0;
+  overflow: clip;
+}
+
+:where(.axo-accordion-trigger) {
+  align-items: center;
+  appearance: none;
+  background: transparent;
+  border: 0;
+  box-sizing: border-box;
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  font: inherit;
+  gap: 1rem;
+  inline-size: 100%;
+  justify-content: space-between;
+  min-block-size: var(--axo-accordion-trigger-min-height, 3rem);
+  padding: var(--axo-accordion-trigger-padding, 0.75rem 1rem);
+  text-align: start;
+}
+
+:where(.axo-accordion-trigger[aria-disabled='true']),
+:where(.axo-accordion-trigger:disabled) {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+:where(.axo-accordion-trigger:focus-visible) {
+  outline: var(--axo-focus-ring, 2px solid currentColor);
+  outline-offset: -2px;
+}
+
+:where(.axo-accordion-indicator) {
+  align-items: center;
+  block-size: 1.25rem;
+  display: inline-flex;
+  flex: 0 0 1.25rem;
+  inline-size: 1.25rem;
+  justify-content: center;
+  transition: transform var(--axo-accordion-transition, 180ms ease);
+}
+
+:where(.axo-accordion-trigger[aria-expanded='true'] .axo-accordion-indicator) {
+  transform: rotate(45deg);
+}
+
+:where(.axo-accordion-panel) {
+  box-sizing: border-box;
+  min-inline-size: 0;
+  overflow-wrap: anywhere;
+  padding: var(--axo-accordion-panel-padding, 0 1rem 1rem);
+}
+
+:where(.axo-accordion-panel.axo-accordion-panel-open) {
+  animation: axo-accordion-reveal var(--axo-accordion-transition, 180ms ease) backwards;
+}
+
+:where(.axo-accordion-panel[hidden]) {
+  display: none;
+}
+
+@keyframes axo-accordion-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(-0.25rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :where(.axo-accordion-indicator) {
+    transition: none;
+  }
+
+  :where(.axo-accordion-panel.axo-accordion-panel-open) {
+    animation: none;
+  }
+}
+
+@media (forced-colors: active) {
+  :where(.axo-accordion-item) {
+    border-color: CanvasText;
+  }
+}

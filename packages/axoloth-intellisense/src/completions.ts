@@ -42,7 +42,12 @@ export function createCompletionProvider(registry: AxolothRegistry): vscode.Comp
           item.filterText = entry.name;
           item.insertText = entry.name;
           item.range = range;
-          item.sortText = `${CATEGORY_ORDER[entry.category] ?? '9'}-${entry.name}`;
+          item.sortText = `${entry.status === 'deprecated' ? 'z' : (CATEGORY_ORDER[entry.category] ?? '9')}-${entry.name}`;
+
+          if (entry.status === 'deprecated') {
+            item.tags = [vscode.CompletionItemTag.Deprecated];
+            item.detail = `Deprecated Axoloth utility; use ${entry.deprecation?.replacement}`;
+          }
 
           return item;
         });

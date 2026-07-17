@@ -1,6 +1,6 @@
 {
   "name": "@quertys/axoloth-style",
-  "version": "0.0.8",
+  "version": "0.6.0",
   "prefix": "axo-",
   "classes": [
     {
@@ -8,476 +8,1288 @@
       "module": "bento",
       "category": "layout",
       "description": "Responsive bento grid container with mobile, tablet, and desktop columns.",
-      "usage": "Use on the parent grid element."
+      "usage": "Use on the parent grid element.",
+      "status": "active"
+    },
+    {
+      "name": "axo-container-responsive",
+      "module": "bento",
+      "category": "responsive",
+      "description": "Makes axo-bento respond to an axo-container-query parent instead of the viewport.",
+      "usage": "Use on axo-bento inside a separate axo-container-query wrapper.",
+      "status": "active"
     },
     {
       "name": "axo-card",
       "module": "bento",
       "category": "layout",
       "description": "Neutral structural card base with radius, border, padding, and transitions.",
-      "usage": "Combine with size, surface, and motion utilities."
+      "usage": "Combine with size, surface, and motion utilities.",
+      "status": "active"
     },
     {
       "name": "axo-square",
       "module": "bento",
       "category": "layout",
       "description": "One-by-one bento item span.",
-      "usage": "Use on an item inside axo-bento."
+      "usage": "Use on an item inside axo-bento.",
+      "status": "active"
     },
     {
       "name": "axo-wide",
       "module": "bento",
       "category": "layout",
       "description": "Bento item that spans two columns on tablet and desktop.",
-      "usage": "Use on an item inside axo-bento."
+      "usage": "Use on an item inside axo-bento.",
+      "status": "active"
     },
     {
       "name": "axo-tall",
       "module": "bento",
       "category": "layout",
       "description": "Bento item that spans two rows on tablet and desktop.",
-      "usage": "Use on an item inside axo-bento."
+      "usage": "Use on an item inside axo-bento.",
+      "status": "active"
     },
     {
       "name": "axo-large",
       "module": "bento",
       "category": "layout",
       "description": "Bento item that spans two columns and two rows on tablet and desktop.",
-      "usage": "Use on an item inside axo-bento."
+      "usage": "Use on an item inside axo-bento.",
+      "status": "active"
     },
     {
       "name": "axo-stack",
       "module": "bento",
       "category": "layout",
       "description": "Vertical flex stack for card content.",
-      "usage": "Customize spacing with --axo-stack-gap."
+      "usage": "Customize spacing with --axo-stack-gap.",
+      "status": "active"
     },
     {
       "name": "axo-row",
       "module": "bento",
       "category": "layout",
       "description": "Horizontal flex row for compact inline content.",
-      "usage": "Customize spacing with --axo-row-gap."
+      "usage": "Customize spacing with --axo-row-gap.",
+      "status": "active"
     },
     {
       "name": "axo-header",
       "module": "layout",
       "category": "layout",
       "description": "Base appbar/header container.",
-      "usage": "Combine with axo-header-grid or axo-header-flex."
+      "usage": "Combine with axo-header-grid or axo-header-flex.",
+      "status": "active"
     },
     {
       "name": "axo-header-grid",
       "module": "layout",
       "category": "layout",
       "description": "Four-slot header grid for left, center, nav, and right areas.",
-      "usage": "Use with axo-header-left, axo-header-center, axo-header-nav, and axo-header-right."
+      "usage": "Use with axo-header-left, axo-header-center, axo-header-nav, and axo-header-right.",
+      "status": "active"
     },
     {
       "name": "axo-header-flex",
       "module": "layout",
       "category": "layout",
       "description": "Simple flex header alternative.",
-      "usage": "Use when a grid appbar is more structure than needed."
+      "usage": "Use when a grid appbar is more structure than needed.",
+      "status": "active"
     },
     {
       "name": "axo-header-left",
       "module": "layout",
       "category": "layout",
       "description": "Left header slot, usually for logo or brand icon.",
-      "usage": "Use inside axo-header-grid."
+      "usage": "Use inside axo-header-grid.",
+      "status": "active"
     },
     {
       "name": "axo-header-center",
       "module": "layout",
       "category": "layout",
       "description": "Center header slot, usually for search or primary controls.",
-      "usage": "Use inside axo-header-grid."
+      "usage": "Use inside axo-header-grid.",
+      "status": "active"
     },
     {
       "name": "axo-header-nav",
       "module": "layout",
       "category": "layout",
       "description": "Header navigation slot that hides on mobile by default.",
-      "usage": "Use inside axo-header-grid for nav links."
+      "usage": "Use inside axo-header-grid for nav links.",
+      "status": "active"
     },
     {
       "name": "axo-header-right",
       "module": "layout",
       "category": "layout",
       "description": "Right header slot, usually for actions or a menu button.",
-      "usage": "Use inside axo-header-grid."
+      "usage": "Use inside axo-header-grid.",
+      "status": "active"
     },
     {
       "name": "axo-searchbar",
       "module": "layout",
       "category": "layout",
       "description": "Inline search layout for icon/text plus input.",
-      "usage": "Use on a label or wrapper around an input."
+      "usage": "Use on a label or wrapper around an input.",
+      "status": "active"
     },
     {
       "name": "axo-icon-button",
       "module": "layout",
       "category": "layout",
       "description": "Square icon button sizing and alignment.",
-      "usage": "Bring your own icon from Lucide, Heroicons, Google Icons, SVG, or HTML."
+      "usage": "Bring your own icon from Lucide, Heroicons, Google Icons, SVG, or HTML.",
+      "status": "active"
     },
     {
       "name": "axo-h-appbar",
       "module": "layout",
       "category": "layout",
       "description": "Appbar height preset.",
-      "usage": "Sets --axo-header-height to 4rem."
+      "usage": "Sets --axo-header-height to 4rem.",
+      "status": "active"
     },
     {
       "name": "axo-sticky-top",
       "module": "layout",
       "category": "layout",
       "description": "Sticky top positioning helper.",
-      "usage": "Customize with --axo-sticky-offset and --axo-z-sticky."
+      "usage": "Customize with --axo-sticky-offset and --axo-z-sticky.",
+      "status": "active"
     },
     {
       "name": "axo-hide-mobile",
       "module": "layout",
       "category": "layout",
       "description": "Hide an element below 768px.",
-      "usage": "Useful for desktop navigation."
+      "usage": "Useful for desktop navigation.",
+      "status": "active"
     },
     {
       "name": "axo-show-mobile",
       "module": "layout",
       "category": "layout",
       "description": "Show an element below 768px.",
-      "usage": "Useful for mobile menu buttons."
+      "usage": "Useful for mobile menu buttons.",
+      "status": "active"
     },
     {
       "name": "axo-shell",
       "module": "layout",
       "category": "layout",
       "description": "Flexible app shell wrapper for sidebar and main content layouts.",
-      "usage": "Use around axo-sidebar and axo-sidebar-main."
+      "usage": "Use around axo-sidebar and axo-sidebar-main.",
+      "status": "active"
     },
     {
       "name": "axo-sidebar",
       "module": "layout",
       "category": "layout",
       "description": "Base sidebar container with column layout, width, padding, overflow, and transitions.",
-      "usage": "Combine with axo-sidebar-left or axo-sidebar-right."
+      "usage": "Combine with axo-sidebar-left or axo-sidebar-right.",
+      "status": "active"
     },
     {
       "name": "axo-sidebar-left",
       "module": "layout",
       "category": "layout",
       "description": "Places a sidebar before the main content inside axo-shell.",
-      "usage": "Use on the same element as axo-sidebar."
+      "usage": "Use on the same element as axo-sidebar.",
+      "status": "active"
     },
     {
       "name": "axo-sidebar-right",
       "module": "layout",
       "category": "layout",
       "description": "Places a sidebar after the main content inside axo-shell.",
-      "usage": "Use on the same element as axo-sidebar."
+      "usage": "Use on the same element as axo-sidebar.",
+      "status": "active"
     },
     {
       "name": "axo-sidebar-rail",
       "module": "layout",
       "category": "layout",
       "description": "Uses the compact rail width for a sidebar.",
-      "usage": "Combine with axo-sidebar-hover for hover expansion."
+      "usage": "Combine with axo-sidebar-hover for hover expansion.",
+      "status": "active"
     },
     {
       "name": "axo-sidebar-hover",
       "module": "layout",
       "category": "layout",
       "description": "Expands a rail sidebar on hover or keyboard focus within.",
-      "usage": "Use with axo-sidebar-rail."
+      "usage": "Use with axo-sidebar-rail.",
+      "status": "active"
     },
     {
       "name": "axo-sidebar-item",
       "module": "layout",
       "category": "layout",
       "description": "Aligned sidebar menu item for links, buttons, and compact actions.",
-      "usage": "Use inside axo-sidebar."
+      "usage": "Use inside axo-sidebar.",
+      "status": "active"
     },
     {
       "name": "axo-sidebar-main",
       "module": "layout",
       "category": "layout",
       "description": "Main content region that fills the remaining space in axo-shell.",
-      "usage": "Use as the sibling of axo-sidebar."
+      "usage": "Use as the sibling of axo-sidebar.",
+      "status": "active"
     },
     {
       "name": "axo-sidebar-sticky",
       "module": "layout",
       "category": "layout",
       "description": "Makes a sidebar stick within the viewport while the main content scrolls.",
-      "usage": "Customize with --axo-sticky-offset and --axo-sidebar-z."
+      "usage": "Customize with --axo-sticky-offset and --axo-sidebar-z.",
+      "status": "active"
     },
     {
       "name": "axo-sidebar-fixed",
       "module": "layout",
       "category": "layout",
       "description": "Fixes a sidebar to the viewport instead of the normal document flow.",
-      "usage": "Combine with axo-sidebar-fixed-left or axo-sidebar-fixed-right."
+      "usage": "Combine with axo-sidebar-fixed-left or axo-sidebar-fixed-right.",
+      "status": "active"
     },
     {
       "name": "axo-sidebar-fixed-left",
       "module": "layout",
       "category": "layout",
       "description": "Pins a fixed sidebar to the left edge of the viewport.",
-      "usage": "Use with axo-sidebar-fixed."
+      "usage": "Use with axo-sidebar-fixed.",
+      "status": "active"
     },
     {
       "name": "axo-sidebar-fixed-right",
       "module": "layout",
       "category": "layout",
       "description": "Pins a fixed sidebar to the right edge of the viewport.",
-      "usage": "Use with axo-sidebar-fixed."
+      "usage": "Use with axo-sidebar-fixed.",
+      "status": "active"
+    },
+    {
+      "name": "axo-sidebar-offcanvas",
+      "module": "layout",
+      "category": "behavior",
+      "description": "Viewport drawer foundation hidden beyond the left edge until opened.",
+      "usage": "Combine with axo-sidebar and initialize @quertys/axoloth-behavior.",
+      "status": "active"
+    },
+    {
+      "name": "axo-sidebar-offcanvas-right",
+      "module": "layout",
+      "category": "behavior",
+      "description": "Moves an off-canvas sidebar to the right viewport edge.",
+      "usage": "Use with axo-sidebar-offcanvas.",
+      "status": "active"
+    },
+    {
+      "name": "axo-sidebar-open",
+      "module": "layout",
+      "category": "state",
+      "description": "Open state applied to an off-canvas sidebar by Axoloth Behavior.",
+      "usage": "Normally managed by initOffcanvas rather than written manually.",
+      "status": "active"
+    },
+    {
+      "name": "axo-sidebar-backdrop",
+      "module": "layout",
+      "category": "behavior",
+      "description": "Fixed dismiss layer behind an off-canvas sidebar.",
+      "usage": "Add data-axo-dismiss matching the sidebar identifier.",
+      "status": "active"
+    },
+    {
+      "name": "axo-sidebar-backdrop-open",
+      "module": "layout",
+      "category": "state",
+      "description": "Visible backdrop state applied by Axoloth Behavior.",
+      "usage": "Normally managed by initOffcanvas rather than written manually.",
+      "status": "active"
+    },
+    {
+      "name": "axo-offcanvas-active",
+      "module": "layout",
+      "category": "state",
+      "description": "Body state that locks document scrolling while a drawer is open.",
+      "usage": "Managed automatically by initOffcanvas.",
+      "status": "active"
+    },
+    {
+      "name": "axo-dialog",
+      "module": "dialog",
+      "category": "behavior",
+      "description": "Fixed viewport layer that centers an accessible dialog panel.",
+      "usage": "Add data-axo-dialog-id and initialize initDialog.",
+      "status": "active"
+    },
+    {
+      "name": "axo-dialog-open",
+      "module": "dialog",
+      "category": "state",
+      "description": "Visible dialog state applied by Axoloth Behavior.",
+      "usage": "Normally managed by initDialog rather than written manually.",
+      "status": "active"
+    },
+    {
+      "name": "axo-dialog-backdrop",
+      "module": "dialog",
+      "category": "behavior",
+      "description": "Full viewport dismiss layer behind a dialog panel.",
+      "usage": "Add data-axo-dialog-dismiss matching the dialog identifier.",
+      "status": "active"
+    },
+    {
+      "name": "axo-dialog-backdrop-open",
+      "module": "dialog",
+      "category": "state",
+      "description": "Visible dialog backdrop state applied by Axoloth Behavior.",
+      "usage": "Normally managed by initDialog rather than written manually.",
+      "status": "active"
+    },
+    {
+      "name": "axo-dialog-panel",
+      "module": "dialog",
+      "category": "layout",
+      "description": "Scrollable, width-constrained content panel inside axo-dialog.",
+      "usage": "Combine with axo-surface or axo-contrast for visual styling.",
+      "status": "active"
+    },
+    {
+      "name": "axo-dialog-header",
+      "module": "dialog",
+      "category": "layout",
+      "description": "Dialog heading row with space for a title and close action.",
+      "usage": "Use as a direct section inside axo-dialog-panel.",
+      "status": "active"
+    },
+    {
+      "name": "axo-dialog-body",
+      "module": "dialog",
+      "category": "layout",
+      "description": "Main content region inside a dialog panel.",
+      "usage": "Use between axo-dialog-header and axo-dialog-footer.",
+      "status": "active"
+    },
+    {
+      "name": "axo-dialog-footer",
+      "module": "dialog",
+      "category": "layout",
+      "description": "Wrapping action row aligned to the end of a dialog panel.",
+      "usage": "Place dismiss and confirmation actions inside it.",
+      "status": "active"
+    },
+    {
+      "name": "axo-dialog-sm",
+      "module": "dialog",
+      "category": "sizing",
+      "description": "Sets a compact dialog panel width.",
+      "usage": "Use with axo-dialog-panel.",
+      "status": "active"
+    },
+    {
+      "name": "axo-dialog-lg",
+      "module": "dialog",
+      "category": "sizing",
+      "description": "Sets a wide dialog panel width.",
+      "usage": "Use with axo-dialog-panel.",
+      "status": "active"
+    },
+    {
+      "name": "axo-dialog-full",
+      "module": "dialog",
+      "category": "sizing",
+      "description": "Expands a dialog panel to the available viewport width.",
+      "usage": "Use with axo-dialog-panel for large workflows.",
+      "status": "active"
+    },
+    {
+      "name": "axo-dialog-active",
+      "module": "dialog",
+      "category": "state",
+      "description": "Body state that locks document scrolling while a dialog is open.",
+      "usage": "Managed automatically by initDialog.",
+      "status": "active"
+    },
+    {
+      "name": "axo-tabs",
+      "module": "tabs",
+      "category": "behavior",
+      "description": "Layout boundary for an accessible tabbed interface.",
+      "usage": "Add data-axo-tabs and initialize initTabs.",
+      "status": "active"
+    },
+    {
+      "name": "axo-tabs-vertical",
+      "module": "tabs",
+      "category": "layout",
+      "description": "Places the tab list beside its active panel on wide containers.",
+      "usage": "Use with axo-tabs and set aria-orientation to vertical when writing ARIA manually.",
+      "status": "active"
+    },
+    {
+      "name": "axo-tab-list",
+      "module": "tabs",
+      "category": "layout",
+      "description": "Scrollable row or column containing Axoloth tab controls.",
+      "usage": "Place data-axo-tab controls directly inside it.",
+      "status": "active"
+    },
+    {
+      "name": "axo-tab",
+      "module": "tabs",
+      "category": "control",
+      "description": "Neutral tab control with selected and focus-visible states.",
+      "usage": "Add data-axo-tab matching a data-axo-tab-panel identifier.",
+      "status": "active"
+    },
+    {
+      "name": "axo-tab-active",
+      "module": "tabs",
+      "category": "state",
+      "description": "Selected tab state managed by Axoloth Behavior.",
+      "usage": "Normally managed by initTabs rather than written manually.",
+      "status": "active"
+    },
+    {
+      "name": "axo-tab-panel",
+      "module": "tabs",
+      "category": "layout",
+      "description": "Content region controlled by an Axoloth tab.",
+      "usage": "Add data-axo-tab-panel matching a data-axo-tab identifier.",
+      "status": "active"
+    },
+    {
+      "name": "axo-tab-panel-active",
+      "module": "tabs",
+      "category": "state",
+      "description": "Visible tab panel state managed by Axoloth Behavior.",
+      "usage": "Normally managed by initTabs rather than written manually.",
+      "status": "active"
+    },
+    {
+      "name": "axo-accordion",
+      "module": "accordion",
+      "category": "behavior",
+      "description": "Layout boundary for an accessible accordion group.",
+      "usage": "Add data-axo-accordion and initialize initAccordion.",
+      "status": "active"
+    },
+    {
+      "name": "axo-accordion-item",
+      "module": "accordion",
+      "category": "layout",
+      "description": "Structural wrapper for one accordion trigger and panel.",
+      "usage": "Combine with axo-surface when a filled item is desired.",
+      "status": "active"
+    },
+    {
+      "name": "axo-accordion-item-open",
+      "module": "accordion",
+      "category": "state",
+      "description": "Expanded accordion item state managed by Axoloth Behavior.",
+      "usage": "Normally managed by initAccordion rather than written manually.",
+      "status": "active"
+    },
+    {
+      "name": "axo-accordion-trigger",
+      "module": "accordion",
+      "category": "control",
+      "description": "Full-width disclosure button for an accordion item.",
+      "usage": "Use on a button with data-axo-accordion-trigger.",
+      "status": "active"
+    },
+    {
+      "name": "axo-accordion-indicator",
+      "module": "accordion",
+      "category": "control",
+      "description": "Fixed-size indicator that rotates while an item is expanded.",
+      "usage": "Place inside axo-accordion-trigger and mark decorative content aria-hidden.",
+      "status": "active"
+    },
+    {
+      "name": "axo-accordion-panel",
+      "module": "accordion",
+      "category": "layout",
+      "description": "Collapsible content region controlled by an accordion trigger.",
+      "usage": "Add data-axo-accordion-panel matching its trigger identifier.",
+      "status": "active"
+    },
+    {
+      "name": "axo-accordion-panel-open",
+      "module": "accordion",
+      "category": "state",
+      "description": "Visible accordion panel state managed by Axoloth Behavior.",
+      "usage": "Normally managed by initAccordion rather than written manually.",
+      "status": "active"
+    },
+    {
+      "name": "axo-dropdown",
+      "module": "dropdown",
+      "category": "behavior",
+      "description": "Positioning boundary for an accessible dropdown menu.",
+      "usage": "Add data-axo-dropdown and initialize initDropdown.",
+      "status": "active"
+    },
+    {
+      "name": "axo-dropdown-open",
+      "module": "dropdown",
+      "category": "state",
+      "description": "Open dropdown group state managed by Axoloth Behavior.",
+      "usage": "Normally managed by initDropdown rather than written manually.",
+      "status": "active"
+    },
+    {
+      "name": "axo-dropdown-trigger",
+      "module": "dropdown",
+      "category": "control",
+      "description": "Inline trigger alignment for a dropdown menu button.",
+      "usage": "Use on a button with data-axo-dropdown-toggle.",
+      "status": "active"
+    },
+    {
+      "name": "axo-dropdown-menu",
+      "module": "dropdown",
+      "category": "layout",
+      "description": "Absolutely positioned menu surface below a dropdown trigger.",
+      "usage": "Add data-axo-dropdown-menu matching the trigger identifier.",
+      "status": "active"
+    },
+    {
+      "name": "axo-dropdown-menu-open",
+      "module": "dropdown",
+      "category": "state",
+      "description": "Visible menu state managed by Axoloth Behavior.",
+      "usage": "Normally managed by initDropdown rather than written manually.",
+      "status": "active"
+    },
+    {
+      "name": "axo-dropdown-item",
+      "module": "dropdown",
+      "category": "control",
+      "description": "Full-width action or link inside a dropdown menu.",
+      "usage": "Use with data-axo-dropdown-item or role menuitem.",
+      "status": "active"
+    },
+    {
+      "name": "axo-dropdown-label",
+      "module": "dropdown",
+      "category": "layout",
+      "description": "Non-interactive group label inside a dropdown menu.",
+      "usage": "Use for short menu section labels.",
+      "status": "active"
+    },
+    {
+      "name": "axo-dropdown-separator",
+      "module": "dropdown",
+      "category": "layout",
+      "description": "Subtle separator between groups of dropdown actions.",
+      "usage": "Use on an hr element with role separator.",
+      "status": "active"
+    },
+    {
+      "name": "axo-dropdown-end",
+      "module": "dropdown",
+      "category": "position",
+      "description": "Aligns a dropdown menu to the trigger's inline end edge.",
+      "usage": "Use on the axo-dropdown wrapper.",
+      "status": "active"
+    },
+    {
+      "name": "axo-dropdown-up",
+      "module": "dropdown",
+      "category": "position",
+      "description": "Places a dropdown menu above its trigger.",
+      "usage": "Use on the axo-dropdown wrapper.",
+      "status": "active"
+    },
+    {
+      "name": "axo-toast-region",
+      "module": "toast",
+      "category": "behavior",
+      "description": "Fixed live region that stacks Axoloth toast notifications.",
+      "usage": "Add data-axo-toast-region and initialize initToast.",
+      "status": "active"
+    },
+    {
+      "name": "axo-toast-region-top-start",
+      "module": "toast",
+      "category": "position",
+      "description": "Positions a toast region at the viewport top-start corner.",
+      "usage": "Use with axo-toast-region.",
+      "status": "active"
+    },
+    {
+      "name": "axo-toast-region-top-end",
+      "module": "toast",
+      "category": "position",
+      "description": "Positions a toast region at the viewport top-end corner.",
+      "usage": "Use with axo-toast-region.",
+      "status": "active"
+    },
+    {
+      "name": "axo-toast-region-bottom-start",
+      "module": "toast",
+      "category": "position",
+      "description": "Positions a toast region at the viewport bottom-start corner.",
+      "usage": "Use with axo-toast-region.",
+      "status": "active"
+    },
+    {
+      "name": "axo-toast-region-bottom-end",
+      "module": "toast",
+      "category": "position",
+      "description": "Positions a toast region at the viewport bottom-end corner.",
+      "usage": "Use with axo-toast-region.",
+      "status": "active"
+    },
+    {
+      "name": "axo-toast",
+      "module": "toast",
+      "category": "behavior",
+      "description": "Responsive notification layout inside a toast region.",
+      "usage": "Created by initToast.show or used with data-axo-toast.",
+      "status": "active"
+    },
+    {
+      "name": "axo-toast-open",
+      "module": "toast",
+      "category": "state",
+      "description": "Visible toast state managed by Axoloth Behavior.",
+      "usage": "Normally managed by initToast rather than written manually.",
+      "status": "active"
+    },
+    {
+      "name": "axo-toast-closing",
+      "module": "toast",
+      "category": "state",
+      "description": "Dismiss transition state managed by Axoloth Behavior.",
+      "usage": "Normally managed by initToast rather than written manually.",
+      "status": "active"
+    },
+    {
+      "name": "axo-toast-content",
+      "module": "toast",
+      "category": "layout",
+      "description": "Flexible text content column inside a toast.",
+      "usage": "Contains axo-toast-title and axo-toast-message.",
+      "status": "active"
+    },
+    {
+      "name": "axo-toast-title",
+      "module": "toast",
+      "category": "content",
+      "description": "Short emphasized toast heading.",
+      "usage": "Use inside axo-toast-content.",
+      "status": "active"
+    },
+    {
+      "name": "axo-toast-message",
+      "module": "toast",
+      "category": "content",
+      "description": "Wrapping notification message inside a toast.",
+      "usage": "Use inside axo-toast-content.",
+      "status": "active"
+    },
+    {
+      "name": "axo-toast-actions",
+      "module": "toast",
+      "category": "layout",
+      "description": "Inline action group inside a toast.",
+      "usage": "Use for undo, retry, or related actions.",
+      "status": "active"
+    },
+    {
+      "name": "axo-toast-dismiss",
+      "module": "toast",
+      "category": "control",
+      "description": "Compact toast dismissal control.",
+      "usage": "Use with data-axo-toast-dismiss.",
+      "status": "active"
     },
     {
       "name": "axo-sidebar-main-offset-left",
       "module": "layout",
       "category": "layout",
       "description": "Offsets main content by the expanded left sidebar width.",
-      "usage": "Use with a left fixed sidebar."
+      "usage": "Use with a left fixed sidebar.",
+      "status": "active"
     },
     {
       "name": "axo-sidebar-main-offset-right",
       "module": "layout",
       "category": "layout",
       "description": "Offsets main content by the expanded right sidebar width.",
-      "usage": "Use with a right fixed sidebar."
+      "usage": "Use with a right fixed sidebar.",
+      "status": "active"
     },
     {
       "name": "axo-sidebar-main-offset-rail-left",
       "module": "layout",
       "category": "layout",
       "description": "Offsets main content by the compact left sidebar rail width.",
-      "usage": "Use with a fixed left rail sidebar."
+      "usage": "Use with a fixed left rail sidebar.",
+      "status": "active"
     },
     {
       "name": "axo-sidebar-main-offset-rail-right",
       "module": "layout",
       "category": "layout",
       "description": "Offsets main content by the compact right sidebar rail width.",
-      "usage": "Use with a fixed right rail sidebar."
+      "usage": "Use with a fixed right rail sidebar.",
+      "status": "active"
     },
     {
       "name": "axo-app",
       "module": "layout",
       "category": "layout",
       "description": "Grid app shell for sidebar, header, main, and footer regions.",
-      "usage": "Use with axo-app-sidebar, axo-app-header, axo-app-main, and axo-app-footer."
+      "usage": "Use with axo-app-sidebar, axo-app-header, axo-app-main, and axo-app-footer.",
+      "status": "active"
     },
     {
       "name": "axo-app-sidebar",
       "module": "layout",
       "category": "layout",
       "description": "Sidebar grid area inside axo-app.",
-      "usage": "Combine with axo-sidebar for sidebar sizing and item layout."
+      "usage": "Combine with axo-sidebar for sidebar sizing and item layout.",
+      "status": "active"
     },
     {
       "name": "axo-app-sidebar-right",
       "module": "layout",
       "category": "layout",
       "description": "Moves the axo-app sidebar area to the right side.",
-      "usage": "Use on the same element as axo-app."
+      "usage": "Use on the same element as axo-app.",
+      "status": "active"
     },
     {
       "name": "axo-app-header",
       "module": "layout",
       "category": "layout",
       "description": "Header grid area inside axo-app.",
-      "usage": "Can be combined with axo-header."
+      "usage": "Can be combined with axo-header.",
+      "status": "active"
     },
     {
       "name": "axo-app-main",
       "module": "layout",
       "category": "layout",
       "description": "Scrollable main content grid area inside axo-app.",
-      "usage": "Customize inner spacing with --axo-app-padding."
+      "usage": "Customize inner spacing with --axo-app-padding.",
+      "status": "active"
     },
     {
       "name": "axo-app-footer",
       "module": "layout",
       "category": "layout",
       "description": "Footer grid area inside axo-app.",
-      "usage": "Customize height with --axo-app-footer-height."
+      "usage": "Customize height with --axo-app-footer-height.",
+      "status": "active"
+    },
+    {
+      "name": "axo-container-query",
+      "module": "layout",
+      "category": "responsive",
+      "description": "Named inline-size query container for adaptive Axoloth child layouts.",
+      "usage": "Wrap axo-bento axo-container-responsive or another container-aware child.",
+      "status": "active"
+    },
+    {
+      "name": "axo-auto-grid",
+      "module": "layout",
+      "category": "primitive",
+      "description": "Auto-fitting grid that creates columns from available space without media queries.",
+      "usage": "Customize minimum item width with --axo-item-min and gap with --axo-grid-gap.",
+      "status": "active"
+    },
+    {
+      "name": "axo-switcher",
+      "module": "layout",
+      "category": "primitive",
+      "description": "Container-aware flex layout that switches between rows and stacked items.",
+      "usage": "Customize the switch point with --axo-switcher-threshold.",
+      "status": "active"
+    },
+    {
+      "name": "axo-center",
+      "module": "layout",
+      "category": "primitive",
+      "description": "Horizontally centered content region with a configurable maximum width and gutter.",
+      "usage": "Customize with --axo-center-width and --axo-center-gutter.",
+      "status": "active"
+    },
+    {
+      "name": "axo-cover",
+      "module": "layout",
+      "category": "primitive",
+      "description": "Full-height flex section that vertically centers its content group.",
+      "usage": "Customize height and padding with --axo-cover-height and --axo-cover-padding.",
+      "status": "active"
+    },
+    {
+      "name": "axo-reel",
+      "module": "layout",
+      "category": "primitive",
+      "description": "Horizontal scrolling row with stable item widths and scroll snapping.",
+      "usage": "Add tabindex=\"0\" and an accessible label when the reel can overflow, then customize item width, gap, and edge padding with Axoloth reel variables.",
+      "status": "active"
+    },
+    {
+      "name": "axo-scroll-snap",
+      "module": "layout",
+      "category": "behavior",
+      "description": "Adds mandatory inline scroll snapping to a custom overflow container.",
+      "usage": "Combine with axo-snap-start on child items.",
+      "status": "active"
+    },
+    {
+      "name": "axo-snap-start",
+      "module": "layout",
+      "category": "behavior",
+      "description": "Aligns an item to the start edge of a scroll-snap container.",
+      "usage": "Use on children of axo-scroll-snap.",
+      "status": "active"
     },
     {
       "name": "axo-page",
       "module": "semantic",
       "category": "layout",
       "description": "Page wrapper with full-width sizing, minimum viewport height, and page padding.",
-      "usage": "Use as a top-level page or main wrapper."
+      "usage": "Use as a top-level page or main wrapper.",
+      "status": "active"
     },
     {
       "name": "axo-container",
       "module": "semantic",
       "category": "layout",
       "description": "Centered content container with configurable max width.",
-      "usage": "Customize width with --axo-container-width."
+      "usage": "Customize width with --axo-container-width.",
+      "status": "active"
     },
     {
       "name": "axo-section",
       "module": "semantic",
       "category": "layout",
       "description": "Vertical section spacing helper.",
-      "usage": "Customize spacing with --axo-section-gap."
+      "usage": "Customize spacing with --axo-section-gap.",
+      "status": "active"
     },
     {
       "name": "axo-cluster",
       "module": "semantic",
       "category": "layout",
       "description": "Wrapping inline group for nav items, tags, and action rows.",
-      "usage": "Customize spacing with --axo-control-gap."
+      "usage": "Customize spacing with --axo-control-gap.",
+      "status": "active"
     },
     {
       "name": "axo-list-reset",
       "module": "semantic",
       "category": "layout",
       "description": "Removes list margin, padding, and markers from ul or ol elements.",
-      "usage": "Use when semantic lists should behave like layout groups."
+      "usage": "Use when semantic lists should behave like layout groups.",
+      "status": "active"
     },
     {
       "name": "axo-nav",
       "module": "semantic",
       "category": "layout",
       "description": "Structural navigation container.",
-      "usage": "Use with axo-nav-list and axo-link."
+      "usage": "Use with axo-nav-list and axo-link.",
+      "status": "active"
     },
     {
       "name": "axo-nav-list",
       "module": "semantic",
       "category": "layout",
       "description": "Reset and row layout for semantic nav lists.",
-      "usage": "Use on ul or ol inside nav."
+      "usage": "Use on ul or ol inside nav.",
+      "status": "active"
     },
     {
       "name": "axo-link",
       "module": "semantic",
       "category": "surface",
       "description": "Neutral link reset with inherited color, hover transition, and focus-visible ring.",
-      "usage": "Use on anchors when browser default blue underline should be removed."
+      "usage": "Use on anchors when browser default blue underline should be removed.",
+      "status": "active"
     },
     {
       "name": "axo-button",
       "module": "semantic",
       "category": "surface",
       "description": "Neutral button structure with sizing, border, alignment, hover, and focus-visible ring.",
-      "usage": "Use on button or anchor elements."
+      "usage": "Use on button or anchor elements.",
+      "status": "active"
     },
     {
       "name": "axo-button-block",
       "module": "semantic",
       "category": "layout",
       "description": "Makes an axo-button fill the available inline size.",
-      "usage": "Use with axo-button."
+      "usage": "Use with axo-button.",
+      "status": "active"
     },
     {
       "name": "axo-field",
       "module": "semantic",
       "category": "layout",
       "description": "Vertical form field wrapper.",
-      "usage": "Use around axo-label and axo-input."
+      "usage": "Use around axo-label and axo-input.",
+      "status": "active"
     },
     {
       "name": "axo-label",
       "module": "semantic",
       "category": "layout",
       "description": "Label text layout helper for forms.",
-      "usage": "Use inside axo-field."
+      "usage": "Use inside axo-field.",
+      "status": "active"
     },
     {
       "name": "axo-input",
       "module": "semantic",
       "category": "surface",
       "description": "Neutral input, select, or textarea structure with border, padding, sizing, and focus-visible ring.",
-      "usage": "Use on input, select, or textarea elements."
+      "usage": "Use on input, select, or textarea elements.",
+      "status": "active"
     },
     {
       "name": "axo-form",
       "module": "semantic",
       "category": "layout",
       "description": "Vertical form layout with consistent control gaps.",
-      "usage": "Customize spacing with --axo-control-gap."
+      "usage": "Customize spacing with --axo-control-gap.",
+      "status": "active"
     },
     {
       "name": "axo-form-grid",
       "module": "semantic",
       "category": "layout",
       "description": "Responsive form grid: one column on mobile and two columns on wider screens.",
-      "usage": "Use for grouped field layouts."
+      "usage": "Use for grouped field layouts.",
+      "status": "active"
+    },
+    {
+      "name": "axo-badge",
+      "module": "semantic",
+      "category": "status",
+      "description": "Compact inline status or metadata label with neutral structure.",
+      "usage": "Combine with axo-badge-dot or user-defined colors.",
+      "status": "active"
+    },
+    {
+      "name": "axo-badge-dot",
+      "module": "semantic",
+      "category": "status",
+      "description": "Current-color status dot sized for axo-badge.",
+      "usage": "Place inside axo-badge before its label.",
+      "status": "active"
+    },
+    {
+      "name": "axo-alert",
+      "module": "semantic",
+      "category": "status",
+      "description": "Neutral alert or notice container with structured spacing and border.",
+      "usage": "Combine with axo-surface or custom status colors.",
+      "status": "active"
+    },
+    {
+      "name": "axo-alert-title",
+      "module": "semantic",
+      "category": "status",
+      "description": "Strong title treatment for an Axoloth alert.",
+      "usage": "Use inside axo-alert.",
+      "status": "active"
+    },
+    {
+      "name": "axo-empty",
+      "module": "semantic",
+      "category": "state",
+      "description": "Centered empty-state layout for icon, title, description, and actions.",
+      "usage": "Use axo-empty-state as a descriptive alias.",
+      "status": "active"
+    },
+    {
+      "name": "axo-empty-state",
+      "module": "semantic",
+      "category": "state",
+      "description": "Descriptive alias for the centered axo-empty layout.",
+      "usage": "Use with axo-empty-icon, axo-empty-title, and axo-empty-description.",
+      "status": "active"
+    },
+    {
+      "name": "axo-empty-icon",
+      "module": "semantic",
+      "category": "state",
+      "description": "Centered circular icon slot for an empty state.",
+      "usage": "Place inside axo-empty or axo-empty-state.",
+      "status": "active"
+    },
+    {
+      "name": "axo-empty-title",
+      "module": "semantic",
+      "category": "state",
+      "description": "Title typography for an empty state.",
+      "usage": "Place inside axo-empty or axo-empty-state.",
+      "status": "active"
+    },
+    {
+      "name": "axo-empty-description",
+      "module": "semantic",
+      "category": "state",
+      "description": "Readable muted description for an empty state.",
+      "usage": "Place inside axo-empty or axo-empty-state.",
+      "status": "active"
+    },
+    {
+      "name": "axo-table-wrap",
+      "module": "semantic",
+      "category": "data",
+      "description": "Responsive table wrapper with horizontal overflow safety.",
+      "usage": "Wrap an axo-table so narrow viewports can scroll it.",
+      "status": "active"
+    },
+    {
+      "name": "axo-table",
+      "module": "semantic",
+      "category": "data",
+      "description": "Neutral full-width data table with consistent cell structure.",
+      "usage": "Use on a semantic table inside axo-table-wrap.",
+      "status": "active"
+    },
+    {
+      "name": "axo-table-compact",
+      "module": "semantic",
+      "category": "data",
+      "description": "Compact cell-density preset for axo-table.",
+      "usage": "Use on the same element as axo-table.",
+      "status": "active"
+    },
+    {
+      "name": "axo-table-sticky",
+      "module": "semantic",
+      "category": "data",
+      "description": "Keeps table header cells visible inside a scrolling table wrapper.",
+      "usage": "Use on the same element as axo-table.",
+      "status": "active"
+    },
+    {
+      "name": "axo-visually-hidden",
+      "module": "semantic",
+      "category": "accessibility",
+      "description": "Visually hides content while keeping it available to assistive technology.",
+      "usage": "Use for accessible labels or descriptions that should not be visible.",
+      "status": "active"
+    },
+    {
+      "name": "axo-skip-link",
+      "module": "semantic",
+      "category": "accessibility",
+      "description": "Keyboard skip link that becomes visible when focused.",
+      "usage": "Place as the first focusable link and point it to the main content id.",
+      "status": "active"
+    },
+    {
+      "name": "axo-divider",
+      "module": "semantic",
+      "category": "layout",
+      "description": "Neutral full-width divider with configurable thickness, spacing, and opacity.",
+      "usage": "Use on hr or a decorative separator.",
+      "status": "active"
+    },
+    {
+      "name": "axo-progress",
+      "module": "semantic",
+      "category": "state",
+      "description": "Accessible progress track wrapper for a child axo-progress-bar.",
+      "usage": "Add progressbar ARIA attributes and set --axo-progress-value.",
+      "status": "active"
+    },
+    {
+      "name": "axo-progress-bar",
+      "module": "semantic",
+      "category": "state",
+      "description": "Progress fill controlled by --axo-progress-value.",
+      "usage": "Place as the direct child of axo-progress.",
+      "status": "active"
+    },
+    {
+      "name": "axo-progress-indeterminate",
+      "module": "semantic",
+      "category": "state",
+      "description": "Looping indeterminate state for axo-progress with reduced-motion support.",
+      "usage": "Use with axo-progress when completion percentage is unknown.",
+      "status": "active"
+    },
+    {
+      "name": "axo-skeleton",
+      "module": "semantic",
+      "category": "state",
+      "description": "Neutral loading placeholder with a reduced-motion-safe pulse.",
+      "usage": "Mark decorative skeletons aria-hidden and customize their dimensions.",
+      "status": "active"
+    },
+    {
+      "name": "axo-skeleton-text",
+      "module": "semantic",
+      "category": "state",
+      "description": "Text-line width preset for axo-skeleton.",
+      "usage": "Use on the same element as axo-skeleton.",
+      "status": "active"
+    },
+    {
+      "name": "axo-skeleton-circle",
+      "module": "semantic",
+      "category": "state",
+      "description": "Circular avatar-style preset for axo-skeleton.",
+      "usage": "Use on the same element as axo-skeleton.",
+      "status": "active"
+    },
+    {
+      "name": "axo-help",
+      "module": "semantic",
+      "category": "form",
+      "description": "Muted helper text for a form field.",
+      "usage": "Connect to its control with aria-describedby when it adds instructions.",
+      "status": "active"
+    },
+    {
+      "name": "axo-error",
+      "module": "semantic",
+      "category": "form",
+      "description": "Readable validation error text with configurable error color.",
+      "usage": "Connect to the invalid control with aria-describedby.",
+      "status": "active"
+    },
+    {
+      "name": "axo-required",
+      "module": "semantic",
+      "category": "form",
+      "description": "Adds a visual required marker after label text.",
+      "usage": "Still add the native required attribute to the associated control.",
+      "status": "active"
+    },
+    {
+      "name": "axo-invalid",
+      "module": "semantic",
+      "category": "form",
+      "description": "Validation border and ring for an invalid axo-input.",
+      "usage": "Use with aria-invalid=true and an associated axo-error message.",
+      "status": "active"
+    },
+    {
+      "name": "axo-checkbox",
+      "module": "semantic",
+      "category": "form",
+      "description": "Aligned label layout for a native checkbox and its text.",
+      "usage": "Use on a label containing input type checkbox.",
+      "status": "active"
+    },
+    {
+      "name": "axo-radio",
+      "module": "semantic",
+      "category": "form",
+      "description": "Aligned label layout for a native radio and its text.",
+      "usage": "Use on a label containing input type radio.",
+      "status": "active"
+    },
+    {
+      "name": "axo-switch",
+      "module": "semantic",
+      "category": "form",
+      "description": "Accessible switch layout built from a native checkbox.",
+      "usage": "Use on a label whose direct child is input type checkbox.",
+      "status": "active"
     },
     {
       "name": "axo-fade",
       "module": "motion",
       "category": "motion",
       "description": "Fade-in entrance animation.",
-      "usage": "Customize timing with --axo-duration and --axo-delay."
+      "usage": "Customize timing with --axo-duration and --axo-delay.",
+      "status": "active"
     },
     {
       "name": "axo-rise",
       "module": "motion",
       "category": "motion",
       "description": "Fade and move upward into place.",
-      "usage": "Customize distance with --axo-rise-distance."
+      "usage": "Customize distance with --axo-rise-distance.",
+      "status": "active"
     },
     {
       "name": "axo-pop",
       "module": "motion",
       "category": "motion",
       "description": "Fade and scale into place.",
-      "usage": "Customize start scale with --axo-pop-start."
+      "usage": "Customize start scale with --axo-pop-start.",
+      "status": "active"
     },
     {
       "name": "axo-lift",
       "module": "motion",
       "category": "motion",
       "description": "Lift upward on hover.",
-      "usage": "Customize distance with --axo-lift-distance."
+      "usage": "Customize distance with --axo-lift-distance.",
+      "status": "active"
     },
     {
       "name": "axo-glow",
       "module": "motion",
       "category": "motion",
       "description": "Soft hover glow shadow.",
-      "usage": "Customize shadow with --axo-glow-shadow."
+      "usage": "Customize shadow with --axo-glow-shadow.",
+      "status": "active"
     },
     {
       "name": "axo-shimmer",
       "module": "motion",
       "category": "motion",
       "description": "Looping shimmer overlay.",
-      "usage": "Customize with --axo-shimmer-duration and --axo-shimmer-color."
+      "usage": "Customize with --axo-shimmer-duration and --axo-shimmer-color.",
+      "status": "active"
     },
     {
       "name": "axo-theme-light",
       "module": "surface",
       "category": "surface",
       "description": "Light theme marker for Axoloth surface variables.",
-      "usage": "Use on a parent wrapper."
+      "usage": "Use on a parent wrapper.",
+      "status": "active"
     },
     {
       "name": "axo-theme-dark",
       "module": "surface",
       "category": "surface",
       "description": "Dark theme marker for Axoloth surface variables.",
-      "usage": "Use on a parent wrapper."
+      "usage": "Use on a parent wrapper.",
+      "status": "active"
     },
     {
       "name": "axo-surface",
       "module": "surface",
       "category": "surface",
       "description": "Normal surface for the current theme marker.",
-      "usage": "Use with axo-card or another structural element."
+      "usage": "Use with axo-card or another structural element.",
+      "status": "active"
     },
     {
       "name": "axo-contrast",
       "module": "surface",
       "category": "surface",
       "description": "Inverted contrast surface for the current theme marker.",
-      "usage": "Use with axo-card when the card should stand out from the parent theme."
+      "usage": "Use with axo-card when the card should stand out from the parent theme.",
+      "status": "active"
     }
   ]
 }

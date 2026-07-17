@@ -1,0 +1,60 @@
+name: Axoloth Quality Gates
+
+on:
+  pull_request:
+    paths:
+      - 'packages/axoloth-style/**'
+      - 'packages/axoloth-behavior/**'
+      - 'web_examples/**'
+      - 'tests/visual/**'
+      - 'tests/accessibility/**'
+      - 'playwright.config.mjs'
+      - 'playwright.accessibility.config.mjs'
+      - 'package.json'
+      - 'package-lock.json'
+  push:
+    branches: [main]
+    paths:
+      - 'packages/axoloth-style/**'
+      - 'packages/axoloth-behavior/**'
+      - 'web_examples/**'
+      - 'tests/visual/**'
+      - 'tests/accessibility/**'
+      - 'playwright.config.mjs'
+      - 'playwright.accessibility.config.mjs'
+      - 'package.json'
+      - 'package-lock.json'
+
+jobs:
+  browser-quality:
+    runs-on: windows-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm --prefix packages/axoloth-style run check
+
+      - run: npm --prefix packages/axoloth-behavior run check
+
+      - run: npm run test:a11y
+
+      - run: npm run test:visual
+
+      - name: Upload browser test report
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: axoloth-browser-test-report
+          path: |
+            playwright-report
+            test-results
+          if-no-files-found: ignore
+          retention-days: 7

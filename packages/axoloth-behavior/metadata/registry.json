@@ -1,0 +1,227 @@
+{
+  "schemaVersion": 1,
+  "name": "@quertys/axoloth-behavior",
+  "version": "0.5.0",
+  "stability": "pre-1.0",
+  "initializers": [
+    {
+      "name": "initAccordion",
+      "behavior": "accordion",
+      "description": "Initializes accordion groups, state, and keyboard navigation."
+    },
+    {
+      "name": "initAxolothBehaviors",
+      "behavior": "combined",
+      "description": "Initializes every Axoloth behavior and returns a combined controller."
+    },
+    {
+      "name": "initDialog",
+      "behavior": "dialog",
+      "description": "Initializes modal dialogs with focus management and nested layer handling."
+    },
+    {
+      "name": "initDropdown",
+      "behavior": "dropdown",
+      "description": "Initializes dropdown menus, dismissal, focus, and keyboard navigation."
+    },
+    {
+      "name": "initOffcanvas",
+      "behavior": "offcanvas",
+      "description": "Initializes accessible off-canvas sidebars and their backdrop controls."
+    },
+    {
+      "name": "initTabs",
+      "behavior": "tabs",
+      "description": "Initializes tab relationships, activation modes, and roving keyboard focus."
+    },
+    {
+      "name": "initToast",
+      "behavior": "toast",
+      "description": "Initializes toast regions, notification lifecycle, timers, and actions."
+    }
+  ],
+  "dataAttributes": [
+    {
+      "name": "data-axo-accordion",
+      "behavior": "accordion",
+      "description": "Marks an accordion group root."
+    },
+    {
+      "name": "data-axo-accordion-collapsible",
+      "behavior": "accordion",
+      "description": "Controls whether the final open accordion item may close."
+    },
+    {
+      "name": "data-axo-accordion-multiple",
+      "behavior": "accordion",
+      "description": "Allows multiple accordion items to remain open."
+    },
+    {
+      "name": "data-axo-accordion-panel",
+      "behavior": "accordion",
+      "description": "Identifies an accordion panel by its owned item key."
+    },
+    {
+      "name": "data-axo-accordion-trigger",
+      "behavior": "accordion",
+      "description": "Identifies the control for an accordion panel."
+    },
+    {
+      "name": "data-axo-dialog-dismiss",
+      "behavior": "dialog",
+      "description": "Dismisses the referenced dialog."
+    },
+    {
+      "name": "data-axo-dialog-id",
+      "behavior": "dialog",
+      "description": "Defines the identifier of a controlled dialog layer."
+    },
+    {
+      "name": "data-axo-dialog-toggle",
+      "behavior": "dialog",
+      "description": "Toggles the referenced dialog."
+    },
+    {
+      "name": "data-axo-dismiss",
+      "behavior": "offcanvas",
+      "description": "Dismisses the referenced off-canvas layer."
+    },
+    {
+      "name": "data-axo-dropdown",
+      "behavior": "dropdown",
+      "description": "Marks a dropdown component root."
+    },
+    {
+      "name": "data-axo-dropdown-item",
+      "behavior": "dropdown",
+      "description": "Marks an interactive item inside a dropdown menu."
+    },
+    {
+      "name": "data-axo-dropdown-menu",
+      "behavior": "dropdown",
+      "description": "Identifies the menu owned by a dropdown trigger."
+    },
+    {
+      "name": "data-axo-dropdown-toggle",
+      "behavior": "dropdown",
+      "description": "Identifies the control that toggles a dropdown menu."
+    },
+    {
+      "name": "data-axo-id",
+      "behavior": "offcanvas",
+      "description": "Defines the identifier of a controlled off-canvas layer."
+    },
+    {
+      "name": "data-axo-tab",
+      "behavior": "tabs",
+      "description": "Identifies a tab control by its panel key."
+    },
+    {
+      "name": "data-axo-tab-panel",
+      "behavior": "tabs",
+      "description": "Identifies a panel owned by a tab control."
+    },
+    {
+      "name": "data-axo-tabs",
+      "behavior": "tabs",
+      "description": "Marks a tabs component root."
+    },
+    {
+      "name": "data-axo-tabs-activation",
+      "behavior": "tabs",
+      "description": "Selects automatic or manual keyboard tab activation."
+    },
+    {
+      "name": "data-axo-toast",
+      "behavior": "toast",
+      "description": "Marks a generated or declarative toast element."
+    },
+    {
+      "name": "data-axo-toast-dismiss",
+      "behavior": "toast",
+      "description": "Marks a control that dismisses its toast."
+    },
+    {
+      "name": "data-axo-toast-duration",
+      "behavior": "toast",
+      "description": "Overrides a toast duration in milliseconds."
+    },
+    {
+      "name": "data-axo-toast-priority",
+      "behavior": "toast",
+      "description": "Selects polite or assertive live announcement priority."
+    },
+    {
+      "name": "data-axo-toast-region",
+      "behavior": "toast",
+      "description": "Marks a live region that owns toast notifications."
+    },
+    {
+      "name": "data-axo-toast-tone",
+      "behavior": "toast",
+      "description": "Provides a semantic tone hook for a toast."
+    },
+    {
+      "name": "data-axo-toggle",
+      "behavior": "offcanvas",
+      "description": "Toggles the referenced off-canvas layer."
+    }
+  ],
+  "events": [
+    {
+      "name": "axo:accordion-close",
+      "behavior": "accordion",
+      "description": "Fires after an accordion panel closes."
+    },
+    {
+      "name": "axo:accordion-open",
+      "behavior": "accordion",
+      "description": "Fires after an accordion panel opens."
+    },
+    {
+      "name": "axo:dialog-close",
+      "behavior": "dialog",
+      "description": "Fires after a dialog closes."
+    },
+    {
+      "name": "axo:dialog-open",
+      "behavior": "dialog",
+      "description": "Fires after a dialog opens."
+    },
+    {
+      "name": "axo:dropdown-close",
+      "behavior": "dropdown",
+      "description": "Fires after a dropdown menu closes."
+    },
+    {
+      "name": "axo:dropdown-open",
+      "behavior": "dropdown",
+      "description": "Fires after a dropdown menu opens."
+    },
+    {
+      "name": "axo:offcanvas-close",
+      "behavior": "offcanvas",
+      "description": "Fires after an off-canvas layer closes."
+    },
+    {
+      "name": "axo:offcanvas-open",
+      "behavior": "offcanvas",
+      "description": "Fires after an off-canvas layer opens."
+    },
+    {
+      "name": "axo:tabs-change",
+      "behavior": "tabs",
+      "description": "Fires when a tabs component changes its active tab."
+    },
+    {
+      "name": "axo:toast-dismiss",
+      "behavior": "toast",
+      "description": "Fires when a toast begins dismissal."
+    },
+    {
+      "name": "axo:toast-show",
+      "behavior": "toast",
+      "description": "Fires after a toast is shown in a region."
+    }
+  ]
+}

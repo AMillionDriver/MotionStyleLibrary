@@ -164,5 +164,300 @@
       "  <button class=\"axo-button axo-button-block\" type=\"submit\">Save</button>",
       "</form>"
     ]
+  },
+  "Axoloth Alert": {
+    "prefix": "axo-alert",
+    "description": "Axoloth neutral alert structure.",
+    "body": [
+      "<div class=\"axo-alert axo-surface\" role=\"status\">",
+      "  <strong class=\"axo-alert-title\">$1</strong>",
+      "  <p>$2</p>",
+      "</div>"
+    ]
+  },
+  "Axoloth Empty State": {
+    "prefix": "axo-empty",
+    "description": "Axoloth centered empty-state structure.",
+    "body": [
+      "<section class=\"axo-empty axo-surface\">",
+      "  <span class=\"axo-empty-icon\" aria-hidden=\"true\">$1</span>",
+      "  <h2 class=\"axo-empty-title\">$2</h2>",
+      "  <p class=\"axo-empty-description\">$3</p>",
+      "  <button class=\"axo-button\" type=\"button\">$4</button>",
+      "</section>"
+    ]
+  },
+  "Axoloth Table": {
+    "prefix": "axo-table",
+    "description": "Axoloth responsive semantic data table.",
+    "body": [
+      "<div class=\"axo-table-wrap axo-surface\">",
+      "  <table class=\"axo-table axo-table-sticky\">",
+      "    <thead>",
+      "      <tr><th scope=\"col\">$1</th><th scope=\"col\">$2</th></tr>",
+      "    </thead>",
+      "    <tbody>",
+      "      <tr><td>$3</td><td><span class=\"axo-badge\">$4</span></td></tr>",
+      "    </tbody>",
+      "  </table>",
+      "</div>"
+    ]
+  },
+  "Axoloth Container Bento": {
+    "prefix": "axo-bento-container",
+    "description": "Axoloth Bento that responds to its wrapper width.",
+    "body": [
+      "<div class=\"axo-container-query\">",
+      "  <section class=\"axo-bento axo-container-responsive\">",
+      "    <article class=\"axo-card axo-surface axo-wide\">$1</article>",
+      "    <article class=\"axo-card axo-surface axo-square\">$2</article>",
+      "  </section>",
+      "</div>"
+    ]
+  },
+  "Axoloth Auto Grid": {
+    "prefix": "axo-auto-grid",
+    "description": "Axoloth auto-fitting grid without breakpoint classes.",
+    "body": [
+      "<section class=\"axo-auto-grid\">",
+      "  <article class=\"axo-card axo-surface\">$1</article>",
+      "  <article class=\"axo-card axo-surface\">$2</article>",
+      "  <article class=\"axo-card axo-surface\">$3</article>",
+      "</section>"
+    ]
+  },
+  "Axoloth Switcher": {
+    "prefix": "axo-switcher",
+    "description": "Axoloth row-to-stack responsive primitive.",
+    "body": [
+      "<section class=\"axo-switcher\">",
+      "  <article class=\"axo-card axo-surface\">$1</article>",
+      "  <article class=\"axo-card axo-surface\">$2</article>",
+      "</section>"
+    ]
+  },
+  "Axoloth Cover": {
+    "prefix": "axo-cover",
+    "description": "Axoloth full-height centered section.",
+    "body": [
+      "<section class=\"axo-cover\">",
+      "  <div class=\"axo-center axo-stack\">",
+      "    <h1>$1</h1>",
+      "    <p>$2</p>",
+      "  </div>",
+      "</section>"
+    ]
+  },
+  "Axoloth Reel": {
+    "prefix": "axo-reel",
+    "description": "Axoloth horizontal snap-scrolling row.",
+    "body": [
+      "<section class=\"axo-reel\" aria-label=\"$1\">",
+      "  <article class=\"axo-card axo-surface\">$2</article>",
+      "  <article class=\"axo-card axo-surface\">$3</article>",
+      "  <article class=\"axo-card axo-surface\">$4</article>",
+      "</section>"
+    ]
+  },
+  "Axoloth Progress": {
+    "prefix": "axo-progress",
+    "description": "Accessible Axoloth progress indicator.",
+    "body": [
+      "<div",
+      "  class=\"axo-progress\"",
+      "  role=\"progressbar\"",
+      "  aria-label=\"$1\"",
+      "  aria-valuemin=\"0\"",
+      "  aria-valuemax=\"100\"",
+      "  aria-valuenow=\"$2\"",
+      "  style=\"--axo-progress-value: $2%\"",
+      ">",
+      "  <span class=\"axo-progress-bar\"></span>",
+      "</div>"
+    ]
+  },
+  "Axoloth Skeleton": {
+    "prefix": "axo-skeleton",
+    "description": "Accessible decorative Axoloth loading skeletons.",
+    "body": [
+      "<div class=\"axo-stack\" aria-hidden=\"true\">",
+      "  <span class=\"axo-skeleton axo-skeleton-circle\"></span>",
+      "  <span class=\"axo-skeleton axo-skeleton-text\"></span>",
+      "  <span class=\"axo-skeleton axo-skeleton-text\" style=\"--axo-skeleton-text-width: 14rem\"></span>",
+      "</div>"
+    ]
+  },
+  "Axoloth Validation Form": {
+    "prefix": "axo-validation-form",
+    "description": "Axoloth form field with accessible invalid state.",
+    "body": [
+      "<form class=\"axo-form axo-card axo-surface\">",
+      "  <label class=\"axo-field\">",
+      "    <span class=\"axo-label axo-required\">$1</span>",
+      "    <input",
+      "      class=\"axo-input axo-invalid\"",
+      "      name=\"$2\"",
+      "      aria-invalid=\"true\"",
+      "      aria-describedby=\"$2-error\"",
+      "      required",
+      "    />",
+      "    <small class=\"axo-error\" id=\"$2-error\">$3</small>",
+      "  </label>",
+      "</form>"
+    ]
+  },
+  "Axoloth Choice Controls": {
+    "prefix": "axo-choice-controls",
+    "description": "Native checkbox, radio, and switch controls with Axoloth layout.",
+    "body": [
+      "<div class=\"axo-stack\">",
+      "  <label class=\"axo-checkbox\"><input type=\"checkbox\" /> <span>$1</span></label>",
+      "  <label class=\"axo-radio\"><input type=\"radio\" name=\"$2\" /> <span>$3</span></label>",
+      "  <label class=\"axo-switch\"><input type=\"checkbox\" /> <span>$4</span></label>",
+      "</div>"
+    ]
+  },
+  "Axoloth Skip Link": {
+    "prefix": "axo-skip-link",
+    "description": "Keyboard skip link and main-content target.",
+    "body": [
+      "<a class=\"axo-skip-link\" href=\"#main-content\">Skip to main content</a>",
+      "<main id=\"main-content\" tabindex=\"-1\">$1</main>"
+    ]
+  },
+  "Axoloth Offcanvas Sidebar": {
+    "prefix": "axo-sidebar-offcanvas",
+    "description": "Accessible off-canvas sidebar for Axoloth Behavior.",
+    "body": [
+      "<button",
+      "  class=\"axo-button\"",
+      "  type=\"button\"",
+      "  data-axo-toggle=\"$1-sidebar\"",
+      "  aria-controls=\"$1-sidebar\"",
+      "  aria-expanded=\"false\"",
+      ">",
+      "  Open menu",
+      "</button>",
+      "",
+      "<aside",
+      "  id=\"$1-sidebar\"",
+      "  class=\"axo-sidebar axo-sidebar-offcanvas axo-surface\"",
+      "  data-axo-id=\"$1-sidebar\"",
+      "  role=\"dialog\"",
+      "  aria-modal=\"true\"",
+      "  aria-label=\"$2 navigation\"",
+      "  aria-hidden=\"true\"",
+      ">",
+      "  <button class=\"axo-button\" type=\"button\" data-axo-dismiss=\"$1-sidebar\">Close</button>",
+      "  <a class=\"axo-sidebar-item axo-link\" href=\"#$3\">$4</a>",
+      "</aside>",
+      "",
+      "<div class=\"axo-sidebar-backdrop\" data-axo-dismiss=\"$1-sidebar\" aria-hidden=\"true\"></div>"
+    ]
+  },
+  "Axoloth Dialog": {
+    "prefix": "axo-dialog",
+    "description": "Accessible modal dialog for Axoloth Behavior.",
+    "body": [
+      "<button",
+      "  class=\"axo-button\"",
+      "  type=\"button\"",
+      "  data-axo-dialog-toggle=\"$1-dialog\"",
+      "  aria-controls=\"$1-dialog\"",
+      "  aria-expanded=\"false\"",
+      ">",
+      "  Open dialog",
+      "</button>",
+      "",
+      "<div",
+      "  id=\"$1-dialog\"",
+      "  class=\"axo-dialog\"",
+      "  data-axo-dialog-id=\"$1-dialog\"",
+      "  aria-labelledby=\"$1-dialog-title\"",
+      "  aria-hidden=\"true\"",
+      ">",
+      "  <div class=\"axo-dialog-backdrop\" data-axo-dialog-dismiss=\"$1-dialog\" aria-hidden=\"true\"></div>",
+      "  <section class=\"axo-dialog-panel axo-surface\">",
+      "    <header class=\"axo-dialog-header\">",
+      "      <h2 id=\"$1-dialog-title\">$2</h2>",
+      "      <button class=\"axo-button\" type=\"button\" data-axo-dialog-dismiss=\"$1-dialog\">Close</button>",
+      "    </header>",
+      "    <div class=\"axo-dialog-body\">$3</div>",
+      "    <footer class=\"axo-dialog-footer\">",
+      "      <button class=\"axo-button\" type=\"button\" data-axo-dialog-dismiss=\"$1-dialog\">Cancel</button>",
+      "      <button class=\"axo-button\" type=\"button\">$4</button>",
+      "    </footer>",
+      "  </section>",
+      "</div>"
+    ]
+  },
+  "Axoloth Tabs": {
+    "prefix": "axo-tabs",
+    "description": "Accessible Axoloth tabs prepared for initTabs.",
+    "body": [
+      "<div id=\"$1-tabs\" class=\"axo-tabs\" data-axo-tabs>",
+      "  <div class=\"axo-tab-list\" aria-label=\"$2 sections\">",
+      "    <button class=\"axo-tab\" type=\"button\" data-axo-tab=\"$3\" aria-selected=\"true\">$4</button>",
+      "    <button class=\"axo-tab\" type=\"button\" data-axo-tab=\"$5\">$6</button>",
+      "  </div>",
+      "  <section class=\"axo-tab-panel axo-card axo-surface\" data-axo-tab-panel=\"$3\">$7</section>",
+      "  <section class=\"axo-tab-panel axo-card axo-surface\" data-axo-tab-panel=\"$5\">$8</section>",
+      "</div>"
+    ]
+  },
+  "Axoloth Accordion": {
+    "prefix": "axo-accordion",
+    "description": "Accessible Axoloth accordion prepared for initAccordion.",
+    "body": [
+      "<div id=\"$1-accordion\" class=\"axo-accordion\" data-axo-accordion>",
+      "  <section class=\"axo-accordion-item axo-surface\">",
+      "    <h3>",
+      "      <button class=\"axo-accordion-trigger\" type=\"button\" data-axo-accordion-trigger=\"$2\" aria-expanded=\"true\">",
+      "        $3 <span class=\"axo-accordion-indicator\" aria-hidden=\"true\">+</span>",
+      "      </button>",
+      "    </h3>",
+      "    <div class=\"axo-accordion-panel\" data-axo-accordion-panel=\"$2\">$4</div>",
+      "  </section>",
+      "  <section class=\"axo-accordion-item axo-surface\">",
+      "    <h3>",
+      "      <button class=\"axo-accordion-trigger\" type=\"button\" data-axo-accordion-trigger=\"$5\">",
+      "        $6 <span class=\"axo-accordion-indicator\" aria-hidden=\"true\">+</span>",
+      "      </button>",
+      "    </h3>",
+      "    <div class=\"axo-accordion-panel\" data-axo-accordion-panel=\"$5\">$7</div>",
+      "  </section>",
+      "</div>"
+    ]
+  },
+  "Axoloth Dropdown": {
+    "prefix": "axo-dropdown",
+    "description": "Accessible Axoloth menu prepared for initDropdown.",
+    "body": [
+      "<div id=\"$1-dropdown\" class=\"axo-dropdown axo-dropdown-end\" data-axo-dropdown>",
+      "  <button",
+      "    class=\"axo-button axo-dropdown-trigger\"",
+      "    type=\"button\"",
+      "    data-axo-dropdown-toggle=\"$2\"",
+      "  >",
+      "    $3",
+      "  </button>",
+      "  <div class=\"axo-dropdown-menu axo-surface\" data-axo-dropdown-menu=\"$2\" hidden>",
+      "    <button class=\"axo-dropdown-item\" type=\"button\" data-axo-dropdown-item>$4</button>",
+      "    <button class=\"axo-dropdown-item\" type=\"button\" data-axo-dropdown-item>$5</button>",
+      "  </div>",
+      "</div>"
+    ]
+  },
+  "Axoloth Toast Region": {
+    "prefix": "axo-toast-region",
+    "description": "Accessible notification region prepared for initToast.",
+    "body": [
+      "<div",
+      "  id=\"$1-notifications\"",
+      "  class=\"axo-toast-region axo-toast-region-top-end\"",
+      "  data-axo-toast-region",
+      "  aria-label=\"$2 Notifications\"",
+      "></div>"
+    ]
   }
 }

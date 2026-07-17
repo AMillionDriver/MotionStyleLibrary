@@ -1,0 +1,9 @@
+{
+  "name": "axoloth-docs",
+  "version": "0.6.0",
+  "private": true,
+  "description": "Static documentation and integration examples for Axoloth Style.",
+  "scripts": {
+    "check": "node --check scripts/examples.js && node --check scripts/theme.js && node scripts/verify-docs.mjs"
+  }
+}

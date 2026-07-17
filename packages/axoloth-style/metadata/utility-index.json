@@ -1,0 +1,6097 @@
+{
+  "schemaVersion": 1,
+  "name": "@quertys/axoloth-style",
+  "version": "0.6.0",
+  "counts": {
+    "classes": 161,
+    "variables": 168,
+    "total": 329
+  },
+  "utilities": [
+    {
+      "kind": "variable",
+      "name": "--axo-accordion-border",
+      "module": "accordion",
+      "category": "surface",
+      "valueType": "border",
+      "default": "1px solid currentColor",
+      "description": "Border applied to each accordion item.",
+      "valueSuggestions": [
+        {
+          "value": "none",
+          "description": "Remove accordion item borders."
+        },
+        {
+          "value": "1px solid currentColor",
+          "description": "Neutral accordion border."
+        },
+        {
+          "value": "1px solid rgb(148 163 184 / 0.35)",
+          "description": "Soft slate border."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-accordion-gap",
+      "module": "accordion",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "0.75rem",
+      "description": "Gap between accordion items.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "Joined accordion items."
+        },
+        {
+          "value": "0.5rem",
+          "description": "Compact accordion gap."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Default accordion gap."
+        },
+        {
+          "value": "1rem",
+          "description": "Comfortable accordion gap."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-accordion-panel-padding",
+      "module": "accordion",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "0 1rem 1rem",
+      "description": "Padding inside expanded accordion panels.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "No accordion panel padding."
+        },
+        {
+          "value": "0 0.75rem 0.75rem",
+          "description": "Compact panel padding."
+        },
+        {
+          "value": "0 1rem 1rem",
+          "description": "Default panel padding."
+        },
+        {
+          "value": "0 1.5rem 1.5rem",
+          "description": "Roomy panel padding."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-accordion-radius",
+      "module": "accordion",
+      "category": "shape",
+      "valueType": "length",
+      "default": "var(--axo-radius, 0.5rem)",
+      "description": "Border radius for accordion items.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "Square accordion items."
+        },
+        {
+          "value": "0.25rem",
+          "description": "Subtle accordion radius."
+        },
+        {
+          "value": "0.5rem",
+          "description": "Default accordion radius."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Soft accordion radius."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-accordion-transition",
+      "module": "accordion",
+      "category": "motion",
+      "valueType": "transition",
+      "default": "180ms ease",
+      "description": "Timing used by accordion panel and indicator motion.",
+      "valueSuggestions": [
+        {
+          "value": "0ms linear",
+          "description": "Disable accordion motion."
+        },
+        {
+          "value": "120ms ease",
+          "description": "Fast accordion motion."
+        },
+        {
+          "value": "180ms ease",
+          "description": "Default accordion motion."
+        },
+        {
+          "value": "280ms ease-out",
+          "description": "Slow accordion motion."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-accordion-trigger-min-height",
+      "module": "accordion",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "3rem",
+      "description": "Minimum block size for accordion triggers.",
+      "valueSuggestions": [
+        {
+          "value": "2.5rem",
+          "description": "Compact accordion trigger."
+        },
+        {
+          "value": "3rem",
+          "description": "Default accordion trigger."
+        },
+        {
+          "value": "3.5rem",
+          "description": "Comfortable accordion trigger."
+        },
+        {
+          "value": "4rem",
+          "description": "Large accordion trigger."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-accordion-trigger-padding",
+      "module": "accordion",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "0.75rem 1rem",
+      "description": "Padding inside accordion trigger controls.",
+      "valueSuggestions": [
+        {
+          "value": "0.5rem 0.75rem",
+          "description": "Compact trigger padding."
+        },
+        {
+          "value": "0.75rem 1rem",
+          "description": "Default trigger padding."
+        },
+        {
+          "value": "1rem 1.25rem",
+          "description": "Roomy trigger padding."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-alert-gap",
+      "module": "semantic",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "0.5rem",
+      "description": "Vertical gap between alert content.",
+      "valueSuggestions": [
+        {
+          "value": "0.25rem",
+          "description": "Tight alert gap."
+        },
+        {
+          "value": "0.5rem",
+          "description": "Default alert gap."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Relaxed alert gap."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-alert-padding",
+      "module": "semantic",
+      "category": "spacing",
+      "valueType": "spacing",
+      "default": "1rem",
+      "description": "Inner padding for axo-alert.",
+      "valueSuggestions": [
+        {
+          "value": "0.75rem",
+          "description": "Compact alert padding."
+        },
+        {
+          "value": "1rem",
+          "description": "Default alert padding."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Large alert padding."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-app-footer-height",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "length",
+      "default": "auto",
+      "description": "Minimum block size for axo-app-footer.",
+      "valueSuggestions": [
+        {
+          "value": "auto",
+          "description": "Size footer from content."
+        },
+        {
+          "value": "3rem",
+          "description": "Compact app footer."
+        },
+        {
+          "value": "4rem",
+          "description": "Default app footer."
+        },
+        {
+          "value": "5rem",
+          "description": "Large app footer."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-app-gap",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "length",
+      "default": "0",
+      "description": "Gap between app shell grid regions.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "No gap between app regions."
+        },
+        {
+          "value": "0.5rem",
+          "description": "Small app region gap."
+        },
+        {
+          "value": "1rem",
+          "description": "Default comfortable app gap."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Large app region gap."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-app-header-height",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "length",
+      "default": "4rem",
+      "description": "Grid row height for axo-app-header.",
+      "valueSuggestions": [
+        {
+          "value": "3.5rem",
+          "description": "Compact app header."
+        },
+        {
+          "value": "4rem",
+          "description": "Default app header."
+        },
+        {
+          "value": "4.5rem",
+          "description": "Comfortable app header."
+        },
+        {
+          "value": "5rem",
+          "description": "Large app header."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-app-padding",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "length",
+      "default": "1rem",
+      "description": "Inner padding for axo-app-main and axo-app-footer.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "No app content padding."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Compact app content padding."
+        },
+        {
+          "value": "1rem",
+          "description": "Default app content padding."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Roomy app content padding."
+        },
+        {
+          "value": "2rem",
+          "description": "Large app content padding."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-badge-gap",
+      "module": "semantic",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "0.375rem",
+      "description": "Gap between content inside axo-badge.",
+      "valueSuggestions": [
+        {
+          "value": "0.25rem",
+          "description": "Tight badge gap."
+        },
+        {
+          "value": "0.375rem",
+          "description": "Default badge gap."
+        },
+        {
+          "value": "0.5rem",
+          "description": "Relaxed badge gap."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-badge-padding",
+      "module": "semantic",
+      "category": "spacing",
+      "valueType": "spacing",
+      "default": "0.35rem 0.625rem",
+      "description": "Block and inline padding for axo-badge.",
+      "valueSuggestions": [
+        {
+          "value": "0.25rem 0.5rem",
+          "description": "Compact badge padding."
+        },
+        {
+          "value": "0.35rem 0.625rem",
+          "description": "Default badge padding."
+        },
+        {
+          "value": "0.5rem 0.75rem",
+          "description": "Large badge padding."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-badge-radius",
+      "module": "semantic",
+      "category": "shape",
+      "valueType": "length",
+      "default": "999px",
+      "description": "Border radius for axo-badge.",
+      "valueSuggestions": [
+        {
+          "value": "0.375rem",
+          "description": "Compact rounded badge."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Soft rounded badge."
+        },
+        {
+          "value": "999px",
+          "description": "Default pill badge."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-border",
+      "module": "bento",
+      "category": "layout",
+      "valueType": "border",
+      "default": "1px solid rgb(255 255 255 / 0.1)",
+      "description": "Default border value for Axoloth cards.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "No border."
+        },
+        {
+          "value": "1px solid rgb(255 255 255 / 0.1)",
+          "description": "Default subtle light border."
+        },
+        {
+          "value": "1px solid rgb(15 23 42 / 0.12)",
+          "description": "Subtle dark border for light surfaces."
+        },
+        {
+          "value": "1px solid currentColor",
+          "description": "Use current text color."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-card-padding",
+      "module": "bento",
+      "category": "layout",
+      "valueType": "length",
+      "default": "1rem",
+      "description": "Default padding for Axoloth cards.",
+      "valueSuggestions": [
+        {
+          "value": "0.75rem",
+          "description": "Compact card padding."
+        },
+        {
+          "value": "1rem",
+          "description": "Default card padding."
+        },
+        {
+          "value": "1.25rem",
+          "description": "Comfortable card padding."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Large card padding."
+        },
+        {
+          "value": "2rem",
+          "description": "Spacious card padding."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-center-gutter",
+      "module": "layout",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "0",
+      "description": "Inline padding inside axo-center.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "No inner gutter."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Compact inner gutter."
+        },
+        {
+          "value": "1rem",
+          "description": "Default page gutter."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Large inner gutter."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-center-width",
+      "module": "layout",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "40rem",
+      "description": "Maximum inline size for axo-center.",
+      "valueSuggestions": [
+        {
+          "value": "32rem",
+          "description": "Narrow centered content."
+        },
+        {
+          "value": "40rem",
+          "description": "Default centered content."
+        },
+        {
+          "value": "56rem",
+          "description": "Wide centered content."
+        },
+        {
+          "value": "72rem",
+          "description": "Page-width centered content."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-check-size",
+      "module": "semantic",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "1.125rem",
+      "description": "Native checkbox and radio control size.",
+      "valueSuggestions": [
+        {
+          "value": "1rem",
+          "description": "Compact check control."
+        },
+        {
+          "value": "1.125rem",
+          "description": "Default check control."
+        },
+        {
+          "value": "1.25rem",
+          "description": "Large check control."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-container-width",
+      "module": "semantic",
+      "category": "layout",
+      "valueType": "length",
+      "default": "72rem",
+      "description": "Maximum inline size used by axo-container.",
+      "valueSuggestions": [
+        {
+          "value": "48rem",
+          "description": "Narrow content container."
+        },
+        {
+          "value": "64rem",
+          "description": "Medium content container."
+        },
+        {
+          "value": "72rem",
+          "description": "Default content container."
+        },
+        {
+          "value": "80rem",
+          "description": "Wide content container."
+        },
+        {
+          "value": "100%",
+          "description": "Fill available width."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-contrast-bg",
+      "module": "surface",
+      "category": "surface",
+      "valueType": "color",
+      "default": "rgb(15 23 42)",
+      "description": "Background color for axo-contrast.",
+      "valueSuggestions": [
+        {
+          "value": "rgb(15 23 42)",
+          "description": "Default dark contrast surface."
+        },
+        {
+          "value": "rgb(2 6 23)",
+          "description": "Near-black contrast surface."
+        },
+        {
+          "value": "rgb(255 255 255)",
+          "description": "Light contrast surface."
+        },
+        {
+          "value": "currentColor",
+          "description": "Use current text color as the fill."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-contrast-border",
+      "module": "surface",
+      "category": "surface",
+      "valueType": "color",
+      "default": "rgb(15 23 42 / 0.2)",
+      "description": "Border color for axo-contrast.",
+      "valueSuggestions": [
+        {
+          "value": "transparent",
+          "description": "No visible border."
+        },
+        {
+          "value": "rgb(15 23 42 / 0.2)",
+          "description": "Default dark contrast border."
+        },
+        {
+          "value": "rgb(255 255 255 / 0.18)",
+          "description": "Light contrast border."
+        },
+        {
+          "value": "currentColor",
+          "description": "Use current text color."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-contrast-color",
+      "module": "surface",
+      "category": "surface",
+      "valueType": "color",
+      "default": "rgb(248 250 252)",
+      "description": "Text color for axo-contrast.",
+      "valueSuggestions": [
+        {
+          "value": "rgb(248 250 252)",
+          "description": "Default light text."
+        },
+        {
+          "value": "rgb(226 232 240)",
+          "description": "Soft light text."
+        },
+        {
+          "value": "rgb(15 23 42)",
+          "description": "Dark text for light contrast surfaces."
+        },
+        {
+          "value": "currentColor",
+          "description": "Inherit current text color."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-contrast-shadow",
+      "module": "surface",
+      "category": "surface",
+      "valueType": "shadow",
+      "default": "0 18px 48px rgb(15 23 42 / 0.18)",
+      "description": "Box-shadow for axo-contrast.",
+      "valueSuggestions": [
+        {
+          "value": "none",
+          "description": "Disable contrast shadow."
+        },
+        {
+          "value": "0 8px 24px rgb(15 23 42 / 0.12)",
+          "description": "Small contrast shadow."
+        },
+        {
+          "value": "0 18px 48px rgb(15 23 42 / 0.18)",
+          "description": "Default contrast shadow."
+        },
+        {
+          "value": "0 24px 64px rgb(15 23 42 / 0.24)",
+          "description": "Large contrast shadow."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-control-accent",
+      "module": "semantic",
+      "category": "form",
+      "valueType": "color",
+      "default": "currentColor",
+      "description": "Native accent color for Axoloth checkbox and radio controls.",
+      "valueSuggestions": [
+        {
+          "value": "currentColor",
+          "description": "Follow inherited text color."
+        },
+        {
+          "value": "rgb(37 99 235)",
+          "description": "Blue accent."
+        },
+        {
+          "value": "rgb(5 150 105)",
+          "description": "Emerald accent."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-control-gap",
+      "module": "semantic",
+      "category": "layout",
+      "valueType": "length",
+      "default": "0.75rem",
+      "description": "Gap used by semantic controls, nav lists, clusters, and forms.",
+      "valueSuggestions": [
+        {
+          "value": "0.5rem",
+          "description": "Tight control gap."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Default control gap."
+        },
+        {
+          "value": "1rem",
+          "description": "Comfortable control gap."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Large control gap."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-control-height",
+      "module": "semantic",
+      "category": "layout",
+      "valueType": "length",
+      "default": "2.5rem",
+      "description": "Minimum block size for axo-button and axo-input.",
+      "valueSuggestions": [
+        {
+          "value": "2.25rem",
+          "description": "Compact control height."
+        },
+        {
+          "value": "2.5rem",
+          "description": "Default control height."
+        },
+        {
+          "value": "2.75rem",
+          "description": "Comfortable control height."
+        },
+        {
+          "value": "3rem",
+          "description": "Large control height."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-control-padding-inline",
+      "module": "semantic",
+      "category": "layout",
+      "valueType": "length",
+      "default": "1rem",
+      "description": "Horizontal padding for axo-button and axo-input.",
+      "valueSuggestions": [
+        {
+          "value": "0.75rem",
+          "description": "Compact control padding."
+        },
+        {
+          "value": "1rem",
+          "description": "Default control padding."
+        },
+        {
+          "value": "1.25rem",
+          "description": "Comfortable control padding."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Large control padding."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-cover-height",
+      "module": "layout",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "100dvh",
+      "description": "Minimum block size for axo-cover.",
+      "valueSuggestions": [
+        {
+          "value": "50dvh",
+          "description": "Half-viewport cover."
+        },
+        {
+          "value": "75dvh",
+          "description": "Large cover section."
+        },
+        {
+          "value": "100dvh",
+          "description": "Default full viewport cover."
+        },
+        {
+          "value": "40rem",
+          "description": "Fixed minimum cover height."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-cover-padding",
+      "module": "layout",
+      "category": "spacing",
+      "valueType": "spacing",
+      "default": "1rem",
+      "description": "Inner padding for axo-cover.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "No cover padding."
+        },
+        {
+          "value": "1rem",
+          "description": "Default cover padding."
+        },
+        {
+          "value": "2rem",
+          "description": "Large cover padding."
+        },
+        {
+          "value": "clamp(1rem, 5vw, 4rem)",
+          "description": "Fluid cover padding."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-delay",
+      "module": "motion",
+      "category": "motion",
+      "valueType": "time",
+      "default": "0ms",
+      "description": "Animation delay for Axoloth entrance utilities.",
+      "valueSuggestions": [
+        {
+          "value": "0ms",
+          "description": "No delay."
+        },
+        {
+          "value": "120ms",
+          "description": "Small stagger delay."
+        },
+        {
+          "value": "220ms",
+          "description": "Medium stagger delay."
+        },
+        {
+          "value": "480ms",
+          "description": "Large stagger delay."
+        },
+        {
+          "value": "1s",
+          "description": "Long delay."
+        },
+        {
+          "value": "5s",
+          "description": "Very long demo delay."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-dialog-backdrop",
+      "module": "dialog",
+      "category": "surface",
+      "valueType": "color",
+      "default": "rgb(2 6 23 / 0.58)",
+      "description": "Backdrop color behind an open dialog.",
+      "valueSuggestions": [
+        {
+          "value": "rgb(2 6 23 / 0.35)",
+          "description": "Light dark backdrop."
+        },
+        {
+          "value": "rgb(2 6 23 / 0.58)",
+          "description": "Default dark backdrop."
+        },
+        {
+          "value": "rgb(2 6 23 / 0.75)",
+          "description": "Strong dark backdrop."
+        },
+        {
+          "value": "transparent",
+          "description": "Invisible dismiss layer."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-dialog-border",
+      "module": "dialog",
+      "category": "surface",
+      "valueType": "border",
+      "default": "var(--axo-border, 1px solid currentColor)",
+      "description": "Border applied to axo-dialog-panel.",
+      "valueSuggestions": [
+        {
+          "value": "none",
+          "description": "Remove the dialog border."
+        },
+        {
+          "value": "1px solid currentColor",
+          "description": "Neutral dialog border."
+        },
+        {
+          "value": "1px solid rgb(148 163 184 / 0.35)",
+          "description": "Soft slate border."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-dialog-duration",
+      "module": "dialog",
+      "category": "motion",
+      "valueType": "time",
+      "default": "180ms",
+      "description": "Open and close transition duration for a dialog.",
+      "valueSuggestions": [
+        {
+          "value": "0ms",
+          "description": "Disable dialog transitions."
+        },
+        {
+          "value": "120ms",
+          "description": "Fast dialog transition."
+        },
+        {
+          "value": "180ms",
+          "description": "Default dialog transition."
+        },
+        {
+          "value": "280ms",
+          "description": "Slow dialog transition."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-dialog-easing",
+      "module": "dialog",
+      "category": "motion",
+      "valueType": "timing-function",
+      "default": "ease-out",
+      "description": "Timing function for dialog and backdrop transitions.",
+      "valueSuggestions": [
+        {
+          "value": "ease-out",
+          "description": "Default quick open and soft finish."
+        },
+        {
+          "value": "ease",
+          "description": "Balanced browser easing."
+        },
+        {
+          "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+          "description": "Soft emphasized easing."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-dialog-enter-distance",
+      "module": "dialog",
+      "category": "motion",
+      "valueType": "length",
+      "default": "0.75rem",
+      "description": "Vertical distance used while the dialog enters.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "No vertical entrance movement."
+        },
+        {
+          "value": "0.5rem",
+          "description": "Subtle entrance movement."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Default entrance movement."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Strong entrance movement."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-dialog-enter-scale",
+      "module": "dialog",
+      "category": "motion",
+      "valueType": "number",
+      "default": "0.98",
+      "description": "Initial panel scale used while the dialog enters.",
+      "valueSuggestions": [
+        {
+          "value": "0.92",
+          "description": "Strong scale entrance."
+        },
+        {
+          "value": "0.96",
+          "description": "Visible scale entrance."
+        },
+        {
+          "value": "0.98",
+          "description": "Default subtle scale entrance."
+        },
+        {
+          "value": "1",
+          "description": "Disable scale entrance."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-dialog-gap",
+      "module": "dialog",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "1rem",
+      "description": "Gap between dialog regions and actions.",
+      "valueSuggestions": [
+        {
+          "value": "0.5rem",
+          "description": "Compact dialog gap."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Tight dialog gap."
+        },
+        {
+          "value": "1rem",
+          "description": "Default dialog gap."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Roomy dialog gap."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-dialog-inset",
+      "module": "dialog",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "1rem",
+      "description": "Viewport edge spacing around an Axoloth dialog panel.",
+      "valueSuggestions": [
+        {
+          "value": "0.5rem",
+          "description": "Compact viewport inset."
+        },
+        {
+          "value": "1rem",
+          "description": "Default viewport inset."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Roomy viewport inset."
+        },
+        {
+          "value": "2rem",
+          "description": "Large viewport inset."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-dialog-padding",
+      "module": "dialog",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "1.25rem",
+      "description": "Internal padding for axo-dialog-panel.",
+      "valueSuggestions": [
+        {
+          "value": "0.75rem",
+          "description": "Compact dialog padding."
+        },
+        {
+          "value": "1rem",
+          "description": "Tight dialog padding."
+        },
+        {
+          "value": "1.25rem",
+          "description": "Default dialog padding."
+        },
+        {
+          "value": "2rem",
+          "description": "Roomy dialog padding."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-dialog-radius",
+      "module": "dialog",
+      "category": "shape",
+      "valueType": "length",
+      "default": "var(--axo-radius, 0.5rem)",
+      "description": "Border radius for axo-dialog-panel.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "Square dialog corners."
+        },
+        {
+          "value": "0.25rem",
+          "description": "Subtle dialog radius."
+        },
+        {
+          "value": "0.5rem",
+          "description": "Default dialog radius."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Soft dialog radius."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-dialog-width",
+      "module": "dialog",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "32rem",
+      "description": "Preferred inline size for axo-dialog-panel.",
+      "valueSuggestions": [
+        {
+          "value": "24rem",
+          "description": "Compact confirmation dialog."
+        },
+        {
+          "value": "32rem",
+          "description": "Default dialog width."
+        },
+        {
+          "value": "48rem",
+          "description": "Wide dialog workflow."
+        },
+        {
+          "value": "min(64rem, 100%)",
+          "description": "Large responsive dialog."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-dialog-z",
+      "module": "dialog",
+      "category": "position",
+      "valueType": "number",
+      "default": "60",
+      "description": "Stacking level for the dialog layer.",
+      "valueSuggestions": [
+        {
+          "value": "50",
+          "description": "Standard overlay layer."
+        },
+        {
+          "value": "60",
+          "description": "Default dialog layer."
+        },
+        {
+          "value": "100",
+          "description": "High app dialog layer."
+        },
+        {
+          "value": "1000",
+          "description": "Global dialog layer."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-divider-gap",
+      "module": "semantic",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "1rem",
+      "description": "Vertical margin around axo-divider.",
+      "valueSuggestions": [
+        {
+          "value": "0.5rem",
+          "description": "Compact divider gap."
+        },
+        {
+          "value": "1rem",
+          "description": "Default divider gap."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Large divider gap."
+        },
+        {
+          "value": "2rem",
+          "description": "Section divider gap."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-divider-opacity",
+      "module": "semantic",
+      "category": "surface",
+      "valueType": "number",
+      "default": "0.16",
+      "description": "Opacity for axo-divider.",
+      "valueSuggestions": [
+        {
+          "value": "0.08",
+          "description": "Very subtle divider."
+        },
+        {
+          "value": "0.16",
+          "description": "Default divider opacity."
+        },
+        {
+          "value": "0.3",
+          "description": "Strong divider opacity."
+        },
+        {
+          "value": "1",
+          "description": "Fully opaque divider."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-divider-size",
+      "module": "semantic",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "1px",
+      "description": "Block thickness for axo-divider.",
+      "valueSuggestions": [
+        {
+          "value": "1px",
+          "description": "Default thin divider."
+        },
+        {
+          "value": "2px",
+          "description": "Strong divider."
+        },
+        {
+          "value": "0.125rem",
+          "description": "Bold divider."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-dropdown-border",
+      "module": "dropdown",
+      "category": "surface",
+      "valueType": "border",
+      "default": "1px solid currentColor",
+      "description": "Border applied to a dropdown menu.",
+      "valueSuggestions": [
+        {
+          "value": "none",
+          "description": "Remove the menu border."
+        },
+        {
+          "value": "1px solid currentColor",
+          "description": "Neutral menu border."
+        },
+        {
+          "value": "1px solid rgb(148 163 184 / 0.35)",
+          "description": "Soft slate border."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-dropdown-duration",
+      "module": "dropdown",
+      "category": "motion",
+      "valueType": "time",
+      "default": "160ms",
+      "description": "Open and close transition duration for dropdown menus.",
+      "valueSuggestions": [
+        {
+          "value": "0ms",
+          "description": "Disable dropdown transitions."
+        },
+        {
+          "value": "120ms",
+          "description": "Fast dropdown transition."
+        },
+        {
+          "value": "160ms",
+          "description": "Default dropdown transition."
+        },
+        {
+          "value": "240ms",
+          "description": "Slow dropdown transition."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-dropdown-gap",
+      "module": "dropdown",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "0.375rem",
+      "description": "Space between a dropdown trigger and its menu.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "Attach the menu to its trigger."
+        },
+        {
+          "value": "0.25rem",
+          "description": "Tight dropdown gap."
+        },
+        {
+          "value": "0.375rem",
+          "description": "Default dropdown gap."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Roomy dropdown gap."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-dropdown-item-min-height",
+      "module": "dropdown",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "2.5rem",
+      "description": "Minimum block size for dropdown menu items.",
+      "valueSuggestions": [
+        {
+          "value": "2rem",
+          "description": "Compact menu item."
+        },
+        {
+          "value": "2.5rem",
+          "description": "Default menu item."
+        },
+        {
+          "value": "2.75rem",
+          "description": "Comfortable menu item."
+        },
+        {
+          "value": "3rem",
+          "description": "Large menu item."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-dropdown-item-padding",
+      "module": "dropdown",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "0.5rem 0.75rem",
+      "description": "Padding inside dropdown menu items.",
+      "valueSuggestions": [
+        {
+          "value": "0.375rem 0.5rem",
+          "description": "Compact item padding."
+        },
+        {
+          "value": "0.5rem 0.75rem",
+          "description": "Default item padding."
+        },
+        {
+          "value": "0.75rem 1rem",
+          "description": "Roomy item padding."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-dropdown-max-height",
+      "module": "dropdown",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "20rem",
+      "description": "Maximum block size before a dropdown menu scrolls.",
+      "valueSuggestions": [
+        {
+          "value": "12rem",
+          "description": "Short dropdown viewport."
+        },
+        {
+          "value": "20rem",
+          "description": "Default dropdown viewport."
+        },
+        {
+          "value": "24rem",
+          "description": "Tall dropdown viewport."
+        },
+        {
+          "value": "50vh",
+          "description": "Viewport-relative menu height."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-dropdown-min-width",
+      "module": "dropdown",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "12rem",
+      "description": "Minimum inline size of a dropdown menu.",
+      "valueSuggestions": [
+        {
+          "value": "10rem",
+          "description": "Compact dropdown menu."
+        },
+        {
+          "value": "12rem",
+          "description": "Default dropdown menu."
+        },
+        {
+          "value": "16rem",
+          "description": "Wide dropdown menu."
+        },
+        {
+          "value": "20rem",
+          "description": "Extra-wide dropdown menu."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-dropdown-padding",
+      "module": "dropdown",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "0.375rem",
+      "description": "Internal padding around dropdown menu items.",
+      "valueSuggestions": [
+        {
+          "value": "0.25rem",
+          "description": "Compact menu padding."
+        },
+        {
+          "value": "0.375rem",
+          "description": "Default menu padding."
+        },
+        {
+          "value": "0.5rem",
+          "description": "Comfortable menu padding."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Roomy menu padding."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-dropdown-radius",
+      "module": "dropdown",
+      "category": "shape",
+      "valueType": "length",
+      "default": "var(--axo-radius, 0.5rem)",
+      "description": "Border radius for dropdown menus and items.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "Square dropdown menu."
+        },
+        {
+          "value": "0.25rem",
+          "description": "Subtle dropdown radius."
+        },
+        {
+          "value": "0.5rem",
+          "description": "Default dropdown radius."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Soft dropdown radius."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-dropdown-shadow",
+      "module": "dropdown",
+      "category": "surface",
+      "valueType": "shadow",
+      "default": "0 18px 48px rgb(15 23 42 / 0.16)",
+      "description": "Shadow below a dropdown menu.",
+      "valueSuggestions": [
+        {
+          "value": "none",
+          "description": "Disable the menu shadow."
+        },
+        {
+          "value": "0 8px 24px rgb(15 23 42 / 0.12)",
+          "description": "Small menu shadow."
+        },
+        {
+          "value": "0 18px 48px rgb(15 23 42 / 0.16)",
+          "description": "Default menu shadow."
+        },
+        {
+          "value": "0 24px 64px rgb(15 23 42 / 0.22)",
+          "description": "Large menu shadow."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-dropdown-z",
+      "module": "dropdown",
+      "category": "position",
+      "valueType": "number",
+      "default": "40",
+      "description": "Stacking level for dropdown menus.",
+      "valueSuggestions": [
+        {
+          "value": "20",
+          "description": "Local menu layer."
+        },
+        {
+          "value": "40",
+          "description": "Default dropdown layer."
+        },
+        {
+          "value": "100",
+          "description": "High app menu layer."
+        },
+        {
+          "value": "1000",
+          "description": "Global menu layer."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-duration",
+      "module": "motion",
+      "category": "motion",
+      "valueType": "time",
+      "default": "480ms",
+      "description": "Shared animation and transition duration for Axoloth motion utilities.",
+      "valueSuggestions": [
+        {
+          "value": "120ms",
+          "description": "Very fast motion."
+        },
+        {
+          "value": "220ms",
+          "description": "Fast motion."
+        },
+        {
+          "value": "480ms",
+          "description": "Default motion duration."
+        },
+        {
+          "value": "720ms",
+          "description": "Slow motion."
+        },
+        {
+          "value": "1s",
+          "description": "Long motion."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-empty-gap",
+      "module": "semantic",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "0.75rem",
+      "description": "Vertical gap between empty-state content.",
+      "valueSuggestions": [
+        {
+          "value": "0.5rem",
+          "description": "Compact empty-state gap."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Default empty-state gap."
+        },
+        {
+          "value": "1rem",
+          "description": "Relaxed empty-state gap."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-empty-padding",
+      "module": "semantic",
+      "category": "spacing",
+      "valueType": "spacing",
+      "default": "2rem",
+      "description": "Inner padding for axo-empty and axo-empty-state.",
+      "valueSuggestions": [
+        {
+          "value": "1.5rem",
+          "description": "Compact empty-state padding."
+        },
+        {
+          "value": "2rem",
+          "description": "Default empty-state padding."
+        },
+        {
+          "value": "3rem",
+          "description": "Large empty-state padding."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-error-color",
+      "module": "semantic",
+      "category": "form",
+      "valueType": "color",
+      "default": "rgb(180 35 24)",
+      "description": "Validation color for axo-error, axo-required, and axo-invalid.",
+      "valueSuggestions": [
+        {
+          "value": "rgb(180 35 24)",
+          "description": "Default accessible red."
+        },
+        {
+          "value": "rgb(220 38 38)",
+          "description": "Bright red."
+        },
+        {
+          "value": "rgb(190 24 93)",
+          "description": "Rose validation color."
+        },
+        {
+          "value": "currentColor",
+          "description": "Use inherited text color."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-focus-ring",
+      "module": "semantic",
+      "category": "surface",
+      "valueType": "outline",
+      "default": "2px solid currentColor",
+      "description": "Focus-visible outline used by semantic links, buttons, and inputs.",
+      "valueSuggestions": [
+        {
+          "value": "2px solid currentColor",
+          "description": "Default inherited focus ring."
+        },
+        {
+          "value": "2px solid rgb(34 211 238)",
+          "description": "Cyan focus ring."
+        },
+        {
+          "value": "2px solid rgb(16 185 129)",
+          "description": "Emerald focus ring."
+        },
+        {
+          "value": "3px solid currentColor",
+          "description": "Strong inherited focus ring."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-gap",
+      "module": "bento",
+      "category": "layout",
+      "valueType": "length",
+      "default": "1rem",
+      "description": "Gap between items inside an Axoloth bento grid.",
+      "valueSuggestions": [
+        {
+          "value": "0.5rem",
+          "description": "Compact spacing."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Tight spacing."
+        },
+        {
+          "value": "1rem",
+          "description": "Default spacing."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Roomy spacing."
+        },
+        {
+          "value": "2rem",
+          "description": "Large spacing."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-glow-shadow",
+      "module": "motion",
+      "category": "motion",
+      "valueType": "shadow",
+      "default": "0 18px 48px rgb(34 211 238 / 0.16)",
+      "description": "Hover box-shadow used by axo-glow.",
+      "valueSuggestions": [
+        {
+          "value": "none",
+          "description": "Disable glow shadow."
+        },
+        {
+          "value": "0 18px 48px rgb(34 211 238 / 0.16)",
+          "description": "Default cyan glow."
+        },
+        {
+          "value": "0 18px 48px rgb(16 185 129 / 0.16)",
+          "description": "Emerald glow."
+        },
+        {
+          "value": "0 18px 48px rgb(244 114 182 / 0.16)",
+          "description": "Pink glow."
+        },
+        {
+          "value": "0 20px 60px rgb(15 23 42 / 0.18)",
+          "description": "Neutral shadow glow."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-grid-gap",
+      "module": "layout",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "var(--axo-gap, 1rem)",
+      "description": "Gap between items in axo-auto-grid.",
+      "valueSuggestions": [
+        {
+          "value": "0.5rem",
+          "description": "Compact grid gap."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Small grid gap."
+        },
+        {
+          "value": "1rem",
+          "description": "Default grid gap."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Large grid gap."
+        },
+        {
+          "value": "2rem",
+          "description": "Extra-large grid gap."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-header-center-width",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "length",
+      "default": "28rem",
+      "description": "Preferred max width for the center slot of axo-header-grid.",
+      "valueSuggestions": [
+        {
+          "value": "20rem",
+          "description": "Compact center slot."
+        },
+        {
+          "value": "24rem",
+          "description": "Medium center slot."
+        },
+        {
+          "value": "28rem",
+          "description": "Default center slot."
+        },
+        {
+          "value": "36rem",
+          "description": "Wide center slot."
+        },
+        {
+          "value": "min(42rem, 100%)",
+          "description": "Responsive wide center slot."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-header-gap",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "length",
+      "default": "0.75rem",
+      "description": "Gap between top-level header grid/flex areas.",
+      "valueSuggestions": [
+        {
+          "value": "0.5rem",
+          "description": "Tight header gap."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Default header gap."
+        },
+        {
+          "value": "1rem",
+          "description": "Comfortable header gap."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Large header gap."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-header-height",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "length",
+      "default": "4rem",
+      "description": "Minimum block size for Axoloth header/appbar layouts.",
+      "valueSuggestions": [
+        {
+          "value": "3.5rem",
+          "description": "Compact appbar height."
+        },
+        {
+          "value": "4rem",
+          "description": "Default appbar height."
+        },
+        {
+          "value": "4.5rem",
+          "description": "Comfortable appbar height."
+        },
+        {
+          "value": "5rem",
+          "description": "Large appbar height."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-header-nav-gap",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "length",
+      "default": "0.75rem",
+      "description": "Gap between links or items inside axo-header-nav.",
+      "valueSuggestions": [
+        {
+          "value": "0.5rem",
+          "description": "Tight nav gap."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Default nav gap."
+        },
+        {
+          "value": "1rem",
+          "description": "Comfortable nav gap."
+        },
+        {
+          "value": "1.25rem",
+          "description": "Large nav gap."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-header-padding-block",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "length",
+      "default": "0.625rem",
+      "description": "Vertical padding for Axoloth header layouts.",
+      "valueSuggestions": [
+        {
+          "value": "0.5rem",
+          "description": "Compact vertical padding."
+        },
+        {
+          "value": "0.625rem",
+          "description": "Default vertical padding."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Comfortable vertical padding."
+        },
+        {
+          "value": "1rem",
+          "description": "Large vertical padding."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-header-padding-inline",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "length",
+      "default": "1rem",
+      "description": "Horizontal padding for Axoloth header layouts.",
+      "valueSuggestions": [
+        {
+          "value": "0.75rem",
+          "description": "Compact horizontal padding."
+        },
+        {
+          "value": "1rem",
+          "description": "Default horizontal padding."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Comfortable horizontal padding."
+        },
+        {
+          "value": "2rem",
+          "description": "Large horizontal padding."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-header-slot-gap",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "length",
+      "default": "0.5rem",
+      "description": "Gap between children inside header slots.",
+      "valueSuggestions": [
+        {
+          "value": "0.25rem",
+          "description": "Very tight slot gap."
+        },
+        {
+          "value": "0.5rem",
+          "description": "Default slot gap."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Comfortable slot gap."
+        },
+        {
+          "value": "1rem",
+          "description": "Large slot gap."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-icon-button-lift",
+      "module": "layout",
+      "category": "motion",
+      "valueType": "length",
+      "default": "-1px",
+      "description": "Hover lift distance for axo-icon-button.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "Disable icon button lift."
+        },
+        {
+          "value": "-1px",
+          "description": "Default subtle lift."
+        },
+        {
+          "value": "-2px",
+          "description": "Medium lift."
+        },
+        {
+          "value": "-4px",
+          "description": "Strong lift."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-icon-button-radius",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "length",
+      "default": "0.625rem",
+      "description": "Border radius for axo-icon-button.",
+      "valueSuggestions": [
+        {
+          "value": "0.375rem",
+          "description": "Small icon button radius."
+        },
+        {
+          "value": "0.625rem",
+          "description": "Default icon button radius."
+        },
+        {
+          "value": "0.875rem",
+          "description": "Large icon button radius."
+        },
+        {
+          "value": "999px",
+          "description": "Circular icon button."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-icon-button-size",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "length",
+      "default": "2.5rem",
+      "description": "Inline size and minimum inline size for axo-icon-button.",
+      "valueSuggestions": [
+        {
+          "value": "2rem",
+          "description": "Compact icon button."
+        },
+        {
+          "value": "2.5rem",
+          "description": "Default icon button."
+        },
+        {
+          "value": "2.75rem",
+          "description": "Comfortable icon button."
+        },
+        {
+          "value": "3rem",
+          "description": "Large icon button."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-item-min",
+      "module": "layout",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "16rem",
+      "description": "Minimum item width before axo-auto-grid creates another column.",
+      "valueSuggestions": [
+        {
+          "value": "12rem",
+          "description": "Compact auto-grid items."
+        },
+        {
+          "value": "16rem",
+          "description": "Default auto-grid item width."
+        },
+        {
+          "value": "20rem",
+          "description": "Wide auto-grid items."
+        },
+        {
+          "value": "24rem",
+          "description": "Extra-wide auto-grid items."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-lift-distance",
+      "module": "motion",
+      "category": "motion",
+      "valueType": "length",
+      "default": "-4px",
+      "description": "Hover translateY distance for axo-lift.",
+      "valueSuggestions": [
+        {
+          "value": "-1px",
+          "description": "Subtle lift."
+        },
+        {
+          "value": "-2px",
+          "description": "Small lift."
+        },
+        {
+          "value": "-4px",
+          "description": "Default lift."
+        },
+        {
+          "value": "-8px",
+          "description": "Strong lift."
+        },
+        {
+          "value": "0",
+          "description": "Disable lift movement."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-offcanvas-backdrop",
+      "module": "layout",
+      "category": "surface",
+      "valueType": "color",
+      "default": "rgb(2 6 23 / 0.55)",
+      "description": "Backdrop color behind an open off-canvas sidebar.",
+      "valueSuggestions": [
+        {
+          "value": "rgb(2 6 23 / 0.35)",
+          "description": "Light dark backdrop."
+        },
+        {
+          "value": "rgb(2 6 23 / 0.55)",
+          "description": "Default dark backdrop."
+        },
+        {
+          "value": "rgb(2 6 23 / 0.72)",
+          "description": "Strong dark backdrop."
+        },
+        {
+          "value": "transparent",
+          "description": "Invisible dismiss layer."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-offcanvas-duration",
+      "module": "layout",
+      "category": "motion",
+      "valueType": "time",
+      "default": "220ms",
+      "description": "Open and close transition duration for the drawer and backdrop.",
+      "valueSuggestions": [
+        {
+          "value": "120ms",
+          "description": "Fast off-canvas transition."
+        },
+        {
+          "value": "220ms",
+          "description": "Default off-canvas transition."
+        },
+        {
+          "value": "320ms",
+          "description": "Slow off-canvas transition."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-offcanvas-easing",
+      "module": "layout",
+      "category": "motion",
+      "valueType": "timing-function",
+      "default": "ease",
+      "description": "Timing function for drawer and backdrop transitions.",
+      "valueSuggestions": [
+        {
+          "value": "ease",
+          "description": "Default browser easing."
+        },
+        {
+          "value": "ease-out",
+          "description": "Quick open and soft finish."
+        },
+        {
+          "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+          "description": "Soft emphasized easing."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-offcanvas-inset-bottom",
+      "module": "layout",
+      "category": "position",
+      "valueType": "length",
+      "default": "0",
+      "description": "Bottom viewport inset for an off-canvas sidebar.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "End at the viewport bottom."
+        },
+        {
+          "value": "3rem",
+          "description": "End above a compact footer."
+        },
+        {
+          "value": "4rem",
+          "description": "End above a default footer."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-offcanvas-inset-top",
+      "module": "layout",
+      "category": "position",
+      "valueType": "length",
+      "default": "0",
+      "description": "Top viewport inset for an off-canvas sidebar.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "Start at the viewport top."
+        },
+        {
+          "value": "3.5rem",
+          "description": "Start below a compact header."
+        },
+        {
+          "value": "4rem",
+          "description": "Start below a default app header."
+        },
+        {
+          "value": "5rem",
+          "description": "Start below a large header."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-offcanvas-max-width",
+      "module": "layout",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "calc(100vw - 2rem)",
+      "description": "Maximum viewport-safe width for an off-canvas sidebar.",
+      "valueSuggestions": [
+        {
+          "value": "calc(100vw - 1rem)",
+          "description": "Small viewport edge gap."
+        },
+        {
+          "value": "calc(100vw - 2rem)",
+          "description": "Default viewport edge gap."
+        },
+        {
+          "value": "90vw",
+          "description": "Ten-percent viewport reveal."
+        },
+        {
+          "value": "24rem",
+          "description": "Fixed maximum width."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-offcanvas-width",
+      "module": "layout",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "var(--axo-sidebar-width, 16rem)",
+      "description": "Preferred inline size for axo-sidebar-offcanvas.",
+      "valueSuggestions": [
+        {
+          "value": "14rem",
+          "description": "Compact off-canvas sidebar."
+        },
+        {
+          "value": "16rem",
+          "description": "Default off-canvas sidebar."
+        },
+        {
+          "value": "20rem",
+          "description": "Wide off-canvas sidebar."
+        },
+        {
+          "value": "24rem",
+          "description": "Extra-wide off-canvas sidebar."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-offcanvas-z",
+      "module": "layout",
+      "category": "position",
+      "valueType": "number",
+      "default": "50",
+      "description": "Stacking level for the off-canvas sidebar.",
+      "valueSuggestions": [
+        {
+          "value": "30",
+          "description": "Low overlay layer."
+        },
+        {
+          "value": "50",
+          "description": "Default off-canvas layer."
+        },
+        {
+          "value": "100",
+          "description": "High app overlay layer."
+        },
+        {
+          "value": "1000",
+          "description": "Global overlay layer."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-page-padding",
+      "module": "semantic",
+      "category": "layout",
+      "valueType": "length",
+      "default": "1rem",
+      "description": "Page padding used by axo-page.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "No page padding."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Compact page padding."
+        },
+        {
+          "value": "1rem",
+          "description": "Default page padding."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Roomy page padding."
+        },
+        {
+          "value": "2rem",
+          "description": "Large page padding."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-pop-start",
+      "module": "motion",
+      "category": "motion",
+      "valueType": "number",
+      "default": "0.92",
+      "description": "Starting scale value for axo-pop.",
+      "valueSuggestions": [
+        {
+          "value": "0.88",
+          "description": "Strong pop scale."
+        },
+        {
+          "value": "0.92",
+          "description": "Default pop scale."
+        },
+        {
+          "value": "0.96",
+          "description": "Subtle pop scale."
+        },
+        {
+          "value": "1",
+          "description": "No scale change."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-progress-duration",
+      "module": "semantic",
+      "category": "motion",
+      "valueType": "time",
+      "default": "480ms",
+      "description": "Fill transition or indeterminate loop duration for progress utilities.",
+      "valueSuggestions": [
+        {
+          "value": "220ms",
+          "description": "Fast progress transition."
+        },
+        {
+          "value": "480ms",
+          "description": "Default progress transition."
+        },
+        {
+          "value": "1.2s",
+          "description": "Default indeterminate loop."
+        },
+        {
+          "value": "2s",
+          "description": "Slow indeterminate loop."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-progress-fill",
+      "module": "semantic",
+      "category": "surface",
+      "valueType": "color",
+      "default": "currentColor",
+      "description": "Fill color for axo-progress-bar.",
+      "valueSuggestions": [
+        {
+          "value": "currentColor",
+          "description": "Follow inherited text color."
+        },
+        {
+          "value": "rgb(37 99 235)",
+          "description": "Blue progress fill."
+        },
+        {
+          "value": "rgb(5 150 105)",
+          "description": "Emerald progress fill."
+        },
+        {
+          "value": "rgb(220 38 38)",
+          "description": "Red progress fill."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-progress-indeterminate-duration",
+      "module": "semantic",
+      "category": "motion",
+      "valueType": "time",
+      "default": "1.2s",
+      "description": "Loop duration for axo-progress-indeterminate.",
+      "valueSuggestions": [
+        {
+          "value": "720ms",
+          "description": "Fast indeterminate loop."
+        },
+        {
+          "value": "1.2s",
+          "description": "Default indeterminate loop."
+        },
+        {
+          "value": "1.8s",
+          "description": "Slow indeterminate loop."
+        },
+        {
+          "value": "2.4s",
+          "description": "Very slow indeterminate loop."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-progress-radius",
+      "module": "semantic",
+      "category": "shape",
+      "valueType": "length",
+      "default": "999px",
+      "description": "Border radius for axo-progress.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "Square progress track."
+        },
+        {
+          "value": "0.25rem",
+          "description": "Slightly rounded progress track."
+        },
+        {
+          "value": "999px",
+          "description": "Default pill progress track."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-progress-size",
+      "module": "semantic",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "0.625rem",
+      "description": "Block thickness for axo-progress.",
+      "valueSuggestions": [
+        {
+          "value": "0.25rem",
+          "description": "Thin progress track."
+        },
+        {
+          "value": "0.5rem",
+          "description": "Compact progress track."
+        },
+        {
+          "value": "0.625rem",
+          "description": "Default progress track."
+        },
+        {
+          "value": "1rem",
+          "description": "Large progress track."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-progress-track",
+      "module": "semantic",
+      "category": "surface",
+      "valueType": "color",
+      "default": "color-mix(in srgb, currentColor 14%, transparent)",
+      "description": "Track color for axo-progress.",
+      "valueSuggestions": [
+        {
+          "value": "color-mix(in srgb, currentColor 14%, transparent)",
+          "description": "Default inherited track."
+        },
+        {
+          "value": "rgb(226 232 240)",
+          "description": "Light neutral track."
+        },
+        {
+          "value": "rgb(51 65 85)",
+          "description": "Dark neutral track."
+        },
+        {
+          "value": "transparent",
+          "description": "Transparent track."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-progress-value",
+      "module": "semantic",
+      "category": "state",
+      "valueType": "percentage",
+      "default": "0%",
+      "description": "Visible completion width for axo-progress-bar.",
+      "valueSuggestions": [
+        {
+          "value": "0%",
+          "description": "No completion."
+        },
+        {
+          "value": "25%",
+          "description": "Quarter complete."
+        },
+        {
+          "value": "50%",
+          "description": "Half complete."
+        },
+        {
+          "value": "75%",
+          "description": "Three quarters complete."
+        },
+        {
+          "value": "100%",
+          "description": "Complete."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-radius",
+      "module": "bento",
+      "category": "layout",
+      "valueType": "length",
+      "default": "0.75rem",
+      "description": "Default border radius for Axoloth cards.",
+      "valueSuggestions": [
+        {
+          "value": "0.25rem",
+          "description": "Small radius."
+        },
+        {
+          "value": "0.5rem",
+          "description": "Medium radius."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Default radius."
+        },
+        {
+          "value": "1rem",
+          "description": "Large radius."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Soft radius."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-reel-gap",
+      "module": "layout",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "1rem",
+      "description": "Gap between items in axo-reel.",
+      "valueSuggestions": [
+        {
+          "value": "0.5rem",
+          "description": "Compact reel gap."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Small reel gap."
+        },
+        {
+          "value": "1rem",
+          "description": "Default reel gap."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Large reel gap."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-reel-item-width",
+      "module": "layout",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "18rem",
+      "description": "Preferred item width in axo-reel, capped to 85 percent on narrow screens.",
+      "valueSuggestions": [
+        {
+          "value": "14rem",
+          "description": "Compact reel items."
+        },
+        {
+          "value": "18rem",
+          "description": "Default reel item width."
+        },
+        {
+          "value": "22rem",
+          "description": "Wide reel items."
+        },
+        {
+          "value": "28rem",
+          "description": "Feature reel items."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-reel-padding",
+      "module": "layout",
+      "category": "spacing",
+      "valueType": "spacing",
+      "default": "0",
+      "description": "Inline edge padding and scroll padding for axo-reel.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "No reel edge padding."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Compact reel edge padding."
+        },
+        {
+          "value": "1rem",
+          "description": "Default page-aligned reel padding."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Large reel edge padding."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-rise-distance",
+      "module": "motion",
+      "category": "motion",
+      "valueType": "length",
+      "default": "18px",
+      "description": "Starting translateY distance for axo-rise.",
+      "valueSuggestions": [
+        {
+          "value": "8px",
+          "description": "Subtle rise distance."
+        },
+        {
+          "value": "12px",
+          "description": "Small rise distance."
+        },
+        {
+          "value": "18px",
+          "description": "Default rise distance."
+        },
+        {
+          "value": "24px",
+          "description": "Strong rise distance."
+        },
+        {
+          "value": "32px",
+          "description": "Large rise distance."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-row-gap",
+      "module": "bento",
+      "category": "layout",
+      "valueType": "length",
+      "default": "0.75rem",
+      "description": "Gap between children inside axo-row.",
+      "valueSuggestions": [
+        {
+          "value": "0.25rem",
+          "description": "Very tight row gap."
+        },
+        {
+          "value": "0.5rem",
+          "description": "Tight row gap."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Default row gap."
+        },
+        {
+          "value": "1rem",
+          "description": "Comfortable row gap."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Large row gap."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-row-min",
+      "module": "bento",
+      "category": "layout",
+      "valueType": "length",
+      "default": "160px",
+      "description": "Minimum auto row height for the bento grid.",
+      "valueSuggestions": [
+        {
+          "value": "120px",
+          "description": "Compact bento rows."
+        },
+        {
+          "value": "160px",
+          "description": "Default bento rows."
+        },
+        {
+          "value": "200px",
+          "description": "Roomy bento rows."
+        },
+        {
+          "value": "240px",
+          "description": "Large bento rows."
+        },
+        {
+          "value": "18rem",
+          "description": "Responsive rem-based rows."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-searchbar-gap",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "length",
+      "default": "0.5rem",
+      "description": "Gap between icon/text and input inside axo-searchbar.",
+      "valueSuggestions": [
+        {
+          "value": "0.25rem",
+          "description": "Very tight searchbar gap."
+        },
+        {
+          "value": "0.5rem",
+          "description": "Default searchbar gap."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Comfortable searchbar gap."
+        },
+        {
+          "value": "1rem",
+          "description": "Large searchbar gap."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-searchbar-height",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "length",
+      "default": "2.5rem",
+      "description": "Minimum block size for axo-searchbar.",
+      "valueSuggestions": [
+        {
+          "value": "2.25rem",
+          "description": "Compact searchbar height."
+        },
+        {
+          "value": "2.5rem",
+          "description": "Default searchbar height."
+        },
+        {
+          "value": "2.75rem",
+          "description": "Comfortable searchbar height."
+        },
+        {
+          "value": "3rem",
+          "description": "Large searchbar height."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-searchbar-padding-inline",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "length",
+      "default": "0.75rem",
+      "description": "Horizontal padding for axo-searchbar.",
+      "valueSuggestions": [
+        {
+          "value": "0.5rem",
+          "description": "Compact searchbar padding."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Default searchbar padding."
+        },
+        {
+          "value": "1rem",
+          "description": "Comfortable searchbar padding."
+        },
+        {
+          "value": "1.25rem",
+          "description": "Large searchbar padding."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-searchbar-width",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "length",
+      "default": "28rem",
+      "description": "Preferred width for axo-searchbar.",
+      "valueSuggestions": [
+        {
+          "value": "16rem",
+          "description": "Compact searchbar width."
+        },
+        {
+          "value": "20rem",
+          "description": "Medium searchbar width."
+        },
+        {
+          "value": "28rem",
+          "description": "Default searchbar width."
+        },
+        {
+          "value": "36rem",
+          "description": "Wide searchbar width."
+        },
+        {
+          "value": "100%",
+          "description": "Fill available width."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-section-gap",
+      "module": "semantic",
+      "category": "layout",
+      "valueType": "length",
+      "default": "2rem",
+      "description": "Vertical padding used by axo-section.",
+      "valueSuggestions": [
+        {
+          "value": "1rem",
+          "description": "Compact section spacing."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Small section spacing."
+        },
+        {
+          "value": "2rem",
+          "description": "Default section spacing."
+        },
+        {
+          "value": "3rem",
+          "description": "Large section spacing."
+        },
+        {
+          "value": "4rem",
+          "description": "Extra large section spacing."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-shimmer-color",
+      "module": "motion",
+      "category": "motion",
+      "valueType": "color",
+      "default": "rgb(255 255 255 / 0.16)",
+      "description": "Highlight color for axo-shimmer overlay.",
+      "valueSuggestions": [
+        {
+          "value": "rgb(255 255 255 / 0.16)",
+          "description": "Default light shimmer."
+        },
+        {
+          "value": "rgb(255 255 255 / 0.28)",
+          "description": "Stronger light shimmer."
+        },
+        {
+          "value": "rgb(34 211 238 / 0.18)",
+          "description": "Cyan shimmer."
+        },
+        {
+          "value": "rgb(15 23 42 / 0.12)",
+          "description": "Dark shimmer for light surfaces."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-shimmer-duration",
+      "module": "motion",
+      "category": "motion",
+      "valueType": "time",
+      "default": "1.6s",
+      "description": "Loop duration for axo-shimmer overlay.",
+      "valueSuggestions": [
+        {
+          "value": "900ms",
+          "description": "Fast shimmer loop."
+        },
+        {
+          "value": "1.2s",
+          "description": "Medium shimmer loop."
+        },
+        {
+          "value": "1.6s",
+          "description": "Default shimmer loop."
+        },
+        {
+          "value": "2.4s",
+          "description": "Slow shimmer loop."
+        },
+        {
+          "value": "3s",
+          "description": "Very slow shimmer loop."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-sidebar-fixed-bottom",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "length",
+      "default": "0",
+      "description": "Bottom inset for axo-sidebar-fixed.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "Pin to the viewport bottom edge."
+        },
+        {
+          "value": "3rem",
+          "description": "Offset above a compact footer."
+        },
+        {
+          "value": "4rem",
+          "description": "Offset above a default footer."
+        },
+        {
+          "value": "5rem",
+          "description": "Offset above a large footer."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-sidebar-fixed-top",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "length",
+      "default": "0",
+      "description": "Top inset for axo-sidebar-fixed.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "Pin to the viewport top edge."
+        },
+        {
+          "value": "3.5rem",
+          "description": "Offset below a compact app header."
+        },
+        {
+          "value": "4rem",
+          "description": "Offset below a default app header."
+        },
+        {
+          "value": "5rem",
+          "description": "Offset below a large app header."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-sidebar-gap",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "length",
+      "default": "0.75rem",
+      "description": "Gap between sidebar children and shell regions.",
+      "valueSuggestions": [
+        {
+          "value": "0.5rem",
+          "description": "Tight sidebar gap."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Default sidebar gap."
+        },
+        {
+          "value": "1rem",
+          "description": "Comfortable sidebar gap."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Large sidebar gap."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-sidebar-main-offset-end",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "length",
+      "default": "0px",
+      "description": "Logical end offset used by fixed sidebar main-content helpers.",
+      "valueSuggestions": [
+        {
+          "value": "0px",
+          "description": "No logical end offset."
+        },
+        {
+          "value": "var(--axo-sidebar-rail-width, 4.5rem)",
+          "description": "Match the configured sidebar rail."
+        },
+        {
+          "value": "var(--axo-sidebar-width, 16rem)",
+          "description": "Match the configured expanded sidebar."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-sidebar-main-offset-start",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "length",
+      "default": "0px",
+      "description": "Logical start offset used by fixed sidebar main-content helpers.",
+      "valueSuggestions": [
+        {
+          "value": "0px",
+          "description": "No logical start offset."
+        },
+        {
+          "value": "var(--axo-sidebar-rail-width, 4.5rem)",
+          "description": "Match the configured sidebar rail."
+        },
+        {
+          "value": "var(--axo-sidebar-width, 16rem)",
+          "description": "Match the configured expanded sidebar."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-sidebar-padding",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "length",
+      "default": "1rem",
+      "description": "Inner padding for axo-sidebar.",
+      "valueSuggestions": [
+        {
+          "value": "0.5rem",
+          "description": "Compact sidebar padding."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Tight sidebar padding."
+        },
+        {
+          "value": "1rem",
+          "description": "Default sidebar padding."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Roomy sidebar padding."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-sidebar-rail-width",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "length",
+      "default": "4.5rem",
+      "description": "Compact rail inline size for axo-sidebar-rail.",
+      "valueSuggestions": [
+        {
+          "value": "3.5rem",
+          "description": "Very compact sidebar rail."
+        },
+        {
+          "value": "4rem",
+          "description": "Compact sidebar rail."
+        },
+        {
+          "value": "4.5rem",
+          "description": "Default sidebar rail."
+        },
+        {
+          "value": "5rem",
+          "description": "Roomy sidebar rail."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-sidebar-transition",
+      "module": "layout",
+      "category": "motion",
+      "valueType": "transition",
+      "default": "220ms ease",
+      "description": "Transition timing used by sidebar width and item interactions.",
+      "valueSuggestions": [
+        {
+          "value": "160ms ease",
+          "description": "Fast sidebar transition."
+        },
+        {
+          "value": "220ms ease",
+          "description": "Default sidebar transition."
+        },
+        {
+          "value": "320ms ease",
+          "description": "Slower sidebar transition."
+        },
+        {
+          "value": "420ms cubic-bezier(0.22, 1, 0.36, 1)",
+          "description": "Soft emphasized transition."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-sidebar-width",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "length",
+      "default": "16rem",
+      "description": "Expanded inline size for axo-sidebar.",
+      "valueSuggestions": [
+        {
+          "value": "14rem",
+          "description": "Compact sidebar width."
+        },
+        {
+          "value": "16rem",
+          "description": "Default sidebar width."
+        },
+        {
+          "value": "18rem",
+          "description": "Comfortable sidebar width."
+        },
+        {
+          "value": "20rem",
+          "description": "Large sidebar width."
+        },
+        {
+          "value": "min(20rem, 100%)",
+          "description": "Responsive capped sidebar width."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-sidebar-z",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "number",
+      "default": "20",
+      "description": "Z-index value for axo-sidebar.",
+      "valueSuggestions": [
+        {
+          "value": "10",
+          "description": "Low sidebar layer."
+        },
+        {
+          "value": "20",
+          "description": "Default sidebar layer."
+        },
+        {
+          "value": "50",
+          "description": "Above most local UI."
+        },
+        {
+          "value": "100",
+          "description": "High sidebar layer."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-skeleton-color",
+      "module": "semantic",
+      "category": "surface",
+      "valueType": "color",
+      "default": "color-mix(in srgb, currentColor 14%, transparent)",
+      "description": "Fill color for axo-skeleton.",
+      "valueSuggestions": [
+        {
+          "value": "color-mix(in srgb, currentColor 14%, transparent)",
+          "description": "Default inherited skeleton."
+        },
+        {
+          "value": "rgb(226 232 240)",
+          "description": "Light skeleton."
+        },
+        {
+          "value": "rgb(51 65 85)",
+          "description": "Dark skeleton."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-skeleton-duration",
+      "module": "semantic",
+      "category": "motion",
+      "valueType": "time",
+      "default": "1.4s",
+      "description": "Pulse duration for axo-skeleton.",
+      "valueSuggestions": [
+        {
+          "value": "900ms",
+          "description": "Fast skeleton pulse."
+        },
+        {
+          "value": "1.4s",
+          "description": "Default skeleton pulse."
+        },
+        {
+          "value": "2s",
+          "description": "Slow skeleton pulse."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-skeleton-height",
+      "module": "semantic",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "1rem",
+      "description": "Block size for axo-skeleton.",
+      "valueSuggestions": [
+        {
+          "value": "0.75rem",
+          "description": "Small text skeleton."
+        },
+        {
+          "value": "1rem",
+          "description": "Default text skeleton."
+        },
+        {
+          "value": "2rem",
+          "description": "Heading skeleton."
+        },
+        {
+          "value": "8rem",
+          "description": "Card media skeleton."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-skeleton-radius",
+      "module": "semantic",
+      "category": "shape",
+      "valueType": "length",
+      "default": "0.5rem",
+      "description": "Border radius for axo-skeleton.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "Square skeleton."
+        },
+        {
+          "value": "0.5rem",
+          "description": "Default skeleton radius."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Card-style skeleton radius."
+        },
+        {
+          "value": "999px",
+          "description": "Pill skeleton radius."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-skeleton-size",
+      "module": "semantic",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "3rem",
+      "description": "Inline and block size for axo-skeleton-circle.",
+      "valueSuggestions": [
+        {
+          "value": "2rem",
+          "description": "Small avatar skeleton."
+        },
+        {
+          "value": "3rem",
+          "description": "Default avatar skeleton."
+        },
+        {
+          "value": "4rem",
+          "description": "Large avatar skeleton."
+        },
+        {
+          "value": "6rem",
+          "description": "Profile skeleton."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-skeleton-text-width",
+      "module": "semantic",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "24rem",
+      "description": "Maximum inline size for axo-skeleton-text.",
+      "valueSuggestions": [
+        {
+          "value": "8rem",
+          "description": "Short text line."
+        },
+        {
+          "value": "16rem",
+          "description": "Medium text line."
+        },
+        {
+          "value": "24rem",
+          "description": "Default text line."
+        },
+        {
+          "value": "100%",
+          "description": "Full-width text line."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-skip-link-offset",
+      "module": "semantic",
+      "category": "accessibility",
+      "valueType": "length",
+      "default": "0.75rem",
+      "description": "Top and inline offset for axo-skip-link.",
+      "valueSuggestions": [
+        {
+          "value": "0.5rem",
+          "description": "Compact skip-link offset."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Default skip-link offset."
+        },
+        {
+          "value": "1rem",
+          "description": "Large skip-link offset."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-skip-link-z",
+      "module": "semantic",
+      "category": "accessibility",
+      "valueType": "number",
+      "default": "1000",
+      "description": "Stacking level for the focused skip link.",
+      "valueSuggestions": [
+        {
+          "value": "100",
+          "description": "Normal overlay level."
+        },
+        {
+          "value": "1000",
+          "description": "Default skip-link level."
+        },
+        {
+          "value": "9999",
+          "description": "Maximum app overlay level."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-stack-gap",
+      "module": "bento",
+      "category": "layout",
+      "valueType": "length",
+      "default": "0.75rem",
+      "description": "Gap between children inside axo-stack.",
+      "valueSuggestions": [
+        {
+          "value": "0.25rem",
+          "description": "Very tight stack gap."
+        },
+        {
+          "value": "0.5rem",
+          "description": "Tight stack gap."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Default stack gap."
+        },
+        {
+          "value": "1rem",
+          "description": "Comfortable stack gap."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Large stack gap."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-state-gap",
+      "module": "semantic",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "0.625rem",
+      "description": "Gap between checkbox, radio, or switch controls and label text.",
+      "valueSuggestions": [
+        {
+          "value": "0.375rem",
+          "description": "Tight control gap."
+        },
+        {
+          "value": "0.625rem",
+          "description": "Default control gap."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Relaxed control gap."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-sticky-offset",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "length",
+      "default": "0",
+      "description": "Top offset for axo-sticky-top.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "Stick to the top edge."
+        },
+        {
+          "value": "0.5rem",
+          "description": "Small sticky offset."
+        },
+        {
+          "value": "1rem",
+          "description": "Default page gutter offset."
+        },
+        {
+          "value": "4rem",
+          "description": "Offset below an appbar."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-surface-bg",
+      "module": "surface",
+      "category": "surface",
+      "valueType": "color",
+      "default": "rgb(255 255 255 / 0.92)",
+      "description": "Background color for axo-surface.",
+      "valueSuggestions": [
+        {
+          "value": "rgb(255 255 255 / 0.92)",
+          "description": "Default light surface."
+        },
+        {
+          "value": "rgb(248 250 252)",
+          "description": "Solid slate-50 surface."
+        },
+        {
+          "value": "rgb(15 23 42 / 0.92)",
+          "description": "Dark glass surface."
+        },
+        {
+          "value": "transparent",
+          "description": "No surface fill."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-surface-border",
+      "module": "surface",
+      "category": "surface",
+      "valueType": "color",
+      "default": "rgb(15 23 42 / 0.12)",
+      "description": "Border color for axo-surface.",
+      "valueSuggestions": [
+        {
+          "value": "transparent",
+          "description": "No visible border."
+        },
+        {
+          "value": "rgb(15 23 42 / 0.12)",
+          "description": "Default dark subtle border."
+        },
+        {
+          "value": "rgb(255 255 255 / 0.14)",
+          "description": "Light border for dark surfaces."
+        },
+        {
+          "value": "currentColor",
+          "description": "Use current text color."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-surface-color",
+      "module": "surface",
+      "category": "surface",
+      "valueType": "color",
+      "default": "rgb(15 23 42)",
+      "description": "Text color for axo-surface.",
+      "valueSuggestions": [
+        {
+          "value": "rgb(15 23 42)",
+          "description": "Default dark text."
+        },
+        {
+          "value": "rgb(51 65 85)",
+          "description": "Soft dark text."
+        },
+        {
+          "value": "rgb(248 250 252)",
+          "description": "Light text for dark surfaces."
+        },
+        {
+          "value": "currentColor",
+          "description": "Inherit current text color."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-surface-shadow",
+      "module": "surface",
+      "category": "surface",
+      "valueType": "shadow",
+      "default": "0 18px 48px rgb(15 23 42 / 0.08)",
+      "description": "Box-shadow for axo-surface.",
+      "valueSuggestions": [
+        {
+          "value": "none",
+          "description": "Disable surface shadow."
+        },
+        {
+          "value": "0 8px 24px rgb(15 23 42 / 0.08)",
+          "description": "Small surface shadow."
+        },
+        {
+          "value": "0 18px 48px rgb(15 23 42 / 0.08)",
+          "description": "Default surface shadow."
+        },
+        {
+          "value": "0 24px 64px rgb(15 23 42 / 0.14)",
+          "description": "Large surface shadow."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-switch-active",
+      "module": "semantic",
+      "category": "form",
+      "valueType": "color",
+      "default": "currentColor",
+      "description": "Checked track color for axo-switch.",
+      "valueSuggestions": [
+        {
+          "value": "currentColor",
+          "description": "Follow inherited text color."
+        },
+        {
+          "value": "rgb(37 99 235)",
+          "description": "Blue active switch."
+        },
+        {
+          "value": "rgb(5 150 105)",
+          "description": "Emerald active switch."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-switch-duration",
+      "module": "semantic",
+      "category": "motion",
+      "valueType": "time",
+      "default": "220ms",
+      "description": "Track and thumb transition duration for axo-switch.",
+      "valueSuggestions": [
+        {
+          "value": "120ms",
+          "description": "Fast switch transition."
+        },
+        {
+          "value": "220ms",
+          "description": "Default switch transition."
+        },
+        {
+          "value": "360ms",
+          "description": "Slow switch transition."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-switch-height",
+      "module": "semantic",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "1.5rem",
+      "description": "Block size for axo-switch input.",
+      "valueSuggestions": [
+        {
+          "value": "1.25rem",
+          "description": "Compact switch height."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Default switch height."
+        },
+        {
+          "value": "1.75rem",
+          "description": "Large switch height."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-switch-padding",
+      "module": "semantic",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "0.125rem",
+      "description": "Inner edge padding used to position the switch thumb.",
+      "valueSuggestions": [
+        {
+          "value": "1px",
+          "description": "Tight switch padding."
+        },
+        {
+          "value": "0.125rem",
+          "description": "Default switch padding."
+        },
+        {
+          "value": "0.1875rem",
+          "description": "Large switch padding."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-switch-thumb",
+      "module": "semantic",
+      "category": "form",
+      "valueType": "color",
+      "default": "Canvas",
+      "description": "Thumb fill color for axo-switch.",
+      "valueSuggestions": [
+        {
+          "value": "Canvas",
+          "description": "Follow the current color scheme."
+        },
+        {
+          "value": "white",
+          "description": "White switch thumb."
+        },
+        {
+          "value": "rgb(15 23 42)",
+          "description": "Dark switch thumb."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-switch-thumb-size",
+      "module": "semantic",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "1rem",
+      "description": "Inline and block size for the switch thumb.",
+      "valueSuggestions": [
+        {
+          "value": "0.875rem",
+          "description": "Compact switch thumb."
+        },
+        {
+          "value": "1rem",
+          "description": "Default switch thumb."
+        },
+        {
+          "value": "1.25rem",
+          "description": "Large switch thumb."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-switch-track",
+      "module": "semantic",
+      "category": "form",
+      "valueType": "color",
+      "default": "color-mix(in srgb, currentColor 14%, transparent)",
+      "description": "Unchecked track color for axo-switch.",
+      "valueSuggestions": [
+        {
+          "value": "color-mix(in srgb, currentColor 14%, transparent)",
+          "description": "Default inherited switch track."
+        },
+        {
+          "value": "rgb(203 213 225)",
+          "description": "Light neutral switch track."
+        },
+        {
+          "value": "rgb(71 85 105)",
+          "description": "Dark neutral switch track."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-switch-width",
+      "module": "semantic",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "2.75rem",
+      "description": "Inline size for axo-switch input.",
+      "valueSuggestions": [
+        {
+          "value": "2.25rem",
+          "description": "Compact switch width."
+        },
+        {
+          "value": "2.75rem",
+          "description": "Default switch width."
+        },
+        {
+          "value": "3.25rem",
+          "description": "Large switch width."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-switcher-gap",
+      "module": "layout",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "1rem",
+      "description": "Gap between children of axo-switcher.",
+      "valueSuggestions": [
+        {
+          "value": "0.5rem",
+          "description": "Compact switcher gap."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Small switcher gap."
+        },
+        {
+          "value": "1rem",
+          "description": "Default switcher gap."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Large switcher gap."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-switcher-threshold",
+      "module": "layout",
+      "category": "responsive",
+      "valueType": "length",
+      "default": "40rem",
+      "description": "Available width where axo-switcher changes between stacked and row layout.",
+      "valueSuggestions": [
+        {
+          "value": "30rem",
+          "description": "Switch at a compact width."
+        },
+        {
+          "value": "40rem",
+          "description": "Default switch threshold."
+        },
+        {
+          "value": "48rem",
+          "description": "Tablet-sized switch threshold."
+        },
+        {
+          "value": "64rem",
+          "description": "Wide switch threshold."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-tab-indicator-color",
+      "module": "tabs",
+      "category": "surface",
+      "valueType": "color",
+      "default": "currentColor",
+      "description": "Color of the selected tab indicator.",
+      "valueSuggestions": [
+        {
+          "value": "currentColor",
+          "description": "Follow the current text color."
+        },
+        {
+          "value": "rgb(15 118 110)",
+          "description": "Teal indicator example."
+        },
+        {
+          "value": "rgb(37 99 235)",
+          "description": "Blue indicator example."
+        },
+        {
+          "value": "transparent",
+          "description": "Hide the visual indicator."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-tab-indicator-size",
+      "module": "tabs",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "2px",
+      "description": "Thickness of the selected tab indicator.",
+      "valueSuggestions": [
+        {
+          "value": "1px",
+          "description": "Subtle tab indicator."
+        },
+        {
+          "value": "2px",
+          "description": "Default tab indicator."
+        },
+        {
+          "value": "3px",
+          "description": "Strong tab indicator."
+        },
+        {
+          "value": "0.25rem",
+          "description": "Bold tab indicator."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-tab-list-gap",
+      "module": "tabs",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "0.25rem",
+      "description": "Gap between adjacent tab controls.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "Joined tab controls."
+        },
+        {
+          "value": "0.25rem",
+          "description": "Default tab control gap."
+        },
+        {
+          "value": "0.5rem",
+          "description": "Comfortable tab control gap."
+        },
+        {
+          "value": "1rem",
+          "description": "Wide tab control gap."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-tab-min-height",
+      "module": "tabs",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "2.75rem",
+      "description": "Minimum block size for an Axoloth tab control.",
+      "valueSuggestions": [
+        {
+          "value": "2.25rem",
+          "description": "Compact tab height."
+        },
+        {
+          "value": "2.75rem",
+          "description": "Default tab height."
+        },
+        {
+          "value": "3rem",
+          "description": "Comfortable tab height."
+        },
+        {
+          "value": "3.5rem",
+          "description": "Large tab height."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-tab-padding-inline",
+      "module": "tabs",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "1rem",
+      "description": "Horizontal padding inside each tab control.",
+      "valueSuggestions": [
+        {
+          "value": "0.5rem",
+          "description": "Compact tab padding."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Tight tab padding."
+        },
+        {
+          "value": "1rem",
+          "description": "Default tab padding."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Wide tab padding."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-tab-panel-padding",
+      "module": "tabs",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "0",
+      "description": "Internal padding applied to tab panels.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "No panel padding."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Compact panel padding."
+        },
+        {
+          "value": "1rem",
+          "description": "Default panel padding."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Roomy panel padding."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-tab-vertical-width",
+      "module": "tabs",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "14rem",
+      "description": "Preferred width of a vertical tab list.",
+      "valueSuggestions": [
+        {
+          "value": "10rem",
+          "description": "Compact vertical tab list."
+        },
+        {
+          "value": "14rem",
+          "description": "Default vertical tab list."
+        },
+        {
+          "value": "18rem",
+          "description": "Wide vertical tab list."
+        },
+        {
+          "value": "25%",
+          "description": "Proportional vertical tab list."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-table-border",
+      "module": "semantic",
+      "category": "surface",
+      "valueType": "border",
+      "default": "1px solid rgb(127 127 127 / 0.24)",
+      "description": "Border used by the table wrapper and table rows.",
+      "valueSuggestions": [
+        {
+          "value": "none",
+          "description": "Remove table borders."
+        },
+        {
+          "value": "1px solid rgb(127 127 127 / 0.24)",
+          "description": "Default neutral table border."
+        },
+        {
+          "value": "1px solid currentColor",
+          "description": "Use the current text color."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-table-cell-padding",
+      "module": "semantic",
+      "category": "spacing",
+      "valueType": "spacing",
+      "default": "0.75rem 1rem",
+      "description": "Cell padding for axo-table.",
+      "valueSuggestions": [
+        {
+          "value": "0.5rem 0.75rem",
+          "description": "Compact table cells."
+        },
+        {
+          "value": "0.75rem 1rem",
+          "description": "Default table cells."
+        },
+        {
+          "value": "1rem 1.25rem",
+          "description": "Spacious table cells."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-table-header-bg",
+      "module": "semantic",
+      "category": "surface",
+      "valueType": "color",
+      "default": "var(--axo-surface-bg, Canvas)",
+      "description": "Background color for sticky axo-table header cells.",
+      "valueSuggestions": [
+        {
+          "value": "var(--axo-surface-bg, Canvas)",
+          "description": "Follow the current Axoloth surface."
+        },
+        {
+          "value": "Canvas",
+          "description": "Use the browser canvas color."
+        },
+        {
+          "value": "transparent",
+          "description": "Use a transparent sticky header."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-tabs-gap",
+      "module": "tabs",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "1rem",
+      "description": "Gap between the tab list and active panel.",
+      "valueSuggestions": [
+        {
+          "value": "0.5rem",
+          "description": "Compact tabs gap."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Tight tabs gap."
+        },
+        {
+          "value": "1rem",
+          "description": "Default tabs gap."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Roomy tabs gap."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-toast-border",
+      "module": "toast",
+      "category": "surface",
+      "valueType": "border",
+      "default": "1px solid currentColor",
+      "description": "Border applied to toast notifications.",
+      "valueSuggestions": [
+        {
+          "value": "none",
+          "description": "Remove the toast border."
+        },
+        {
+          "value": "1px solid currentColor",
+          "description": "Neutral toast border."
+        },
+        {
+          "value": "1px solid rgb(148 163 184 / 0.35)",
+          "description": "Soft slate border."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-toast-distance",
+      "module": "toast",
+      "category": "motion",
+      "valueType": "length",
+      "default": "0.75rem",
+      "description": "Vertical entrance and dismissal distance for a toast.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "Disable toast movement."
+        },
+        {
+          "value": "0.5rem",
+          "description": "Subtle toast movement."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Default toast movement."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Strong toast movement."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-toast-duration",
+      "module": "toast",
+      "category": "motion",
+      "valueType": "time",
+      "default": "180ms",
+      "description": "Show and dismiss transition duration for toast notifications.",
+      "valueSuggestions": [
+        {
+          "value": "0ms",
+          "description": "Disable toast transitions."
+        },
+        {
+          "value": "120ms",
+          "description": "Fast toast transition."
+        },
+        {
+          "value": "180ms",
+          "description": "Default toast transition."
+        },
+        {
+          "value": "280ms",
+          "description": "Slow toast transition."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-toast-gap",
+      "module": "toast",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "0.75rem",
+      "description": "Gap between toast content, actions, and dismiss control.",
+      "valueSuggestions": [
+        {
+          "value": "0.5rem",
+          "description": "Compact toast gap."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Default toast gap."
+        },
+        {
+          "value": "1rem",
+          "description": "Comfortable toast gap."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Wide toast gap."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-toast-padding",
+      "module": "toast",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "1rem",
+      "description": "Internal padding for a toast notification.",
+      "valueSuggestions": [
+        {
+          "value": "0.75rem",
+          "description": "Compact toast padding."
+        },
+        {
+          "value": "1rem",
+          "description": "Default toast padding."
+        },
+        {
+          "value": "1.25rem",
+          "description": "Comfortable toast padding."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Roomy toast padding."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-toast-radius",
+      "module": "toast",
+      "category": "shape",
+      "valueType": "length",
+      "default": "var(--axo-radius, 0.5rem)",
+      "description": "Border radius for toast notifications.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "Square toast corners."
+        },
+        {
+          "value": "0.25rem",
+          "description": "Subtle toast radius."
+        },
+        {
+          "value": "0.5rem",
+          "description": "Default toast radius."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Soft toast radius."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-toast-region-gap",
+      "module": "toast",
+      "category": "spacing",
+      "valueType": "length",
+      "default": "0.75rem",
+      "description": "Gap between stacked toast notifications.",
+      "valueSuggestions": [
+        {
+          "value": "0.5rem",
+          "description": "Compact toast stack."
+        },
+        {
+          "value": "0.75rem",
+          "description": "Default toast stack."
+        },
+        {
+          "value": "1rem",
+          "description": "Comfortable toast stack."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Roomy toast stack."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-toast-region-inset",
+      "module": "toast",
+      "category": "position",
+      "valueType": "length",
+      "default": "1rem",
+      "description": "Viewport edge inset for toast regions.",
+      "valueSuggestions": [
+        {
+          "value": "0.5rem",
+          "description": "Compact viewport inset."
+        },
+        {
+          "value": "1rem",
+          "description": "Default viewport inset."
+        },
+        {
+          "value": "1.5rem",
+          "description": "Roomy viewport inset."
+        },
+        {
+          "value": "max(1rem, env(safe-area-inset-top))",
+          "description": "Safe-area aware inset."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-toast-shadow",
+      "module": "toast",
+      "category": "surface",
+      "valueType": "shadow",
+      "default": "0 18px 48px rgb(15 23 42 / 0.16)",
+      "description": "Shadow below toast notifications.",
+      "valueSuggestions": [
+        {
+          "value": "none",
+          "description": "Disable the toast shadow."
+        },
+        {
+          "value": "0 8px 24px rgb(15 23 42 / 0.12)",
+          "description": "Small toast shadow."
+        },
+        {
+          "value": "0 18px 48px rgb(15 23 42 / 0.16)",
+          "description": "Default toast shadow."
+        },
+        {
+          "value": "0 24px 64px rgb(15 23 42 / 0.22)",
+          "description": "Large toast shadow."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-toast-width",
+      "module": "toast",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "24rem",
+      "description": "Preferred inline size for toast notifications.",
+      "valueSuggestions": [
+        {
+          "value": "18rem",
+          "description": "Compact toast width."
+        },
+        {
+          "value": "24rem",
+          "description": "Default toast width."
+        },
+        {
+          "value": "30rem",
+          "description": "Wide toast width."
+        },
+        {
+          "value": "calc(100vw - 2rem)",
+          "description": "Viewport-safe toast width."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-toast-z",
+      "module": "toast",
+      "category": "position",
+      "valueType": "number",
+      "default": "80",
+      "description": "Stacking level for toast regions.",
+      "valueSuggestions": [
+        {
+          "value": "50",
+          "description": "Standard overlay level."
+        },
+        {
+          "value": "80",
+          "description": "Default toast level."
+        },
+        {
+          "value": "100",
+          "description": "High app notification level."
+        },
+        {
+          "value": "1000",
+          "description": "Global notification level."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "variable",
+      "name": "--axo-z-sticky",
+      "module": "layout",
+      "category": "layout",
+      "valueType": "number",
+      "default": "20",
+      "description": "Z-index value for axo-sticky-top.",
+      "valueSuggestions": [
+        {
+          "value": "10",
+          "description": "Low sticky layer."
+        },
+        {
+          "value": "20",
+          "description": "Default sticky layer."
+        },
+        {
+          "value": "50",
+          "description": "Above most local UI."
+        },
+        {
+          "value": "100",
+          "description": "High sticky layer."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-accordion",
+      "module": "accordion",
+      "category": "behavior",
+      "description": "Layout boundary for an accessible accordion group.",
+      "usage": "Add data-axo-accordion and initialize initAccordion.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-accordion-indicator",
+      "module": "accordion",
+      "category": "control",
+      "description": "Fixed-size indicator that rotates while an item is expanded.",
+      "usage": "Place inside axo-accordion-trigger and mark decorative content aria-hidden.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-accordion-item",
+      "module": "accordion",
+      "category": "layout",
+      "description": "Structural wrapper for one accordion trigger and panel.",
+      "usage": "Combine with axo-surface when a filled item is desired.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-accordion-item-open",
+      "module": "accordion",
+      "category": "state",
+      "description": "Expanded accordion item state managed by Axoloth Behavior.",
+      "usage": "Normally managed by initAccordion rather than written manually.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-accordion-panel",
+      "module": "accordion",
+      "category": "layout",
+      "description": "Collapsible content region controlled by an accordion trigger.",
+      "usage": "Add data-axo-accordion-panel matching its trigger identifier.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-accordion-panel-open",
+      "module": "accordion",
+      "category": "state",
+      "description": "Visible accordion panel state managed by Axoloth Behavior.",
+      "usage": "Normally managed by initAccordion rather than written manually.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-accordion-trigger",
+      "module": "accordion",
+      "category": "control",
+      "description": "Full-width disclosure button for an accordion item.",
+      "usage": "Use on a button with data-axo-accordion-trigger.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-alert",
+      "module": "semantic",
+      "category": "status",
+      "description": "Neutral alert or notice container with structured spacing and border.",
+      "usage": "Combine with axo-surface or custom status colors.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-alert-title",
+      "module": "semantic",
+      "category": "status",
+      "description": "Strong title treatment for an Axoloth alert.",
+      "usage": "Use inside axo-alert.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-app",
+      "module": "layout",
+      "category": "layout",
+      "description": "Grid app shell for sidebar, header, main, and footer regions.",
+      "usage": "Use with axo-app-sidebar, axo-app-header, axo-app-main, and axo-app-footer.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-app-footer",
+      "module": "layout",
+      "category": "layout",
+      "description": "Footer grid area inside axo-app.",
+      "usage": "Customize height with --axo-app-footer-height.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-app-header",
+      "module": "layout",
+      "category": "layout",
+      "description": "Header grid area inside axo-app.",
+      "usage": "Can be combined with axo-header.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-app-main",
+      "module": "layout",
+      "category": "layout",
+      "description": "Scrollable main content grid area inside axo-app.",
+      "usage": "Customize inner spacing with --axo-app-padding.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-app-sidebar",
+      "module": "layout",
+      "category": "layout",
+      "description": "Sidebar grid area inside axo-app.",
+      "usage": "Combine with axo-sidebar for sidebar sizing and item layout.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-app-sidebar-right",
+      "module": "layout",
+      "category": "layout",
+      "description": "Moves the axo-app sidebar area to the right side.",
+      "usage": "Use on the same element as axo-app.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-auto-grid",
+      "module": "layout",
+      "category": "primitive",
+      "description": "Auto-fitting grid that creates columns from available space without media queries.",
+      "usage": "Customize minimum item width with --axo-item-min and gap with --axo-grid-gap.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-badge",
+      "module": "semantic",
+      "category": "status",
+      "description": "Compact inline status or metadata label with neutral structure.",
+      "usage": "Combine with axo-badge-dot or user-defined colors.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-badge-dot",
+      "module": "semantic",
+      "category": "status",
+      "description": "Current-color status dot sized for axo-badge.",
+      "usage": "Place inside axo-badge before its label.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-bento",
+      "module": "bento",
+      "category": "layout",
+      "description": "Responsive bento grid container with mobile, tablet, and desktop columns.",
+      "usage": "Use on the parent grid element.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-button",
+      "module": "semantic",
+      "category": "surface",
+      "description": "Neutral button structure with sizing, border, alignment, hover, and focus-visible ring.",
+      "usage": "Use on button or anchor elements.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-button-block",
+      "module": "semantic",
+      "category": "layout",
+      "description": "Makes an axo-button fill the available inline size.",
+      "usage": "Use with axo-button.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-card",
+      "module": "bento",
+      "category": "layout",
+      "description": "Neutral structural card base with radius, border, padding, and transitions.",
+      "usage": "Combine with size, surface, and motion utilities.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-center",
+      "module": "layout",
+      "category": "primitive",
+      "description": "Horizontally centered content region with a configurable maximum width and gutter.",
+      "usage": "Customize with --axo-center-width and --axo-center-gutter.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-checkbox",
+      "module": "semantic",
+      "category": "form",
+      "description": "Aligned label layout for a native checkbox and its text.",
+      "usage": "Use on a label containing input type checkbox.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-cluster",
+      "module": "semantic",
+      "category": "layout",
+      "description": "Wrapping inline group for nav items, tags, and action rows.",
+      "usage": "Customize spacing with --axo-control-gap.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-container",
+      "module": "semantic",
+      "category": "layout",
+      "description": "Centered content container with configurable max width.",
+      "usage": "Customize width with --axo-container-width.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-container-query",
+      "module": "layout",
+      "category": "responsive",
+      "description": "Named inline-size query container for adaptive Axoloth child layouts.",
+      "usage": "Wrap axo-bento axo-container-responsive or another container-aware child.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-container-responsive",
+      "module": "bento",
+      "category": "responsive",
+      "description": "Makes axo-bento respond to an axo-container-query parent instead of the viewport.",
+      "usage": "Use on axo-bento inside a separate axo-container-query wrapper.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-contrast",
+      "module": "surface",
+      "category": "surface",
+      "description": "Inverted contrast surface for the current theme marker.",
+      "usage": "Use with axo-card when the card should stand out from the parent theme.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-cover",
+      "module": "layout",
+      "category": "primitive",
+      "description": "Full-height flex section that vertically centers its content group.",
+      "usage": "Customize height and padding with --axo-cover-height and --axo-cover-padding.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-dialog",
+      "module": "dialog",
+      "category": "behavior",
+      "description": "Fixed viewport layer that centers an accessible dialog panel.",
+      "usage": "Add data-axo-dialog-id and initialize initDialog.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-dialog-active",
+      "module": "dialog",
+      "category": "state",
+      "description": "Body state that locks document scrolling while a dialog is open.",
+      "usage": "Managed automatically by initDialog.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-dialog-backdrop",
+      "module": "dialog",
+      "category": "behavior",
+      "description": "Full viewport dismiss layer behind a dialog panel.",
+      "usage": "Add data-axo-dialog-dismiss matching the dialog identifier.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-dialog-backdrop-open",
+      "module": "dialog",
+      "category": "state",
+      "description": "Visible dialog backdrop state applied by Axoloth Behavior.",
+      "usage": "Normally managed by initDialog rather than written manually.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-dialog-body",
+      "module": "dialog",
+      "category": "layout",
+      "description": "Main content region inside a dialog panel.",
+      "usage": "Use between axo-dialog-header and axo-dialog-footer.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-dialog-footer",
+      "module": "dialog",
+      "category": "layout",
+      "description": "Wrapping action row aligned to the end of a dialog panel.",
+      "usage": "Place dismiss and confirmation actions inside it.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-dialog-full",
+      "module": "dialog",
+      "category": "sizing",
+      "description": "Expands a dialog panel to the available viewport width.",
+      "usage": "Use with axo-dialog-panel for large workflows.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-dialog-header",
+      "module": "dialog",
+      "category": "layout",
+      "description": "Dialog heading row with space for a title and close action.",
+      "usage": "Use as a direct section inside axo-dialog-panel.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-dialog-lg",
+      "module": "dialog",
+      "category": "sizing",
+      "description": "Sets a wide dialog panel width.",
+      "usage": "Use with axo-dialog-panel.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-dialog-open",
+      "module": "dialog",
+      "category": "state",
+      "description": "Visible dialog state applied by Axoloth Behavior.",
+      "usage": "Normally managed by initDialog rather than written manually.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-dialog-panel",
+      "module": "dialog",
+      "category": "layout",
+      "description": "Scrollable, width-constrained content panel inside axo-dialog.",
+      "usage": "Combine with axo-surface or axo-contrast for visual styling.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-dialog-sm",
+      "module": "dialog",
+      "category": "sizing",
+      "description": "Sets a compact dialog panel width.",
+      "usage": "Use with axo-dialog-panel.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-divider",
+      "module": "semantic",
+      "category": "layout",
+      "description": "Neutral full-width divider with configurable thickness, spacing, and opacity.",
+      "usage": "Use on hr or a decorative separator.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-dropdown",
+      "module": "dropdown",
+      "category": "behavior",
+      "description": "Positioning boundary for an accessible dropdown menu.",
+      "usage": "Add data-axo-dropdown and initialize initDropdown.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-dropdown-end",
+      "module": "dropdown",
+      "category": "position",
+      "description": "Aligns a dropdown menu to the trigger's inline end edge.",
+      "usage": "Use on the axo-dropdown wrapper.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-dropdown-item",
+      "module": "dropdown",
+      "category": "control",
+      "description": "Full-width action or link inside a dropdown menu.",
+      "usage": "Use with data-axo-dropdown-item or role menuitem.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-dropdown-label",
+      "module": "dropdown",
+      "category": "layout",
+      "description": "Non-interactive group label inside a dropdown menu.",
+      "usage": "Use for short menu section labels.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-dropdown-menu",
+      "module": "dropdown",
+      "category": "layout",
+      "description": "Absolutely positioned menu surface below a dropdown trigger.",
+      "usage": "Add data-axo-dropdown-menu matching the trigger identifier.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-dropdown-menu-open",
+      "module": "dropdown",
+      "category": "state",
+      "description": "Visible menu state managed by Axoloth Behavior.",
+      "usage": "Normally managed by initDropdown rather than written manually.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-dropdown-open",
+      "module": "dropdown",
+      "category": "state",
+      "description": "Open dropdown group state managed by Axoloth Behavior.",
+      "usage": "Normally managed by initDropdown rather than written manually.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-dropdown-separator",
+      "module": "dropdown",
+      "category": "layout",
+      "description": "Subtle separator between groups of dropdown actions.",
+      "usage": "Use on an hr element with role separator.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-dropdown-trigger",
+      "module": "dropdown",
+      "category": "control",
+      "description": "Inline trigger alignment for a dropdown menu button.",
+      "usage": "Use on a button with data-axo-dropdown-toggle.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-dropdown-up",
+      "module": "dropdown",
+      "category": "position",
+      "description": "Places a dropdown menu above its trigger.",
+      "usage": "Use on the axo-dropdown wrapper.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-empty",
+      "module": "semantic",
+      "category": "state",
+      "description": "Centered empty-state layout for icon, title, description, and actions.",
+      "usage": "Use axo-empty-state as a descriptive alias.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-empty-description",
+      "module": "semantic",
+      "category": "state",
+      "description": "Readable muted description for an empty state.",
+      "usage": "Place inside axo-empty or axo-empty-state.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-empty-icon",
+      "module": "semantic",
+      "category": "state",
+      "description": "Centered circular icon slot for an empty state.",
+      "usage": "Place inside axo-empty or axo-empty-state.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-empty-state",
+      "module": "semantic",
+      "category": "state",
+      "description": "Descriptive alias for the centered axo-empty layout.",
+      "usage": "Use with axo-empty-icon, axo-empty-title, and axo-empty-description.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-empty-title",
+      "module": "semantic",
+      "category": "state",
+      "description": "Title typography for an empty state.",
+      "usage": "Place inside axo-empty or axo-empty-state.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-error",
+      "module": "semantic",
+      "category": "form",
+      "description": "Readable validation error text with configurable error color.",
+      "usage": "Connect to the invalid control with aria-describedby.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-fade",
+      "module": "motion",
+      "category": "motion",
+      "description": "Fade-in entrance animation.",
+      "usage": "Customize timing with --axo-duration and --axo-delay.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-field",
+      "module": "semantic",
+      "category": "layout",
+      "description": "Vertical form field wrapper.",
+      "usage": "Use around axo-label and axo-input.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-form",
+      "module": "semantic",
+      "category": "layout",
+      "description": "Vertical form layout with consistent control gaps.",
+      "usage": "Customize spacing with --axo-control-gap.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-form-grid",
+      "module": "semantic",
+      "category": "layout",
+      "description": "Responsive form grid: one column on mobile and two columns on wider screens.",
+      "usage": "Use for grouped field layouts.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-glow",
+      "module": "motion",
+      "category": "motion",
+      "description": "Soft hover glow shadow.",
+      "usage": "Customize shadow with --axo-glow-shadow.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-h-appbar",
+      "module": "layout",
+      "category": "layout",
+      "description": "Appbar height preset.",
+      "usage": "Sets --axo-header-height to 4rem.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-header",
+      "module": "layout",
+      "category": "layout",
+      "description": "Base appbar/header container.",
+      "usage": "Combine with axo-header-grid or axo-header-flex.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-header-center",
+      "module": "layout",
+      "category": "layout",
+      "description": "Center header slot, usually for search or primary controls.",
+      "usage": "Use inside axo-header-grid.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-header-flex",
+      "module": "layout",
+      "category": "layout",
+      "description": "Simple flex header alternative.",
+      "usage": "Use when a grid appbar is more structure than needed.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-header-grid",
+      "module": "layout",
+      "category": "layout",
+      "description": "Four-slot header grid for left, center, nav, and right areas.",
+      "usage": "Use with axo-header-left, axo-header-center, axo-header-nav, and axo-header-right.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-header-left",
+      "module": "layout",
+      "category": "layout",
+      "description": "Left header slot, usually for logo or brand icon.",
+      "usage": "Use inside axo-header-grid.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-header-nav",
+      "module": "layout",
+      "category": "layout",
+      "description": "Header navigation slot that hides on mobile by default.",
+      "usage": "Use inside axo-header-grid for nav links.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-header-right",
+      "module": "layout",
+      "category": "layout",
+      "description": "Right header slot, usually for actions or a menu button.",
+      "usage": "Use inside axo-header-grid.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-help",
+      "module": "semantic",
+      "category": "form",
+      "description": "Muted helper text for a form field.",
+      "usage": "Connect to its control with aria-describedby when it adds instructions.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-hide-mobile",
+      "module": "layout",
+      "category": "layout",
+      "description": "Hide an element below 768px.",
+      "usage": "Useful for desktop navigation.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-icon-button",
+      "module": "layout",
+      "category": "layout",
+      "description": "Square icon button sizing and alignment.",
+      "usage": "Bring your own icon from Lucide, Heroicons, Google Icons, SVG, or HTML.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-input",
+      "module": "semantic",
+      "category": "surface",
+      "description": "Neutral input, select, or textarea structure with border, padding, sizing, and focus-visible ring.",
+      "usage": "Use on input, select, or textarea elements.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-invalid",
+      "module": "semantic",
+      "category": "form",
+      "description": "Validation border and ring for an invalid axo-input.",
+      "usage": "Use with aria-invalid=true and an associated axo-error message.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-label",
+      "module": "semantic",
+      "category": "layout",
+      "description": "Label text layout helper for forms.",
+      "usage": "Use inside axo-field.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-large",
+      "module": "bento",
+      "category": "layout",
+      "description": "Bento item that spans two columns and two rows on tablet and desktop.",
+      "usage": "Use on an item inside axo-bento.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-lift",
+      "module": "motion",
+      "category": "motion",
+      "description": "Lift upward on hover.",
+      "usage": "Customize distance with --axo-lift-distance.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-link",
+      "module": "semantic",
+      "category": "surface",
+      "description": "Neutral link reset with inherited color, hover transition, and focus-visible ring.",
+      "usage": "Use on anchors when browser default blue underline should be removed.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-list-reset",
+      "module": "semantic",
+      "category": "layout",
+      "description": "Removes list margin, padding, and markers from ul or ol elements.",
+      "usage": "Use when semantic lists should behave like layout groups.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-nav",
+      "module": "semantic",
+      "category": "layout",
+      "description": "Structural navigation container.",
+      "usage": "Use with axo-nav-list and axo-link.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-nav-list",
+      "module": "semantic",
+      "category": "layout",
+      "description": "Reset and row layout for semantic nav lists.",
+      "usage": "Use on ul or ol inside nav.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-offcanvas-active",
+      "module": "layout",
+      "category": "state",
+      "description": "Body state that locks document scrolling while a drawer is open.",
+      "usage": "Managed automatically by initOffcanvas.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-page",
+      "module": "semantic",
+      "category": "layout",
+      "description": "Page wrapper with full-width sizing, minimum viewport height, and page padding.",
+      "usage": "Use as a top-level page or main wrapper.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-pop",
+      "module": "motion",
+      "category": "motion",
+      "description": "Fade and scale into place.",
+      "usage": "Customize start scale with --axo-pop-start.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-progress",
+      "module": "semantic",
+      "category": "state",
+      "description": "Accessible progress track wrapper for a child axo-progress-bar.",
+      "usage": "Add progressbar ARIA attributes and set --axo-progress-value.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-progress-bar",
+      "module": "semantic",
+      "category": "state",
+      "description": "Progress fill controlled by --axo-progress-value.",
+      "usage": "Place as the direct child of axo-progress.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-progress-indeterminate",
+      "module": "semantic",
+      "category": "state",
+      "description": "Looping indeterminate state for axo-progress with reduced-motion support.",
+      "usage": "Use with axo-progress when completion percentage is unknown.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-radio",
+      "module": "semantic",
+      "category": "form",
+      "description": "Aligned label layout for a native radio and its text.",
+      "usage": "Use on a label containing input type radio.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-reel",
+      "module": "layout",
+      "category": "primitive",
+      "description": "Horizontal scrolling row with stable item widths and scroll snapping.",
+      "usage": "Add tabindex=\"0\" and an accessible label when the reel can overflow, then customize item width, gap, and edge padding with Axoloth reel variables.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-required",
+      "module": "semantic",
+      "category": "form",
+      "description": "Adds a visual required marker after label text.",
+      "usage": "Still add the native required attribute to the associated control.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-rise",
+      "module": "motion",
+      "category": "motion",
+      "description": "Fade and move upward into place.",
+      "usage": "Customize distance with --axo-rise-distance.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-row",
+      "module": "bento",
+      "category": "layout",
+      "description": "Horizontal flex row for compact inline content.",
+      "usage": "Customize spacing with --axo-row-gap.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-scroll-snap",
+      "module": "layout",
+      "category": "behavior",
+      "description": "Adds mandatory inline scroll snapping to a custom overflow container.",
+      "usage": "Combine with axo-snap-start on child items.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-searchbar",
+      "module": "layout",
+      "category": "layout",
+      "description": "Inline search layout for icon/text plus input.",
+      "usage": "Use on a label or wrapper around an input.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-section",
+      "module": "semantic",
+      "category": "layout",
+      "description": "Vertical section spacing helper.",
+      "usage": "Customize spacing with --axo-section-gap.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-shell",
+      "module": "layout",
+      "category": "layout",
+      "description": "Flexible app shell wrapper for sidebar and main content layouts.",
+      "usage": "Use around axo-sidebar and axo-sidebar-main.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-shimmer",
+      "module": "motion",
+      "category": "motion",
+      "description": "Looping shimmer overlay.",
+      "usage": "Customize with --axo-shimmer-duration and --axo-shimmer-color.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-show-mobile",
+      "module": "layout",
+      "category": "layout",
+      "description": "Show an element below 768px.",
+      "usage": "Useful for mobile menu buttons.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-sidebar",
+      "module": "layout",
+      "category": "layout",
+      "description": "Base sidebar container with column layout, width, padding, overflow, and transitions.",
+      "usage": "Combine with axo-sidebar-left or axo-sidebar-right.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-sidebar-backdrop",
+      "module": "layout",
+      "category": "behavior",
+      "description": "Fixed dismiss layer behind an off-canvas sidebar.",
+      "usage": "Add data-axo-dismiss matching the sidebar identifier.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-sidebar-backdrop-open",
+      "module": "layout",
+      "category": "state",
+      "description": "Visible backdrop state applied by Axoloth Behavior.",
+      "usage": "Normally managed by initOffcanvas rather than written manually.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-sidebar-fixed",
+      "module": "layout",
+      "category": "layout",
+      "description": "Fixes a sidebar to the viewport instead of the normal document flow.",
+      "usage": "Combine with axo-sidebar-fixed-left or axo-sidebar-fixed-right.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-sidebar-fixed-left",
+      "module": "layout",
+      "category": "layout",
+      "description": "Pins a fixed sidebar to the left edge of the viewport.",
+      "usage": "Use with axo-sidebar-fixed.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-sidebar-fixed-right",
+      "module": "layout",
+      "category": "layout",
+      "description": "Pins a fixed sidebar to the right edge of the viewport.",
+      "usage": "Use with axo-sidebar-fixed.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-sidebar-hover",
+      "module": "layout",
+      "category": "layout",
+      "description": "Expands a rail sidebar on hover or keyboard focus within.",
+      "usage": "Use with axo-sidebar-rail.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-sidebar-item",
+      "module": "layout",
+      "category": "layout",
+      "description": "Aligned sidebar menu item for links, buttons, and compact actions.",
+      "usage": "Use inside axo-sidebar.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-sidebar-left",
+      "module": "layout",
+      "category": "layout",
+      "description": "Places a sidebar before the main content inside axo-shell.",
+      "usage": "Use on the same element as axo-sidebar.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-sidebar-main",
+      "module": "layout",
+      "category": "layout",
+      "description": "Main content region that fills the remaining space in axo-shell.",
+      "usage": "Use as the sibling of axo-sidebar.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-sidebar-main-offset-left",
+      "module": "layout",
+      "category": "layout",
+      "description": "Offsets main content by the expanded left sidebar width.",
+      "usage": "Use with a left fixed sidebar.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-sidebar-main-offset-rail-left",
+      "module": "layout",
+      "category": "layout",
+      "description": "Offsets main content by the compact left sidebar rail width.",
+      "usage": "Use with a fixed left rail sidebar.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-sidebar-main-offset-rail-right",
+      "module": "layout",
+      "category": "layout",
+      "description": "Offsets main content by the compact right sidebar rail width.",
+      "usage": "Use with a fixed right rail sidebar.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-sidebar-main-offset-right",
+      "module": "layout",
+      "category": "layout",
+      "description": "Offsets main content by the expanded right sidebar width.",
+      "usage": "Use with a right fixed sidebar.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-sidebar-offcanvas",
+      "module": "layout",
+      "category": "behavior",
+      "description": "Viewport drawer foundation hidden beyond the left edge until opened.",
+      "usage": "Combine with axo-sidebar and initialize @quertys/axoloth-behavior.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-sidebar-offcanvas-right",
+      "module": "layout",
+      "category": "behavior",
+      "description": "Moves an off-canvas sidebar to the right viewport edge.",
+      "usage": "Use with axo-sidebar-offcanvas.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-sidebar-open",
+      "module": "layout",
+      "category": "state",
+      "description": "Open state applied to an off-canvas sidebar by Axoloth Behavior.",
+      "usage": "Normally managed by initOffcanvas rather than written manually.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-sidebar-rail",
+      "module": "layout",
+      "category": "layout",
+      "description": "Uses the compact rail width for a sidebar.",
+      "usage": "Combine with axo-sidebar-hover for hover expansion.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-sidebar-right",
+      "module": "layout",
+      "category": "layout",
+      "description": "Places a sidebar after the main content inside axo-shell.",
+      "usage": "Use on the same element as axo-sidebar.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-sidebar-sticky",
+      "module": "layout",
+      "category": "layout",
+      "description": "Makes a sidebar stick within the viewport while the main content scrolls.",
+      "usage": "Customize with --axo-sticky-offset and --axo-sidebar-z.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-skeleton",
+      "module": "semantic",
+      "category": "state",
+      "description": "Neutral loading placeholder with a reduced-motion-safe pulse.",
+      "usage": "Mark decorative skeletons aria-hidden and customize their dimensions.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-skeleton-circle",
+      "module": "semantic",
+      "category": "state",
+      "description": "Circular avatar-style preset for axo-skeleton.",
+      "usage": "Use on the same element as axo-skeleton.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-skeleton-text",
+      "module": "semantic",
+      "category": "state",
+      "description": "Text-line width preset for axo-skeleton.",
+      "usage": "Use on the same element as axo-skeleton.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-skip-link",
+      "module": "semantic",
+      "category": "accessibility",
+      "description": "Keyboard skip link that becomes visible when focused.",
+      "usage": "Place as the first focusable link and point it to the main content id.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-snap-start",
+      "module": "layout",
+      "category": "behavior",
+      "description": "Aligns an item to the start edge of a scroll-snap container.",
+      "usage": "Use on children of axo-scroll-snap.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-square",
+      "module": "bento",
+      "category": "layout",
+      "description": "One-by-one bento item span.",
+      "usage": "Use on an item inside axo-bento.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-stack",
+      "module": "bento",
+      "category": "layout",
+      "description": "Vertical flex stack for card content.",
+      "usage": "Customize spacing with --axo-stack-gap.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-sticky-top",
+      "module": "layout",
+      "category": "layout",
+      "description": "Sticky top positioning helper.",
+      "usage": "Customize with --axo-sticky-offset and --axo-z-sticky.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-surface",
+      "module": "surface",
+      "category": "surface",
+      "description": "Normal surface for the current theme marker.",
+      "usage": "Use with axo-card or another structural element.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-switch",
+      "module": "semantic",
+      "category": "form",
+      "description": "Accessible switch layout built from a native checkbox.",
+      "usage": "Use on a label whose direct child is input type checkbox.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-switcher",
+      "module": "layout",
+      "category": "primitive",
+      "description": "Container-aware flex layout that switches between rows and stacked items.",
+      "usage": "Customize the switch point with --axo-switcher-threshold.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-tab",
+      "module": "tabs",
+      "category": "control",
+      "description": "Neutral tab control with selected and focus-visible states.",
+      "usage": "Add data-axo-tab matching a data-axo-tab-panel identifier.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-tab-active",
+      "module": "tabs",
+      "category": "state",
+      "description": "Selected tab state managed by Axoloth Behavior.",
+      "usage": "Normally managed by initTabs rather than written manually.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-tab-list",
+      "module": "tabs",
+      "category": "layout",
+      "description": "Scrollable row or column containing Axoloth tab controls.",
+      "usage": "Place data-axo-tab controls directly inside it.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-tab-panel",
+      "module": "tabs",
+      "category": "layout",
+      "description": "Content region controlled by an Axoloth tab.",
+      "usage": "Add data-axo-tab-panel matching a data-axo-tab identifier.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-tab-panel-active",
+      "module": "tabs",
+      "category": "state",
+      "description": "Visible tab panel state managed by Axoloth Behavior.",
+      "usage": "Normally managed by initTabs rather than written manually.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-table",
+      "module": "semantic",
+      "category": "data",
+      "description": "Neutral full-width data table with consistent cell structure.",
+      "usage": "Use on a semantic table inside axo-table-wrap.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-table-compact",
+      "module": "semantic",
+      "category": "data",
+      "description": "Compact cell-density preset for axo-table.",
+      "usage": "Use on the same element as axo-table.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-table-sticky",
+      "module": "semantic",
+      "category": "data",
+      "description": "Keeps table header cells visible inside a scrolling table wrapper.",
+      "usage": "Use on the same element as axo-table.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-table-wrap",
+      "module": "semantic",
+      "category": "data",
+      "description": "Responsive table wrapper with horizontal overflow safety.",
+      "usage": "Wrap an axo-table so narrow viewports can scroll it.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-tabs",
+      "module": "tabs",
+      "category": "behavior",
+      "description": "Layout boundary for an accessible tabbed interface.",
+      "usage": "Add data-axo-tabs and initialize initTabs.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-tabs-vertical",
+      "module": "tabs",
+      "category": "layout",
+      "description": "Places the tab list beside its active panel on wide containers.",
+      "usage": "Use with axo-tabs and set aria-orientation to vertical when writing ARIA manually.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-tall",
+      "module": "bento",
+      "category": "layout",
+      "description": "Bento item that spans two rows on tablet and desktop.",
+      "usage": "Use on an item inside axo-bento.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-theme-dark",
+      "module": "surface",
+      "category": "surface",
+      "description": "Dark theme marker for Axoloth surface variables.",
+      "usage": "Use on a parent wrapper.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-theme-light",
+      "module": "surface",
+      "category": "surface",
+      "description": "Light theme marker for Axoloth surface variables.",
+      "usage": "Use on a parent wrapper.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-toast",
+      "module": "toast",
+      "category": "behavior",
+      "description": "Responsive notification layout inside a toast region.",
+      "usage": "Created by initToast.show or used with data-axo-toast.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-toast-actions",
+      "module": "toast",
+      "category": "layout",
+      "description": "Inline action group inside a toast.",
+      "usage": "Use for undo, retry, or related actions.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-toast-closing",
+      "module": "toast",
+      "category": "state",
+      "description": "Dismiss transition state managed by Axoloth Behavior.",
+      "usage": "Normally managed by initToast rather than written manually.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-toast-content",
+      "module": "toast",
+      "category": "layout",
+      "description": "Flexible text content column inside a toast.",
+      "usage": "Contains axo-toast-title and axo-toast-message.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-toast-dismiss",
+      "module": "toast",
+      "category": "control",
+      "description": "Compact toast dismissal control.",
+      "usage": "Use with data-axo-toast-dismiss.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-toast-message",
+      "module": "toast",
+      "category": "content",
+      "description": "Wrapping notification message inside a toast.",
+      "usage": "Use inside axo-toast-content.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-toast-open",
+      "module": "toast",
+      "category": "state",
+      "description": "Visible toast state managed by Axoloth Behavior.",
+      "usage": "Normally managed by initToast rather than written manually.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-toast-region",
+      "module": "toast",
+      "category": "behavior",
+      "description": "Fixed live region that stacks Axoloth toast notifications.",
+      "usage": "Add data-axo-toast-region and initialize initToast.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-toast-region-bottom-end",
+      "module": "toast",
+      "category": "position",
+      "description": "Positions a toast region at the viewport bottom-end corner.",
+      "usage": "Use with axo-toast-region.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-toast-region-bottom-start",
+      "module": "toast",
+      "category": "position",
+      "description": "Positions a toast region at the viewport bottom-start corner.",
+      "usage": "Use with axo-toast-region.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-toast-region-top-end",
+      "module": "toast",
+      "category": "position",
+      "description": "Positions a toast region at the viewport top-end corner.",
+      "usage": "Use with axo-toast-region.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-toast-region-top-start",
+      "module": "toast",
+      "category": "position",
+      "description": "Positions a toast region at the viewport top-start corner.",
+      "usage": "Use with axo-toast-region.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-toast-title",
+      "module": "toast",
+      "category": "content",
+      "description": "Short emphasized toast heading.",
+      "usage": "Use inside axo-toast-content.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-visually-hidden",
+      "module": "semantic",
+      "category": "accessibility",
+      "description": "Visually hides content while keeping it available to assistive technology.",
+      "usage": "Use for accessible labels or descriptions that should not be visible.",
+      "status": "active"
+    },
+    {
+      "kind": "class",
+      "name": "axo-wide",
+      "module": "bento",
+      "category": "layout",
+      "description": "Bento item that spans two columns on tablet and desktop.",
+      "usage": "Use on an item inside axo-bento.",
+      "status": "active"
+    }
+  ]
+}
