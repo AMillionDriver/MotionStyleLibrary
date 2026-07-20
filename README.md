@@ -144,6 +144,12 @@ npm run verify:axoloth
 
 That verifier runs lint, build, style contract checks, behavior contract checks, docs checks, accessibility tests, visual tests, IntelliSense tests, and VSIX packaging.
 
+## Releases
+
+Release instructions live in [RELEASE.md](./RELEASE.md).
+
+`@quertys/axoloth-style` publishes through npm Trusted Publishing after a `style-v*` tag is pushed from `main`. Behavior and VS Code extension releases remain manual unless their own publishing workflows are added.
+
 ## Package Checks
 
 Style package:
@@ -170,7 +176,7 @@ npm test
 npm run package
 ```
 
-The generated VSIX is not published automatically. Publishing to npm and VS Code Marketplace remains manual.
+The generated VSIX is not published automatically. See the release checklist before publishing any package or extension.
 
 ## API Stability
 
