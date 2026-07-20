@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.0.20
+
+- Added synced class and variable metadata for first-class Drawer utilities.
+- Added `data-axo-drawer-*` behavior attribute completions and hover documentation.
+- Added HTML and JSX snippets for the Drawer API.
+
 ## 0.0.19
 
 - Added `data-axo-*` behavior attribute completions inside HTML-like opening tags.

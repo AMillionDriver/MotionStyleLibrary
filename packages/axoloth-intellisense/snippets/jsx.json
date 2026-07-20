@@ -325,6 +325,34 @@
       "<main id=\"main-content\" tabIndex={-1}>$1</main>"
     ]
   },
+  "Axoloth Drawer": {
+    "prefix": "axo-drawer",
+    "description": "Accessible viewport drawer for Axoloth Behavior.",
+    "body": [
+      "<button",
+      "  className=\"axo-button\"",
+      "  type=\"button\"",
+      "  data-axo-drawer-toggle=\"$1-drawer\"",
+      "  aria-controls=\"$1-drawer\"",
+      "  aria-expanded=\"false\"",
+      ">",
+      "  Open drawer",
+      "</button>",
+      "",
+      "<aside",
+      "  id=\"$1-drawer\"",
+      "  className=\"axo-drawer axo-surface\"",
+      "  data-axo-drawer-id=\"$1-drawer\"",
+      "  aria-label=\"$2 navigation\"",
+      "  aria-hidden=\"true\"",
+      ">",
+      "  <button className=\"axo-button\" type=\"button\" data-axo-drawer-dismiss=\"$1-drawer\">Close</button>",
+      "  <a className=\"axo-sidebar-item axo-link\" href=\"#$3\">$4</a>",
+      "</aside>",
+      "",
+      "<div className=\"axo-drawer-backdrop\" data-axo-drawer-dismiss=\"$1-drawer\" aria-hidden=\"true\" />"
+    ]
+  },
   "Axoloth Offcanvas Sidebar": {
     "prefix": "axo-sidebar-offcanvas",
     "description": "Accessible off-canvas sidebar for Axoloth Behavior.",

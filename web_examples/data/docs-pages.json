@@ -199,6 +199,73 @@
     ]
   },
   {
+    "id": "drawer",
+    "title": "Drawer",
+    "category": "Components",
+    "overview": "Use Drawer for temporary viewport navigation or panels that slide over the page and dismiss with Escape, backdrop, or close controls.",
+    "template": [
+      "<button class=\"axo-button\" type=\"button\" data-axo-drawer-toggle=\"main-drawer\">",
+      "  Open drawer",
+      "</button>",
+      "",
+      "<aside class=\"axo-drawer axo-surface\" data-axo-drawer-id=\"main-drawer\" aria-label=\"Main navigation\">",
+      "  <button class=\"axo-button\" type=\"button\" data-axo-drawer-dismiss=\"main-drawer\">Close</button>",
+      "  <a class=\"axo-sidebar-item axo-link\" href=\"#dashboard\">Dashboard</a>",
+      "  <a class=\"axo-sidebar-item axo-link\" href=\"#settings\">Settings</a>",
+      "</aside>",
+      "",
+      "<div class=\"axo-drawer-backdrop\" data-axo-drawer-dismiss=\"main-drawer\"></div>"
+    ],
+    "classes": [
+      { "name": "axo-drawer", "description": "Fixed viewport drawer foundation." },
+      { "name": "axo-drawer-right", "description": "Moves the drawer to the right viewport edge." },
+      { "name": "axo-drawer-open", "description": "Open state managed by initDrawer." },
+      { "name": "axo-drawer-backdrop", "description": "Fixed dismiss layer behind the drawer." },
+      {
+        "name": "axo-drawer-backdrop-open",
+        "description": "Visible backdrop state managed by initDrawer."
+      },
+      {
+        "name": "axo-drawer-active",
+        "description": "Body scroll-lock state managed by initDrawer."
+      },
+      { "name": "axo-sidebar-item", "description": "Menu item alignment inside the drawer." }
+    ],
+    "options": [
+      { "name": "--axo-drawer-width", "description": "Preferred drawer width." },
+      { "name": "--axo-drawer-max-width", "description": "Viewport-safe maximum drawer width." },
+      { "name": "--axo-drawer-inset-top", "description": "Top viewport inset." },
+      { "name": "--axo-drawer-inset-bottom", "description": "Bottom viewport inset." },
+      { "name": "--axo-drawer-duration", "description": "Open and close transition duration." },
+      {
+        "name": "--axo-drawer-easing",
+        "description": "Open and close transition timing function."
+      },
+      { "name": "--axo-drawer-z", "description": "Drawer stacking layer." },
+      { "name": "--axo-drawer-backdrop", "description": "Backdrop color." }
+    ],
+    "example": [
+      "<script type=\"module\">",
+      "  import { initDrawer } from '@quertys/axoloth-behavior/drawer';",
+      "",
+      "  const drawer = initDrawer();",
+      "</script>"
+    ],
+    "preview": [
+      "<div class=\"docs-preview-shell\">",
+      "  <aside class=\"docs-preview-sidebar\">",
+      "    <a class=\"axo-sidebar-item axo-link\" href=\"#\">Dashboard</a>",
+      "    <a class=\"axo-sidebar-item axo-link\" href=\"#\">Messages</a>",
+      "    <a class=\"axo-sidebar-item axo-link\" href=\"#\">Settings</a>",
+      "  </aside>",
+      "  <main class=\"docs-preview-main axo-stack\">",
+      "    <h3>Drawer preview</h3>",
+      "    <p>Use the fixed-sidebar example for the interactive drawer behavior.</p>",
+      "  </main>",
+      "</div>"
+    ]
+  },
+  {
     "id": "navbar",
     "title": "Navbar",
     "category": "Components",

@@ -101,11 +101,9 @@
     </aside>
 
     <aside
-      id="demo-sidebar"
-      class="axo-sidebar axo-sidebar-offcanvas axo-surface"
-      data-axo-id="demo-sidebar"
-      role="dialog"
-      aria-modal="true"
+      id="demo-drawer"
+      class="axo-drawer axo-surface"
+      data-axo-drawer-id="demo-drawer"
       aria-label="Demo navigation"
       aria-hidden="true"
     >
@@ -114,7 +112,9 @@
         <h2 class="drawer-heading">Workspace</h2>
       </div>
 
-      <button class="axo-button" type="button" data-axo-dismiss="demo-sidebar">Close menu</button>
+      <button class="axo-button" type="button" data-axo-drawer-dismiss="demo-drawer">
+        Close menu
+      </button>
 
       <nav class="axo-nav" aria-label="Drawer navigation">
         <ul class="axo-nav-list axo-stack">
@@ -135,7 +135,7 @@
       </button>
     </aside>
 
-    <div class="axo-sidebar-backdrop" data-axo-dismiss="demo-sidebar" aria-hidden="true"></div>
+    <div class="axo-drawer-backdrop" data-axo-drawer-dismiss="demo-drawer" aria-hidden="true"></div>
 
     <div
       id="drawer-help-dialog"
@@ -191,11 +191,11 @@
             <button
               class="axo-button"
               type="button"
-              data-axo-toggle="demo-sidebar"
-              aria-controls="demo-sidebar"
+              data-axo-drawer-toggle="demo-drawer"
+              aria-controls="demo-drawer"
               aria-expanded="false"
             >
-              Open off-canvas menu
+              Open drawer menu
             </button>
             <span class="muted">Try Escape, Tab, Shift+Tab, or the backdrop.</span>
           </div>

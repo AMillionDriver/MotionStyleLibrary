@@ -840,6 +840,170 @@
       ]
     },
     {
+      "name": "--axo-drawer-width",
+      "description": "Preferred inline size for axo-drawer.\n\nDefault: var(--axo-offcanvas-width, var(--axo-sidebar-width, 16rem))\n\nValue type: length\n\nModule: layout",
+      "values": [
+        {
+          "name": "14rem",
+          "description": "Compact drawer."
+        },
+        {
+          "name": "16rem",
+          "description": "Default drawer."
+        },
+        {
+          "name": "20rem",
+          "description": "Wide drawer."
+        },
+        {
+          "name": "24rem",
+          "description": "Extra-wide drawer."
+        }
+      ]
+    },
+    {
+      "name": "--axo-drawer-max-width",
+      "description": "Maximum viewport-safe width for axo-drawer.\n\nDefault: var(--axo-offcanvas-max-width, calc(100vw - 2rem))\n\nValue type: length\n\nModule: layout",
+      "values": [
+        {
+          "name": "calc(100vw - 1rem)",
+          "description": "Small viewport edge gap."
+        },
+        {
+          "name": "calc(100vw - 2rem)",
+          "description": "Default viewport edge gap."
+        },
+        {
+          "name": "90vw",
+          "description": "Ten-percent viewport reveal."
+        },
+        {
+          "name": "24rem",
+          "description": "Fixed maximum width."
+        }
+      ]
+    },
+    {
+      "name": "--axo-drawer-inset-top",
+      "description": "Top viewport inset for axo-drawer.\n\nDefault: var(--axo-offcanvas-inset-top, 0)\n\nValue type: length\n\nModule: layout",
+      "values": [
+        {
+          "name": "0",
+          "description": "Start at the viewport top."
+        },
+        {
+          "name": "3.5rem",
+          "description": "Start below a compact header."
+        },
+        {
+          "name": "4rem",
+          "description": "Start below a default app header."
+        },
+        {
+          "name": "5rem",
+          "description": "Start below a large header."
+        }
+      ]
+    },
+    {
+      "name": "--axo-drawer-inset-bottom",
+      "description": "Bottom viewport inset for axo-drawer.\n\nDefault: var(--axo-offcanvas-inset-bottom, 0)\n\nValue type: length\n\nModule: layout",
+      "values": [
+        {
+          "name": "0",
+          "description": "End at the viewport bottom."
+        },
+        {
+          "name": "3rem",
+          "description": "End above a compact footer."
+        },
+        {
+          "name": "4rem",
+          "description": "End above a default footer."
+        }
+      ]
+    },
+    {
+      "name": "--axo-drawer-backdrop",
+      "description": "Backdrop color behind an open drawer.\n\nDefault: var(--axo-offcanvas-backdrop, rgb(2 6 23 / 0.55))\n\nValue type: color\n\nModule: layout",
+      "values": [
+        {
+          "name": "rgb(2 6 23 / 0.35)",
+          "description": "Light dark backdrop."
+        },
+        {
+          "name": "rgb(2 6 23 / 0.55)",
+          "description": "Default dark backdrop."
+        },
+        {
+          "name": "rgb(2 6 23 / 0.72)",
+          "description": "Strong dark backdrop."
+        },
+        {
+          "name": "transparent",
+          "description": "Invisible dismiss layer."
+        }
+      ]
+    },
+    {
+      "name": "--axo-drawer-duration",
+      "description": "Open and close transition duration for axo-drawer and its backdrop.\n\nDefault: var(--axo-offcanvas-duration, 220ms)\n\nValue type: time\n\nModule: layout",
+      "values": [
+        {
+          "name": "120ms",
+          "description": "Fast drawer transition."
+        },
+        {
+          "name": "220ms",
+          "description": "Default drawer transition."
+        },
+        {
+          "name": "320ms",
+          "description": "Slow drawer transition."
+        }
+      ]
+    },
+    {
+      "name": "--axo-drawer-easing",
+      "description": "Timing function for axo-drawer and backdrop transitions.\n\nDefault: var(--axo-offcanvas-easing, ease)\n\nValue type: timing-function\n\nModule: layout",
+      "values": [
+        {
+          "name": "ease",
+          "description": "Default browser easing."
+        },
+        {
+          "name": "ease-out",
+          "description": "Quick open and soft finish."
+        },
+        {
+          "name": "cubic-bezier(0.22, 1, 0.36, 1)",
+          "description": "Soft emphasized easing."
+        }
+      ]
+    },
+    {
+      "name": "--axo-drawer-z",
+      "description": "Stacking level for axo-drawer.\n\nDefault: var(--axo-offcanvas-z, 50)\n\nValue type: number\n\nModule: layout",
+      "values": [
+        {
+          "name": "30",
+          "description": "Low overlay layer."
+        },
+        {
+          "name": "50",
+          "description": "Default drawer layer."
+        },
+        {
+          "name": "100",
+          "description": "High app overlay layer."
+        },
+        {
+          "name": "1000",
+          "description": "Global overlay layer."
+        }
+      ]
+    },
+    {
       "name": "--axo-dialog-inset",
       "description": "Viewport edge spacing around an Axoloth dialog panel.\n\nDefault: 1rem\n\nValue type: length\n\nModule: dialog",
       "values": [

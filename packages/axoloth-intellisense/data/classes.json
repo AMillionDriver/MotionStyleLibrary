@@ -1,6 +1,6 @@
 {
   "name": "@quertys/axoloth-style",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "prefix": "axo-",
   "classes": [
     {
@@ -321,6 +321,54 @@
       "category": "state",
       "description": "Body state that locks document scrolling while a drawer is open.",
       "usage": "Managed automatically by initOffcanvas.",
+      "status": "active"
+    },
+    {
+      "name": "axo-drawer",
+      "module": "layout",
+      "category": "behavior",
+      "description": "Self-contained viewport drawer hidden beyond the left edge until opened.",
+      "usage": "Use with @quertys/axoloth-behavior/drawer and data-axo-drawer-id.",
+      "status": "active"
+    },
+    {
+      "name": "axo-drawer-right",
+      "module": "layout",
+      "category": "behavior",
+      "description": "Moves a drawer to the right viewport edge.",
+      "usage": "Use on the same element as axo-drawer.",
+      "status": "active"
+    },
+    {
+      "name": "axo-drawer-open",
+      "module": "layout",
+      "category": "state",
+      "description": "Open state applied to a drawer by Axoloth Behavior.",
+      "usage": "Normally managed by initDrawer rather than written manually.",
+      "status": "active"
+    },
+    {
+      "name": "axo-drawer-backdrop",
+      "module": "layout",
+      "category": "behavior",
+      "description": "Fixed dismiss layer behind an open drawer.",
+      "usage": "Add data-axo-drawer-dismiss matching the drawer identifier.",
+      "status": "active"
+    },
+    {
+      "name": "axo-drawer-backdrop-open",
+      "module": "layout",
+      "category": "state",
+      "description": "Visible drawer backdrop state applied by Axoloth Behavior.",
+      "usage": "Normally managed by initDrawer rather than written manually.",
+      "status": "active"
+    },
+    {
+      "name": "axo-drawer-active",
+      "module": "layout",
+      "category": "state",
+      "description": "Body state that locks document scrolling while a drawer is open.",
+      "usage": "Managed automatically by initDrawer.",
       "status": "active"
     },
     {

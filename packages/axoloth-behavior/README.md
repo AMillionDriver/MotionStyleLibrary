@@ -2,11 +2,11 @@
 
 Optional zero-dependency JavaScript behaviors for `@quertys/axoloth-style`.
 
-Axoloth Behavior keeps interactive state separate from the CSS-first package. Install it only when a layout needs tabs, accordions, dropdowns, toasts, an off-canvas sidebar, or a dialog. The package is framework-neutral and works with plain HTML, React, Vue, Svelte, Angular, or any DOM-based application.
+Axoloth Behavior keeps interactive state separate from the CSS-first package. Install it only when a layout needs tabs, accordions, dropdowns, toasts, drawers, an off-canvas sidebar, or a dialog. The package is framework-neutral and works with plain HTML, React, Vue, Svelte, Angular, or any DOM-based application.
 
 ## API Stability
 
-Version `0.5.0` validates package exports, initializers, declarative attributes,
+Version `0.6.0` validates package exports, initializers, declarative attributes,
 and custom events against the reviewed `0.4.0` baseline. Read
 [MIGRATION.md](./MIGRATION.md) before changing public behavior contracts and run
 `npm run check` before packaging a release.
@@ -23,6 +23,7 @@ Import the Axoloth CSS once, then initialize only the behavior you use:
 import '@quertys/axoloth-style/axoloth.css';
 import { initAccordion } from '@quertys/axoloth-behavior/accordion';
 import { initDialog } from '@quertys/axoloth-behavior/dialog';
+import { initDrawer } from '@quertys/axoloth-behavior/drawer';
 import { initDropdown } from '@quertys/axoloth-behavior/dropdown';
 import { initOffcanvas } from '@quertys/axoloth-behavior/offcanvas';
 import { initTabs } from '@quertys/axoloth-behavior/tabs';
@@ -30,6 +31,7 @@ import { initToast } from '@quertys/axoloth-behavior/toast';
 
 const accordion = initAccordion();
 const dialog = initDialog();
+const drawer = initDrawer();
 const dropdown = initDropdown();
 const offcanvas = initOffcanvas();
 const tabs = initTabs();
@@ -215,6 +217,9 @@ Use `autofocus` on a control when it should receive initial focus. Otherwise the
 
 ## Off-Canvas Sidebar
 
+`initOffcanvas()` is the legacy-compatible sidebar drawer initializer. For new
+work, prefer the clearer Drawer API below.
+
 ```html
 <button
   class="axo-button"
@@ -243,9 +248,42 @@ Use `autofocus` on a control when it should receive initial focus. Otherwise the
 <div class="axo-sidebar-backdrop" data-axo-dismiss="main-sidebar"></div>
 ```
 
+## Drawer
+
+```html
+<button
+  class="axo-button"
+  type="button"
+  data-axo-drawer-toggle="main-drawer"
+  aria-controls="main-drawer"
+  aria-expanded="false"
+>
+  Open drawer
+</button>
+
+<aside
+  id="main-drawer"
+  class="axo-drawer axo-surface"
+  data-axo-drawer-id="main-drawer"
+  aria-label="Main navigation"
+  aria-hidden="true"
+>
+  <button class="axo-button" type="button" data-axo-drawer-dismiss="main-drawer">Close</button>
+  <a class="axo-sidebar-item axo-link" href="#dashboard">Dashboard</a>
+  <a class="axo-sidebar-item axo-link" href="#settings">Settings</a>
+</aside>
+
+<div class="axo-drawer-backdrop" data-axo-drawer-dismiss="main-drawer"></div>
+```
+
+`initDrawer()` manages `axo-drawer-open`, `axo-drawer-backdrop-open`, and
+`axo-drawer-active`. It traps focus while open, closes on Escape or backdrop
+dismissal, restores focus to the trigger, and dispatches `axo:drawer-open` and
+`axo:drawer-close` from the drawer element.
+
 ## Dismissible Controller API
 
-Dialog and off-canvas controllers expose the same lifecycle API:
+Dialog, drawer, and off-canvas controllers expose the same lifecycle API:
 
 ```js
 const controller = initDialog();

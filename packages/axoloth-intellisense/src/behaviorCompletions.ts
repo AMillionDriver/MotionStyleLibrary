@@ -3,12 +3,13 @@ import { getDataAttributeCompletionContext } from './behaviorContext';
 import { AxolothRegistry, createBehaviorDocumentation } from './data';
 
 const BEHAVIOR_ORDER: Record<string, string> = {
-  offcanvas: '1',
-  dialog: '2',
-  tabs: '3',
-  accordion: '4',
-  dropdown: '5',
-  toast: '6',
+  drawer: '1',
+  offcanvas: '2',
+  dialog: '3',
+  tabs: '4',
+  accordion: '5',
+  dropdown: '6',
+  toast: '7',
 };
 
 export function createBehaviorAttributeCompletionProvider(

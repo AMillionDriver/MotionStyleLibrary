@@ -1,6 +1,6 @@
 {
   "name": "@quertys/axoloth-style",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "prefix": "--axo-",
   "variables": [
     {
@@ -1014,6 +1014,210 @@
         {
           "value": "50",
           "description": "Default off-canvas layer."
+        },
+        {
+          "value": "100",
+          "description": "High app overlay layer."
+        },
+        {
+          "value": "1000",
+          "description": "Global overlay layer."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-drawer-width",
+      "module": "layout",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "var(--axo-offcanvas-width, var(--axo-sidebar-width, 16rem))",
+      "description": "Preferred inline size for axo-drawer.",
+      "valueSuggestions": [
+        {
+          "value": "14rem",
+          "description": "Compact drawer."
+        },
+        {
+          "value": "16rem",
+          "description": "Default drawer."
+        },
+        {
+          "value": "20rem",
+          "description": "Wide drawer."
+        },
+        {
+          "value": "24rem",
+          "description": "Extra-wide drawer."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-drawer-max-width",
+      "module": "layout",
+      "category": "sizing",
+      "valueType": "length",
+      "default": "var(--axo-offcanvas-max-width, calc(100vw - 2rem))",
+      "description": "Maximum viewport-safe width for axo-drawer.",
+      "valueSuggestions": [
+        {
+          "value": "calc(100vw - 1rem)",
+          "description": "Small viewport edge gap."
+        },
+        {
+          "value": "calc(100vw - 2rem)",
+          "description": "Default viewport edge gap."
+        },
+        {
+          "value": "90vw",
+          "description": "Ten-percent viewport reveal."
+        },
+        {
+          "value": "24rem",
+          "description": "Fixed maximum width."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-drawer-inset-top",
+      "module": "layout",
+      "category": "position",
+      "valueType": "length",
+      "default": "var(--axo-offcanvas-inset-top, 0)",
+      "description": "Top viewport inset for axo-drawer.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "Start at the viewport top."
+        },
+        {
+          "value": "3.5rem",
+          "description": "Start below a compact header."
+        },
+        {
+          "value": "4rem",
+          "description": "Start below a default app header."
+        },
+        {
+          "value": "5rem",
+          "description": "Start below a large header."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-drawer-inset-bottom",
+      "module": "layout",
+      "category": "position",
+      "valueType": "length",
+      "default": "var(--axo-offcanvas-inset-bottom, 0)",
+      "description": "Bottom viewport inset for axo-drawer.",
+      "valueSuggestions": [
+        {
+          "value": "0",
+          "description": "End at the viewport bottom."
+        },
+        {
+          "value": "3rem",
+          "description": "End above a compact footer."
+        },
+        {
+          "value": "4rem",
+          "description": "End above a default footer."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-drawer-backdrop",
+      "module": "layout",
+      "category": "surface",
+      "valueType": "color",
+      "default": "var(--axo-offcanvas-backdrop, rgb(2 6 23 / 0.55))",
+      "description": "Backdrop color behind an open drawer.",
+      "valueSuggestions": [
+        {
+          "value": "rgb(2 6 23 / 0.35)",
+          "description": "Light dark backdrop."
+        },
+        {
+          "value": "rgb(2 6 23 / 0.55)",
+          "description": "Default dark backdrop."
+        },
+        {
+          "value": "rgb(2 6 23 / 0.72)",
+          "description": "Strong dark backdrop."
+        },
+        {
+          "value": "transparent",
+          "description": "Invisible dismiss layer."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-drawer-duration",
+      "module": "layout",
+      "category": "motion",
+      "valueType": "time",
+      "default": "var(--axo-offcanvas-duration, 220ms)",
+      "description": "Open and close transition duration for axo-drawer and its backdrop.",
+      "valueSuggestions": [
+        {
+          "value": "120ms",
+          "description": "Fast drawer transition."
+        },
+        {
+          "value": "220ms",
+          "description": "Default drawer transition."
+        },
+        {
+          "value": "320ms",
+          "description": "Slow drawer transition."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-drawer-easing",
+      "module": "layout",
+      "category": "motion",
+      "valueType": "timing-function",
+      "default": "var(--axo-offcanvas-easing, ease)",
+      "description": "Timing function for axo-drawer and backdrop transitions.",
+      "valueSuggestions": [
+        {
+          "value": "ease",
+          "description": "Default browser easing."
+        },
+        {
+          "value": "ease-out",
+          "description": "Quick open and soft finish."
+        },
+        {
+          "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+          "description": "Soft emphasized easing."
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "name": "--axo-drawer-z",
+      "module": "layout",
+      "category": "position",
+      "valueType": "number",
+      "default": "var(--axo-offcanvas-z, 50)",
+      "description": "Stacking level for axo-drawer.",
+      "valueSuggestions": [
+        {
+          "value": "30",
+          "description": "Low overlay layer."
+        },
+        {
+          "value": "50",
+          "description": "Default drawer layer."
         },
         {
           "value": "100",
