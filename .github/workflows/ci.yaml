@@ -63,6 +63,10 @@ jobs:
       - run: npm ci
       - run: npm --prefix packages/axoloth-style run check
       - run: npm --prefix packages/axoloth-behavior run check
+
+      - run: npm ci
+        working-directory: packages/axoloth-intellisense
+
       - run: npm --prefix packages/axoloth-intellisense test
 
   docs:
