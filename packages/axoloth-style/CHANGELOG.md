@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Added first-class Drawer utilities: `axo-drawer`, right-side variant, backdrop, open state, and body scroll-lock state.
+- Added `--axo-drawer-*` CSS variables that alias the existing off-canvas sizing, inset, motion, backdrop, and z-index controls.
 - Froze the public naming prefix on `axo-*`, `--axo-*`, and `data-axo-*`.
 - Added API contract validation for frozen class and CSS variable prefixes.
 

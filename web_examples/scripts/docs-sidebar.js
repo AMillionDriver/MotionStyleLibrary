@@ -11,6 +11,7 @@ const docsIconPaths = {
   bento: '<path d="M4 4h7v7H4zM13 4h7v4h-7zM13 10h7v10h-7zM4 13h7v7H4z" />',
   card: '<path d="M5 5h14v14H5zM8 9h8M8 13h5" />',
   container: '<path d="M4 6h16v12H4zM8 6v12M16 6v12" />',
+  drawer: '<path d="M4 5h16v14H4zM4 5h6v14H4zM13 9l3 3-3 3" />',
   install: '<path d="M12 3v11M8 10l4 4 4-4M5 19h14" />',
   motion: '<path d="M13 3 4 14h7l-1 7 9-12h-7z" />',
   navbar: '<path d="M4 6h16M4 12h10M4 18h16" />',

@@ -195,7 +195,7 @@
   min-block-size: 100dvh;
 }
 
-:where(.axo-sidebar) {
+:where(.axo-sidebar, .axo-drawer) {
   box-sizing: border-box;
   display: flex;
   flex: 0 0 var(--axo-sidebar-width, 16rem);
@@ -395,7 +395,7 @@
     min-block-size: auto;
   }
 
-  :where(.axo-sidebar),
+  :where(.axo-sidebar, .axo-drawer),
   :where(.axo-sidebar-rail),
   :where(.axo-sidebar-rail.axo-sidebar-hover:hover),
   :where(.axo-sidebar-rail.axo-sidebar-hover:focus-within) {
@@ -446,74 +446,85 @@
   }
 }
 
-:where(.axo-sidebar-offcanvas) {
+:where(.axo-sidebar-offcanvas, .axo-drawer) {
   flex-basis: auto;
   inline-size: min(
-    var(--axo-offcanvas-width, var(--axo-sidebar-width, 16rem)),
-    var(--axo-offcanvas-max-width, calc(100vw - 2rem))
+    var(--axo-drawer-width, var(--axo-offcanvas-width, var(--axo-sidebar-width, 16rem))),
+    var(--axo-drawer-max-width, var(--axo-offcanvas-max-width, calc(100vw - 2rem)))
   );
-  inset-block-end: var(--axo-offcanvas-inset-bottom, 0);
-  inset-block-start: var(--axo-offcanvas-inset-top, 0);
+  inset-block-end: var(--axo-drawer-inset-bottom, var(--axo-offcanvas-inset-bottom, 0));
+  inset-block-start: var(--axo-drawer-inset-top, var(--axo-offcanvas-inset-top, 0));
   inset-inline-start: 0;
   max-block-size: none;
-  max-inline-size: var(--axo-offcanvas-max-width, calc(100vw - 2rem));
+  max-inline-size: var(--axo-drawer-max-width, var(--axo-offcanvas-max-width, calc(100vw - 2rem)));
   overscroll-behavior: contain;
   pointer-events: none;
   position: fixed;
   transform: translateX(-100%);
   transition:
-    transform var(--axo-offcanvas-duration, 220ms) var(--axo-offcanvas-easing, ease),
-    visibility 0s linear var(--axo-offcanvas-duration, 220ms);
+    transform var(--axo-drawer-duration, var(--axo-offcanvas-duration, 220ms))
+      var(--axo-drawer-easing, var(--axo-offcanvas-easing, ease)),
+    visibility 0s linear var(--axo-drawer-duration, var(--axo-offcanvas-duration, 220ms));
   visibility: hidden;
   will-change: transform;
-  z-index: var(--axo-offcanvas-z, 50);
+  z-index: var(--axo-drawer-z, var(--axo-offcanvas-z, 50));
 }
 
-:where(.axo-sidebar-offcanvas-right) {
+:where(.axo-sidebar-offcanvas-right, .axo-drawer-right) {
   inset-inline-end: 0;
   inset-inline-start: auto;
   transform: translateX(100%);
 }
 
-:where(.axo-sidebar-offcanvas.axo-sidebar-open) {
+:where(.axo-sidebar-offcanvas.axo-sidebar-open),
+:where(.axo-sidebar-offcanvas.axo-drawer-open),
+:where(.axo-drawer.axo-drawer-open),
+:where(.axo-drawer.axo-sidebar-open) {
   pointer-events: auto;
   transform: translateX(0);
   transition-delay: 0s;
   visibility: visible;
 }
 
-:where(.axo-sidebar-backdrop) {
-  background: var(--axo-offcanvas-backdrop, rgb(2 6 23 / 0.55));
+:where(.axo-sidebar-backdrop, .axo-drawer-backdrop) {
+  background: var(--axo-drawer-backdrop, var(--axo-offcanvas-backdrop, rgb(2 6 23 / 0.55)));
   inset: 0;
   opacity: 0;
   pointer-events: none;
   position: fixed;
   transition:
-    opacity var(--axo-offcanvas-duration, 220ms) var(--axo-offcanvas-easing, ease),
-    visibility 0s linear var(--axo-offcanvas-duration, 220ms);
+    opacity var(--axo-drawer-duration, var(--axo-offcanvas-duration, 220ms))
+      var(--axo-drawer-easing, var(--axo-offcanvas-easing, ease)),
+    visibility 0s linear var(--axo-drawer-duration, var(--axo-offcanvas-duration, 220ms));
   visibility: hidden;
-  z-index: calc(var(--axo-offcanvas-z, 50) - 1);
+  z-index: calc(var(--axo-drawer-z, var(--axo-offcanvas-z, 50)) - 1);
 }
 
-:where(.axo-sidebar-backdrop.axo-sidebar-backdrop-open) {
+:where(.axo-sidebar-backdrop.axo-sidebar-backdrop-open),
+:where(.axo-sidebar-backdrop.axo-drawer-backdrop-open),
+:where(.axo-drawer-backdrop.axo-drawer-backdrop-open),
+:where(.axo-drawer-backdrop.axo-sidebar-backdrop-open) {
   opacity: 1;
   pointer-events: auto;
   transition-delay: 0s;
   visibility: visible;
 }
 
-:where(body.axo-offcanvas-active) {
+:where(body.axo-offcanvas-active, body.axo-drawer-active) {
   overflow: hidden;
 }
 
 @media (forced-colors: active) {
-  :where(.axo-sidebar-backdrop) {
+  :where(.axo-sidebar-backdrop, .axo-drawer-backdrop) {
     background: CanvasText;
     forced-color-adjust: none;
     opacity: 0;
   }
 
-  :where(.axo-sidebar-backdrop.axo-sidebar-backdrop-open) {
+  :where(.axo-sidebar-backdrop.axo-sidebar-backdrop-open),
+  :where(.axo-sidebar-backdrop.axo-drawer-backdrop-open),
+  :where(.axo-drawer-backdrop.axo-drawer-backdrop-open),
+  :where(.axo-drawer-backdrop.axo-sidebar-backdrop-open) {
     opacity: 0.5;
   }
 }

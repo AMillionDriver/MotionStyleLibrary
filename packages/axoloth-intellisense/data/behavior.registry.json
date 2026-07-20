@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "name": "@quertys/axoloth-behavior",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "stability": "pre-1.0",
   "initializers": [
     {
@@ -18,6 +18,11 @@
       "name": "initDialog",
       "behavior": "dialog",
       "description": "Initializes modal dialogs with focus management and nested layer handling."
+    },
+    {
+      "name": "initDrawer",
+      "behavior": "drawer",
+      "description": "Initializes accessible viewport drawers with backdrop, focus management, and scroll locking."
     },
     {
       "name": "initDropdown",
@@ -80,6 +85,21 @@
       "name": "data-axo-dialog-toggle",
       "behavior": "dialog",
       "description": "Toggles the referenced dialog."
+    },
+    {
+      "name": "data-axo-drawer-dismiss",
+      "behavior": "drawer",
+      "description": "Dismisses the referenced drawer layer."
+    },
+    {
+      "name": "data-axo-drawer-id",
+      "behavior": "drawer",
+      "description": "Defines the identifier of a controlled drawer layer."
+    },
+    {
+      "name": "data-axo-drawer-toggle",
+      "behavior": "drawer",
+      "description": "Toggles the referenced drawer layer."
     },
     {
       "name": "data-axo-dismiss",
@@ -187,6 +207,16 @@
       "name": "axo:dialog-open",
       "behavior": "dialog",
       "description": "Fires after a dialog opens."
+    },
+    {
+      "name": "axo:drawer-close",
+      "behavior": "drawer",
+      "description": "Fires after a drawer closes."
+    },
+    {
+      "name": "axo:drawer-open",
+      "behavior": "drawer",
+      "description": "Fires after a drawer opens."
     },
     {
       "name": "axo:dropdown-close",

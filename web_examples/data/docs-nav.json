@@ -50,6 +50,12 @@
           "badge": "app"
         },
         {
+          "id": "drawer",
+          "label": "Drawer",
+          "path": "docs/drawer/",
+          "badge": "layer"
+        },
+        {
           "id": "navbar",
           "label": "Navbar",
           "path": "docs/navbar/",

@@ -1,11 +1,12 @@
 import { initAccordion } from './accordion.js';
 import { initDialog } from './dialog.js';
+import { initDrawer } from './drawer.js';
 import { initDropdown } from './dropdown.js';
 import { initOffcanvas } from './offcanvas.js';
 import { initTabs } from './tabs.js';
 import { initToast } from './toast.js';
 
-export { initAccordion, initDialog, initDropdown, initOffcanvas, initTabs, initToast };
+export { initAccordion, initDialog, initDrawer, initDropdown, initOffcanvas, initTabs, initToast };
 
 export function initAxolothBehaviors(
   root = typeof document === 'undefined' ? null : document,
@@ -13,6 +14,7 @@ export function initAxolothBehaviors(
 ) {
   const accordion = initAccordion(root, options.accordion);
   const dialog = initDialog(root, options.dialog);
+  const drawer = initDrawer(root, options.drawer);
   const dropdown = initDropdown(root, options.dropdown);
   const offcanvas = initOffcanvas(root, options.offcanvas);
   const tabs = initTabs(root, options.tabs);
@@ -21,6 +23,7 @@ export function initAxolothBehaviors(
   return {
     accordion,
     dialog,
+    drawer,
     dropdown,
     offcanvas,
     tabs,
@@ -28,6 +31,7 @@ export function initAxolothBehaviors(
     destroy() {
       accordion.destroy();
       dialog.destroy();
+      drawer.destroy();
       dropdown.destroy();
       offcanvas.destroy();
       tabs.destroy();

@@ -15,7 +15,7 @@ It is not a Tailwind replacement and it does not try to own your full visual the
 
 ## API Stability
 
-Axoloth `0.6.0` validates every public class and CSS variable against the
+Axoloth `0.7.0` validates every public class and CSS variable against the
 reviewed `0.5.0` API baseline. Utilities cannot be removed silently: renames
 must ship as documented aliases with machine-readable replacement and removal
 versions.
@@ -91,7 +91,7 @@ Available package exports:
 - `@quertys/axoloth-style/bento.css`: bento grid and card layout utilities only.
 - `@quertys/axoloth-style/dialog.css`: dialog overlay, panel, regions, sizing, and state utilities only.
 - `@quertys/axoloth-style/dropdown.css`: dropdown positioning, menu, item, label, separator, and state utilities only.
-- `@quertys/axoloth-style/layout.css`: app shell, sidebar, app header, searchbar, and structural layout utilities only.
+- `@quertys/axoloth-style/layout.css`: app shell, sidebar, drawer, app header, searchbar, and structural layout utilities only.
 - `@quertys/axoloth-style/motion.css`: animation and hover motion utilities only.
 - `@quertys/axoloth-style/semantic.css`: page, container, nav, list, button, and form utilities only.
 - `@quertys/axoloth-style/surface.css`: light/dark surface and contrast utilities only.
@@ -189,7 +189,7 @@ For quick prototypes, you can load the published CSS from a CDN:
 ```html
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/@quertys/axoloth-style@0.6.0/src/axoloth.css"
+  href="https://cdn.jsdelivr.net/npm/@quertys/axoloth-style@0.7.0/src/axoloth.css"
 />
 ```
 
@@ -354,11 +354,14 @@ Sidebar classes:
 - `axo-sidebar-main-offset-right`: offset main content for a fixed right sidebar.
 - `axo-sidebar-main-offset-rail-left`: offset main content for a fixed left rail sidebar.
 - `axo-sidebar-main-offset-rail-right`: offset main content for a fixed right rail sidebar.
+- `axo-drawer`: fixed viewport drawer hidden beyond the left edge.
+- `axo-drawer-right`: moves the drawer to the right edge.
+- `axo-drawer-backdrop`: fixed dismiss layer behind an open drawer.
 - `axo-sidebar-offcanvas`: fixed viewport drawer hidden beyond the left edge.
 - `axo-sidebar-offcanvas-right`: moves the drawer to the right edge.
 - `axo-sidebar-backdrop`: fixed dismiss layer behind an open drawer.
 
-### Optional Off-Canvas Behavior
+### Optional Drawer Behavior
 
 Axoloth Style provides the CSS foundation. Install the zero-dependency behavior package when you also need state, Escape handling, focus trapping, focus return, and body scroll locking:
 
@@ -368,40 +371,38 @@ npm install @quertys/axoloth-style @quertys/axoloth-behavior
 
 ```js
 import '@quertys/axoloth-style/axoloth.css';
-import { initOffcanvas } from '@quertys/axoloth-behavior/offcanvas';
+import { initDrawer } from '@quertys/axoloth-behavior/drawer';
 
-const offcanvas = initOffcanvas();
+const drawer = initDrawer();
 ```
 
 ```html
 <button
   class="axo-button"
   type="button"
-  data-axo-toggle="main-sidebar"
-  aria-controls="main-sidebar"
+  data-axo-drawer-toggle="main-drawer"
+  aria-controls="main-drawer"
   aria-expanded="false"
 >
   Open menu
 </button>
 
 <aside
-  id="main-sidebar"
-  class="axo-sidebar axo-sidebar-offcanvas axo-surface"
-  data-axo-id="main-sidebar"
-  role="dialog"
-  aria-modal="true"
+  id="main-drawer"
+  class="axo-drawer axo-surface"
+  data-axo-drawer-id="main-drawer"
   aria-label="Main navigation"
   aria-hidden="true"
 >
-  <button class="axo-button" type="button" data-axo-dismiss="main-sidebar">Close</button>
+  <button class="axo-button" type="button" data-axo-drawer-dismiss="main-drawer">Close</button>
   <a class="axo-sidebar-item axo-link" href="#dashboard">Dashboard</a>
   <a class="axo-sidebar-item axo-link" href="#settings">Settings</a>
 </aside>
 
-<div class="axo-sidebar-backdrop" data-axo-dismiss="main-sidebar" aria-hidden="true"></div>
+<div class="axo-drawer-backdrop" data-axo-drawer-dismiss="main-drawer" aria-hidden="true"></div>
 ```
 
-The behavior package never auto-runs. Framework apps can call `destroy()` from their cleanup lifecycle, while plain HTML can initialize it once after the markup is available.
+The behavior package never auto-runs. Framework apps can call `destroy()` from their cleanup lifecycle, while plain HTML can initialize it once after the markup is available. The older `axo-sidebar-offcanvas` and `initOffcanvas()` API remains available for existing code.
 
 ### Dialog and Modal
 
@@ -950,6 +951,14 @@ You can customize Axoloth Style from any parent wrapper:
   --axo-offcanvas-easing: ease;
   --axo-offcanvas-z: 50;
   --axo-offcanvas-backdrop: rgb(2 6 23 / 0.55);
+  --axo-drawer-width: 18rem;
+  --axo-drawer-max-width: calc(100vw - 2rem);
+  --axo-drawer-inset-top: 0;
+  --axo-drawer-inset-bottom: 0;
+  --axo-drawer-duration: 220ms;
+  --axo-drawer-easing: ease;
+  --axo-drawer-z: 50;
+  --axo-drawer-backdrop: rgb(2 6 23 / 0.55);
   --axo-dialog-inset: 1rem;
   --axo-dialog-width: 32rem;
   --axo-dialog-padding: 1.25rem;
@@ -1091,7 +1100,7 @@ Or combine it with Tailwind, Bootstrap, UnoCSS, plain CSS modules, Sass, or any 
 
 _Generated from `metadata/registry.json`. Run `npm run generate` after changing the registry._
 
-Registry 0.6.1: **161 classes**, **168 CSS variables**, and **10 modules**.
+Registry 0.7.0: **167 classes**, **176 CSS variables**, and **10 modules**.
 
 ### Class Registry
 
@@ -1137,6 +1146,12 @@ Registry 0.6.1: **161 classes**, **168 CSS variables**, and **10 modules**.
 | `axo-sidebar-backdrop` | layout | behavior | Active | Fixed dismiss layer behind an off-canvas sidebar. |
 | `axo-sidebar-backdrop-open` | layout | state | Active | Visible backdrop state applied by Axoloth Behavior. |
 | `axo-offcanvas-active` | layout | state | Active | Body state that locks document scrolling while a drawer is open. |
+| `axo-drawer` | layout | behavior | Active | Self-contained viewport drawer hidden beyond the left edge until opened. |
+| `axo-drawer-right` | layout | behavior | Active | Moves a drawer to the right viewport edge. |
+| `axo-drawer-open` | layout | state | Active | Open state applied to a drawer by Axoloth Behavior. |
+| `axo-drawer-backdrop` | layout | behavior | Active | Fixed dismiss layer behind an open drawer. |
+| `axo-drawer-backdrop-open` | layout | state | Active | Visible drawer backdrop state applied by Axoloth Behavior. |
+| `axo-drawer-active` | layout | state | Active | Body state that locks document scrolling while a drawer is open. |
 | `axo-dialog` | dialog | behavior | Active | Fixed viewport layer that centers an accessible dialog panel. |
 | `axo-dialog-open` | dialog | state | Active | Visible dialog state applied by Axoloth Behavior. |
 | `axo-dialog-backdrop` | dialog | behavior | Active | Full viewport dismiss layer behind a dialog panel. |

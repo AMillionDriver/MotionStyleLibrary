@@ -14,7 +14,7 @@ replacement and earliest removal version.
 - Completion for known `data-axo-*` behavior attributes inside HTML-like opening tags.
 - Duplicate filtering inside the same class attribute.
 - Hover documentation for known `axo-*` classes, `--axo-*` variables, `data-axo-*` attributes, `axo:*` events, and `init*` behavior initializers.
-- Snippets for common Axoloth structures like container-aware grids, off-canvas sidebars, dialogs, tabs, accordions, dropdowns, toast regions, forms, validation states, loading states, alerts, and data tables.
+- Snippets for common Axoloth structures like container-aware grids, drawers, off-canvas sidebars, dialogs, tabs, accordions, dropdowns, toast regions, forms, validation states, loading states, alerts, and data tables.
 - Lightweight warnings for unknown `axo-*` classes in class-like contexts.
 - Quick fixes for unknown `axo-*` classes, including nearest-class replacement and remove-class actions.
 - CSS custom data for `--axo-*` variables, so VS Code can show native CSS variable completion and hover docs.
@@ -77,6 +77,7 @@ axo-sidebar
 axo-sidebar-hover
 axo-sidebar-fixed
 axo-sidebar-fixed-rail
+axo-drawer
 axo-sidebar-offcanvas
 axo-dialog
 axo-tabs
@@ -109,7 +110,7 @@ When building interactive markup, type a behavior attribute inside an opening ta
 <button class="axo-button" data-axo-></button>
 ```
 
-The extension suggests known attributes such as `data-axo-toggle`, `data-axo-dialog-toggle`, `data-axo-tab`, and `data-axo-toast-region`. It filters duplicate `data-axo-*` attributes already used on the same tag.
+The extension suggests known attributes such as `data-axo-drawer-toggle`, `data-axo-toggle`, `data-axo-dialog-toggle`, `data-axo-tab`, and `data-axo-toast-region`. It filters duplicate `data-axo-*` attributes already used on the same tag.
 
 Hover known behavior APIs to see their registry documentation:
 

@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.6.0
+
+- Added `initDrawer()` as the first-class drawer controller.
+- Added `data-axo-drawer-id`, `data-axo-drawer-toggle`, and `data-axo-drawer-dismiss`.
+- Added `axo:drawer-open` and `axo:drawer-close` lifecycle events.
+
 ## 0.5.0
 
 - Captured the `0.4.0` package exports, initializers, data attributes, and custom events as a public API baseline.
