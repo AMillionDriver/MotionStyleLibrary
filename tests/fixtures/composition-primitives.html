@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../packages/axoloth-style/src/axoloth.css" />
+    <title>Axoloth Composition Primitives</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 1rem;
+      }
+
+      .fixture-region {
+        border: 1px solid currentColor;
+        min-block-size: 4rem;
+        padding: 0.75rem;
+      }
+
+      .fixture-width {
+        inline-size: 48rem;
+        max-inline-size: 100%;
+      }
+
+      .fixture-frame {
+        inline-size: 20rem;
+        max-inline-size: 100%;
+      }
+
+      .fixture-pile {
+        block-size: 8rem;
+      }
+
+      .fixture-pile > :first-child {
+        background: #dbeafe;
+      }
+
+      .fixture-pile > :last-child {
+        align-self: center;
+        justify-self: center;
+      }
+
+      .fixture-bleed-parent {
+        inline-size: 24rem;
+        max-inline-size: 100%;
+        padding-inline: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="fixture-root" class="axo-flow" style="--axo-flow-space: 12px">
+      <section id="flow" class="axo-flow fixture-width" style="--axo-flow-space: 12px">
+        <p>First flow item</p>
+        <p>Second flow item</p>
+      </section>
+
+      <section
+        id="split"
+        class="axo-split fixture-width"
+        style="--axo-split-min: 15rem; --axo-split-trailing-grow: 2"
+      >
+        <div class="fixture-region">Leading</div>
+        <div class="fixture-region">Trailing</div>
+      </section>
+
+      <section
+        id="content-sidebar"
+        class="axo-sidebar-layout fixture-width"
+        style="--axo-sidebar-layout-width: 14rem"
+      >
+        <aside class="fixture-region">Sidebar</aside>
+        <article class="fixture-region">Primary content</article>
+      </section>
+
+      <section
+        id="frame"
+        class="axo-frame fixture-frame fixture-region"
+        style="--axo-frame-ratio: 16 / 9"
+      >
+        <div>Stable frame</div>
+      </section>
+
+      <section
+        id="pile"
+        class="axo-pile fixture-pile fixture-width"
+        style="--axo-pile-align: stretch; --axo-pile-justify: stretch"
+      >
+        <div aria-hidden="true"></div>
+        <strong>Pile overlay</strong>
+      </section>
+
+      <section id="bleed-parent" class="fixture-bleed-parent fixture-region">
+        <div id="bleed" class="axo-bleed fixture-region" style="--axo-bleed-space: 16px">
+          Controlled bleed
+        </div>
+      </section>
+
+      <section
+        id="scroll-area"
+        class="axo-scroll-area fixture-region"
+        style="--axo-scroll-height: 8rem"
+        tabindex="0"
+        aria-label="Scrollable activity"
+      >
+        <p>Activity one</p>
+        <p>Activity two</p>
+        <p>Activity three</p>
+        <p>Activity four</p>
+        <p>Activity five</p>
+        <p>Activity six</p>
+      </section>
+    </main>
+  </body>
+</html>

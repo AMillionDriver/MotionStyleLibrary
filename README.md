@@ -11,11 +11,11 @@ The repository also includes optional JavaScript behaviors, a VS Code IntelliSen
 
 ## Packages
 
-| Package                        | Current version | Purpose                                                                                                           |
-| ------------------------------ | --------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `@quertys/axoloth-style`       | `0.6.0`         | CSS utilities for app shells, bento grids, sidebars, semantic controls, surface themes, and motion presets.       |
-| `@quertys/axoloth-behavior`    | `0.5.0`         | Optional zero-dependency DOM behaviors for tabs, accordions, dropdowns, dialogs, off-canvas sidebars, and toasts. |
-| `quertys.axoloth-intellisense` | `0.0.19`        | VS Code support for `axo-*`, `--axo-*`, and `data-axo-*` authoring.                                               |
+| Package                        | Current version | Purpose                                                                                                         |
+| ------------------------------ | --------------- | --------------------------------------------------------------------------------------------------------------- |
+| `@quertys/axoloth-style`       | `0.8.0`         | CSS utilities for app shells, composition primitives, bento grids, semantic controls, surfaces, and motion.     |
+| `@quertys/axoloth-behavior`    | `0.6.0`         | Optional zero-dependency DOM behaviors for tabs, accordions, dropdowns, dialogs, drawers, sidebars, and toasts. |
+| `quertys.axoloth-intellisense` | `0.0.21`        | VS Code support for `axo-*`, `--axo-*`, and `data-axo-*` authoring.                                             |
 
 ## Install
 

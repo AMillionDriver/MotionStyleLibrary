@@ -1,6 +1,6 @@
 {
   "name": "@quertys/axoloth-style",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "prefix": "axo-",
   "classes": [
     {
@@ -905,6 +905,62 @@
       "category": "behavior",
       "description": "Aligns an item to the start edge of a scroll-snap container.",
       "usage": "Use on children of axo-scroll-snap.",
+      "status": "active"
+    },
+    {
+      "name": "axo-flow",
+      "module": "layout",
+      "category": "primitive",
+      "description": "Creates predictable vertical rhythm while preserving normal document flow.",
+      "usage": "Use for prose and semantic content that should not become a flex container.",
+      "status": "active"
+    },
+    {
+      "name": "axo-split",
+      "module": "layout",
+      "category": "primitive",
+      "description": "Two-region intrinsic layout that wraps when its children no longer fit.",
+      "usage": "Use with exactly two direct children and customize their ratio with split grow variables.",
+      "status": "active"
+    },
+    {
+      "name": "axo-sidebar-layout",
+      "module": "layout",
+      "category": "primitive",
+      "description": "Intrinsic content layout with a narrow first region and fluid final region.",
+      "usage": "Use with a sidebar as the first direct child and primary content as the final child.",
+      "status": "active"
+    },
+    {
+      "name": "axo-frame",
+      "module": "layout",
+      "category": "primitive",
+      "description": "Aspect-ratio frame that keeps media and content dimensions stable.",
+      "usage": "Wrap one media or content element and customize ratio, fit, and position variables.",
+      "status": "active"
+    },
+    {
+      "name": "axo-pile",
+      "module": "layout",
+      "category": "primitive",
+      "description": "Overlays direct children in the same grid area without absolute positioning.",
+      "usage": "Place the background first and overlays later so normal stacking order remains explicit.",
+      "status": "active"
+    },
+    {
+      "name": "axo-bleed",
+      "module": "layout",
+      "category": "primitive",
+      "description": "Extends content beyond its parent by a configurable logical inline distance.",
+      "usage": "Use inside padded page or container regions and match the surrounding gutter.",
+      "status": "active"
+    },
+    {
+      "name": "axo-scroll-area",
+      "module": "layout",
+      "category": "primitive",
+      "description": "Bounded scroll container with stable gutters and contained overscroll.",
+      "usage": "Use for long panels, menus, logs, and tables that need local scrolling.",
       "status": "active"
     },
     {

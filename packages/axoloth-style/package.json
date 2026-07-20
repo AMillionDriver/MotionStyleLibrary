@@ -1,6 +1,6 @@
 {
   "name": "@quertys/axoloth-style",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "CSS-first layout and motion utilities for app shells, bento grids, semantic controls, and animation presets.",
   "homepage": "https://amilliondriver.github.io/MotionStyleLibrary/",
   "repository": {

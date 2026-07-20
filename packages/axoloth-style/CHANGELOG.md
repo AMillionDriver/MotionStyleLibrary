@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Added composition primitives for flow rhythm, intrinsic splits, content sidebars, aspect-ratio frames, overlay piles, gutter bleed, and bounded scroll areas.
+- Added configurable `--axo-flow-*`, `--axo-split-*`, `--axo-sidebar-layout-*`, `--axo-frame-*`, `--axo-pile-*`, `--axo-bleed-*`, and `--axo-scroll-*` variables.
 - Added first-class Drawer utilities: `axo-drawer`, right-side variant, backdrop, open state, and body scroll-lock state.
 - Added `--axo-drawer-*` CSS variables that alias the existing off-canvas sizing, inset, motion, backdrop, and z-index controls.
 - Froze the public naming prefix on `axo-*`, `--axo-*`, and `data-axo-*`.
