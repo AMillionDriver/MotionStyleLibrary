@@ -9,9 +9,18 @@ web_examples/
 |-- index.html
 |-- styles/docs.css
 |-- scripts/examples.js
+|-- scripts/docs-sidebar.js
+|-- scripts/component-docs.js
 |-- scripts/theme.js
 |-- data/examples.json
+|-- data/docs-nav.json
+|-- data/docs-pages.json
 |-- data/utilities.json
+|-- docs/
+|   |-- sidebar/
+|   |-- container/
+|   |-- stack/
+|   `-- motion/
 |-- examples/
 |   |-- app-shell/
 |   |-- bento/
@@ -30,8 +39,8 @@ web_examples/
 
 Use Live Server or any static server from `web_examples/`.
 
-The root page loads data from `data/examples.json`, so opening the HTML file by
-double-click may fail because browsers can block local JSON fetches.
+The root page and focused docs pages load JSON from `data/`, so opening the HTML
+file by double-click may fail because browsers can block local JSON fetches.
 
 ## CSS Source
 
@@ -42,6 +51,12 @@ Local development uses the repository CSS:
 ```
 
 Example pages use:
+
+```html
+<link rel="stylesheet" href="../../../packages/axoloth-style/src/axoloth.css" />
+```
+
+Focused docs pages use:
 
 ```html
 <link rel="stylesheet" href="../../../packages/axoloth-style/src/axoloth.css" />
@@ -70,6 +85,15 @@ npm run generate
 Every generated utility also carries an `active` or `deprecated` API status.
 Deprecated entries include their supported replacement and earliest removal
 version, sourced from `metadata/deprecations.json`.
+
+## Add A New Docs Page
+
+1. Add the sidebar entry to `data/docs-nav.json`.
+2. Add the focused page content to `data/docs-pages.json`.
+3. Create `docs/<id>/index.html` using the existing docs page shell.
+
+Each docs route should focus on one item only: overview, basic template,
+available classes, CSS variable options, code example, and live preview.
 
 ## Visual Regression
 
