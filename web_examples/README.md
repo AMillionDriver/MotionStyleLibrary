@@ -68,7 +68,7 @@ CDN version:
 ```html
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/@quertys/axoloth-style@0.8.0/src/axoloth.css"
+  href="https://cdn.jsdelivr.net/npm/@quertys/axoloth-style@0.9.0/src/axoloth.css"
 />
 ```
 
@@ -133,7 +133,7 @@ content reviews. Treat this command as the repeatable first layer of the audit.
   "id": "sidebar-fixed",
   "name": "Fixed Sidebar",
   "category": "Layout",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "status": "ready",
   "previewUrl": "./examples/sidebar-fixed/",
   "sourceUrl": "./examples/sidebar-fixed/index.html",

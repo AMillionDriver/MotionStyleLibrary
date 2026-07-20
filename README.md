@@ -8,14 +8,15 @@ The repository also includes optional JavaScript behaviors, a VS Code IntelliSen
 
 - Documentation: [https://amilliondriver.github.io/MotionStyleLibrary/](https://amilliondriver.github.io/MotionStyleLibrary/)
 - Repository: [AMillionDriver/MotionStyleLibrary](https://github.com/AMillionDriver/MotionStyleLibrary)
+- VS Code Extension: [Axoloth IntelliSense](https://marketplace.visualstudio.com/items?itemName=quertys.axoloth-intellisense)
 
 ## Packages
 
-| Package                        | Current version | Purpose                                                                                                         |
-| ------------------------------ | --------------- | --------------------------------------------------------------------------------------------------------------- |
-| `@quertys/axoloth-style`       | `0.8.0`         | CSS utilities for app shells, composition primitives, bento grids, semantic controls, surfaces, and motion.     |
-| `@quertys/axoloth-behavior`    | `0.6.0`         | Optional zero-dependency DOM behaviors for tabs, accordions, dropdowns, dialogs, drawers, sidebars, and toasts. |
-| `quertys.axoloth-intellisense` | `0.0.21`        | VS Code support for `axo-*`, `--axo-*`, and `data-axo-*` authoring.                                             |
+| Package                                                                                                            | Current version | Purpose                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------ | --------------- | --------------------------------------------------------------------------------------------------------------- |
+| `@quertys/axoloth-style`                                                                                           | `0.9.0`         | CSS utilities for app shells, composition primitives, bento grids, semantic controls, surfaces, and motion.     |
+| `@quertys/axoloth-behavior`                                                                                        | `0.6.0`         | Optional zero-dependency DOM behaviors for tabs, accordions, dropdowns, dialogs, drawers, sidebars, and toasts. |
+| [`quertys.axoloth-intellisense`](https://marketplace.visualstudio.com/items?itemName=quertys.axoloth-intellisense) | `0.0.22`        | VS Code support for `axo-*`, `--axo-*`, and `data-axo-*` authoring.                                             |
 
 ## Install
 

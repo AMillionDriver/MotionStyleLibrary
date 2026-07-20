@@ -12,10 +12,11 @@ It is not a Tailwind replacement and it does not try to own your full visual the
 
 - Documentation: [https://amilliondriver.github.io/MotionStyleLibrary/](https://amilliondriver.github.io/MotionStyleLibrary/)
 - Repository: [AMillionDriver/MotionStyleLibrary](https://github.com/AMillionDriver/MotionStyleLibrary)
+- VS Code Extension: [Axoloth IntelliSense](https://marketplace.visualstudio.com/items?itemName=quertys.axoloth-intellisense)
 
 ## API Stability
 
-Axoloth `0.8.0` validates every public class and CSS variable against the
+Axoloth `0.9.0` validates every public class and CSS variable against the
 reviewed `0.5.0` API baseline. Utilities cannot be removed silently: renames
 must ship as documented aliases with machine-readable replacement and removal
 versions.
@@ -189,7 +190,7 @@ For quick prototypes, you can load the published CSS from a CDN:
 ```html
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/@quertys/axoloth-style@0.8.0/src/axoloth.css"
+  href="https://cdn.jsdelivr.net/npm/@quertys/axoloth-style@0.9.0/src/axoloth.css"
 />
 ```
 
@@ -259,6 +260,23 @@ Composition example:
   </article>
 </section>
 ```
+
+### Container-aware Components
+
+Use `axo-container-query` on a separate parent and add `axo-container-responsive` to a supported component. Bento grids, app shells, headers, form grids, and vertical tabs can then adapt to the space where they are embedded instead of relying only on viewport width.
+
+```html
+<div class="axo-container-query">
+  <header class="axo-header axo-header-grid axo-container-responsive axo-surface">
+    <a class="axo-header-left axo-link" href="/">Axoloth</a>
+    <div class="axo-header-center">Search</div>
+    <nav class="axo-header-nav">Primary navigation</nav>
+    <button class="axo-header-right axo-show-compact" type="button">Menu</button>
+  </header>
+</div>
+```
+
+The compact container threshold is `40rem` for headers, form grids, tabs, and visibility helpers. Container-aware app shells collapse below `48rem`; Bento retains its existing `40rem` and `64rem` tiers. Use `axo-hide-compact` and `axo-show-compact` for optional content inside any `axo-container-query` wrapper.
 
 ### Header and Appbar
 
@@ -1123,14 +1141,14 @@ Or combine it with Tailwind, Bootstrap, UnoCSS, plain CSS modules, Sass, or any 
 
 _Generated from `metadata/registry.json`. Run `npm run generate` after changing the registry._
 
-Registry 0.8.0: **174 classes**, **194 CSS variables**, and **10 modules**.
+Registry 0.9.0: **176 classes**, **195 CSS variables**, and **10 modules**.
 
 ### Class Registry
 
 | Class | Module | Category | Status | Description |
 | --- | --- | --- | --- | --- |
 | `axo-bento` | bento | layout | Active | Responsive bento grid container with mobile, tablet, and desktop columns. |
-| `axo-container-responsive` | bento | responsive | Active | Makes axo-bento respond to an axo-container-query parent instead of the viewport. |
+| `axo-container-responsive` | layout | responsive | Active | Makes supported Axoloth components respond to an axo-container-query ancestor instead of only the viewport. |
 | `axo-card` | bento | layout | Active | Neutral structural card base with radius, border, padding, and transitions. |
 | `axo-square` | bento | layout | Active | One-by-one bento item span. |
 | `axo-wide` | bento | layout | Active | Bento item that spans two columns on tablet and desktop. |
@@ -1151,6 +1169,8 @@ Registry 0.8.0: **174 classes**, **194 CSS variables**, and **10 modules**.
 | `axo-sticky-top` | layout | layout | Active | Sticky top positioning helper. |
 | `axo-hide-mobile` | layout | layout | Active | Hide an element below 768px. |
 | `axo-show-mobile` | layout | layout | Active | Show an element below 768px. |
+| `axo-hide-compact` | layout | responsive | Active | Hides an element when its axo-container-query ancestor is narrower than 40rem. |
+| `axo-show-compact` | layout | responsive | Active | Shows an element when its axo-container-query ancestor is narrower than 40rem. |
 | `axo-shell` | layout | layout | Active | Flexible app shell wrapper for sidebar and main content layouts. |
 | `axo-sidebar` | layout | layout | Active | Base sidebar container with column layout, width, padding, overflow, and transitions. |
 | `axo-sidebar-left` | layout | layout | Active | Places a sidebar before the main content inside axo-shell. |

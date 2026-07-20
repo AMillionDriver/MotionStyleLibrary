@@ -2226,6 +2226,28 @@
       ]
     },
     {
+      "name": "--axo-show-compact-display",
+      "description": "Display mode used by axo-show-compact inside a compact query container.\n\nDefault: inline-flex\n\nValue type: keyword\n\nModule: layout",
+      "values": [
+        {
+          "name": "inline-flex",
+          "description": "Inline flex control or action."
+        },
+        {
+          "name": "flex",
+          "description": "Block-level flex layout."
+        },
+        {
+          "name": "block",
+          "description": "Standard block layout."
+        },
+        {
+          "name": "grid",
+          "description": "Grid layout."
+        }
+      ]
+    },
+    {
       "name": "--axo-grid-gap",
       "description": "Gap between items in axo-auto-grid.\n\nDefault: var(--axo-gap, 1rem)\n\nValue type: length\n\nModule: layout",
       "values": [

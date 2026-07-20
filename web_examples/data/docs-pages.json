@@ -574,38 +574,70 @@
     "id": "responsive",
     "title": "Responsive",
     "category": "Utilities",
-    "overview": "Use responsive utilities for layout patterns that should adapt without hand-writing breakpoints for every page.",
+    "overview": "Use intrinsic primitives and container-aware modifiers so reusable layouts respond to the space where they are embedded, not only the viewport.",
     "template": [
-      "<section class=\"axo-bento axo-container-query\">",
-      "  <article class=\"axo-card axo-surface\">One</article>",
-      "  <article class=\"axo-card axo-wide axo-surface\">Two</article>",
-      "</section>"
+      "<div class=\"axo-container-query\">",
+      "  <section class=\"axo-bento axo-container-responsive\">",
+      "    <article class=\"axo-card axo-surface\">One</article>",
+      "    <article class=\"axo-card axo-wide axo-surface\">Two</article>",
+      "  </section>",
+      "</div>"
     ],
     "classes": [
+      {
+        "name": "axo-container-query",
+        "description": "Creates the named inline-size query boundary around an adaptive component."
+      },
+      {
+        "name": "axo-container-responsive",
+        "description": "Opts supported Bento, app, header, form-grid, or vertical-tabs layouts into container response."
+      },
       {
         "name": "axo-auto-grid",
         "description": "Creates a responsive grid with minimum card width."
       },
       { "name": "axo-switcher", "description": "Switches child layout based on available width." },
       { "name": "axo-reel", "description": "Horizontal overflow row for compact screens." },
+      {
+        "name": "axo-hide-compact",
+        "description": "Hides optional content below a 40rem query container."
+      },
+      {
+        "name": "axo-show-compact",
+        "description": "Shows compact controls below a 40rem query container."
+      },
       { "name": "axo-hide-mobile", "description": "Hides content on small screens." },
       { "name": "axo-show-mobile", "description": "Shows content only on small screens." }
     ],
     "options": [
-      { "name": "--axo-gap", "description": "General layout gap." },
-      { "name": "--axo-row-min", "description": "Minimum row height for bento layouts." },
-      { "name": "--axo-container-width", "description": "Responsive max width." }
+      { "name": "--axo-item-min", "description": "Minimum card width used by axo-auto-grid." },
+      {
+        "name": "--axo-switcher-threshold",
+        "description": "Intrinsic switch point used by axo-switcher."
+      },
+      {
+        "name": "--axo-show-compact-display",
+        "description": "Display mode used when axo-show-compact becomes visible."
+      }
     ],
     "example": [
-      "<div class=\"axo-auto-grid\">",
-      "  <article class=\"axo-card axo-surface\">Card</article>",
-      "  <article class=\"axo-card axo-surface\">Card</article>",
+      "<div class=\"axo-container-query\">",
+      "  <header class=\"axo-header axo-header-grid axo-container-responsive axo-surface\">",
+      "    <a class=\"axo-header-left axo-link\" href=\"/\">Axoloth</a>",
+      "    <div class=\"axo-header-center\">Search</div>",
+      "    <nav class=\"axo-header-nav\">Primary navigation</nav>",
+      "    <button class=\"axo-header-right axo-show-compact\" type=\"button\">Menu</button>",
+      "  </header>",
       "</div>"
     ],
     "preview": [
-      "<div class=\"axo-bento\">",
-      "  <article class=\"axo-card axo-surface\">Responsive</article>",
-      "  <article class=\"axo-card axo-wide axo-surface\">Wide when there is room</article>",
+      "<div class=\"axo-container-query docs-preview-panel\" style=\"inline-size: min(100%, 34rem)\">",
+      "  <header class=\"axo-header axo-header-grid axo-container-responsive axo-surface\">",
+      "    <strong class=\"axo-header-left\">Axoloth</strong>",
+      "    <span class=\"axo-header-center\">Container-aware</span>",
+      "    <nav class=\"axo-header-nav\">Docs</nav>",
+      "    <button class=\"axo-header-right axo-button axo-show-compact\" type=\"button\">Menu</button>",
+      "  </header>",
       "</div>"
     ]
   },

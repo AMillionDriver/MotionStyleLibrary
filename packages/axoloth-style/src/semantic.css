@@ -550,6 +550,14 @@
   }
 }
 
+@supports (container-type: inline-size) {
+  @container axo-layout (max-width: 39.999rem) {
+    :where(.axo-form-grid.axo-container-responsive) {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   :where(.axo-progress-bar, .axo-skip-link, .axo-switch > input[type='checkbox']) {
     transition: none;

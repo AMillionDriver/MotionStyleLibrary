@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.0.22
+
+- Added synchronized metadata for generalized container-responsive layouts and compact visibility helpers.
+- Added HTML and JSX snippets for container-aware headers, forms, and embedded app shells.
+
 ## 0.0.21
 
 - Added synchronized class and variable metadata for Composition Primitives V1.

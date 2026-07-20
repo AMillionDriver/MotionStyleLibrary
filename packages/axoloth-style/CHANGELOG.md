@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Generalized `axo-container-responsive` across Bento, app shells, headers, form grids, and vertical tabs.
+- Added `axo-hide-compact`, `axo-show-compact`, and `--axo-show-compact-display` for container-aware visibility.
 - Added composition primitives for flow rhythm, intrinsic splits, content sidebars, aspect-ratio frames, overlay piles, gutter bleed, and bounded scroll areas.
 - Added configurable `--axo-flow-*`, `--axo-split-*`, `--axo-sidebar-layout-*`, `--axo-frame-*`, `--axo-pile-*`, `--axo-bleed-*`, and `--axo-scroll-*` variables.
 - Added first-class Drawer utilities: `axo-drawer`, right-side variant, backdrop, open state, and body scroll-lock state.
