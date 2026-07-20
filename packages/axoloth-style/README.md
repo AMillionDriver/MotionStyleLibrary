@@ -1091,7 +1091,7 @@ Or combine it with Tailwind, Bootstrap, UnoCSS, plain CSS modules, Sass, or any 
 
 _Generated from `metadata/registry.json`. Run `npm run generate` after changing the registry._
 
-Registry 0.6.0: **161 classes**, **168 CSS variables**, and **10 modules**.
+Registry 0.6.1: **161 classes**, **168 CSS variables**, and **10 modules**.
 
 ### Class Registry
 

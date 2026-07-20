@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "name": "@quertys/axoloth-style",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "stability": "pre-1.0",
   "namingPolicy": "../NAMING.md",
   "prefixes": {
