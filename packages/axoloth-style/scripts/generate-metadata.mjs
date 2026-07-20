@@ -23,6 +23,7 @@ const paths = {
 
 const readJson = (filePath) => JSON.parse(readFileSync(filePath, 'utf8'));
 const serializeJson = (value) => `${JSON.stringify(value, null, 2)}\n`;
+const normalizeLineEndings = (value) => value?.replaceAll('\r\n', '\n');
 
 function assert(condition, message) {
   if (!condition) throw new Error(message);
@@ -191,7 +192,7 @@ function replaceGeneratedReadmeSection(readme, generatedReference) {
 
 function writeOrCheck(filePath, content, check, driftedFiles) {
   const currentContent = existsSync(filePath) ? readFileSync(filePath, 'utf8') : null;
-  if (currentContent === content) return;
+  if (normalizeLineEndings(currentContent) === normalizeLineEndings(content)) return;
 
   if (check) {
     driftedFiles.push(filePath);
