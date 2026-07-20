@@ -93,6 +93,9 @@ axo-alert
 axo-empty
 axo-table
 axo-bento-container
+axo-header-container
+axo-form-container
+axo-app-container
 axo-auto-grid
 axo-switcher
 axo-cover

@@ -215,6 +215,46 @@
       "</div>"
     ]
   },
+  "Axoloth Container Header": {
+    "prefix": "axo-header-container",
+    "description": "Axoloth header that compacts based on its wrapper width.",
+    "body": [
+      "<div className=\"axo-container-query\">",
+      "  <header className=\"axo-header axo-header-grid axo-container-responsive axo-surface\">",
+      "    <a className=\"axo-header-left axo-link\" href=\"$1\">$2</a>",
+      "    <div className=\"axo-header-center\">$3</div>",
+      "    <nav className=\"axo-header-nav\">$4</nav>",
+      "    <button className=\"axo-header-right axo-icon-button axo-show-compact\" type=\"button\" aria-label=\"Open menu\">$5</button>",
+      "  </header>",
+      "</div>"
+    ]
+  },
+  "Axoloth Container Form": {
+    "prefix": "axo-form-container",
+    "description": "Axoloth form grid that responds to its wrapper width.",
+    "body": [
+      "<div className=\"axo-container-query\">",
+      "  <form className=\"axo-form-grid axo-container-responsive\">",
+      "    <label className=\"axo-field\"><span className=\"axo-label\">$1</span><input className=\"axo-input\" /></label>",
+      "    <label className=\"axo-field\"><span className=\"axo-label\">$2</span><input className=\"axo-input\" /></label>",
+      "  </form>",
+      "</div>"
+    ]
+  },
+  "Axoloth Container App": {
+    "prefix": "axo-app-container",
+    "description": "Embedded Axoloth app shell that responds to its wrapper width.",
+    "body": [
+      "<div className=\"axo-container-query\">",
+      "  <div className=\"axo-app axo-container-responsive\">",
+      "    <aside className=\"axo-app-sidebar axo-sidebar axo-surface\">$1</aside>",
+      "    <header className=\"axo-app-header axo-header axo-surface\">$2</header>",
+      "    <main className=\"axo-app-main\">$3</main>",
+      "    <footer className=\"axo-app-footer\">$4</footer>",
+      "  </div>",
+      "</div>"
+    ]
+  },
   "Axoloth Auto Grid": {
     "prefix": "axo-auto-grid",
     "description": "Axoloth auto-fitting grid without breakpoint classes.",

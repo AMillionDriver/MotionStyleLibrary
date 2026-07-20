@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "name": "@quertys/axoloth-style",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "stability": "pre-1.0",
   "namingPolicy": "../NAMING.md",
   "prefixes": {
@@ -31,10 +31,10 @@
     },
     {
       "name": "axo-container-responsive",
-      "module": "bento",
+      "module": "layout",
       "category": "responsive",
-      "description": "Makes axo-bento respond to an axo-container-query parent instead of the viewport.",
-      "usage": "Use on axo-bento inside a separate axo-container-query wrapper."
+      "description": "Makes supported Axoloth components respond to an axo-container-query ancestor instead of only the viewport.",
+      "usage": "Use on bento, app, header, form-grid, or vertical tabs inside a separate axo-container-query wrapper."
     },
     {
       "name": "axo-card",
@@ -175,6 +175,20 @@
       "category": "layout",
       "description": "Show an element below 768px.",
       "usage": "Useful for mobile menu buttons."
+    },
+    {
+      "name": "axo-hide-compact",
+      "module": "layout",
+      "category": "responsive",
+      "description": "Hides an element when its axo-container-query ancestor is narrower than 40rem.",
+      "usage": "Use inside axo-container-query for secondary navigation or optional content."
+    },
+    {
+      "name": "axo-show-compact",
+      "module": "layout",
+      "category": "responsive",
+      "description": "Shows an element when its axo-container-query ancestor is narrower than 40rem.",
+      "usage": "Customize the visible display mode with --axo-show-compact-display."
     },
     {
       "name": "axo-shell",
@@ -3871,6 +3885,32 @@
         {
           "value": "var(--axo-sidebar-width, 16rem)",
           "description": "Match the configured expanded sidebar."
+        }
+      ]
+    },
+    {
+      "name": "--axo-show-compact-display",
+      "module": "layout",
+      "category": "responsive",
+      "valueType": "keyword",
+      "default": "inline-flex",
+      "description": "Display mode used by axo-show-compact inside a compact query container.",
+      "valueSuggestions": [
+        {
+          "value": "inline-flex",
+          "description": "Inline flex control or action."
+        },
+        {
+          "value": "flex",
+          "description": "Block-level flex layout."
+        },
+        {
+          "value": "block",
+          "description": "Standard block layout."
+        },
+        {
+          "value": "grid",
+          "description": "Grid layout."
         }
       ]
     },

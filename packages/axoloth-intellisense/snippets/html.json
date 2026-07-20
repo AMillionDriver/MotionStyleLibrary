@@ -215,6 +215,46 @@
       "</div>"
     ]
   },
+  "Axoloth Container Header": {
+    "prefix": "axo-header-container",
+    "description": "Axoloth header that compacts based on its wrapper width.",
+    "body": [
+      "<div class=\"axo-container-query\">",
+      "  <header class=\"axo-header axo-header-grid axo-container-responsive axo-surface\">",
+      "    <a class=\"axo-header-left axo-link\" href=\"$1\">$2</a>",
+      "    <div class=\"axo-header-center\">$3</div>",
+      "    <nav class=\"axo-header-nav\">$4</nav>",
+      "    <button class=\"axo-header-right axo-icon-button axo-show-compact\" type=\"button\" aria-label=\"Open menu\">$5</button>",
+      "  </header>",
+      "</div>"
+    ]
+  },
+  "Axoloth Container Form": {
+    "prefix": "axo-form-container",
+    "description": "Axoloth form grid that responds to its wrapper width.",
+    "body": [
+      "<div class=\"axo-container-query\">",
+      "  <form class=\"axo-form-grid axo-container-responsive\">",
+      "    <label class=\"axo-field\"><span class=\"axo-label\">$1</span><input class=\"axo-input\" /></label>",
+      "    <label class=\"axo-field\"><span class=\"axo-label\">$2</span><input class=\"axo-input\" /></label>",
+      "  </form>",
+      "</div>"
+    ]
+  },
+  "Axoloth Container App": {
+    "prefix": "axo-app-container",
+    "description": "Embedded Axoloth app shell that responds to its wrapper width.",
+    "body": [
+      "<div class=\"axo-container-query\">",
+      "  <div class=\"axo-app axo-container-responsive\">",
+      "    <aside class=\"axo-app-sidebar axo-sidebar axo-surface\">$1</aside>",
+      "    <header class=\"axo-app-header axo-header axo-surface\">$2</header>",
+      "    <main class=\"axo-app-main\">$3</main>",
+      "    <footer class=\"axo-app-footer\">$4</footer>",
+      "  </div>",
+      "</div>"
+    ]
+  },
   "Axoloth Auto Grid": {
     "prefix": "axo-auto-grid",
     "description": "Axoloth auto-fitting grid without breakpoint classes.",

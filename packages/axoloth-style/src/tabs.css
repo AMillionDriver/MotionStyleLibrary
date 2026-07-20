@@ -108,6 +108,31 @@
   }
 }
 
+@supports (container-type: inline-size) {
+  @container axo-layout (max-width: 39.999rem) {
+    :where(.axo-tabs-vertical.axo-container-responsive) {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    :where(.axo-tabs-vertical.axo-container-responsive > .axo-tab-list) {
+      flex-direction: row;
+      overflow-x: auto;
+    }
+
+    :where(.axo-tabs-vertical.axo-container-responsive > .axo-tab-list .axo-tab) {
+      border-block-end: var(--axo-tab-indicator-size, 2px) solid transparent;
+      border-inline-end: 0;
+    }
+
+    :where(.axo-tabs-vertical.axo-container-responsive > .axo-tab-list .axo-tab.axo-tab-active),
+    :where(
+      .axo-tabs-vertical.axo-container-responsive > .axo-tab-list .axo-tab[aria-selected='true']
+    ) {
+      border-block-end-color: var(--axo-tab-indicator-color, currentColor);
+    }
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   :where(.axo-tab) {
     transition: none;

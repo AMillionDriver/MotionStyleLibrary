@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../packages/axoloth-style/src/axoloth.css" />
+    <title>Axoloth Container Responsive</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 1rem;
+      }
+
+      .fixture-compact {
+        inline-size: 34rem;
+        max-inline-size: 100%;
+      }
+
+      .fixture-app-compact {
+        inline-size: 42rem;
+        max-inline-size: 100%;
+      }
+
+      .fixture-wide {
+        inline-size: 56rem;
+        max-inline-size: 100%;
+      }
+
+      .fixture-region {
+        border: 1px solid currentColor;
+        min-block-size: 3rem;
+        padding: 0.5rem;
+      }
+
+      .fixture-app {
+        min-block-size: 18rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="axo-flow">
+      <div id="header-compact-container" class="axo-container-query fixture-compact">
+        <header
+          id="header-compact"
+          class="axo-header axo-header-grid axo-container-responsive fixture-region"
+        >
+          <strong class="axo-header-left">Brand</strong>
+          <span class="axo-header-center">Search</span>
+          <nav id="header-compact-nav" class="axo-header-nav">Navigation</nav>
+          <button id="header-compact-menu" class="axo-header-right axo-show-compact" type="button">
+            Menu
+          </button>
+        </header>
+      </div>
+
+      <div id="header-wide-container" class="axo-container-query fixture-wide">
+        <header
+          id="header-wide"
+          class="axo-header axo-header-grid axo-container-responsive fixture-region"
+        >
+          <strong class="axo-header-left">Brand</strong>
+          <span class="axo-header-center">Search</span>
+          <nav id="header-wide-nav" class="axo-header-nav">Navigation</nav>
+          <button id="header-wide-menu" class="axo-header-right axo-show-compact" type="button">
+            Menu
+          </button>
+        </header>
+      </div>
+
+      <div id="form-compact-container" class="axo-container-query fixture-compact">
+        <form id="form-compact" class="axo-form-grid axo-container-responsive">
+          <label class="axo-field fixture-region"
+            ><span class="axo-label">Name</span><input class="axo-input"
+          /></label>
+          <label class="axo-field fixture-region"
+            ><span class="axo-label">Email</span><input class="axo-input"
+          /></label>
+        </form>
+      </div>
+
+      <div id="form-wide-container" class="axo-container-query fixture-wide">
+        <form id="form-wide" class="axo-form-grid axo-container-responsive">
+          <label class="axo-field fixture-region"
+            ><span class="axo-label">Name</span><input class="axo-input"
+          /></label>
+          <label class="axo-field fixture-region"
+            ><span class="axo-label">Email</span><input class="axo-input"
+          /></label>
+        </form>
+      </div>
+
+      <div id="app-compact-container" class="axo-container-query fixture-app-compact">
+        <div id="app-compact" class="axo-app axo-container-responsive fixture-app">
+          <aside class="axo-app-sidebar fixture-region">Sidebar</aside>
+          <header class="axo-app-header fixture-region">Header</header>
+          <main class="axo-app-main fixture-region">Main</main>
+          <footer class="axo-app-footer fixture-region">Footer</footer>
+        </div>
+      </div>
+
+      <div id="app-wide-container" class="axo-container-query fixture-wide">
+        <div id="app-wide" class="axo-app axo-container-responsive fixture-app">
+          <aside class="axo-app-sidebar fixture-region">Sidebar</aside>
+          <header class="axo-app-header fixture-region">Header</header>
+          <main class="axo-app-main fixture-region">Main</main>
+          <footer class="axo-app-footer fixture-region">Footer</footer>
+        </div>
+      </div>
+
+      <div id="tabs-compact-container" class="axo-container-query fixture-compact">
+        <section
+          id="tabs-compact"
+          class="axo-tabs axo-tabs-vertical axo-container-responsive fixture-region"
+        >
+          <div class="axo-tab-list" role="tablist">
+            <button class="axo-tab axo-tab-active" type="button" role="tab" aria-selected="true">
+              Overview
+            </button>
+            <button class="axo-tab" type="button" role="tab" aria-selected="false">Settings</button>
+          </div>
+          <div class="axo-tab-panel">Compact panel</div>
+        </section>
+      </div>
+
+      <div id="tabs-wide-container" class="axo-container-query fixture-wide">
+        <section
+          id="tabs-wide"
+          class="axo-tabs axo-tabs-vertical axo-container-responsive fixture-region"
+        >
+          <div class="axo-tab-list" role="tablist">
+            <button class="axo-tab axo-tab-active" type="button" role="tab" aria-selected="true">
+              Overview
+            </button>
+            <button class="axo-tab" type="button" role="tab" aria-selected="false">Settings</button>
+          </div>
+          <div class="axo-tab-panel">Wide panel</div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
