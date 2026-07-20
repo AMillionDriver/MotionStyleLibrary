@@ -37,6 +37,12 @@
           "label": "Stack",
           "path": "docs/stack/",
           "badge": "layout"
+        },
+        {
+          "id": "composition",
+          "label": "Composition",
+          "path": "docs/composition/",
+          "badge": "layout"
         }
       ]
     },

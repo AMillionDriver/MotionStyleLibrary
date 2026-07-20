@@ -2472,6 +2472,406 @@
       ]
     },
     {
+      "name": "--axo-flow-space",
+      "description": "Vertical rhythm between direct children of axo-flow.\n\nDefault: 1rem\n\nValue type: length\n\nModule: layout",
+      "values": [
+        {
+          "name": "0.5rem",
+          "description": "Compact flow rhythm."
+        },
+        {
+          "name": "0.75rem",
+          "description": "Tight flow rhythm."
+        },
+        {
+          "name": "1rem",
+          "description": "Default flow rhythm."
+        },
+        {
+          "name": "1.5rem",
+          "description": "Comfortable flow rhythm."
+        },
+        {
+          "name": "2rem",
+          "description": "Large flow rhythm."
+        }
+      ]
+    },
+    {
+      "name": "--axo-split-gap",
+      "description": "Gap between the two regions inside axo-split.\n\nDefault: var(--axo-gap, 1rem)\n\nValue type: length\n\nModule: layout",
+      "values": [
+        {
+          "name": "0.5rem",
+          "description": "Compact split gap."
+        },
+        {
+          "name": "0.75rem",
+          "description": "Tight split gap."
+        },
+        {
+          "name": "1rem",
+          "description": "Default split gap."
+        },
+        {
+          "name": "1.5rem",
+          "description": "Comfortable split gap."
+        },
+        {
+          "name": "2rem",
+          "description": "Large split gap."
+        }
+      ]
+    },
+    {
+      "name": "--axo-split-min",
+      "description": "Preferred minimum width of each axo-split region before wrapping.\n\nDefault: 18rem\n\nValue type: length\n\nModule: layout",
+      "values": [
+        {
+          "name": "14rem",
+          "description": "Compact split regions."
+        },
+        {
+          "name": "18rem",
+          "description": "Default split regions."
+        },
+        {
+          "name": "22rem",
+          "description": "Wide split regions."
+        },
+        {
+          "name": "28rem",
+          "description": "Feature split regions."
+        }
+      ]
+    },
+    {
+      "name": "--axo-split-leading-grow",
+      "description": "Flex grow ratio for the first direct child of axo-split.\n\nDefault: 1\n\nValue type: number\n\nModule: layout",
+      "values": [
+        {
+          "name": "1",
+          "description": "Equal or smaller leading region."
+        },
+        {
+          "name": "2",
+          "description": "Double leading region."
+        },
+        {
+          "name": "3",
+          "description": "Triple leading region."
+        }
+      ]
+    },
+    {
+      "name": "--axo-split-trailing-grow",
+      "description": "Flex grow ratio for the final direct child of axo-split.\n\nDefault: 1\n\nValue type: number\n\nModule: layout",
+      "values": [
+        {
+          "name": "1",
+          "description": "Equal or smaller trailing region."
+        },
+        {
+          "name": "2",
+          "description": "Double trailing region."
+        },
+        {
+          "name": "3",
+          "description": "Triple trailing region."
+        }
+      ]
+    },
+    {
+      "name": "--axo-split-align",
+      "description": "Cross-axis alignment for direct children of axo-split.\n\nDefault: stretch\n\nValue type: keyword\n\nModule: layout",
+      "values": [
+        {
+          "name": "stretch",
+          "description": "Match region heights."
+        },
+        {
+          "name": "start",
+          "description": "Align regions to the block start."
+        },
+        {
+          "name": "center",
+          "description": "Center regions on the cross axis."
+        },
+        {
+          "name": "end",
+          "description": "Align regions to the block end."
+        }
+      ]
+    },
+    {
+      "name": "--axo-sidebar-layout-width",
+      "description": "Preferred width of the first region in axo-sidebar-layout.\n\nDefault: 16rem\n\nValue type: length\n\nModule: layout",
+      "values": [
+        {
+          "name": "12rem",
+          "description": "Compact intrinsic sidebar."
+        },
+        {
+          "name": "16rem",
+          "description": "Default intrinsic sidebar."
+        },
+        {
+          "name": "20rem",
+          "description": "Wide intrinsic sidebar."
+        },
+        {
+          "name": "24rem",
+          "description": "Extra-wide intrinsic sidebar."
+        }
+      ]
+    },
+    {
+      "name": "--axo-sidebar-layout-content-min",
+      "description": "Minimum share required by the main region before axo-sidebar-layout wraps.\n\nDefault: 50%\n\nValue type: length\n\nModule: layout",
+      "values": [
+        {
+          "name": "40%",
+          "description": "Allow a narrower main region."
+        },
+        {
+          "name": "50%",
+          "description": "Default main-region threshold."
+        },
+        {
+          "name": "60%",
+          "description": "Favor a wider main region."
+        },
+        {
+          "name": "24rem",
+          "description": "Use a fixed readable minimum."
+        }
+      ]
+    },
+    {
+      "name": "--axo-sidebar-layout-gap",
+      "description": "Gap between the sidebar and main regions in axo-sidebar-layout.\n\nDefault: var(--axo-gap, 1rem)\n\nValue type: length\n\nModule: layout",
+      "values": [
+        {
+          "name": "0.75rem",
+          "description": "Tight sidebar layout gap."
+        },
+        {
+          "name": "1rem",
+          "description": "Default sidebar layout gap."
+        },
+        {
+          "name": "1.5rem",
+          "description": "Comfortable sidebar layout gap."
+        },
+        {
+          "name": "2rem",
+          "description": "Large sidebar layout gap."
+        }
+      ]
+    },
+    {
+      "name": "--axo-sidebar-layout-align",
+      "description": "Cross-axis alignment for regions inside axo-sidebar-layout.\n\nDefault: stretch\n\nValue type: keyword\n\nModule: layout",
+      "values": [
+        {
+          "name": "stretch",
+          "description": "Match region heights."
+        },
+        {
+          "name": "start",
+          "description": "Align regions to the block start."
+        },
+        {
+          "name": "center",
+          "description": "Center regions on the cross axis."
+        },
+        {
+          "name": "end",
+          "description": "Align regions to the block end."
+        }
+      ]
+    },
+    {
+      "name": "--axo-frame-ratio",
+      "description": "Aspect ratio maintained by axo-frame.\n\nDefault: 16 / 9\n\nValue type: ratio\n\nModule: layout",
+      "values": [
+        {
+          "name": "1 / 1",
+          "description": "Square frame."
+        },
+        {
+          "name": "4 / 3",
+          "description": "Landscape frame."
+        },
+        {
+          "name": "16 / 9",
+          "description": "Default widescreen frame."
+        },
+        {
+          "name": "3 / 4",
+          "description": "Portrait frame."
+        }
+      ]
+    },
+    {
+      "name": "--axo-frame-fit",
+      "description": "Object fitting mode for media inside axo-frame.\n\nDefault: cover\n\nValue type: keyword\n\nModule: layout",
+      "values": [
+        {
+          "name": "cover",
+          "description": "Fill and crop the frame."
+        },
+        {
+          "name": "contain",
+          "description": "Fit all media inside the frame."
+        },
+        {
+          "name": "fill",
+          "description": "Stretch media to fill the frame."
+        },
+        {
+          "name": "scale-down",
+          "description": "Use the smaller contain or natural size."
+        }
+      ]
+    },
+    {
+      "name": "--axo-frame-position",
+      "description": "Object position for media inside axo-frame.\n\nDefault: center\n\nValue type: position\n\nModule: layout",
+      "values": [
+        {
+          "name": "center",
+          "description": "Center media in the frame."
+        },
+        {
+          "name": "top",
+          "description": "Anchor media to the top."
+        },
+        {
+          "name": "bottom",
+          "description": "Anchor media to the bottom."
+        },
+        {
+          "name": "left center",
+          "description": "Anchor media to the left."
+        },
+        {
+          "name": "right center",
+          "description": "Anchor media to the right."
+        }
+      ]
+    },
+    {
+      "name": "--axo-pile-align",
+      "description": "Block-axis alignment for overlaid children inside axo-pile.\n\nDefault: stretch\n\nValue type: keyword\n\nModule: layout",
+      "values": [
+        {
+          "name": "stretch",
+          "description": "Stretch overlays to the pile height."
+        },
+        {
+          "name": "start",
+          "description": "Align overlays to the block start."
+        },
+        {
+          "name": "center",
+          "description": "Center overlays vertically."
+        },
+        {
+          "name": "end",
+          "description": "Align overlays to the block end."
+        }
+      ]
+    },
+    {
+      "name": "--axo-pile-justify",
+      "description": "Inline-axis alignment for overlaid children inside axo-pile.\n\nDefault: stretch\n\nValue type: keyword\n\nModule: layout",
+      "values": [
+        {
+          "name": "stretch",
+          "description": "Stretch overlays to the pile width."
+        },
+        {
+          "name": "start",
+          "description": "Align overlays to inline start."
+        },
+        {
+          "name": "center",
+          "description": "Center overlays horizontally."
+        },
+        {
+          "name": "end",
+          "description": "Align overlays to inline end."
+        }
+      ]
+    },
+    {
+      "name": "--axo-bleed-space",
+      "description": "Logical inline distance that axo-bleed extends beyond its parent.\n\nDefault: var(--axo-page-padding, 1rem)\n\nValue type: length\n\nModule: layout",
+      "values": [
+        {
+          "name": "0.75rem",
+          "description": "Compact bleed distance."
+        },
+        {
+          "name": "1rem",
+          "description": "Default page-gutter bleed."
+        },
+        {
+          "name": "1.5rem",
+          "description": "Roomy bleed distance."
+        },
+        {
+          "name": "2rem",
+          "description": "Large bleed distance."
+        }
+      ]
+    },
+    {
+      "name": "--axo-scroll-height",
+      "description": "Maximum block size of axo-scroll-area before local scrolling begins.\n\nDefault: 24rem\n\nValue type: length\n\nModule: layout",
+      "values": [
+        {
+          "name": "12rem",
+          "description": "Compact scroll area."
+        },
+        {
+          "name": "18rem",
+          "description": "Medium scroll area."
+        },
+        {
+          "name": "24rem",
+          "description": "Default scroll area."
+        },
+        {
+          "name": "32rem",
+          "description": "Large scroll area."
+        },
+        {
+          "name": "60dvh",
+          "description": "Viewport-relative scroll area."
+        }
+      ]
+    },
+    {
+      "name": "--axo-scroll-gutter",
+      "description": "Scrollbar gutter reservation used by axo-scroll-area.\n\nDefault: stable\n\nValue type: keyword\n\nModule: layout",
+      "values": [
+        {
+          "name": "auto",
+          "description": "Reserve space only while scrolling."
+        },
+        {
+          "name": "stable",
+          "description": "Reserve one stable scrollbar gutter."
+        },
+        {
+          "name": "stable both-edges",
+          "description": "Reserve symmetric gutters."
+        }
+      ]
+    },
+    {
       "name": "--axo-page-padding",
       "description": "Page padding used by axo-page.\n\nDefault: 1rem\n\nValue type: length\n\nModule: semantic",
       "values": [

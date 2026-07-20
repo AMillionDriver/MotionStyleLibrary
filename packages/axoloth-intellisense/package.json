@@ -2,7 +2,7 @@
   "name": "axoloth-intellisense",
   "displayName": "Axoloth IntelliSense",
   "description": "IntelliSense support for Axoloth Style utility classes and Behavior attributes.",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "publisher": "quertys",
   "license": "MIT",
   "engines": {

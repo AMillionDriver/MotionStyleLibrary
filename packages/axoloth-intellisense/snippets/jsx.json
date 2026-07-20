@@ -259,6 +259,29 @@
       "</section>"
     ]
   },
+  "Axoloth Split": {
+    "prefix": "axo-split",
+    "description": "Axoloth intrinsic two-region composition.",
+    "body": [
+      "<section className=\"axo-split\">",
+      "  <div className=\"axo-frame axo-surface\">$1</div>",
+      "  <article className=\"axo-flow\">",
+      "    <h2>$2</h2>",
+      "    <p>$3</p>",
+      "  </article>",
+      "</section>"
+    ]
+  },
+  "Axoloth Content Sidebar": {
+    "prefix": "axo-sidebar-layout",
+    "description": "Axoloth intrinsic content layout with a narrow first region.",
+    "body": [
+      "<div className=\"axo-sidebar-layout\">",
+      "  <aside className=\"axo-flow axo-surface\">$1</aside>",
+      "  <main className=\"axo-flow\">$2</main>",
+      "</div>"
+    ]
+  },
   "Axoloth Progress": {
     "prefix": "axo-progress",
     "description": "Accessible Axoloth progress indicator.",

@@ -36,8 +36,8 @@ Before publishing:
    ```bash
    git switch main
    git pull origin main
-   git tag style-v0.7.0
-   git push origin style-v0.7.0
+   git tag style-v0.8.0
+   git push origin style-v0.8.0
    ```
 
 The `style-v*` tag starts `.github/workflows/publish-style.yml`, verifies the style package, previews package contents, and publishes to npm.

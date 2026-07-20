@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.0.21
+
+- Added synchronized class and variable metadata for Composition Primitives V1.
+- Added HTML and JSX snippets for intrinsic split and sidebar-layout patterns.
+
 ## 0.0.20
 
 - Added synced class and variable metadata for first-class Drawer utilities.

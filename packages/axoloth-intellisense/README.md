@@ -97,6 +97,8 @@ axo-auto-grid
 axo-switcher
 axo-cover
 axo-reel
+axo-split
+axo-sidebar-layout
 axo-progress
 axo-skeleton
 axo-validation-form

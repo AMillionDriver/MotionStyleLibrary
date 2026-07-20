@@ -15,7 +15,7 @@ It is not a Tailwind replacement and it does not try to own your full visual the
 
 ## API Stability
 
-Axoloth `0.7.0` validates every public class and CSS variable against the
+Axoloth `0.8.0` validates every public class and CSS variable against the
 reviewed `0.5.0` API baseline. Utilities cannot be removed silently: renames
 must ship as documented aliases with machine-readable replacement and removal
 versions.
@@ -189,7 +189,7 @@ For quick prototypes, you can load the published CSS from a CDN:
 ```html
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/@quertys/axoloth-style@0.7.0/src/axoloth.css"
+  href="https://cdn.jsdelivr.net/npm/@quertys/axoloth-style@0.8.0/src/axoloth.css"
 />
 ```
 
@@ -211,6 +211,13 @@ Primitives adapt to the space where they are placed, so reusable sections need f
 - `axo-reel`: horizontal scrolling row with stable item widths and snap behavior.
 - `axo-scroll-snap`: reusable inline snap behavior for custom overflow containers.
 - `axo-snap-start`: start alignment for children of a snap container.
+- `axo-flow`: vertical rhythm that preserves normal document flow.
+- `axo-split`: two-region layout with intrinsic wrapping and configurable ratios.
+- `axo-sidebar-layout`: narrow first region plus fluid primary content.
+- `axo-frame`: stable aspect-ratio boundary for media or content.
+- `axo-pile`: overlays direct children in one grid area.
+- `axo-bleed`: extends content beyond a parent gutter without viewport overflow.
+- `axo-scroll-area`: bounded local scrolling with a stable scrollbar gutter.
 
 Auto grid example:
 
@@ -234,6 +241,22 @@ Switcher and reel example:
   <article class="axo-card axo-surface">Item one</article>
   <article class="axo-card axo-surface">Item two</article>
   <article class="axo-card axo-surface">Item three</article>
+</section>
+```
+
+Composition example:
+
+```html
+<section class="axo-split" style="--axo-split-min: 16rem; --axo-split-trailing-grow: 2">
+  <div class="axo-frame axo-surface" style="--axo-frame-ratio: 4 / 3">
+    <div>Stable preview</div>
+  </div>
+
+  <article class="axo-flow">
+    <h2>Intrinsic composition</h2>
+    <p>The regions wrap when their preferred minimum widths no longer fit.</p>
+    <button class="axo-button" type="button">Continue</button>
+  </article>
 </section>
 ```
 
@@ -1100,7 +1123,7 @@ Or combine it with Tailwind, Bootstrap, UnoCSS, plain CSS modules, Sass, or any 
 
 _Generated from `metadata/registry.json`. Run `npm run generate` after changing the registry._
 
-Registry 0.7.0: **167 classes**, **176 CSS variables**, and **10 modules**.
+Registry 0.8.0: **174 classes**, **194 CSS variables**, and **10 modules**.
 
 ### Class Registry
 
@@ -1219,6 +1242,13 @@ Registry 0.7.0: **167 classes**, **176 CSS variables**, and **10 modules**.
 | `axo-reel` | layout | primitive | Active | Horizontal scrolling row with stable item widths and scroll snapping. |
 | `axo-scroll-snap` | layout | behavior | Active | Adds mandatory inline scroll snapping to a custom overflow container. |
 | `axo-snap-start` | layout | behavior | Active | Aligns an item to the start edge of a scroll-snap container. |
+| `axo-flow` | layout | primitive | Active | Creates predictable vertical rhythm while preserving normal document flow. |
+| `axo-split` | layout | primitive | Active | Two-region intrinsic layout that wraps when its children no longer fit. |
+| `axo-sidebar-layout` | layout | primitive | Active | Intrinsic content layout with a narrow first region and fluid final region. |
+| `axo-frame` | layout | primitive | Active | Aspect-ratio frame that keeps media and content dimensions stable. |
+| `axo-pile` | layout | primitive | Active | Overlays direct children in the same grid area without absolute positioning. |
+| `axo-bleed` | layout | primitive | Active | Extends content beyond its parent by a configurable logical inline distance. |
+| `axo-scroll-area` | layout | primitive | Active | Bounded scroll container with stable gutters and contained overscroll. |
 | `axo-page` | semantic | layout | Active | Page wrapper with full-width sizing, minimum viewport height, and page padding. |
 | `axo-container` | semantic | layout | Active | Centered content container with configurable max width. |
 | `axo-section` | semantic | layout | Active | Vertical section spacing helper. |

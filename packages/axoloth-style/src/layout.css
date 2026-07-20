@@ -186,6 +186,115 @@
   scroll-snap-align: start;
 }
 
+:where(.axo-flow) {
+  box-sizing: border-box;
+}
+
+:where(.axo-flow > *) {
+  margin-block: 0;
+}
+
+:where(.axo-flow > * + *) {
+  margin-block-start: var(--axo-flow-space, 1rem);
+}
+
+:where(.axo-split) {
+  align-items: var(--axo-split-align, stretch);
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--axo-split-gap, var(--axo-gap, 1rem));
+  inline-size: 100%;
+}
+
+:where(.axo-split > *) {
+  flex-basis: min(100%, var(--axo-split-min, 18rem));
+  flex-shrink: 1;
+  min-inline-size: 0;
+}
+
+:where(.axo-split > :first-child) {
+  flex-grow: var(--axo-split-leading-grow, 1);
+}
+
+:where(.axo-split > :last-child) {
+  flex-grow: var(--axo-split-trailing-grow, 1);
+}
+
+:where(.axo-sidebar-layout) {
+  align-items: var(--axo-sidebar-layout-align, stretch);
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--axo-sidebar-layout-gap, var(--axo-gap, 1rem));
+  inline-size: 100%;
+}
+
+:where(.axo-sidebar-layout > *) {
+  min-inline-size: 0;
+}
+
+:where(.axo-sidebar-layout > :first-child) {
+  flex-basis: min(100%, var(--axo-sidebar-layout-width, 16rem));
+  flex-grow: 1;
+}
+
+:where(.axo-sidebar-layout > :last-child) {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-inline-size: min(100%, var(--axo-sidebar-layout-content-min, 50%));
+}
+
+:where(.axo-frame) {
+  aspect-ratio: var(--axo-frame-ratio, 16 / 9);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+:where(.axo-frame > *) {
+  block-size: 100%;
+  inline-size: 100%;
+}
+
+:where(.axo-frame > :is(img, video, svg), .axo-frame > picture > img) {
+  display: block;
+  object-fit: var(--axo-frame-fit, cover);
+  object-position: var(--axo-frame-position, center);
+}
+
+:where(.axo-pile) {
+  align-items: var(--axo-pile-align, stretch);
+  box-sizing: border-box;
+  display: grid;
+  inline-size: 100%;
+  isolation: isolate;
+  justify-items: var(--axo-pile-justify, stretch);
+}
+
+:where(.axo-pile > *) {
+  grid-area: 1 / 1;
+  min-inline-size: 0;
+}
+
+:where(.axo-bleed) {
+  box-sizing: border-box;
+  inline-size: calc(
+    100% + var(--axo-bleed-space, var(--axo-page-padding, 1rem)) +
+      var(--axo-bleed-space, var(--axo-page-padding, 1rem))
+  );
+  margin-inline: calc(0px - var(--axo-bleed-space, var(--axo-page-padding, 1rem)));
+  max-inline-size: none;
+}
+
+:where(.axo-scroll-area) {
+  box-sizing: border-box;
+  max-block-size: var(--axo-scroll-height, 24rem);
+  min-inline-size: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: var(--axo-scroll-gutter, stable);
+}
+
 :where(.axo-shell) {
   align-items: stretch;
   box-sizing: border-box;
