@@ -28,6 +28,8 @@ packages/**/*.vsix
 *.njsproj
 *.sln
 *.sw?
+.agents/
+.codex-remote-attachments/
 
 # Secret
 .env
