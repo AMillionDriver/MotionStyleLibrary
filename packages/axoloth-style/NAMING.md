@@ -4,6 +4,25 @@ This policy keeps Axoloth utilities predictable as the package approaches a
 stable API. Public names are recorded in `metadata/registry.json` before they
 are released.
 
+## API Freeze Decision
+
+Axoloth freezes its public naming prefix on `axo`.
+
+```txt
+CSS class:       axo-*
+CSS variable:    --axo-*
+Behavior attr:   data-axo-*
+```
+
+The prefix is part of the public contract. New public utilities must not use
+short aliases such as `ax-*`, `x-*`, `my-*`, `set-*`, or `put-*`. Existing and
+future docs, examples, metadata, and IntelliSense entries should treat `axo-*`
+as the canonical spelling.
+
+Do not add compatibility aliases for shorter prefixes unless a specific
+migration record exists in `metadata/deprecations.json`. Alias growth makes the
+library harder to document, autocomplete, and stabilize.
+
 ## Prefixes
 
 - CSS classes use `axo-`.

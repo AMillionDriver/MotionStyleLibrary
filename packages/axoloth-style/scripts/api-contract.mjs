@@ -4,6 +4,12 @@ const API_COLLECTIONS = {
   variable: 'variables',
 };
 
+const FROZEN_PREFIXES = {
+  class: 'axo-',
+  dataAttribute: 'data-axo-',
+  variable: '--axo-',
+};
+
 function assert(condition, message) {
   if (!condition) throw new Error(message);
 }
@@ -44,6 +50,26 @@ function getDeprecationKey(kind, name) {
   return `${kind}:${name}`;
 }
 
+function getExpectedDeprecatedPrefix(kind) {
+  if (kind === 'class') return FROZEN_PREFIXES.class;
+  if (kind === 'variable') return FROZEN_PREFIXES.variable;
+  return './';
+}
+
+function assertFrozenPrefixes(registry) {
+  assert(registry.prefixes, 'Utility registry must declare frozen public prefixes.');
+
+  Object.entries(FROZEN_PREFIXES).forEach(([kind, prefix]) => {
+    assert(registry.prefixes[kind] === prefix, `Registry ${kind} prefix must remain ${prefix}.`);
+  });
+}
+
+function assertNamesUsePrefix(names, prefix, label) {
+  names.forEach((name) => {
+    assert(name.startsWith(prefix), `${label} must start with ${prefix}: ${name}`);
+  });
+}
+
 export function createApiBaseline(registry, packageData, baselineVersion = registry.version) {
   parseVersion(baselineVersion, 'baseline version');
 
@@ -81,10 +107,23 @@ export function validateApiContract({ baseline, deprecations, packageData, regis
     compareVersions(packageData.version, baseline.baselineVersion) >= 0,
     `Package ${packageData.version} predates API baseline ${baseline.baselineVersion}.`
   );
+  assertFrozenPrefixes(registry);
 
   assertUniqueNames(baseline.classes, 'API baseline classes');
   assertUniqueNames(baseline.exports, 'API baseline exports');
   assertUniqueNames(baseline.variables, 'API baseline variables');
+  assertNamesUsePrefix(baseline.classes, FROZEN_PREFIXES.class, 'API baseline class');
+  assertNamesUsePrefix(baseline.variables, FROZEN_PREFIXES.variable, 'API baseline variable');
+  assertNamesUsePrefix(
+    registry.classes.map((entry) => entry.name),
+    FROZEN_PREFIXES.class,
+    'Public class'
+  );
+  assertNamesUsePrefix(
+    registry.variables.map((entry) => entry.name),
+    FROZEN_PREFIXES.variable,
+    'Public variable'
+  );
   assert(
     [...baseline.classes].sort().join('\n') === baseline.classes.join('\n'),
     'API baseline classes must be sorted.'
@@ -108,8 +147,7 @@ export function validateApiContract({ baseline, deprecations, packageData, regis
 
   deprecations.deprecations.forEach((record) => {
     assert(API_COLLECTIONS[record.kind], `Invalid deprecation kind: ${record.kind}`);
-    const expectedPrefix =
-      record.kind === 'class' ? 'axo-' : record.kind === 'variable' ? '--axo-' : './';
+    const expectedPrefix = getExpectedDeprecatedPrefix(record.kind);
     assert(record.name?.startsWith(expectedPrefix), `Invalid deprecated name: ${record.name}`);
     assert(
       record.replacement?.startsWith(expectedPrefix),

@@ -14,13 +14,25 @@
     ],
     "classes": [
       { "name": "axo-page", "description": "Page wrapper with safe min-height and base spacing." },
-      { "name": "axo-container", "description": "Constrains content width with responsive side padding." },
-      { "name": "axo-section", "description": "Adds vertical section spacing for major page blocks." }
+      {
+        "name": "axo-container",
+        "description": "Constrains content width with responsive side padding."
+      },
+      {
+        "name": "axo-section",
+        "description": "Adds vertical section spacing for major page blocks."
+      }
     ],
     "options": [
       { "name": "--axo-page-padding", "description": "Controls page side padding." },
-      { "name": "--axo-container-width", "description": "Controls the maximum readable content width." },
-      { "name": "--axo-section-gap", "description": "Controls vertical spacing between section content." }
+      {
+        "name": "--axo-container-width",
+        "description": "Controls the maximum readable content width."
+      },
+      {
+        "name": "--axo-section-gap",
+        "description": "Controls vertical spacing between section content."
+      }
     ],
     "example": [
       "<section class=\"axo-container axo-section axo-card axo-surface\">",
@@ -47,12 +59,21 @@
       "</div>"
     ],
     "classes": [
-      { "name": "axo-row", "description": "Horizontal layout for direct children with a shared gap." },
-      { "name": "axo-cluster", "description": "Wrapping inline group for nav links, tags, and action rows." }
+      {
+        "name": "axo-row",
+        "description": "Horizontal layout for direct children with a shared gap."
+      },
+      {
+        "name": "axo-cluster",
+        "description": "Wrapping inline group for nav links, tags, and action rows."
+      }
     ],
     "options": [
       { "name": "--axo-row-gap", "description": "Controls gap between row children." },
-      { "name": "--axo-control-gap", "description": "Controls gap for semantic controls and grouped actions." }
+      {
+        "name": "--axo-control-gap",
+        "description": "Controls gap for semantic controls and grouped actions."
+      }
     ],
     "example": [
       "<div class=\"axo-cluster\">",
@@ -128,11 +149,23 @@
       { "name": "axo-sidebar-left", "description": "Places a flow sidebar on the left side." },
       { "name": "axo-sidebar-right", "description": "Places a flow sidebar on the right side." },
       { "name": "axo-sidebar-rail", "description": "Compresses sidebar to rail width." },
-      { "name": "axo-sidebar-hover", "description": "Expands rail sidebar on hover or keyboard focus." },
+      {
+        "name": "axo-sidebar-hover",
+        "description": "Expands rail sidebar on hover or keyboard focus."
+      },
       { "name": "axo-sidebar-fixed", "description": "Pins sidebar to the viewport." },
-      { "name": "axo-sidebar-main-offset-left", "description": "Offsets main content by expanded sidebar width." },
-      { "name": "axo-sidebar-main-offset-rail-left", "description": "Offsets main content by rail width." },
-      { "name": "axo-sidebar-item", "description": "Menu item alignment and interaction structure." }
+      {
+        "name": "axo-sidebar-main-offset-left",
+        "description": "Offsets main content by expanded sidebar width."
+      },
+      {
+        "name": "axo-sidebar-main-offset-rail-left",
+        "description": "Offsets main content by rail width."
+      },
+      {
+        "name": "axo-sidebar-item",
+        "description": "Menu item alignment and interaction structure."
+      }
     ],
     "options": [
       { "name": "--axo-sidebar-width", "description": "Expanded sidebar width." },
@@ -186,13 +219,22 @@
     ],
     "classes": [
       { "name": "axo-header", "description": "Base page header structure." },
-      { "name": "axo-header-grid", "description": "Grid header with left, center, nav, and right slots." },
+      {
+        "name": "axo-header-grid",
+        "description": "Grid header with left, center, nav, and right slots."
+      },
       { "name": "axo-header-left", "description": "Left header slot." },
-      { "name": "axo-header-center", "description": "Center header slot for search or primary controls." },
+      {
+        "name": "axo-header-center",
+        "description": "Center header slot for search or primary controls."
+      },
       { "name": "axo-header-nav", "description": "Navigation slot inside header." },
       { "name": "axo-header-right", "description": "Right action slot." },
       { "name": "axo-nav", "description": "Navigation container structure." },
-      { "name": "axo-nav-list", "description": "Resets list style and lays nav items horizontally." }
+      {
+        "name": "axo-nav-list",
+        "description": "Resets list style and lays nav items horizontally."
+      }
     ],
     "options": [
       { "name": "--axo-header-height", "description": "Minimum header height." },
@@ -228,7 +270,10 @@
       "</article>"
     ],
     "classes": [
-      { "name": "axo-card", "description": "Neutral card shell with radius, border, padding, and transition." },
+      {
+        "name": "axo-card",
+        "description": "Neutral card shell with radius, border, padding, and transition."
+      },
       { "name": "axo-surface", "description": "Adaptive neutral surface for card backgrounds." },
       { "name": "axo-contrast", "description": "High contrast card surface." },
       { "name": "axo-lift", "description": "Hover lift effect." },
@@ -349,9 +394,15 @@
     ],
     "classes": [
       { "name": "axo-row", "description": "Single-line horizontal alignment with gap." },
-      { "name": "axo-cluster", "description": "Wrapping horizontal alignment for nav and actions." },
+      {
+        "name": "axo-cluster",
+        "description": "Wrapping horizontal alignment for nav and actions."
+      },
       { "name": "axo-center", "description": "Centers content within available space." },
-      { "name": "axo-switcher", "description": "Switches between horizontal and stacked layout based on available width." }
+      {
+        "name": "axo-switcher",
+        "description": "Switches between horizontal and stacked layout based on available width."
+      }
     ],
     "options": [
       { "name": "--axo-row-gap", "description": "Row spacing." },
@@ -384,7 +435,10 @@
       "</section>"
     ],
     "classes": [
-      { "name": "axo-auto-grid", "description": "Creates a responsive grid with minimum card width." },
+      {
+        "name": "axo-auto-grid",
+        "description": "Creates a responsive grid with minimum card width."
+      },
       { "name": "axo-switcher", "description": "Switches child layout based on available width." },
       { "name": "axo-reel", "description": "Horizontal overflow row for compact screens." },
       { "name": "axo-hide-mobile", "description": "Hides content on small screens." },
@@ -435,9 +489,7 @@
       { "name": "--axo-glow-shadow", "description": "Glow shadow value." },
       { "name": "--axo-shimmer-duration", "description": "Shimmer animation speed." }
     ],
-    "example": [
-      "<button class=\"axo-button axo-pop axo-lift\">Animated action</button>"
-    ],
+    "example": ["<button class=\"axo-button axo-pop axo-lift\">Animated action</button>"],
     "preview": [
       "<div class=\"docs-preview-strip\">",
       "  <article class=\"docs-preview-panel axo-card axo-surface axo-rise axo-lift\">Rise + lift</article>",

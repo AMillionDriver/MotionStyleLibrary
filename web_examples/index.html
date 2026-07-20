@@ -59,15 +59,19 @@
           <h2>Use npm or a CDN link.</h2>
           <div class="code-grid">
             <pre
-              role="region"
-              aria-label="npm install command"
+              class="copy-code"
+              data-copy-code
+              role="button"
+              aria-label="Copy npm install command"
               tabindex="0"
-            ><code>npm install @quertys/axoloth-style</code></pre>
+            ><code>npm install @quertys/axoloth-style</code><span class="copy-code-status" aria-hidden="true">Copy</span></pre>
             <pre
-              role="region"
-              aria-label="CDN stylesheet example"
+              class="copy-code"
+              data-copy-code
+              role="button"
+              aria-label="Copy CDN stylesheet example"
               tabindex="0"
-            ><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@quertys/axoloth-style@0.6.0/src/axoloth.css"&gt;</code></pre>
+            ><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@quertys/axoloth-style@0.6.0/src/axoloth.css"&gt;</code><span class="copy-code-status" aria-hidden="true">Copy</span></pre>
           </div>
         </section>
 
@@ -169,8 +173,11 @@
       </nav>
     </footer>
 
+    <div id="docs-snackbar" class="docs-snackbar" role="status" aria-live="polite"></div>
+
     <script src="./scripts/theme.js"></script>
     <script src="./scripts/docs-sidebar.js" data-docs-root="."></script>
+    <script src="./scripts/docs-copy.js"></script>
     <script src="./scripts/examples.js"></script>
   </body>
 </html>

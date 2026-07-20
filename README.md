@@ -4,13 +4,18 @@ Axoloth is a CSS-first utility library for building layout structure, simple mot
 
 The repository also includes optional JavaScript behaviors, a VS Code IntelliSense extension, visual/accessibility tests, and static example pages.
 
+## Links
+
+- Documentation: [https://amilliondriver.github.io/MotionStyleLibrary/](https://amilliondriver.github.io/MotionStyleLibrary/)
+- Repository: [AMillionDriver/MotionStyleLibrary](https://github.com/AMillionDriver/MotionStyleLibrary)
+
 ## Packages
 
-| Package | Current version | Purpose |
-| --- | --- | --- |
-| `@quertys/axoloth-style` | `0.6.0` | CSS utilities for app shells, bento grids, sidebars, semantic controls, surface themes, and motion presets. |
-| `@quertys/axoloth-behavior` | `0.5.0` | Optional zero-dependency DOM behaviors for tabs, accordions, dropdowns, dialogs, off-canvas sidebars, and toasts. |
-| `quertys.axoloth-intellisense` | `0.0.19` | VS Code support for `axo-*`, `--axo-*`, and `data-axo-*` authoring. |
+| Package                        | Current version | Purpose                                                                                                           |
+| ------------------------------ | --------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `@quertys/axoloth-style`       | `0.6.0`         | CSS utilities for app shells, bento grids, sidebars, semantic controls, surface themes, and motion presets.       |
+| `@quertys/axoloth-behavior`    | `0.5.0`         | Optional zero-dependency DOM behaviors for tabs, accordions, dropdowns, dialogs, off-canvas sidebars, and toasts. |
+| `quertys.axoloth-intellisense` | `0.0.19`        | VS Code support for `axo-*`, `--axo-*`, and `data-axo-*` authoring.                                               |
 
 ## Install
 
