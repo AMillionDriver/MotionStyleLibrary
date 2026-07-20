@@ -15,6 +15,11 @@ function createFixture(version = '0.6.0') {
     registry: {
       name: '@quertys/axoloth-style',
       version,
+      prefixes: {
+        class: 'axo-',
+        dataAttribute: 'data-axo-',
+        variable: '--axo-',
+      },
       classes: [{ name: 'axo-old' }, { name: 'axo-new' }],
       variables: [{ name: '--axo-gap' }],
     },
@@ -53,6 +58,27 @@ test('allows additive API changes', () => {
 
   assert.equal(result.classes, 2);
   assert.equal(result.aliases, 0);
+});
+
+test('rejects non-frozen registry prefixes', () => {
+  const fixture = createFixture();
+  fixture.registry.prefixes.class = 'ax-';
+
+  assert.throws(() => validateApiContract(fixture), /class prefix must remain axo-/);
+});
+
+test('rejects public class names outside axo prefix', () => {
+  const fixture = createFixture();
+  fixture.registry.classes.push({ name: 'x-card' });
+
+  assert.throws(() => validateApiContract(fixture), /Public class must start with axo-/);
+});
+
+test('rejects public variable names outside axo prefix', () => {
+  const fixture = createFixture();
+  fixture.registry.variables.push({ name: '--ui-gap' });
+
+  assert.throws(() => validateApiContract(fixture), /Public variable must start with --axo-/);
 });
 
 test('rejects removal without a deprecation record', () => {

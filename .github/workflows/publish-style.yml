@@ -1,0 +1,40 @@
+name: Publish Axoloth Style
+
+on:
+  push:
+    tags:
+      - 'style-v*'
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  verify-and-publish:
+    name: Verify and publish
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org
+          package-manager-cache: false
+
+      - name: Install repository dependencies
+        run: npm ci
+
+      - name: Verify Axoloth Style
+        run: npm --prefix packages/axoloth-style run check
+
+      - name: Preview package contents
+        run: npm pack --dry-run
+        working-directory: packages/axoloth-style
+
+      - name: Publish package
+        run: npm publish --access public
+        working-directory: packages/axoloth-style

@@ -8,6 +8,11 @@ It is not a Tailwind replacement and it does not try to own your full visual the
 
 > Indonesian note: Axoloth Style dipakai untuk mempercepat format layout dan animasi, bukan untuk menggantikan styling utama project kamu.
 
+## Links
+
+- Documentation: [https://amilliondriver.github.io/MotionStyleLibrary/](https://amilliondriver.github.io/MotionStyleLibrary/)
+- Repository: [AMillionDriver/MotionStyleLibrary](https://github.com/AMillionDriver/MotionStyleLibrary)
+
 ## API Stability
 
 Axoloth `0.6.0` validates every public class and CSS variable against the
@@ -15,6 +20,9 @@ reviewed `0.5.0` API baseline. Utilities cannot be removed silently: renames
 must ship as documented aliases with machine-readable replacement and removal
 versions.
 
+- Public classes are frozen on `axo-*`.
+- Public CSS variables are frozen on `--axo-*`.
+- Behavior attributes are frozen on `data-axo-*`.
 - Read [MIGRATION.md](./MIGRATION.md) before upgrading across minor versions.
 - Read [NAMING.md](./NAMING.md) before proposing public names.
 - Run `npm run check` inside this package to verify metadata and API compatibility.
@@ -1079,6 +1087,7 @@ Or combine it with Tailwind, Bootstrap, UnoCSS, plain CSS modules, Sass, or any 
 ## Generated Utility Reference
 
 <!-- AXOLOTH-REGISTRY:START -->
+<!-- prettier-ignore-start -->
 
 _Generated from `metadata/registry.json`. Run `npm run generate` after changing the registry._
 
@@ -1250,6 +1259,7 @@ Registry 0.6.0: **161 classes**, **168 CSS variables**, and **10 modules**.
 | `axo-surface` | surface | surface | Active | Normal surface for the current theme marker. |
 | `axo-contrast` | surface | surface | Active | Inverted contrast surface for the current theme marker. |
 
+<!-- prettier-ignore-end -->
 <!-- AXOLOTH-REGISTRY:END -->
 
 ## Troubleshooting

@@ -1,0 +1,102 @@
+{
+  "groups": [
+    {
+      "title": "Getting Started",
+      "items": [
+        {
+          "id": "overview",
+          "label": "Overview",
+          "path": "#introduction",
+          "badge": "start"
+        },
+        {
+          "id": "install",
+          "label": "Install",
+          "path": "#install",
+          "badge": "npm"
+        }
+      ]
+    },
+    {
+      "title": "Layout",
+      "items": [
+        {
+          "id": "container",
+          "label": "Container",
+          "path": "docs/container/",
+          "badge": "layout"
+        },
+        {
+          "id": "row",
+          "label": "Row",
+          "path": "docs/row/",
+          "badge": "layout"
+        },
+        {
+          "id": "stack",
+          "label": "Stack",
+          "path": "docs/stack/",
+          "badge": "layout"
+        }
+      ]
+    },
+    {
+      "title": "Components",
+      "items": [
+        {
+          "id": "sidebar",
+          "label": "Sidebar",
+          "path": "docs/sidebar/",
+          "badge": "app"
+        },
+        {
+          "id": "navbar",
+          "label": "Navbar",
+          "path": "docs/navbar/",
+          "badge": "nav"
+        },
+        {
+          "id": "card",
+          "label": "Card",
+          "path": "docs/card/",
+          "badge": "ui"
+        },
+        {
+          "id": "bento",
+          "label": "Bento",
+          "path": "docs/bento/",
+          "badge": "grid"
+        }
+      ]
+    },
+    {
+      "title": "Utilities",
+      "items": [
+        {
+          "id": "spacing",
+          "label": "Spacing",
+          "path": "docs/spacing/",
+          "badge": "space"
+        },
+        {
+          "id": "alignment",
+          "label": "Alignment",
+          "path": "docs/alignment/",
+          "badge": "align"
+        },
+        {
+          "id": "responsive",
+          "label": "Responsive",
+          "path": "docs/responsive/",
+          "badge": "rwd"
+        },
+        {
+          "id": "motion",
+          "label": "Motion",
+          "path": "docs/motion/",
+          "badge": "fx"
+        }
+      ]
+    }
+  ]
+}

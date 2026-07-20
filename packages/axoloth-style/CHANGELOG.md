@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Froze the public naming prefix on `axo-*`, `--axo-*`, and `data-axo-*`.
+- Added API contract validation for frozen class and CSS variable prefixes.
+
 ## 0.6.0
 
 - Added repeatable Axe and Playwright accessibility audits for every public example at mobile and desktop sizes.

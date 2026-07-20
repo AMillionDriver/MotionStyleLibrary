@@ -4,13 +4,18 @@ Axoloth is a CSS-first utility library for building layout structure, simple mot
 
 The repository also includes optional JavaScript behaviors, a VS Code IntelliSense extension, visual/accessibility tests, and static example pages.
 
+## Links
+
+- Documentation: [https://amilliondriver.github.io/MotionStyleLibrary/](https://amilliondriver.github.io/MotionStyleLibrary/)
+- Repository: [AMillionDriver/MotionStyleLibrary](https://github.com/AMillionDriver/MotionStyleLibrary)
+
 ## Packages
 
-| Package | Current version | Purpose |
-| --- | --- | --- |
-| `@quertys/axoloth-style` | `0.6.0` | CSS utilities for app shells, bento grids, sidebars, semantic controls, surface themes, and motion presets. |
-| `@quertys/axoloth-behavior` | `0.5.0` | Optional zero-dependency DOM behaviors for tabs, accordions, dropdowns, dialogs, off-canvas sidebars, and toasts. |
-| `quertys.axoloth-intellisense` | `0.0.19` | VS Code support for `axo-*`, `--axo-*`, and `data-axo-*` authoring. |
+| Package                        | Current version | Purpose                                                                                                           |
+| ------------------------------ | --------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `@quertys/axoloth-style`       | `0.6.0`         | CSS utilities for app shells, bento grids, sidebars, semantic controls, surface themes, and motion presets.       |
+| `@quertys/axoloth-behavior`    | `0.5.0`         | Optional zero-dependency DOM behaviors for tabs, accordions, dropdowns, dialogs, off-canvas sidebars, and toasts. |
+| `quertys.axoloth-intellisense` | `0.0.19`        | VS Code support for `axo-*`, `--axo-*`, and `data-axo-*` authoring.                                               |
 
 ## Install
 
@@ -139,6 +144,12 @@ npm run verify:axoloth
 
 That verifier runs lint, build, style contract checks, behavior contract checks, docs checks, accessibility tests, visual tests, IntelliSense tests, and VSIX packaging.
 
+## Releases
+
+Release instructions live in [RELEASE.md](./RELEASE.md).
+
+`@quertys/axoloth-style` publishes through npm Trusted Publishing after a `style-v*` tag is pushed from `main`. Behavior and VS Code extension releases remain manual unless their own publishing workflows are added.
+
 ## Package Checks
 
 Style package:
@@ -165,7 +176,7 @@ npm test
 npm run package
 ```
 
-The generated VSIX is not published automatically. Publishing to npm and VS Code Marketplace remains manual.
+The generated VSIX is not published automatically. See the release checklist before publishing any package or extension.
 
 ## API Stability
 

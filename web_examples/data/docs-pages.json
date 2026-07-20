@@ -1,0 +1,501 @@
+[
+  {
+    "id": "container",
+    "title": "Container",
+    "category": "Layout",
+    "overview": "Use Container when content needs a readable max width while the page background remains full width.",
+    "template": [
+      "<main class=\"axo-page\">",
+      "  <section class=\"axo-container axo-section\">",
+      "    <h1>Readable content width</h1>",
+      "    <p>Place page content here.</p>",
+      "  </section>",
+      "</main>"
+    ],
+    "classes": [
+      { "name": "axo-page", "description": "Page wrapper with safe min-height and base spacing." },
+      {
+        "name": "axo-container",
+        "description": "Constrains content width with responsive side padding."
+      },
+      {
+        "name": "axo-section",
+        "description": "Adds vertical section spacing for major page blocks."
+      }
+    ],
+    "options": [
+      { "name": "--axo-page-padding", "description": "Controls page side padding." },
+      {
+        "name": "--axo-container-width",
+        "description": "Controls the maximum readable content width."
+      },
+      {
+        "name": "--axo-section-gap",
+        "description": "Controls vertical spacing between section content."
+      }
+    ],
+    "example": [
+      "<section class=\"axo-container axo-section axo-card axo-surface\">",
+      "  <h2>Documentation block</h2>",
+      "  <p>Container keeps long text from stretching too wide.</p>",
+      "</section>"
+    ],
+    "preview": [
+      "<div class=\"axo-container axo-card axo-surface\">",
+      "  <h3>Centered content</h3>",
+      "  <p>This block uses Axoloth container and card utilities.</p>",
+      "</div>"
+    ]
+  },
+  {
+    "id": "row",
+    "title": "Row",
+    "category": "Layout",
+    "overview": "Use Row and Cluster for horizontal groups that should wrap safely when the viewport is narrow.",
+    "template": [
+      "<div class=\"axo-row\">",
+      "  <button class=\"axo-button\">Primary</button>",
+      "  <button class=\"axo-button\">Secondary</button>",
+      "</div>"
+    ],
+    "classes": [
+      {
+        "name": "axo-row",
+        "description": "Horizontal layout for direct children with a shared gap."
+      },
+      {
+        "name": "axo-cluster",
+        "description": "Wrapping inline group for nav links, tags, and action rows."
+      }
+    ],
+    "options": [
+      { "name": "--axo-row-gap", "description": "Controls gap between row children." },
+      {
+        "name": "--axo-control-gap",
+        "description": "Controls gap for semantic controls and grouped actions."
+      }
+    ],
+    "example": [
+      "<div class=\"axo-cluster\">",
+      "  <a class=\"axo-link\" href=\"#\">Intro</a>",
+      "  <a class=\"axo-link\" href=\"#\">Cards</a>",
+      "  <button class=\"axo-button\">Action</button>",
+      "</div>"
+    ],
+    "preview": [
+      "<div class=\"docs-preview-row\">",
+      "  <button class=\"axo-button\">Primary</button>",
+      "  <button class=\"axo-button\">Secondary</button>",
+      "  <a class=\"axo-link\" href=\"#\">Inline link</a>",
+      "</div>"
+    ]
+  },
+  {
+    "id": "stack",
+    "title": "Stack",
+    "category": "Layout",
+    "overview": "Use Stack when children should flow vertically with consistent spacing without writing margins on every element.",
+    "template": [
+      "<section class=\"axo-stack\">",
+      "  <h2>Stacked content</h2>",
+      "  <p>Every direct child receives consistent rhythm.</p>",
+      "  <button class=\"axo-button\">Continue</button>",
+      "</section>"
+    ],
+    "classes": [
+      { "name": "axo-stack", "description": "Vertical flow utility for repeated blocks." },
+      { "name": "axo-section", "description": "Larger vertical spacing for page sections." },
+      { "name": "axo-form", "description": "Form-specific vertical stack with control spacing." }
+    ],
+    "options": [
+      { "name": "--axo-stack-gap", "description": "Controls the direct child gap inside a stack." },
+      { "name": "--axo-section-gap", "description": "Controls major section rhythm." },
+      { "name": "--axo-control-gap", "description": "Controls gaps inside form/control groups." }
+    ],
+    "example": [
+      "<article class=\"axo-card axo-surface axo-stack\">",
+      "  <h3>Release note</h3>",
+      "  <p>Keep content rhythm predictable.</p>",
+      "  <a class=\"axo-link\" href=\"#\">Read details</a>",
+      "</article>"
+    ],
+    "preview": [
+      "<article class=\"axo-card axo-surface axo-stack\">",
+      "  <h3>Stack preview</h3>",
+      "  <p>Spacing is applied by the parent utility.</p>",
+      "  <button class=\"axo-button\">Open</button>",
+      "</article>"
+    ]
+  },
+  {
+    "id": "sidebar",
+    "title": "Sidebar",
+    "category": "Components",
+    "overview": "Use Sidebar for app navigation, rail layouts, hover-expand menus, and fixed left or right panels.",
+    "template": [
+      "<aside class=\"axo-sidebar axo-sidebar-fixed axo-sidebar-fixed-left axo-sidebar-rail axo-sidebar-hover axo-surface\">",
+      "  <a class=\"axo-sidebar-item\" href=\"#dashboard\">Dashboard</a>",
+      "  <a class=\"axo-sidebar-item\" href=\"#cards\">Cards</a>",
+      "  <a class=\"axo-sidebar-item\" href=\"#settings\">Settings</a>",
+      "</aside>",
+      "",
+      "<main class=\"axo-sidebar-main axo-sidebar-main-offset-rail-left\">",
+      "  <section class=\"axo-card axo-surface\">Content</section>",
+      "</main>"
+    ],
+    "classes": [
+      { "name": "axo-shell", "description": "Flow layout wrapper for sidebar and main content." },
+      { "name": "axo-sidebar", "description": "Base sidebar container." },
+      { "name": "axo-sidebar-left", "description": "Places a flow sidebar on the left side." },
+      { "name": "axo-sidebar-right", "description": "Places a flow sidebar on the right side." },
+      { "name": "axo-sidebar-rail", "description": "Compresses sidebar to rail width." },
+      {
+        "name": "axo-sidebar-hover",
+        "description": "Expands rail sidebar on hover or keyboard focus."
+      },
+      { "name": "axo-sidebar-fixed", "description": "Pins sidebar to the viewport." },
+      {
+        "name": "axo-sidebar-main-offset-left",
+        "description": "Offsets main content by expanded sidebar width."
+      },
+      {
+        "name": "axo-sidebar-main-offset-rail-left",
+        "description": "Offsets main content by rail width."
+      },
+      {
+        "name": "axo-sidebar-item",
+        "description": "Menu item alignment and interaction structure."
+      }
+    ],
+    "options": [
+      { "name": "--axo-sidebar-width", "description": "Expanded sidebar width." },
+      { "name": "--axo-sidebar-rail-width", "description": "Collapsed rail width." },
+      { "name": "--axo-sidebar-gap", "description": "Gap between sidebar items." },
+      { "name": "--axo-sidebar-padding", "description": "Internal sidebar padding." },
+      { "name": "--axo-sidebar-transition", "description": "Width and motion transition timing." },
+      { "name": "--axo-sidebar-fixed-top", "description": "Top inset for fixed sidebar." }
+    ],
+    "example": [
+      "<div class=\"axo-shell\">",
+      "  <aside class=\"axo-sidebar axo-sidebar-rail axo-sidebar-hover axo-surface\">",
+      "    <a class=\"axo-sidebar-item\" href=\"#\">Dashboard</a>",
+      "    <a class=\"axo-sidebar-item\" href=\"#\">Settings</a>",
+      "  </aside>",
+      "  <main class=\"axo-sidebar-main\">Main content</main>",
+      "</div>"
+    ],
+    "preview": [
+      "<div class=\"docs-preview-shell\">",
+      "  <aside class=\"docs-preview-sidebar\">",
+      "    <a class=\"axo-sidebar-item axo-link\" href=\"#\">Dashboard</a>",
+      "    <a class=\"axo-sidebar-item axo-link\" href=\"#\">Cards</a>",
+      "    <a class=\"axo-sidebar-item axo-link\" href=\"#\">Settings</a>",
+      "  </aside>",
+      "  <main class=\"docs-preview-main axo-stack\">",
+      "    <h3>Sidebar preview</h3>",
+      "    <p>Main content is separated from navigation.</p>",
+      "  </main>",
+      "</div>"
+    ]
+  },
+  {
+    "id": "navbar",
+    "title": "Navbar",
+    "category": "Components",
+    "overview": "Use Navbar utilities for page headers with brand, search, navigation links, and action areas.",
+    "template": [
+      "<header class=\"axo-header axo-header-grid axo-surface\">",
+      "  <a class=\"axo-header-left axo-link\" href=\"/\">Axoloth</a>",
+      "  <label class=\"axo-searchbar axo-header-center\">",
+      "    <span class=\"axo-visually-hidden\">Search</span>",
+      "    <input class=\"axo-input\" type=\"search\" placeholder=\"Search\" />",
+      "  </label>",
+      "  <nav class=\"axo-header-nav axo-nav\">",
+      "    <ul class=\"axo-nav-list\">",
+      "      <li><a class=\"axo-link\" href=\"#docs\">Docs</a></li>",
+      "    </ul>",
+      "  </nav>",
+      "</header>"
+    ],
+    "classes": [
+      { "name": "axo-header", "description": "Base page header structure." },
+      {
+        "name": "axo-header-grid",
+        "description": "Grid header with left, center, nav, and right slots."
+      },
+      { "name": "axo-header-left", "description": "Left header slot." },
+      {
+        "name": "axo-header-center",
+        "description": "Center header slot for search or primary controls."
+      },
+      { "name": "axo-header-nav", "description": "Navigation slot inside header." },
+      { "name": "axo-header-right", "description": "Right action slot." },
+      { "name": "axo-nav", "description": "Navigation container structure." },
+      {
+        "name": "axo-nav-list",
+        "description": "Resets list style and lays nav items horizontally."
+      }
+    ],
+    "options": [
+      { "name": "--axo-header-height", "description": "Minimum header height." },
+      { "name": "--axo-header-gap", "description": "Gap between header slots." },
+      { "name": "--axo-header-center-width", "description": "Preferred width for center slot." },
+      { "name": "--axo-searchbar-width", "description": "Searchbar max width." }
+    ],
+    "example": [
+      "<nav class=\"axo-nav\">",
+      "  <ul class=\"axo-nav-list\">",
+      "    <li><a class=\"axo-link\" href=\"#intro\">Intro</a></li>",
+      "    <li><a class=\"axo-link\" href=\"#cards\">Cards</a></li>",
+      "  </ul>",
+      "</nav>"
+    ],
+    "preview": [
+      "<header class=\"axo-header axo-header-grid axo-surface\">",
+      "  <strong class=\"axo-header-left\">Axoloth</strong>",
+      "  <input class=\"axo-input axo-header-center\" placeholder=\"Search\" />",
+      "  <nav class=\"axo-header-nav axo-nav\"><ul class=\"axo-nav-list\"><li><a class=\"axo-link\" href=\"#\">Docs</a></li><li><a class=\"axo-link\" href=\"#\">Examples</a></li></ul></nav>",
+      "</header>"
+    ]
+  },
+  {
+    "id": "card",
+    "title": "Card",
+    "category": "Components",
+    "overview": "Use Card as a neutral content surface for repeated items, panels, settings blocks, and previews.",
+    "template": [
+      "<article class=\"axo-card axo-surface axo-rise axo-lift\">",
+      "  <h3>Card title</h3>",
+      "  <p>Content stays project-styled, while structure is handled by Axoloth.</p>",
+      "</article>"
+    ],
+    "classes": [
+      {
+        "name": "axo-card",
+        "description": "Neutral card shell with radius, border, padding, and transition."
+      },
+      { "name": "axo-surface", "description": "Adaptive neutral surface for card backgrounds." },
+      { "name": "axo-contrast", "description": "High contrast card surface." },
+      { "name": "axo-lift", "description": "Hover lift effect." },
+      { "name": "axo-glow", "description": "Subtle glow animation utility." }
+    ],
+    "options": [
+      { "name": "--axo-radius", "description": "Card radius." },
+      { "name": "--axo-border", "description": "Card border color." },
+      { "name": "--axo-card-padding", "description": "Card internal padding." },
+      { "name": "--axo-surface-bg", "description": "Surface background color." }
+    ],
+    "example": [
+      "<article class=\"axo-card axo-surface axo-stack\">",
+      "  <h3>Feature card</h3>",
+      "  <p>Use custom CSS or Tailwind for colors if needed.</p>",
+      "</article>"
+    ],
+    "preview": [
+      "<div class=\"docs-preview-strip\">",
+      "  <article class=\"docs-preview-panel axo-card axo-surface axo-rise axo-lift\"><h3>Surface</h3><p>Neutral card.</p></article>",
+      "  <article class=\"docs-preview-panel is-dark axo-card axo-contrast axo-pop\"><h3>Contrast</h3><p>High emphasis.</p></article>",
+      "</div>"
+    ]
+  },
+  {
+    "id": "bento",
+    "title": "Bento",
+    "category": "Components",
+    "overview": "Use Bento for responsive card grids where selected items can span wider or taller than normal cards.",
+    "template": [
+      "<section class=\"axo-bento\">",
+      "  <article class=\"axo-card axo-square axo-surface\">Square</article>",
+      "  <article class=\"axo-card axo-wide axo-surface\">Wide</article>",
+      "  <article class=\"axo-card axo-tall axo-contrast\">Tall</article>",
+      "  <article class=\"axo-card axo-large axo-surface\">Large</article>",
+      "</section>"
+    ],
+    "classes": [
+      { "name": "axo-bento", "description": "Responsive bento grid wrapper." },
+      { "name": "axo-square", "description": "Square card span." },
+      { "name": "axo-wide", "description": "Two-column card span when room exists." },
+      { "name": "axo-tall", "description": "Two-row card span when room exists." },
+      { "name": "axo-large", "description": "Two-column and two-row card span." },
+      { "name": "axo-stack", "description": "Vertical content rhythm inside bento cards." }
+    ],
+    "options": [
+      { "name": "--axo-gap", "description": "Bento grid gap." },
+      { "name": "--axo-row-min", "description": "Minimum row height." },
+      { "name": "--axo-card-padding", "description": "Padding inside each card." },
+      { "name": "--axo-radius", "description": "Radius for card corners." }
+    ],
+    "example": [
+      "<div class=\"axo-bento\">",
+      "  <div class=\"axo-card axo-wide axo-surface\">Wide</div>",
+      "  <div class=\"axo-card axo-tall axo-contrast\">Tall</div>",
+      "</div>"
+    ],
+    "preview": [
+      "<div class=\"axo-bento\">",
+      "  <article class=\"axo-card axo-square axo-surface\">Square</article>",
+      "  <article class=\"axo-card axo-wide axo-surface\">Wide</article>",
+      "  <article class=\"axo-card axo-tall axo-contrast\">Tall</article>",
+      "</div>"
+    ]
+  },
+  {
+    "id": "spacing",
+    "title": "Spacing",
+    "category": "Utilities",
+    "overview": "Use spacing utilities and CSS variables to keep page rhythm consistent without creating a full spacing framework.",
+    "template": [
+      "<main class=\"axo-page\" style=\"--axo-page-padding: 1.5rem;\">",
+      "  <section class=\"axo-container axo-section\" style=\"--axo-section-gap: 2rem;\">",
+      "    <div class=\"axo-stack\" style=\"--axo-stack-gap: 0.75rem;\">",
+      "      <h1>Spacing utility</h1>",
+      "      <p>Override variables locally when a section needs a different rhythm.</p>",
+      "    </div>",
+      "  </section>",
+      "</main>"
+    ],
+    "classes": [
+      { "name": "axo-page", "description": "Applies safe page padding and min height." },
+      { "name": "axo-section", "description": "Applies section-level vertical rhythm." },
+      { "name": "axo-stack", "description": "Controls vertical child spacing." },
+      { "name": "axo-cluster", "description": "Controls wrapping inline spacing." }
+    ],
+    "options": [
+      { "name": "--axo-page-padding", "description": "Page edge spacing." },
+      { "name": "--axo-section-gap", "description": "Gap between section children." },
+      { "name": "--axo-stack-gap", "description": "Gap between stacked children." },
+      { "name": "--axo-control-gap", "description": "Gap for grouped controls." }
+    ],
+    "example": [
+      "<div class=\"axo-stack\" style=\"--axo-stack-gap: 1rem;\">",
+      "  <p>First item</p>",
+      "  <p>Second item</p>",
+      "</div>"
+    ],
+    "preview": [
+      "<div class=\"axo-stack axo-card axo-surface\" style=\"--axo-stack-gap: 0.75rem;\">",
+      "  <strong>Stack gap</strong>",
+      "  <span>Item one</span>",
+      "  <span>Item two</span>",
+      "</div>"
+    ]
+  },
+  {
+    "id": "alignment",
+    "title": "Alignment",
+    "category": "Utilities",
+    "overview": "Use alignment utilities for common placement patterns such as rows, clusters, centered content, and adaptive groups.",
+    "template": [
+      "<div class=\"axo-cluster\">",
+      "  <a class=\"axo-link\" href=\"#\">Docs</a>",
+      "  <a class=\"axo-link\" href=\"#\">Examples</a>",
+      "  <button class=\"axo-button\">Install</button>",
+      "</div>"
+    ],
+    "classes": [
+      { "name": "axo-row", "description": "Single-line horizontal alignment with gap." },
+      {
+        "name": "axo-cluster",
+        "description": "Wrapping horizontal alignment for nav and actions."
+      },
+      { "name": "axo-center", "description": "Centers content within available space." },
+      {
+        "name": "axo-switcher",
+        "description": "Switches between horizontal and stacked layout based on available width."
+      }
+    ],
+    "options": [
+      { "name": "--axo-row-gap", "description": "Row spacing." },
+      { "name": "--axo-control-gap", "description": "Control group spacing." },
+      { "name": "--axo-container-width", "description": "Centered container width." }
+    ],
+    "example": [
+      "<div class=\"axo-row\">",
+      "  <span>Status</span>",
+      "  <button class=\"axo-button\">Refresh</button>",
+      "</div>"
+    ],
+    "preview": [
+      "<div class=\"docs-preview-row\">",
+      "  <span class=\"docs-kind\">Ready</span>",
+      "  <button class=\"axo-button\">Refresh</button>",
+      "  <a class=\"axo-link\" href=\"#\">Details</a>",
+      "</div>"
+    ]
+  },
+  {
+    "id": "responsive",
+    "title": "Responsive",
+    "category": "Utilities",
+    "overview": "Use responsive utilities for layout patterns that should adapt without hand-writing breakpoints for every page.",
+    "template": [
+      "<section class=\"axo-bento axo-container-query\">",
+      "  <article class=\"axo-card axo-surface\">One</article>",
+      "  <article class=\"axo-card axo-wide axo-surface\">Two</article>",
+      "</section>"
+    ],
+    "classes": [
+      {
+        "name": "axo-auto-grid",
+        "description": "Creates a responsive grid with minimum card width."
+      },
+      { "name": "axo-switcher", "description": "Switches child layout based on available width." },
+      { "name": "axo-reel", "description": "Horizontal overflow row for compact screens." },
+      { "name": "axo-hide-mobile", "description": "Hides content on small screens." },
+      { "name": "axo-show-mobile", "description": "Shows content only on small screens." }
+    ],
+    "options": [
+      { "name": "--axo-gap", "description": "General layout gap." },
+      { "name": "--axo-row-min", "description": "Minimum row height for bento layouts." },
+      { "name": "--axo-container-width", "description": "Responsive max width." }
+    ],
+    "example": [
+      "<div class=\"axo-auto-grid\">",
+      "  <article class=\"axo-card axo-surface\">Card</article>",
+      "  <article class=\"axo-card axo-surface\">Card</article>",
+      "</div>"
+    ],
+    "preview": [
+      "<div class=\"axo-bento\">",
+      "  <article class=\"axo-card axo-surface\">Responsive</article>",
+      "  <article class=\"axo-card axo-wide axo-surface\">Wide when there is room</article>",
+      "</div>"
+    ]
+  },
+  {
+    "id": "motion",
+    "title": "Motion",
+    "category": "Utilities",
+    "overview": "Use Motion utilities for simple CSS animation presets that can be combined with any layout or visual style.",
+    "template": [
+      "<article class=\"axo-card axo-surface axo-rise axo-lift axo-glow\">",
+      "  <h3>Motion card</h3>",
+      "  <p>Enter with rise, lift on hover, glow over time.</p>",
+      "</article>"
+    ],
+    "classes": [
+      { "name": "axo-fade", "description": "Fade-in animation." },
+      { "name": "axo-rise", "description": "Fade and rise entrance animation." },
+      { "name": "axo-pop", "description": "Scale-up entrance animation." },
+      { "name": "axo-lift", "description": "Hover lift interaction." },
+      { "name": "axo-glow", "description": "Animated glow shadow." },
+      { "name": "axo-shimmer", "description": "Animated shimmer overlay." }
+    ],
+    "options": [
+      { "name": "--axo-duration", "description": "Animation duration." },
+      { "name": "--axo-delay", "description": "Animation delay." },
+      { "name": "--axo-rise-distance", "description": "Distance for rise animation." },
+      { "name": "--axo-lift-distance", "description": "Hover lift distance." },
+      { "name": "--axo-glow-shadow", "description": "Glow shadow value." },
+      { "name": "--axo-shimmer-duration", "description": "Shimmer animation speed." }
+    ],
+    "example": ["<button class=\"axo-button axo-pop axo-lift\">Animated action</button>"],
+    "preview": [
+      "<div class=\"docs-preview-strip\">",
+      "  <article class=\"docs-preview-panel axo-card axo-surface axo-rise axo-lift\">Rise + lift</article>",
+      "  <article class=\"docs-preview-panel axo-card axo-surface axo-pop axo-glow\">Pop + glow</article>",
+      "  <article class=\"docs-preview-panel axo-card axo-surface axo-shimmer\">Shimmer</article>",
+      "</div>"
+    ]
+  }
+]
