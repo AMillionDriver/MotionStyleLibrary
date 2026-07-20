@@ -37,15 +37,34 @@ const utilityNames = new Set(utilityIndex.utilities.map((utility) => utility.nam
 assert(docsPageIds.size === docsPages.length, 'Docs page IDs must be unique.');
 
 docsPages.forEach((page) => {
-  ['id', 'title', 'category', 'overview', 'template', 'classes', 'options', 'example', 'preview'].forEach(
-    (field) => assert(page[field], `Docs page ${page.id || '<unknown>'} is missing ${field}.`)
+  [
+    'id',
+    'title',
+    'category',
+    'overview',
+    'template',
+    'classes',
+    'options',
+    'example',
+    'preview',
+  ].forEach((field) =>
+    assert(page[field], `Docs page ${page.id || '<unknown>'} is missing ${field}.`)
   );
-  assert(existsSync(resolve(docsDirectory, `docs/${page.id}/index.html`)), `Missing docs route: ${page.id}`);
+  assert(
+    existsSync(resolve(docsDirectory, `docs/${page.id}/index.html`)),
+    `Missing docs route: ${page.id}`
+  );
   page.classes.forEach((item) => {
-    assert(utilityNames.has(item.name), `Docs page ${page.id} references unknown class: ${item.name}`);
+    assert(
+      utilityNames.has(item.name),
+      `Docs page ${page.id} references unknown class: ${item.name}`
+    );
   });
   page.options.forEach((item) => {
-    assert(utilityNames.has(item.name), `Docs page ${page.id} references unknown option: ${item.name}`);
+    assert(
+      utilityNames.has(item.name),
+      `Docs page ${page.id} references unknown option: ${item.name}`
+    );
   });
 });
 
@@ -99,11 +118,14 @@ utilityIndex.utilities
       utility.deprecation?.removeIn,
       `Deprecated utility ${utility.name} has no removal version.`
     );
-});
+  });
 assert(indexHtml.includes('id="examples-table-body"'), 'Docs example table target is missing.');
 assert(indexHtml.includes('id="utilities-table-body"'), 'Docs utility table target is missing.');
 assert(indexHtml.includes('data-docs-sidebar'), 'Docs sidebar target is missing.');
 assert(indexHtml.includes('scripts/docs-sidebar.js'), 'Docs sidebar script is missing.');
+assert(indexHtml.includes('data-copy-code'), 'Install copy code target is missing.');
+assert(indexHtml.includes('id="docs-snackbar"'), 'Docs snackbar target is missing.');
+assert(indexHtml.includes('scripts/docs-copy.js'), 'Docs copy script is missing.');
 
 console.log(
   `Docs verified: ${examples.length} examples, ${docsPages.length} docs pages, and ${utilityIndex.utilities.length} generated utilities.`

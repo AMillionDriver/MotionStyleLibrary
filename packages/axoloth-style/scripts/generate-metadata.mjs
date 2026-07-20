@@ -159,6 +159,7 @@ function createReadmeReference(registry) {
 
   return [
     '<!-- AXOLOTH-REGISTRY:START -->',
+    '<!-- prettier-ignore-start -->',
     '',
     '_Generated from `metadata/registry.json`. Run `npm run generate` after changing the registry._',
     '',
@@ -170,6 +171,7 @@ function createReadmeReference(registry) {
     '| --- | --- | --- | --- | --- |',
     ...rows,
     '',
+    '<!-- prettier-ignore-end -->',
     '<!-- AXOLOTH-REGISTRY:END -->',
   ].join('\n');
 }

@@ -97,9 +97,7 @@ export function loadRegistry(extensionPath: string): AxolothRegistry {
   const data = JSON.parse(classRaw) as RawClassData;
   const variableData = JSON.parse(variableRaw) as RawVariableData;
   const behaviorData = JSON.parse(behaviorRegistryRaw) as RawBehaviorRegistryData;
-  const behaviorDeprecations = JSON.parse(
-    behaviorDeprecationsRaw
-  ) as RawBehaviorDeprecationData;
+  const behaviorDeprecations = JSON.parse(behaviorDeprecationsRaw) as RawBehaviorDeprecationData;
   const classMap = new Map(data.classes.map((entry) => [entry.name, entry]));
   const variableMap = new Map(variableData.variables.map((entry) => [entry.name, entry]));
   const deprecationMap = createBehaviorDeprecationMap(behaviorDeprecations.deprecations);
