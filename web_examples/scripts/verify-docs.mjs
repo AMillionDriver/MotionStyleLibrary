@@ -118,7 +118,7 @@ utilityIndex.utilities
       utility.deprecation?.removeIn,
       `Deprecated utility ${utility.name} has no removal version.`
     );
-  });
+});
 assert(indexHtml.includes('id="examples-table-body"'), 'Docs example table target is missing.');
 assert(indexHtml.includes('id="utilities-table-body"'), 'Docs utility table target is missing.');
 assert(indexHtml.includes('data-docs-sidebar'), 'Docs sidebar target is missing.');

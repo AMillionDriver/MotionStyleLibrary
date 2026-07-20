@@ -59,21 +59,12 @@
       "</div>"
     ],
     "classes": [
-      {
-        "name": "axo-row",
-        "description": "Horizontal layout for direct children with a shared gap."
-      },
-      {
-        "name": "axo-cluster",
-        "description": "Wrapping inline group for nav links, tags, and action rows."
-      }
+      { "name": "axo-row", "description": "Horizontal layout for direct children with a shared gap." },
+      { "name": "axo-cluster", "description": "Wrapping inline group for nav links, tags, and action rows." }
     ],
     "options": [
       { "name": "--axo-row-gap", "description": "Controls gap between row children." },
-      {
-        "name": "--axo-control-gap",
-        "description": "Controls gap for semantic controls and grouped actions."
-      }
+      { "name": "--axo-control-gap", "description": "Controls gap for semantic controls and grouped actions." }
     ],
     "example": [
       "<div class=\"axo-cluster\">",
