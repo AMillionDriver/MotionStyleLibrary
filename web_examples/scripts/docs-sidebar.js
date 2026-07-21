@@ -32,6 +32,8 @@ const openSidebarIcon =
   '<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 5h16v14H4zM9 5v14M13 9l3 3-3 3" /></svg>';
 const closeSidebarIcon =
   '<svg aria-hidden="true" viewBox="0 0 24 24"><path d="m7 7 10 10M17 7 7 17" /></svg>';
+const closeSidebarPanelIcon =
+  '<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 5h16v14H4zM9 5v14M16 9l-3 3 3 3" /></svg>';
 
 function normalizeDocsValue(value) {
   return String(value || '')
@@ -109,47 +111,56 @@ function renderDocsSidebar(groups) {
         aria-label="Close documentation sidebar"
         title="Close documentation sidebar"
       >
-        ${closeSidebarIcon}
+        <span class="docs-sidebar-close-default">${closeSidebarIcon}</span>
+        <span class="docs-sidebar-close-hover">${closeSidebarPanelIcon}</span>
       </button>
       <small>Focused pages for Axoloth layout, component, and utility patterns.</small>
     </div>
-    ${groups
-      .map(
-        (group) => `
-          <section class="docs-sidebar-group" data-docs-nav-group>
-            <p class="docs-sidebar-title">${escapeDocsHtml(group.title)}</p>
-            <ul class="docs-sidebar-list">
-              ${group.items
-                .map((item) => {
-                  const isActive = item.id === activeDocsItem;
-                  return `
-                    <li data-docs-nav-item="${escapeDocsHtml(
-                      `${group.title} ${item.label} ${item.badge}`
-                    )}">
-                      <a
-                        class="docs-sidebar-link"
-                        href="${escapeDocsHtml(resolveDocsPath(item.path))}"
-                        aria-label="${escapeDocsHtml(item.label)}"
-                        title="${escapeDocsHtml(item.label)}"
-                        ${isActive ? 'aria-current="page"' : ''}
-                      >
-                        ${getDocsIcon(item.id)}
-                        <span class="docs-sidebar-label">${escapeDocsHtml(item.label)}</span>
-                        <span class="docs-sidebar-badge">${escapeDocsHtml(item.badge)}</span>
-                      </a>
-                    </li>
-                  `;
-                })
-                .join('')}
-            </ul>
-          </section>
-        `
-      )
-      .join('')}
-    <p class="docs-sidebar-empty" hidden>No matching docs item.</p>
+    <div class="docs-sidebar-scroll" data-docs-sidebar-scroll>
+      ${groups
+        .map(
+          (group) => `
+            <section class="docs-sidebar-group" data-docs-nav-group>
+              <p class="docs-sidebar-title">${escapeDocsHtml(group.title)}</p>
+              <ul class="docs-sidebar-list">
+                ${group.items
+                  .map((item) => {
+                    const isActive = item.id === activeDocsItem;
+                    return `
+                      <li data-docs-nav-item="${escapeDocsHtml(
+                        `${group.title} ${item.label} ${item.badge}`
+                      )}">
+                        <a
+                          class="docs-sidebar-link"
+                          href="${escapeDocsHtml(resolveDocsPath(item.path))}"
+                          aria-label="${escapeDocsHtml(item.label)}"
+                          title="${escapeDocsHtml(item.label)}"
+                          ${isActive ? 'aria-current="page"' : ''}
+                        >
+                          ${getDocsIcon(item.id)}
+                          <span class="docs-sidebar-label">${escapeDocsHtml(item.label)}</span>
+                          <span class="docs-sidebar-badge">${escapeDocsHtml(item.badge)}</span>
+                        </a>
+                      </li>
+                    `;
+                  })
+                  .join('')}
+              </ul>
+            </section>
+          `
+        )
+        .join('')}
+      <p class="docs-sidebar-empty" hidden>No matching docs item.</p>
+    </div>
   `;
 
   setSidebarExpanded(isSidebarExpanded);
+
+  requestAnimationFrame(() => {
+    docsSidebar
+      .querySelector('.docs-sidebar-link[aria-current="page"]')
+      ?.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+  });
 }
 
 function filterDocsSidebar() {

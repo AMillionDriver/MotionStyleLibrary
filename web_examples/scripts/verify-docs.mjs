@@ -12,6 +12,8 @@ const utilityIndex = JSON.parse(
 );
 const indexHtml = readFileSync(resolve(docsDirectory, 'index.html'), 'utf8');
 const examplesScript = readFileSync(resolve(docsDirectory, 'scripts/examples.js'), 'utf8');
+const docsSidebarScript = readFileSync(resolve(docsDirectory, 'scripts/docs-sidebar.js'), 'utf8');
+const docsStyles = readFileSync(resolve(docsDirectory, 'styles/docs.css'), 'utf8');
 const behaviorGuideHtml = readFileSync(resolve(docsDirectory, 'docs/behavior/index.html'), 'utf8');
 const behaviorGuideScript = readFileSync(
   resolve(docsDirectory, 'scripts/behavior-guide.js'),
@@ -250,6 +252,15 @@ assert(
 assert(indexHtml.includes('id="utilities-table-body"'), 'Docs utility table target is missing.');
 assert(indexHtml.includes('data-docs-sidebar'), 'Docs sidebar target is missing.');
 assert(indexHtml.includes('scripts/docs-sidebar.js'), 'Docs sidebar script is missing.');
+assert(
+  docsSidebarScript.includes('data-docs-sidebar-scroll') &&
+    docsStyles.includes('.docs-sidebar-scroll'),
+  'Docs sidebar must expose an independently scrollable navigation region.'
+);
+assert(
+  docsSidebarScript.includes('docs-sidebar-close-hover'),
+  'Docs sidebar close control must expose its panel-close hover state.'
+);
 assert(indexHtml.includes('data-copy-code'), 'Install copy code target is missing.');
 assert(indexHtml.includes('id="docs-snackbar"'), 'Docs snackbar target is missing.');
 assert(indexHtml.includes('scripts/docs-copy.js'), 'Docs copy script is missing.');
