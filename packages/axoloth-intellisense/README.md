@@ -11,6 +11,7 @@ replacement and earliest removal version.
 ## Features
 
 - Completion for Axoloth utility classes in `class`, `className`, `class:list`, and CSS selectors.
+- Class completion and hover documentation include related `--axo-*` variables, defaults, descriptions, and a ready-to-edit CSS example when customization points exist.
 - Completion for known `data-axo-*` behavior attributes inside HTML-like opening tags.
 - Duplicate filtering inside the same class attribute.
 - Hover documentation for known `axo-*` classes, `--axo-*` variables, `data-axo-*` attributes, `axo:*` events, and `init*` behavior initializers.
@@ -48,6 +49,16 @@ Or in React:
 The extension only starts suggesting when the current token begins with `axo` or `axo-`, so normal classes like `axis-card` do not get noisy Axoloth suggestions.
 
 Unknown Axoloth classes show a warning. Use VS Code Quick Fix from the lightbulb, context menu, or keyboard shortcut to replace a typo like `axo-bentoo` with the nearest known class such as `axo-bento`.
+
+Hover a customizable class such as `axo-reel` to see its supported variables and current defaults:
+
+```css
+.axo-reel {
+  --axo-reel-item-width: 18rem;
+  --axo-reel-gap: 1rem;
+  --axo-reel-padding: 0;
+}
+```
 
 In CSS files, type an Axoloth variable:
 

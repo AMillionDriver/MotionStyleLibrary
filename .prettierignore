@@ -4,3 +4,14 @@ coverage/
 package-lock.json
 .eslintrc.cjs
 .env
+
+# Generated Axoloth metadata projections. Format is owned by the generators.
+packages/axoloth-style/metadata/classes.json
+packages/axoloth-style/metadata/utility-index.json
+packages/axoloth-style/metadata/variables.json
+packages/axoloth-intellisense/data/behavior.deprecations.json
+packages/axoloth-intellisense/data/behavior.registry.json
+packages/axoloth-intellisense/data/classes.json
+packages/axoloth-intellisense/data/css.customData.json
+packages/axoloth-intellisense/data/variables.json
+web_examples/data/utilities.json

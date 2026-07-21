@@ -1,6 +1,7 @@
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 import * as vscode from 'vscode';
+import { createRelatedVariablesMarkdown } from './classVariableGuidance';
 import { DeprecatableEntry, formatDeprecationSummary } from './deprecation';
 
 export interface AxolothClassEntry extends DeprecatableEntry {
@@ -8,7 +9,8 @@ export interface AxolothClassEntry extends DeprecatableEntry {
   module: string;
   category: string;
   description: string;
-  usage?: string;
+  usage: string;
+  relatedVariables: string[];
 }
 
 export interface AxolothVariableValueSuggestion {
@@ -167,7 +169,10 @@ function decorateBehaviorEntries(
   });
 }
 
-export function createClassDocumentation(entry: AxolothClassEntry): vscode.MarkdownString {
+export function createClassDocumentation(
+  entry: AxolothClassEntry,
+  variableMap: ReadonlyMap<string, AxolothVariableEntry>
+): vscode.MarkdownString {
   const markdown = new vscode.MarkdownString(undefined, true);
   markdown.isTrusted = false;
   markdown.appendMarkdown(`**${entry.name}**\n\n`);
@@ -177,9 +182,10 @@ export function createClassDocumentation(entry: AxolothClassEntry): vscode.Markd
   markdown.appendMarkdown(`Category: \`${entry.category}\`  \n`);
   markdown.appendMarkdown(`Module: \`${entry.module}\``);
 
-  if (entry.usage) {
-    markdown.appendMarkdown(`\n\n${entry.usage}`);
-  }
+  markdown.appendMarkdown(`\n\n${entry.usage}`);
+
+  const relatedVariables = createRelatedVariablesMarkdown(entry, variableMap);
+  if (relatedVariables) markdown.appendMarkdown(`\n\n${relatedVariables}`);
 
   return markdown;
 }

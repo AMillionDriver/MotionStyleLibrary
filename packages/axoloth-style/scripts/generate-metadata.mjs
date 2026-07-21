@@ -37,6 +37,37 @@ function assertUnique(items, label) {
   });
 }
 
+export function validateClassVariableRelations(registry) {
+  assert(Array.isArray(registry.classes), 'Registry classes must be an array.');
+  assert(Array.isArray(registry.variables), 'Registry variables must be an array.');
+
+  const registeredVariables = new Set(registry.variables.map((utility) => utility.name));
+
+  registry.classes.forEach((utility) => {
+    assert(
+      Array.isArray(utility.relatedVariables),
+      `Missing relatedVariables array for ${utility.name}`
+    );
+
+    const uniqueVariables = new Set(utility.relatedVariables);
+    assert(
+      uniqueVariables.size === utility.relatedVariables.length,
+      `Duplicate related variable for ${utility.name}`
+    );
+
+    utility.relatedVariables.forEach((variableName) => {
+      assert(
+        /^--axo-[a-z0-9]+(?:-[a-z0-9]+)*$/.test(variableName),
+        `Invalid related variable for ${utility.name}: ${variableName}`
+      );
+      assert(
+        registeredVariables.has(variableName),
+        `Unknown related variable for ${utility.name}: ${variableName}`
+      );
+    });
+  });
+}
+
 function validateRegistry(registry, packageData) {
   assert(registry.schemaVersion === 1, 'Unsupported registry schema version.');
   assert(registry.name === packageData.name, 'Registry package name does not match package.json.');
@@ -51,6 +82,7 @@ function validateRegistry(registry, packageData) {
   assert(Array.isArray(registry.variables), 'Registry variables must be an array.');
   assertUnique(registry.classes, 'class');
   assertUnique(registry.variables, 'variable');
+  validateClassVariableRelations(registry);
 
   const modules = new Set(registry.modules);
   registry.classes.forEach((utility) => {
@@ -67,6 +99,7 @@ function validateRegistry(registry, packageData) {
       typeof utility.description === 'string' && utility.description,
       `Missing description for ${utility.name}`
     );
+    assert(typeof utility.usage === 'string' && utility.usage, `Missing usage for ${utility.name}`);
   });
 
   registry.variables.forEach((utility) => {

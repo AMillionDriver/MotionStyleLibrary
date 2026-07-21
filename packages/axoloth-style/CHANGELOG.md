@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+## 0.10.0
+
+- Added explicit class-to-variable relationships for every public utility in the canonical registry.
+- Added metadata contract validation for missing, duplicate, malformed, and unknown related variables.
+
+## 0.9.0
+
 - Generalized `axo-container-responsive` across Bento, app shells, headers, form grids, and vertical tabs.
 - Added `axo-hide-compact`, `axo-show-compact`, and `--axo-show-compact-display` for container-aware visibility.
 - Added composition primitives for flow rhythm, intrinsic splits, content sidebars, aspect-ratio frames, overlay piles, gutter bleed, and bounded scroll areas.

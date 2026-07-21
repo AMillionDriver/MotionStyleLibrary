@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.0.23
+
+- Added related CSS variables, defaults, descriptions, and override guidance to class completion and hover documentation.
+- Added synchronized class-to-variable metadata contract coverage, including the `axo-reel` customization API.
+
 ## 0.0.22
 
 - Added synchronized metadata for generalized container-responsive layouts and compact visibility helpers.

@@ -37,11 +37,12 @@ engine.
 
 Use Axoloth classes for repeatable structure, then add a local class or adjust
 the documented `--axo-*` variables for the design details that belong to your
-project.
+project. Class metadata includes an explicit `relatedVariables` array, so tools
+can connect a utility to its supported customization points without parsing CSS.
 
 ## API Stability
 
-Axoloth `0.9.0` validates every public class and CSS variable against the
+Axoloth `0.10.0` validates every public class and CSS variable against the
 reviewed `0.5.0` API baseline. Utilities cannot be removed silently: renames
 must ship as documented aliases with machine-readable replacement and removal
 versions.
@@ -81,7 +82,7 @@ or CSS motion:
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@quertys/axoloth-style@0.9.0/src/axoloth.css"
+      href="https://cdn.jsdelivr.net/npm/@quertys/axoloth-style@0.10.0/src/axoloth.css"
     />
     <style>
       .project-card {
@@ -126,7 +127,7 @@ bundler:
 ```html
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/@quertys/axoloth-style@0.9.0/src/axoloth.css"
+  href="https://cdn.jsdelivr.net/npm/@quertys/axoloth-style@0.10.0/src/axoloth.css"
 />
 
 <div id="account-tabs" class="axo-tabs" data-axo-tabs>
@@ -293,7 +294,7 @@ For quick prototypes, you can load the published CSS from a CDN:
 ```html
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/@quertys/axoloth-style@0.9.0/src/axoloth.css"
+  href="https://cdn.jsdelivr.net/npm/@quertys/axoloth-style@0.10.0/src/axoloth.css"
 />
 ```
 
@@ -1244,7 +1245,7 @@ Or combine it with Tailwind, Bootstrap, UnoCSS, plain CSS modules, Sass, or any 
 
 _Generated from `metadata/registry.json`. Run `npm run generate` after changing the registry._
 
-Registry 0.9.0: **176 classes**, **195 CSS variables**, and **10 modules**.
+Registry 0.10.0: **176 classes**, **195 CSS variables**, and **10 modules**.
 
 ### Class Registry
 

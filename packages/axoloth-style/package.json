@@ -1,6 +1,6 @@
 {
   "name": "@quertys/axoloth-style",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "description": "CSS-first layout and motion utilities for app shells, bento grids, semantic controls, and animation presets.",
   "homepage": "https://amilliondriver.github.io/MotionStyleLibrary/",
   "repository": {
@@ -75,7 +75,7 @@
     "generate": "node scripts/generate-metadata.mjs",
     "check:metadata": "node scripts/generate-metadata.mjs --check",
     "check:api": "node scripts/check-api.mjs",
-    "test": "node --test scripts/api-contract.test.mjs",
+    "test": "node --test scripts/api-contract.test.mjs scripts/metadata-contract.test.mjs",
     "check": "npm run check:metadata && npm run check:api && npm test",
     "snapshot:api": "node scripts/snapshot-api.mjs"
   },

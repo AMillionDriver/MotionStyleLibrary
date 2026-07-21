@@ -81,7 +81,7 @@ export function createHoverProvider(registry: AxolothRegistry): vscode.HoverProv
         return undefined;
       }
 
-      return new vscode.Hover(createClassDocumentation(entry), range);
+      return new vscode.Hover(createClassDocumentation(entry, registry.variableMap), range);
     },
   };
 }
