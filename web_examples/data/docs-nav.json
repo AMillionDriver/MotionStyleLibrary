@@ -10,10 +10,22 @@
           "badge": "start"
         },
         {
+          "id": "mental-model",
+          "label": "What Axoloth Is",
+          "path": "#mental-model",
+          "badge": "scope"
+        },
+        {
           "id": "install",
           "label": "Install",
           "path": "#install",
           "badge": "npm"
+        },
+        {
+          "id": "vanilla-quick-start",
+          "label": "Vanilla Quick Start",
+          "path": "#vanilla-quick-start",
+          "badge": "html"
         }
       ]
     },

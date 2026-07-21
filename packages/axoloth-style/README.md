@@ -14,6 +14,31 @@ It is not a Tailwind replacement and it does not try to own your full visual the
 - Repository: [AMillionDriver/MotionStyleLibrary](https://github.com/AMillionDriver/MotionStyleLibrary)
 - VS Code Extension: [Axoloth IntelliSense](https://marketplace.visualstudio.com/items?itemName=quertys.axoloth-intellisense)
 
+## What Axoloth Is / Is Not
+
+Axoloth is a **pattern-level layout toolkit**. Its utilities describe reusable
+structures such as app shells, sidebars, bento grids, intrinsic compositions,
+semantic controls, and simple motion. It is designed to remove repetitive
+structural CSS while leaving the visual identity of a project under your
+control.
+
+Axoloth is **not** an atomic CSS framework or a Tailwind replacement. It does
+not provide a prefixed version of every CSS property, breakpoint prefixes such
+as `md:`, a complete typography scale, brand colors, or a build-time purge
+engine.
+
+| Axoloth owns                                         | Your project owns                                    |
+| ---------------------------------------------------- | ---------------------------------------------------- |
+| Reusable layout patterns and responsive structure    | Brand colors and visual direction                    |
+| Neutral controls, surfaces, and accessibility states | Typography, editorial hierarchy, and content styling |
+| CSS variables that tune supported patterns           | Project-specific components and one-off compositions |
+| Optional motion presets                              | Complex animation choreography                       |
+| Styling hooks for interactive components             | Application state, data, and business logic          |
+
+Use Axoloth classes for repeatable structure, then add a local class or adjust
+the documented `--axo-*` variables for the design details that belong to your
+project.
+
 ## API Stability
 
 Axoloth `0.9.0` validates every public class and CSS variable against the
@@ -40,27 +65,92 @@ For local package development inside this repository:
 npm install ./packages/axoloth-style
 ```
 
-## Quick Start
+## Vanilla Quick Starts
 
-Import the full CSS entry once in your app:
+### CSS Only
 
-```js
-import '@quertys/axoloth-style/axoloth.css';
-```
-
-Then use the `axo-*` utility classes in your markup:
+For plain HTML, load the published stylesheet and use `axo-*` classes. No
+JavaScript or build step is required for layout, surfaces, semantic controls,
+or CSS motion:
 
 ```html
-<div class="axo-theme-dark axo-bento">
-  <div class="axo-card axo-surface axo-wide axo-rise axo-lift">Bento wide</div>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@quertys/axoloth-style@0.9.0/src/axoloth.css"
+    />
+    <style>
+      .project-card {
+        background: #f7f7f4;
+        color: #171717;
+      }
+    </style>
+  </head>
+  <body class="axo-page">
+    <main class="axo-container axo-section">
+      <section class="axo-bento" aria-label="Featured work">
+        <article class="axo-card axo-wide axo-rise axo-lift project-card">
+          <h1>Project-owned visual identity</h1>
+          <p>Axoloth owns the responsive card structure.</p>
+        </article>
 
-  <div class="axo-card axo-contrast axo-tall axo-pop axo-glow">Bento tall</div>
-
-  <div class="axo-card axo-surface axo-square axo-fade">Bento square</div>
-</div>
+        <article class="axo-card axo-tall axo-surface">Neutral supporting card</article>
+      </section>
+    </main>
+  </body>
+</html>
 ```
 
-Axoloth Style gives these elements structure, responsive grid behavior, transitions, animations, and optional surface colors. The surface utilities are intentionally minimal, so you can still use your own CSS, Tailwind, Bootstrap, or design system for the final theme.
+In this example, `axo-page`, `axo-container`, `axo-bento`, and `axo-card`
+provide reusable structure. The local `project-card` class owns the custom
+colors. This is the intended composition model.
+
+### CSS + Axoloth Behavior
+
+Interactive components use the separate, optional
+`@quertys/axoloth-behavior` package. The CSS provides layout and state styles;
+the behavior package manages ARIA relationships, keyboard interaction, and
+component state.
+
+```bash
+npm install @quertys/axoloth-style @quertys/axoloth-behavior
+```
+
+The following example runs directly in a browser without a framework or
+bundler:
+
+```html
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@quertys/axoloth-style@0.9.0/src/axoloth.css"
+/>
+
+<div id="account-tabs" class="axo-tabs" data-axo-tabs>
+  <div class="axo-tab-list" aria-label="Account sections">
+    <button class="axo-tab" type="button" data-axo-tab="profile">Profile</button>
+    <button class="axo-tab" type="button" data-axo-tab="security">Security</button>
+  </div>
+
+  <section class="axo-tab-panel" data-axo-tab-panel="profile">Profile content</section>
+  <section class="axo-tab-panel" data-axo-tab-panel="security">Security content</section>
+</div>
+
+<script type="module">
+  import { initTabs } from 'https://cdn.jsdelivr.net/npm/@quertys/axoloth-behavior@0.6.0/src/tabs.js';
+
+  const tabs = initTabs();
+
+  // Call tabs.destroy() before replacing this document in a client-side app.
+</script>
+```
+
+Behavior never starts automatically. Initialize only the components you use,
+or import `initAxolothBehaviors` from the package root to initialize every
+supported behavior.
 
 ## CSS Entry Points
 
@@ -70,20 +160,33 @@ Use the full entry when you want everything:
 import '@quertys/axoloth-style/axoloth.css';
 ```
 
-Use smaller entries when you only need one module:
+`axoloth.css` is an aggregator that imports **every Axoloth CSS module**. It
+does not inspect your HTML, tree-shake selectors, or remove unused CSS. This is
+the simplest option for prototypes and applications that use several Axoloth
+patterns.
+
+Use focused entries when a page only needs specific capabilities:
 
 ```js
-import '@quertys/axoloth-style/accordion.css';
 import '@quertys/axoloth-style/bento.css';
-import '@quertys/axoloth-style/dialog.css';
-import '@quertys/axoloth-style/dropdown.css';
 import '@quertys/axoloth-style/layout.css';
 import '@quertys/axoloth-style/motion.css';
 import '@quertys/axoloth-style/semantic.css';
 import '@quertys/axoloth-style/surface.css';
+```
+
+Interactive component styles can be imported independently too:
+
+```js
+import '@quertys/axoloth-style/accordion.css';
+import '@quertys/axoloth-style/dialog.css';
+import '@quertys/axoloth-style/dropdown.css';
 import '@quertys/axoloth-style/tabs.css';
 import '@quertys/axoloth-style/toast.css';
 ```
+
+Do not import `axoloth.css` together with individual module entries. The full
+entry already includes them.
 
 Available package exports:
 
