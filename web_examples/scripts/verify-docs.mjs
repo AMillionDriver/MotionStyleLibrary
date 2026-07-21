@@ -126,6 +126,17 @@ assert(indexHtml.includes('scripts/docs-sidebar.js'), 'Docs sidebar script is mi
 assert(indexHtml.includes('data-copy-code'), 'Install copy code target is missing.');
 assert(indexHtml.includes('id="docs-snackbar"'), 'Docs snackbar target is missing.');
 assert(indexHtml.includes('scripts/docs-copy.js'), 'Docs copy script is missing.');
+assert(indexHtml.includes('id="mental-model"'), 'Docs mental model section is missing.');
+assert(indexHtml.includes('id="vanilla-css-only"'), 'Vanilla CSS-only quick start is missing.');
+assert(
+  indexHtml.includes('id="vanilla-with-behavior"'),
+  'Vanilla CSS-plus-behavior quick start is missing.'
+);
+assert(indexHtml.includes('id="css-entry-points"'), 'CSS entry-point guidance is missing.');
+assert(
+  indexHtml.includes('remove unused CSS automatically'),
+  'Full-entry unused CSS behavior must be explained.'
+);
 
 console.log(
   `Docs verified: ${examples.length} examples, ${docsPages.length} docs pages, and ${utilityIndex.utilities.length} generated utilities.`

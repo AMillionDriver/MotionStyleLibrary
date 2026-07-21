@@ -47,11 +47,52 @@
       <main class="docs-layout">
         <section id="introduction" class="docs-section">
           <p class="eyebrow">Introduction</p>
-          <h1>CSS-first utilities for layout and simple motion.</h1>
+          <h1>Pattern-level utilities for layout and simple motion.</h1>
           <p>
-            This page is the root index for Axoloth Style examples. Keep this page simple; each
-            example folder can be more visual and specific.
+            Axoloth packages recurring structures such as app shells, sidebars, bento grids,
+            intrinsic compositions, semantic controls, and motion presets into reusable CSS classes.
+            It gives projects a structural foundation without deciding their visual identity.
           </p>
+        </section>
+
+        <section id="mental-model" class="docs-section">
+          <p class="eyebrow">What Axoloth Is / Is Not</p>
+          <h2>A layout toolkit, not a Tailwind replacement.</h2>
+          <p>
+            Axoloth is pattern-level rather than atomic. It does not provide a class for every CSS
+            property, breakpoint prefixes such as <code>md:</code>, a complete brand theme, or a
+            build-time purge engine.
+          </p>
+
+          <div
+            class="table-wrap"
+            role="region"
+            aria-label="Axoloth responsibility boundary"
+            tabindex="0"
+          >
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Axoloth owns</th>
+                  <th scope="col">Your project owns</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Reusable structure and responsive layout patterns</td>
+                  <td>Brand colors, typography, and visual direction</td>
+                </tr>
+                <tr>
+                  <td>Neutral controls, surfaces, accessibility states, and simple motion</td>
+                  <td>Application state, business logic, and complex animation choreography</td>
+                </tr>
+                <tr>
+                  <td>Documented <code>--axo-*</code> variables for supported patterns</td>
+                  <td>One-off components and project-specific composition details</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </section>
 
         <section id="install" class="docs-section">
@@ -73,6 +114,89 @@
               tabindex="0"
             ><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@quertys/axoloth-style@0.9.0/src/axoloth.css"&gt;</code><span class="copy-code-status" aria-hidden="true">Copy</span></pre>
           </div>
+
+          <h3 id="css-entry-points">Choose a CSS entry point</h3>
+          <p>
+            <code>axoloth.css</code> imports every Axoloth CSS module. It does not inspect your
+            markup, tree-shake selectors, or remove unused CSS automatically. Use it when a page
+            needs several Axoloth features.
+          </p>
+          <p>
+            For a smaller, focused setup, import only the modules the page needs. Do not combine
+            these entries with <code>axoloth.css</code>, because the full entry already includes
+            them.
+          </p>
+          <div class="code-grid">
+            <pre
+              class="copy-code"
+              data-copy-code
+              role="button"
+              aria-label="Copy focused layout and motion imports"
+              tabindex="0"
+            ><code>import '@quertys/axoloth-style/layout.css';
+import '@quertys/axoloth-style/motion.css';</code><span class="copy-code-status" aria-hidden="true">Copy</span></pre>
+            <pre
+              class="copy-code"
+              data-copy-code
+              role="button"
+              aria-label="Copy focused component style imports"
+              tabindex="0"
+            ><code>import '@quertys/axoloth-style/semantic.css';
+import '@quertys/axoloth-style/surface.css';
+import '@quertys/axoloth-style/tabs.css';</code><span class="copy-code-status" aria-hidden="true">Copy</span></pre>
+          </div>
+        </section>
+
+        <section id="vanilla-quick-start" class="docs-section">
+          <p class="eyebrow">Vanilla Quick Starts</p>
+          <h2>Start with CSS, then add behavior only when needed.</h2>
+
+          <h3 id="vanilla-css-only">CSS only</h3>
+          <p>
+            Layout, surfaces, semantic controls, and CSS motion work without JavaScript. Axoloth
+            classes provide structure; a local class keeps the project-specific visual identity.
+          </p>
+          <pre
+            class="copy-code"
+            data-copy-code
+            role="button"
+            aria-label="Copy Vanilla CSS-only example"
+            tabindex="0"
+          ><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@quertys/axoloth-style@0.9.0/src/axoloth.css"&gt;
+
+&lt;main class="axo-page"&gt;
+  &lt;section class="axo-container axo-section"&gt;
+    &lt;article class="axo-card axo-surface axo-rise project-card"&gt;
+      Axoloth structure + project-owned styling
+    &lt;/article&gt;
+  &lt;/section&gt;
+&lt;/main&gt;</code><span class="copy-code-status" aria-hidden="true">Copy</span></pre>
+
+          <h3 id="vanilla-with-behavior">CSS + Axoloth Behavior</h3>
+          <p>
+            Interactive components need the separate behavior package. CSS does not initialize
+            <code>data-axo-*</code> attributes automatically; import and initialize the behavior
+            used by the page.
+          </p>
+          <pre
+            class="copy-code"
+            data-copy-code
+            role="button"
+            aria-label="Copy Vanilla tabs with behavior example"
+            tabindex="0"
+          ><code>&lt;div class="axo-tabs" data-axo-tabs&gt;
+  &lt;div class="axo-tab-list" aria-label="Sections"&gt;
+    &lt;button class="axo-tab" type="button" data-axo-tab="preview"&gt;Preview&lt;/button&gt;
+    &lt;button class="axo-tab" type="button" data-axo-tab="source"&gt;Source&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;section class="axo-tab-panel" data-axo-tab-panel="preview"&gt;Preview panel&lt;/section&gt;
+  &lt;section class="axo-tab-panel" data-axo-tab-panel="source"&gt;Source panel&lt;/section&gt;
+&lt;/div&gt;
+
+&lt;script type="module"&gt;
+  import { initTabs } from 'https://cdn.jsdelivr.net/npm/@quertys/axoloth-behavior@0.6.0/src/tabs.js';
+  initTabs();
+&lt;/script&gt;</code><span class="copy-code-status" aria-hidden="true">Copy</span></pre>
         </section>
 
         <section id="layout-examples" class="docs-section">

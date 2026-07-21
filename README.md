@@ -18,57 +18,96 @@ The repository also includes optional JavaScript behaviors, a VS Code IntelliSen
 | `@quertys/axoloth-behavior`                                                                                        | `0.6.0`         | Optional zero-dependency DOM behaviors for tabs, accordions, dropdowns, dialogs, drawers, sidebars, and toasts. |
 | [`quertys.axoloth-intellisense`](https://marketplace.visualstudio.com/items?itemName=quertys.axoloth-intellisense) | `0.0.22`        | VS Code support for `axo-*`, `--axo-*`, and `data-axo-*` authoring.                                             |
 
-## Install
+## What Axoloth Is / Is Not
 
-```bash
-npm install @quertys/axoloth-style
+Axoloth is a **pattern-level layout toolkit**. It packages recurring structures
+such as app shells, sidebars, bento grids, intrinsic compositions, semantic
+controls, and simple motion into reusable `axo-*` classes.
+
+Axoloth is not an atomic CSS framework or a Tailwind replacement. It does not
+offer a class for every CSS declaration, breakpoint prefixes such as `md:`, a
+complete design theme, or automatic unused-CSS removal.
+
+Axoloth owns reusable structure, responsive patterns, neutral control styling,
+and optional motion. The consuming project owns brand colors, typography,
+content styling, business logic, and one-off visual compositions.
+
+## Vanilla Quick Starts
+
+### CSS Only
+
+Plain HTML can use Axoloth directly from a pinned CDN URL. Layout and CSS motion
+do not require JavaScript:
+
+```html
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@quertys/axoloth-style@0.9.0/src/axoloth.css"
+/>
+
+<main class="axo-page">
+  <section class="axo-container axo-section">
+    <div class="axo-bento">
+      <article class="axo-card axo-wide axo-surface axo-rise axo-lift">
+        <h1>Responsive structure</h1>
+        <p>Add a local class when this card needs project-specific branding.</p>
+      </article>
+    </div>
+  </section>
+</main>
 ```
 
-Import the full CSS entry once:
+### CSS + Behavior
+
+Install the optional behavior package when tabs, accordions, dropdowns, dialogs,
+drawers, sidebars, or toasts need state and keyboard interaction:
+
+```bash
+npm install @quertys/axoloth-style @quertys/axoloth-behavior
+```
+
+For browser-native Vanilla JavaScript, import a pinned behavior module:
+
+```html
+<div class="axo-tabs" data-axo-tabs>
+  <div class="axo-tab-list" aria-label="Sections">
+    <button class="axo-tab" type="button" data-axo-tab="preview">Preview</button>
+    <button class="axo-tab" type="button" data-axo-tab="source">Source</button>
+  </div>
+  <section class="axo-tab-panel" data-axo-tab-panel="preview">Preview panel</section>
+  <section class="axo-tab-panel" data-axo-tab-panel="source">Source panel</section>
+</div>
+
+<script type="module">
+  import { initTabs } from 'https://cdn.jsdelivr.net/npm/@quertys/axoloth-behavior@0.6.0/src/tabs.js';
+
+  initTabs();
+</script>
+```
+
+Behavior is never initialized by the CSS package. Import and initialize only
+the components the page uses.
+
+### Bundler And Modular CSS
+
+With Vite or another bundler, import the complete stylesheet once:
 
 ```js
 import '@quertys/axoloth-style/axoloth.css';
 ```
 
-Or import a focused CSS module:
+The full `axoloth.css` entry imports every CSS module. It does not purge unused
+selectors. Use focused entries when a page only needs part of Axoloth:
 
 ```js
-import '@quertys/axoloth-style/bento.css';
 import '@quertys/axoloth-style/layout.css';
 import '@quertys/axoloth-style/motion.css';
 ```
 
-Install behavior only when interactive components need it:
-
-```bash
-npm install @quertys/axoloth-behavior
-```
-
-```js
-import { initTabs } from '@quertys/axoloth-behavior/tabs';
-
-const tabs = initTabs();
-```
-
-## Quick Example
-
-```html
-<main class="axo-page axo-theme-light">
-  <section class="axo-container axo-section">
-    <div class="axo-bento">
-      <article class="axo-card axo-wide axo-surface axo-rise axo-lift">
-        <h2>Responsive layout</h2>
-        <p>Axoloth handles structure. Your app keeps control of visual identity.</p>
-      </article>
-
-      <aside class="axo-card axo-tall axo-contrast axo-pop">
-        <h2>Sidebar card</h2>
-        <p>Combine layout, surface, and motion utilities as needed.</p>
-      </aside>
-    </div>
-  </section>
-</main>
-```
+Other focused entries include `bento.css`, `semantic.css`, `surface.css`,
+`accordion.css`, `dialog.css`, `dropdown.css`, `tabs.css`, and `toast.css`. Do
+not combine focused entries with `axoloth.css`, because the full entry already
+includes every module.
 
 ## What Axoloth Focuses On
 
