@@ -10,6 +10,19 @@ const utilityIndex = JSON.parse(
   readFileSync(resolve(docsDirectory, 'data/utilities.json'), 'utf8')
 );
 const indexHtml = readFileSync(resolve(docsDirectory, 'index.html'), 'utf8');
+const behaviorGuideHtml = readFileSync(resolve(docsDirectory, 'docs/behavior/index.html'), 'utf8');
+const behaviorGuideScript = readFileSync(
+  resolve(docsDirectory, 'scripts/behavior-guide.js'),
+  'utf8'
+);
+const behaviorReadme = readFileSync(
+  resolve(docsDirectory, '../packages/axoloth-behavior/README.md'),
+  'utf8'
+);
+const deployWorkflow = readFileSync(
+  resolve(docsDirectory, '../.github/workflows/deploy-docs-pages.yml'),
+  'utf8'
+);
 
 function assert(condition, message) {
   if (!condition) throw new Error(message);
@@ -136,6 +149,84 @@ assert(indexHtml.includes('id="css-entry-points"'), 'CSS entry-point guidance is
 assert(
   indexHtml.includes('remove unused CSS automatically'),
   'Full-entry unused CSS behavior must be explained.'
+);
+assert(
+  docsNavItems.some((item) => item.id === 'behavior' && item.path === 'docs/behavior/'),
+  'Behavior Guide must be discoverable from the docs navigation.'
+);
+assert(
+  indexHtml.includes('href="./docs/behavior/"'),
+  'The docs quick start must link to the complete Behavior Guide.'
+);
+
+[
+  'id="behavior-install"',
+  'id="initialize-all"',
+  'id="manual-initialization"',
+  'id="behavior-tabs"',
+  'id="behavior-accordion"',
+  'id="behavior-dialog"',
+  'id="behavior-drawer"',
+  'id="behavior-cleanup"',
+  'id="behavior-troubleshooting"',
+].forEach((marker) =>
+  assert(behaviorGuideHtml.includes(marker), `Behavior Guide is missing ${marker}.`)
+);
+
+[
+  '@quertys/axoloth-behavior/tabs',
+  '@quertys/axoloth-behavior/accordion',
+  '@quertys/axoloth-behavior/dialog',
+  '@quertys/axoloth-behavior/drawer',
+].forEach((entryPoint) =>
+  assert(
+    behaviorGuideHtml.includes(entryPoint),
+    `Behavior Guide is missing the per-component import ${entryPoint}.`
+  )
+);
+
+['data-axo-tabs', 'data-axo-accordion', 'data-axo-dialog-toggle', 'data-axo-drawer-toggle'].forEach(
+  (attribute) =>
+    assert(
+      behaviorGuideHtml.includes(attribute),
+      `Behavior Guide is missing runnable markup for ${attribute}.`
+    )
+);
+
+assert(
+  behaviorGuideHtml.includes('npm install @quertys/axoloth-style @quertys/axoloth-behavior'),
+  'Behavior Guide installation command is missing.'
+);
+assert(
+  behaviorGuideHtml.includes('cdn.jsdelivr.net/npm/@quertys/axoloth-behavior@0.6.0/src/index.js'),
+  'Behavior Guide CDN ES module setup is missing.'
+);
+assert(
+  behaviorGuideHtml.includes('initAxolothBehaviors') && behaviorGuideHtml.includes('destroy()'),
+  'Behavior Guide must show aggregate initialization and cleanup.'
+);
+assert(
+  behaviorGuideHtml.includes('The package does not auto-initialize'),
+  'Behavior Guide troubleshooting must explain explicit initialization.'
+);
+assert(
+  behaviorGuideScript.includes('initAxolothBehaviors(demoRoot)'),
+  'Behavior Guide live demos must initialize through the framework-free package API.'
+);
+assert(
+  behaviorGuideScript.includes('behaviors.destroy()'),
+  'Behavior Guide live demos must clean up their controller.'
+);
+assert(
+  behaviorReadme.includes('CSS alone never initializes JavaScript behavior') &&
+    behaviorReadme.includes('## CDN / Native ES Modules') &&
+    behaviorReadme.includes('## Troubleshooting'),
+  'Behavior package README is missing the style/behavior boundary or setup guidance.'
+);
+assert(
+  deployWorkflow.includes('packages/axoloth-behavior/src/**') &&
+    deployWorkflow.includes('packages/axoloth-behavior/src'),
+  'GitHub Pages must deploy the behavior source used by the live guide.'
 );
 
 console.log(

@@ -86,7 +86,10 @@ For browser-native Vanilla JavaScript, import a pinned behavior module:
 ```
 
 Behavior is never initialized by the CSS package. Import and initialize only
-the components the page uses.
+the components the page uses. See the
+[Behavior Guide](https://amilliondriver.github.io/MotionStyleLibrary/docs/behavior/)
+for installation, initialize-all and per-component patterns, cleanup,
+troubleshooting, and runnable Vanilla examples.
 
 ### Bundler And Modular CSS
 

@@ -4,6 +4,12 @@ Optional zero-dependency JavaScript behaviors for `@quertys/axoloth-style`.
 
 Axoloth Behavior keeps interactive state separate from the CSS-first package. Install it only when a layout needs tabs, accordions, dropdowns, toasts, drawers, an off-canvas sidebar, or a dialog. The package is framework-neutral and works with plain HTML, React, Vue, Svelte, Angular, or any DOM-based application.
 
+> Axoloth Style provides layout and presentation. Axoloth Behavior attaches interaction to
+> `data-axo-*` attributes. Importing the CSS alone never initializes JavaScript behavior.
+
+Read the [Behavior Guide and live Vanilla demos](https://amilliondriver.github.io/MotionStyleLibrary/docs/behavior/)
+for runnable tabs, accordion, dialog, and drawer examples.
+
 ## API Stability
 
 Version `0.6.0` validates package exports, initializers, declarative attributes,
@@ -17,7 +23,47 @@ and custom events against the reviewed `0.4.0` baseline. Read
 npm install @quertys/axoloth-style @quertys/axoloth-behavior
 ```
 
-Import the Axoloth CSS once, then initialize only the behavior you use:
+## Initialize Everything
+
+Import the Axoloth CSS once, then initialize the behavior package after the DOM is available:
+
+```js
+import '@quertys/axoloth-style/axoloth.css';
+import { initAxolothBehaviors } from '@quertys/axoloth-behavior';
+
+const axoloth = initAxolothBehaviors();
+
+// Remove every listener when the page or application is disposed.
+window.addEventListener('pagehide', () => axoloth.destroy(), { once: true });
+```
+
+`initAxolothBehaviors()` initializes every exported behavior and returns their controllers under
+`accordion`, `dialog`, `drawer`, `dropdown`, `offcanvas`, `tabs`, and `toast`.
+
+## CDN / Native ES Modules
+
+No bundler is required. Load the CSS with a stylesheet link and import the JavaScript from an ES
+module script:
+
+```html
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@quertys/axoloth-style@0.9.0/src/axoloth.css"
+/>
+
+<script type="module">
+  import { initAxolothBehaviors } from 'https://cdn.jsdelivr.net/npm/@quertys/axoloth-behavior@0.6.0/src/index.js';
+
+  const axoloth = initAxolothBehaviors();
+  window.addEventListener('pagehide', () => axoloth.destroy(), { once: true });
+</script>
+```
+
+Pin both versions in production so a future release cannot change a deployed page unexpectedly.
+
+## Initialize One Behavior
+
+Import only the behavior used by the page when you want a smaller, explicit setup:
 
 ```js
 import '@quertys/axoloth-style/axoloth.css';
@@ -41,6 +87,21 @@ const toast = initToast();
 All initializers accept an optional root as their first argument and options as
 their second argument. For example, configure Toast with
 `initToast(document, { duration: 4500, limit: 3 })`.
+
+Scope an initializer to one part of a page and clean it up independently:
+
+```js
+import { initTabs } from '@quertys/axoloth-behavior/tabs';
+
+const accountSection = document.querySelector('#account-section');
+const tabs = initTabs(accountSection);
+
+// Re-scan after adding matching markup dynamically.
+tabs.refresh();
+
+// Remove listeners before replacing or unmounting the section.
+tabs.destroy();
+```
 
 ## Tabs
 
@@ -308,18 +369,42 @@ dialogElement.addEventListener('axo:dialog-close', () => {
 
 Off-canvas controllers dispatch `axo:offcanvas-open` and `axo:offcanvas-close`.
 
-## Initialize All Available Behaviors
+## Troubleshooting
 
-```js
-import { initAxolothBehaviors } from '@quertys/axoloth-behavior';
+### `data-axo-*` attributes do nothing
 
-const axoloth = initAxolothBehaviors();
+The package intentionally does not auto-initialize. Confirm that the behavior package is imported
+from a `<script type="module">` or your bundler entry and that an initializer runs after the markup
+exists.
 
-// Remove all listeners during app cleanup.
-axoloth.destroy();
-```
+### The component is styled but not interactive
 
-The package does not auto-initialize and does not run during server-side rendering. You keep control over when behavior is attached and destroyed.
+`@quertys/axoloth-style` only supplies CSS. Install or load `@quertys/axoloth-behavior`, then call
+`initAxolothBehaviors()` or the matching component initializer.
+
+### A trigger cannot find its panel
+
+Target values must match exactly. For example, `data-axo-drawer-toggle="menu"` controls
+`data-axo-drawer-id="menu"`; a tab value must match its `data-axo-tab-panel` value.
+
+### Dynamically added markup is ignored
+
+Call the controller's `refresh()` method after inserting new tabs, accordion items, dropdowns, or
+toast regions. Dialog, drawer, and off-canvas controllers use delegated events and can discover
+matching targets when they are triggered.
+
+### An interaction fires twice
+
+The same root was probably initialized more than once. Keep the returned controller and call
+`destroy()` before initializing it again.
+
+### Server-rendered code cannot access `document`
+
+Run initializers only on the client after the DOM exists. Calling an initializer without a DOM
+returns a safe empty controller, but your own selectors must also stay inside the client lifecycle.
+
+The package never auto-initializes and never owns your application lifecycle. You decide when
+behavior is attached, refreshed, and destroyed.
 
 ## License
 

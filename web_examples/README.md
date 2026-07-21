@@ -11,12 +11,14 @@ web_examples/
 |-- scripts/examples.js
 |-- scripts/docs-sidebar.js
 |-- scripts/component-docs.js
+|-- scripts/behavior-guide.js
 |-- scripts/theme.js
 |-- data/examples.json
 |-- data/docs-nav.json
 |-- data/docs-pages.json
 |-- data/utilities.json
 |-- docs/
+|   |-- behavior/
 |   |-- sidebar/
 |   |-- container/
 |   |-- stack/
@@ -61,6 +63,11 @@ Focused docs pages use:
 ```html
 <link rel="stylesheet" href="../../../packages/axoloth-style/src/axoloth.css" />
 ```
+
+The Behavior Guide loads the repository's framework-free ES module source for its live demos. The
+GitHub Pages workflow copies both package sources into the deployment artifact. Public copyable
+examples use pinned jsDelivr URLs for `@quertys/axoloth-style` and
+`@quertys/axoloth-behavior`.
 
 For a standalone GitHub Pages deployment, replace those links with the published
 CDN version:

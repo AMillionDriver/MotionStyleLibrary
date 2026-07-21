@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Install, initialize, debug, and clean up Axoloth Behavior in framework-free Vanilla JavaScript."
+    />
+    <link rel="stylesheet" href="../../../packages/axoloth-style/src/axoloth.css" />
+    <link rel="stylesheet" href="../../styles/docs.css" />
+    <title>Behavior Guide - Axoloth Style Docs</title>
+  </head>
+  <body data-docs-active="behavior" data-docs-page="behavior">
+    <header class="docs-topbar">
+      <a class="brand axo-link" href="../../#introduction">Axoloth Style</a>
+      <button
+        id="docs-sidebar-toggle"
+        class="docs-button docs-menu-button"
+        type="button"
+        aria-controls="docs-sidebar"
+        aria-expanded="false"
+      >
+        Menu
+      </button>
+      <label class="docs-search"
+        ><span class="sr-only">Search docs</span
+        ><input id="example-search" type="search" placeholder="Search docs" autocomplete="off"
+      /></label>
+      <button id="theme-toggle" class="docs-button" type="button">Dark Mode</button>
+    </header>
+
+    <div class="docs-shell">
+      <aside id="docs-sidebar" class="docs-sidebar" data-docs-sidebar></aside>
+
+      <main class="docs-layout" data-behavior-demos>
+        <section id="behavior-overview" class="docs-section">
+          <p class="eyebrow">Behavior / Overview</p>
+          <h1>Make <code>data-axo-*</code> interactive.</h1>
+          <p>
+            Axoloth Style and Axoloth Behavior are deliberately separate. CSS supplies layout and
+            presentation. The optional JavaScript package reads declarative attributes, manages
+            accessible state, and returns controllers you can refresh or destroy.
+          </p>
+
+          <div class="docs-detail-grid behavior-responsibility-grid">
+            <article>
+              <p class="eyebrow">Style package</p>
+              <h2>Structure and appearance</h2>
+              <ul class="docs-doc-list">
+                <li><code>axo-tabs</code><small>Layout and visual states.</small></li>
+                <li><code>axo-dialog</code><small>Layer positioning and transitions.</small></li>
+                <li><code>axo-drawer</code><small>Drawer placement and open classes.</small></li>
+              </ul>
+            </article>
+            <article>
+              <p class="eyebrow">Behavior package</p>
+              <h2>State and interaction</h2>
+              <ul class="docs-doc-list">
+                <li>
+                  <code>data-axo-*</code><small>Connects triggers, panels, and targets.</small>
+                </li>
+                <li><code>init*</code><small>Attaches event listeners and ARIA state.</small></li>
+                <li><code>destroy()</code><small>Removes listeners during cleanup.</small></li>
+              </ul>
+            </article>
+          </div>
+
+          <p class="behavior-callout">
+            Attributes do nothing until an initializer runs. The package never auto-initializes.
+          </p>
+        </section>
+
+        <section id="behavior-install" class="docs-section">
+          <p class="eyebrow">Install</p>
+          <h2>Choose npm or native ES modules.</h2>
+
+          <div class="code-grid">
+            <div>
+              <h3>npm and a bundler</h3>
+              <pre
+                class="copy-code"
+                data-copy-code
+                role="button"
+                aria-label="Copy behavior npm installation"
+                tabindex="0"
+              ><code>npm install @quertys/axoloth-style @quertys/axoloth-behavior</code><span class="copy-code-status" aria-hidden="true">Copy</span></pre>
+            </div>
+
+            <div>
+              <h3>CDN and native ES modules</h3>
+              <pre
+                class="copy-code"
+                data-copy-code
+                role="button"
+                aria-label="Copy behavior CDN setup"
+                tabindex="0"
+              ><code>&lt;link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@quertys/axoloth-style@0.9.0/src/axoloth.css"
+/&gt;
+
+&lt;script type="module"&gt;
+  import { initAxolothBehaviors } from
+    'https://cdn.jsdelivr.net/npm/@quertys/axoloth-behavior@0.6.0/src/index.js';
+
+  const axoloth = initAxolothBehaviors();
+  window.addEventListener('pagehide', () =&gt; axoloth.destroy(), { once: true });
+&lt;/script&gt;</code><span class="copy-code-status" aria-hidden="true">Copy</span></pre>
+            </div>
+          </div>
+          <p>Pin both package versions for predictable production deployments.</p>
+        </section>
+
+        <section id="initialize-all" class="docs-section">
+          <p class="eyebrow">Initialize Everything</p>
+          <h2>One call for every available behavior.</h2>
+          <p>
+            Call the root initializer after the DOM exists. It returns the individual controllers
+            plus one aggregate <code>destroy()</code> method.
+          </p>
+          <pre
+            class="copy-code"
+            data-copy-code
+            role="button"
+            aria-label="Copy initialize all behaviors example"
+            tabindex="0"
+          ><code>import '@quertys/axoloth-style/axoloth.css';
+import { initAxolothBehaviors } from '@quertys/axoloth-behavior';
+
+const axoloth = initAxolothBehaviors();
+
+// Available controllers:
+axoloth.tabs.refresh();
+axoloth.accordion.refresh();
+
+// Remove every listener when this page or view is disposed.
+window.addEventListener('pagehide', () =&gt; axoloth.destroy(), { once: true });</code><span class="copy-code-status" aria-hidden="true">Copy</span></pre>
+          <p class="behavior-status" data-behavior-status role="status" aria-live="polite">
+            Initializing behavior demos...
+          </p>
+        </section>
+
+        <section id="manual-initialization" class="docs-section">
+          <p class="eyebrow">Manual Initialization</p>
+          <h2>Import only the component you use.</h2>
+          <p>
+            Every initializer accepts an optional root. Scoping to a section keeps ownership and
+            cleanup explicit in multi-page apps or component systems.
+          </p>
+          <pre
+            class="copy-code"
+            data-copy-code
+            role="button"
+            aria-label="Copy manual behavior imports"
+            tabindex="0"
+          ><code>import { initTabs } from '@quertys/axoloth-behavior/tabs';
+import { initAccordion } from '@quertys/axoloth-behavior/accordion';
+import { initDialog } from '@quertys/axoloth-behavior/dialog';
+import { initDrawer } from '@quertys/axoloth-behavior/drawer';
+
+const feature = document.querySelector('#account-feature');
+const controllers = [
+  initTabs(feature),
+  initAccordion(feature),
+  initDialog(feature),
+  initDrawer(feature),
+];
+
+// Call refresh() after inserting new matching markup.
+controllers[0].refresh();
+controllers[1].refresh();
+
+// Clean up before replacing or unmounting the feature.
+controllers.forEach((controller) =&gt; controller.destroy());</code><span class="copy-code-status" aria-hidden="true">Copy</span></pre>
+        </section>
+
+        <section id="behavior-tabs" class="docs-section">
+          <p class="eyebrow">Vanilla Example 01</p>
+          <h2>Tabs</h2>
+          <p>
+            Matching <code>data-axo-tab</code> and <code>data-axo-tab-panel</code> values connect
+            each trigger to its panel. Arrow keys, Home, and End are supported.
+          </p>
+
+          <div class="behavior-example-grid">
+            <pre
+              class="copy-code"
+              data-copy-code
+              role="button"
+              aria-label="Copy complete Vanilla tabs example"
+              tabindex="0"
+            ><code>&lt;div id="account-tabs" class="axo-tabs" data-axo-tabs&gt;
+  &lt;div class="axo-tab-list" aria-label="Account sections"&gt;
+    &lt;button class="axo-tab" type="button"
+      data-axo-tab="profile" aria-selected="true"&gt;Profile&lt;/button&gt;
+    &lt;button class="axo-tab" type="button"
+      data-axo-tab="security"&gt;Security&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;section class="axo-tab-panel" data-axo-tab-panel="profile"&gt;
+    Profile content
+  &lt;/section&gt;
+  &lt;section class="axo-tab-panel" data-axo-tab-panel="security"&gt;
+    Security content
+  &lt;/section&gt;
+&lt;/div&gt;
+
+&lt;script type="module"&gt;
+  import { initTabs } from
+    'https://cdn.jsdelivr.net/npm/@quertys/axoloth-behavior@0.6.0/src/tabs.js';
+  const tabs = initTabs(document.querySelector('#account-tabs'));
+  window.addEventListener('pagehide', () =&gt; tabs.destroy(), { once: true });
+&lt;/script&gt;</code><span class="copy-code-status" aria-hidden="true">Copy</span></pre>
+
+            <div class="docs-preview behavior-demo" aria-label="Interactive tabs preview">
+              <div id="behavior-tabs-demo" class="axo-tabs" data-axo-tabs>
+                <div class="axo-tab-list" aria-label="Demo account sections">
+                  <button class="axo-tab" type="button" data-axo-tab="profile" aria-selected="true">
+                    Profile
+                  </button>
+                  <button class="axo-tab" type="button" data-axo-tab="security">Security</button>
+                </div>
+                <section class="axo-tab-panel" data-axo-tab-panel="profile">
+                  <h3>Profile</h3>
+                  <p>Update the public information shown on your account.</p>
+                </section>
+                <section class="axo-tab-panel" data-axo-tab-panel="security">
+                  <h3>Security</h3>
+                  <p>Review passkeys and active sessions.</p>
+                </section>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="behavior-accordion" class="docs-section">
+          <p class="eyebrow">Vanilla Example 02</p>
+          <h2>Accordion</h2>
+          <p>
+            Each trigger and panel share an identifier. The default group keeps one item open and
+            remains collapsible.
+          </p>
+
+          <div class="behavior-example-grid">
+            <pre
+              class="copy-code"
+              data-copy-code
+              role="button"
+              aria-label="Copy complete Vanilla accordion example"
+              tabindex="0"
+            ><code>&lt;div id="faq" class="axo-accordion" data-axo-accordion&gt;
+  &lt;section class="axo-accordion-item axo-surface"&gt;
+    &lt;h3&gt;
+      &lt;button class="axo-accordion-trigger" type="button"
+        data-axo-accordion-trigger="install" aria-expanded="true"&gt;
+        How do I install it?
+        &lt;span class="axo-accordion-indicator" aria-hidden="true"&gt;+&lt;/span&gt;
+      &lt;/button&gt;
+    &lt;/h3&gt;
+    &lt;div class="axo-accordion-panel"
+      data-axo-accordion-panel="install"&gt;Install both packages with npm.&lt;/div&gt;
+  &lt;/section&gt;
+&lt;/div&gt;
+
+&lt;script type="module"&gt;
+  import { initAccordion } from
+    'https://cdn.jsdelivr.net/npm/@quertys/axoloth-behavior@0.6.0/src/accordion.js';
+  const accordion = initAccordion(document.querySelector('#faq'));
+  window.addEventListener('pagehide', () =&gt; accordion.destroy(), { once: true });
+&lt;/script&gt;</code><span class="copy-code-status" aria-hidden="true">Copy</span></pre>
+
+            <div class="docs-preview behavior-demo" aria-label="Interactive accordion preview">
+              <div id="behavior-accordion-demo" class="axo-accordion" data-axo-accordion>
+                <section class="axo-accordion-item axo-surface">
+                  <h3>
+                    <button
+                      class="axo-accordion-trigger"
+                      type="button"
+                      data-axo-accordion-trigger="install"
+                      aria-expanded="true"
+                    >
+                      How do I install it?
+                      <span class="axo-accordion-indicator" aria-hidden="true">+</span>
+                    </button>
+                  </h3>
+                  <div class="axo-accordion-panel" data-axo-accordion-panel="install">
+                    Install both packages, then initialize behavior after the DOM exists.
+                  </div>
+                </section>
+                <section class="axo-accordion-item axo-surface">
+                  <h3>
+                    <button
+                      class="axo-accordion-trigger"
+                      type="button"
+                      data-axo-accordion-trigger="cleanup"
+                    >
+                      When should I clean up?
+                      <span class="axo-accordion-indicator" aria-hidden="true">+</span>
+                    </button>
+                  </h3>
+                  <div class="axo-accordion-panel" data-axo-accordion-panel="cleanup">
+                    Call destroy before replacing the initialized root or leaving the view.
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="behavior-dialog" class="docs-section">
+          <p class="eyebrow">Vanilla Example 03</p>
+          <h2>Dialog</h2>
+          <p>
+            The controller handles ARIA state, focus trapping, Escape, backdrop dismissal, body
+            scroll locking, and focus return.
+          </p>
+
+          <div class="behavior-example-grid">
+            <pre
+              class="copy-code"
+              data-copy-code
+              role="button"
+              aria-label="Copy complete Vanilla dialog example"
+              tabindex="0"
+            ><code>&lt;div id="dialog-example"&gt;
+  &lt;button type="button" class="axo-button"
+    data-axo-dialog-toggle="confirm-dialog"
+    aria-controls="confirm-dialog" aria-expanded="false"&gt;Open dialog&lt;/button&gt;
+  &lt;div id="confirm-dialog" class="axo-dialog"
+    data-axo-dialog-id="confirm-dialog"
+    aria-labelledby="confirm-title" aria-hidden="true"&gt;
+    &lt;div class="axo-dialog-backdrop"
+      data-axo-dialog-dismiss="confirm-dialog" aria-hidden="true"&gt;&lt;/div&gt;
+    &lt;section class="axo-dialog-panel axo-surface"&gt;
+      &lt;header class="axo-dialog-header"&gt;
+        &lt;h2 id="confirm-title"&gt;Confirm action&lt;/h2&gt;
+      &lt;/header&gt;
+      &lt;div class="axo-dialog-body"&gt;This dialog traps focus while open.&lt;/div&gt;
+      &lt;footer class="axo-dialog-footer"&gt;
+        &lt;button class="axo-button" type="button"
+          data-axo-dialog-dismiss="confirm-dialog"&gt;Close&lt;/button&gt;
+      &lt;/footer&gt;
+    &lt;/section&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script type="module"&gt;
+  import { initDialog } from
+    'https://cdn.jsdelivr.net/npm/@quertys/axoloth-behavior@0.6.0/src/dialog.js';
+  const dialog = initDialog(document.querySelector('#dialog-example'));
+  window.addEventListener('pagehide', () =&gt; dialog.destroy(), { once: true });
+&lt;/script&gt;</code><span class="copy-code-status" aria-hidden="true">Copy</span></pre>
+
+            <div
+              id="behavior-dialog-example"
+              class="docs-preview behavior-demo"
+              aria-label="Interactive dialog preview"
+            >
+              <h3>Dialog preview</h3>
+              <p>Open the layer, press Tab, then close it with Escape or the backdrop.</p>
+              <button
+                class="axo-button"
+                type="button"
+                data-axo-dialog-toggle="behavior-confirm-dialog"
+                aria-controls="behavior-confirm-dialog"
+                aria-expanded="false"
+              >
+                Open dialog
+              </button>
+              <div
+                id="behavior-confirm-dialog"
+                class="axo-dialog"
+                data-axo-dialog-id="behavior-confirm-dialog"
+                aria-labelledby="behavior-dialog-title"
+                aria-hidden="true"
+              >
+                <div
+                  class="axo-dialog-backdrop"
+                  data-axo-dialog-dismiss="behavior-confirm-dialog"
+                  aria-hidden="true"
+                ></div>
+                <section class="axo-dialog-panel axo-surface">
+                  <header class="axo-dialog-header">
+                    <h2 id="behavior-dialog-title">Confirm action</h2>
+                  </header>
+                  <div class="axo-dialog-body">
+                    Focus stays inside this dialog while it is open.
+                  </div>
+                  <footer class="axo-dialog-footer">
+                    <button
+                      class="axo-button"
+                      type="button"
+                      data-axo-dialog-dismiss="behavior-confirm-dialog"
+                    >
+                      Close
+                    </button>
+                  </footer>
+                </section>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="behavior-drawer" class="docs-section">
+          <p class="eyebrow">Vanilla Example 04</p>
+          <h2>Drawer</h2>
+          <p>
+            Matching toggle, target, and dismiss values create a temporary viewport panel with focus
+            management and a dismissible backdrop.
+          </p>
+
+          <div class="behavior-example-grid">
+            <pre
+              class="copy-code"
+              data-copy-code
+              role="button"
+              aria-label="Copy complete Vanilla drawer example"
+              tabindex="0"
+            ><code>&lt;div id="drawer-example"&gt;
+  &lt;button class="axo-button" type="button"
+    data-axo-drawer-toggle="main-drawer"
+    aria-controls="main-drawer" aria-expanded="false"&gt;Open drawer&lt;/button&gt;
+  &lt;aside id="main-drawer" class="axo-drawer axo-drawer-right axo-surface"
+    data-axo-drawer-id="main-drawer"
+    aria-label="Main navigation" aria-hidden="true"&gt;
+    &lt;button class="axo-button" type="button"
+      data-axo-drawer-dismiss="main-drawer"&gt;Close&lt;/button&gt;
+    &lt;a class="axo-sidebar-item axo-link" href="#dashboard"&gt;Dashboard&lt;/a&gt;
+  &lt;/aside&gt;
+  &lt;div class="axo-drawer-backdrop"
+    data-axo-drawer-dismiss="main-drawer"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script type="module"&gt;
+  import { initDrawer } from
+    'https://cdn.jsdelivr.net/npm/@quertys/axoloth-behavior@0.6.0/src/drawer.js';
+  const drawer = initDrawer(document.querySelector('#drawer-example'));
+  window.addEventListener('pagehide', () =&gt; drawer.destroy(), { once: true });
+&lt;/script&gt;</code><span class="copy-code-status" aria-hidden="true">Copy</span></pre>
+
+            <div
+              id="behavior-drawer-example"
+              class="docs-preview behavior-demo"
+              aria-label="Interactive drawer preview"
+            >
+              <h3>Drawer preview</h3>
+              <p>Open the right-side panel, then dismiss it with Escape or the backdrop.</p>
+              <button
+                class="axo-button"
+                type="button"
+                data-axo-drawer-toggle="behavior-main-drawer"
+                aria-controls="behavior-main-drawer"
+                aria-expanded="false"
+              >
+                Open drawer
+              </button>
+              <aside
+                id="behavior-main-drawer"
+                class="axo-drawer axo-drawer-right axo-surface"
+                data-axo-drawer-id="behavior-main-drawer"
+                aria-label="Demo navigation"
+                aria-hidden="true"
+              >
+                <button
+                  class="axo-button"
+                  type="button"
+                  data-axo-drawer-dismiss="behavior-main-drawer"
+                >
+                  Close
+                </button>
+                <a class="axo-sidebar-item axo-link" href="#behavior-overview">Overview</a>
+                <a class="axo-sidebar-item axo-link" href="#manual-initialization">Manual setup</a>
+                <a class="axo-sidebar-item axo-link" href="#behavior-troubleshooting"
+                  >Troubleshooting</a
+                >
+              </aside>
+              <div class="axo-drawer-backdrop" data-axo-drawer-dismiss="behavior-main-drawer"></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="behavior-cleanup" class="docs-section">
+          <p class="eyebrow">Cleanup</p>
+          <h2>Keep the controller that owns the listeners.</h2>
+          <p>
+            Call <code>destroy()</code> before unmounting, replacing an initialized root, or
+            initializing it again. Use <code>refresh()</code> for newly inserted tabs or accordion
+            items.
+          </p>
+          <pre
+            class="copy-code"
+            data-copy-code
+            role="button"
+            aria-label="Copy behavior lifecycle example"
+            tabindex="0"
+          ><code>const axoloth = initAxolothBehaviors(document.querySelector('#feature'));
+
+// Later, after adding matching markup:
+axoloth.tabs.refresh();
+axoloth.accordion.refresh();
+
+// Before the feature is removed:
+axoloth.destroy();</code><span class="copy-code-status" aria-hidden="true">Copy</span></pre>
+        </section>
+
+        <section id="behavior-troubleshooting" class="docs-section">
+          <p class="eyebrow">Troubleshooting</p>
+          <h2>When attributes do not work.</h2>
+          <ul class="docs-doc-list behavior-troubleshooting-list">
+            <li>
+              <code>The component is styled but clicks do nothing</code>
+              <small>
+                Only Axoloth Style is loaded. Import Axoloth Behavior and call the matching
+                initializer after the markup exists.
+              </small>
+            </li>
+            <li>
+              <code>The script is loaded but attributes still do nothing</code>
+              <small>
+                The package does not auto-initialize. Call <code>initAxolothBehaviors()</code> or a
+                per-component initializer from a module script.
+              </small>
+            </li>
+            <li>
+              <code>A trigger cannot find its panel</code>
+              <small>
+                Match identifiers exactly: a drawer toggle value must equal its drawer ID, and tab
+                values must equal their panel values.
+              </small>
+            </li>
+            <li>
+              <code>New markup is ignored</code>
+              <small>
+                Call <code>refresh()</code> after inserting new tabs, accordion items, dropdowns, or
+                toast regions.
+              </small>
+            </li>
+            <li>
+              <code>An interaction fires twice</code>
+              <small>
+                The same root was initialized more than once. Destroy its previous controller before
+                initializing again.
+              </small>
+            </li>
+            <li>
+              <code>SSR reports that document is missing</code>
+              <small>
+                Initialize inside the client lifecycle after the DOM exists, and keep your own DOM
+                selectors out of server execution.
+              </small>
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+
+    <footer class="docs-footer">
+      <span>Axoloth Behavior Guide</span>
+      <nav aria-label="External links">
+        <a class="axo-link" href="https://www.npmjs.com/package/@quertys/axoloth-behavior"
+          >Behavior npm</a
+        ><a class="axo-link" href="https://github.com/AMillionDriver/MotionStyleLibrary"
+          >Repository</a
+        >
+      </nav>
+    </footer>
+
+    <div id="docs-snackbar" class="docs-snackbar" role="status" aria-live="polite"></div>
+    <script src="../../scripts/theme.js"></script>
+    <script src="../../scripts/docs-sidebar.js" data-docs-root="../.."></script>
+    <script src="../../scripts/docs-copy.js"></script>
+    <script type="module" src="../../scripts/behavior-guide.js"></script>
+  </body>
+</html>
