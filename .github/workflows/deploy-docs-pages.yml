@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'web_examples/**'
+      - 'packages/axoloth-behavior/src/**'
       - 'packages/axoloth-style/src/**'
       - 'packages/axoloth-style/metadata/**'
       - '.github/workflows/deploy-docs-pages.yml'
@@ -53,7 +54,9 @@ jobs:
           set -euo pipefail
           rm -rf dist-pages
           mkdir -p dist-pages/packages/axoloth-style
+          mkdir -p dist-pages/packages/axoloth-behavior
           cp -R web_examples/. dist-pages/
+          cp -R packages/axoloth-behavior/src dist-pages/packages/axoloth-behavior/src
           cp -R packages/axoloth-style/src dist-pages/packages/axoloth-style/src
           sed -i 's#../packages/axoloth-style/src/axoloth.css#./packages/axoloth-style/src/axoloth.css#g' dist-pages/index.html
           find dist-pages/examples -name index.html -print0 | xargs -0 sed -i 's#../../../packages/axoloth-style/src/axoloth.css#../../packages/axoloth-style/src/axoloth.css#g'

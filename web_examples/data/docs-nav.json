@@ -94,6 +94,17 @@
       ]
     },
     {
+      "title": "Behavior",
+      "items": [
+        {
+          "id": "behavior",
+          "label": "Behavior Guide",
+          "path": "docs/behavior/",
+          "badge": "js"
+        }
+      ]
+    },
+    {
       "title": "Utilities",
       "items": [
         {

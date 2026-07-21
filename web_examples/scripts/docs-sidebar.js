@@ -8,6 +8,7 @@ let isSidebarExpanded = false;
 
 const docsIconPaths = {
   alignment: '<path d="M5 7h14M5 12h10M5 17h14" />',
+  behavior: '<path d="M8 9 4 12l4 3M16 9l4 3-4 3M14 5l-4 14" />',
   bento: '<path d="M4 4h7v7H4zM13 4h7v4h-7zM13 10h7v10h-7zM4 13h7v7H4z" />',
   card: '<path d="M5 5h14v14H5zM8 9h8M8 13h5" />',
   composition: '<path d="M4 5h7v14H4zM13 5h7v8h-7zM13 15h7v4h-7z" />',

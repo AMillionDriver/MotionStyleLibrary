@@ -676,5 +676,35 @@
       "  <article class=\"docs-preview-panel axo-card axo-surface axo-shimmer\">Shimmer</article>",
       "</div>"
     ]
+  },
+  {
+    "id": "behavior",
+    "title": "Behavior Guide",
+    "category": "Behavior",
+    "overview": "Connect optional Axoloth JavaScript controllers to data-axo-* markup with explicit initialization, refresh, and cleanup.",
+    "template": [
+      "import { initAxolothBehaviors } from '@quertys/axoloth-behavior';",
+      "",
+      "const axoloth = initAxolothBehaviors();",
+      "window.addEventListener('pagehide', () => axoloth.destroy(), { once: true });"
+    ],
+    "classes": [
+      { "name": "axo-tabs", "description": "Tabs layout styled by Axoloth Style." },
+      {
+        "name": "axo-accordion",
+        "description": "Accordion structure styled by Axoloth Style."
+      },
+      { "name": "axo-dialog", "description": "Dialog layer styled by Axoloth Style." },
+      { "name": "axo-drawer", "description": "Drawer layer styled by Axoloth Style." }
+    ],
+    "options": [],
+    "example": [
+      "import { initTabs } from '@quertys/axoloth-behavior/tabs';",
+      "const tabs = initTabs(document.querySelector('#tabs-example'));",
+      "tabs.destroy();"
+    ],
+    "preview": [
+      "<p>Open the Behavior Guide for runnable tabs, accordion, dialog, and drawer demos.</p>"
+    ]
   }
 ]

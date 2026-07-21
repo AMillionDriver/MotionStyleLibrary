@@ -42,6 +42,8 @@ examples.forEach((example) => {
         });
 
         if (example.id === 'kitchen-sink') {
+          await expect(page.locator('#utility-count')).not.toHaveText('Loading utilities...');
+          await expect(page.locator('#utilities-table-body tr')).not.toHaveCount(1);
           await page.locator('#utility-reference').evaluate((element) => {
             const topbarHeight =
               document.querySelector('.docs-topbar')?.getBoundingClientRect().height ?? 0;

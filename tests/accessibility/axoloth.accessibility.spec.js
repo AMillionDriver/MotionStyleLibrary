@@ -7,6 +7,7 @@ const examples = JSON.parse(
 );
 const auditTargets = [
   { id: 'docs-hub', path: '/web_examples/' },
+  { id: 'behavior-guide', path: '/web_examples/docs/behavior/' },
   ...examples.map((example) => ({
     id: example.id,
     path: `/web_examples/${example.previewUrl.replace(/^\.\//, '')}`,
@@ -80,5 +81,48 @@ auditTargets.forEach((target) => {
         expect(results.violations, formatViolations(results.violations)).toEqual([]);
       });
     });
+  });
+});
+
+test.describe('behavior guide interactions', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto('/web_examples/docs/behavior/', { waitUntil: 'networkidle' });
+    await expect(page.locator('[data-behavior-status]')).toContainText('Initialized');
+  });
+
+  test('tabs and accordion update their accessible state', async ({ page }) => {
+    const securityTab = page.getByRole('tab', { name: 'Security' });
+    const profilePanel = page.getByRole('tabpanel', { name: 'Profile' });
+    const securityPanel = page.getByRole('tabpanel', { name: 'Security' });
+
+    await securityTab.click();
+    await expect(securityTab).toHaveAttribute('aria-selected', 'true');
+    await expect(profilePanel).toBeHidden();
+    await expect(securityPanel).toBeVisible();
+
+    const cleanupTrigger = page.getByRole('button', { name: /When should I clean up/ });
+    await cleanupTrigger.click();
+    await expect(cleanupTrigger).toHaveAttribute('aria-expanded', 'true');
+    await expect(page.getByRole('region', { name: /When should I clean up/ })).toBeVisible();
+  });
+
+  test('dialog and drawer open, dismiss, and restore focus', async ({ page }) => {
+    const dialogTrigger = page.getByRole('button', { name: 'Open dialog' });
+    const dialog = page.locator('#behavior-confirm-dialog');
+
+    await dialogTrigger.click();
+    await expect(dialog).toHaveClass(/axo-dialog-open/);
+    await page.keyboard.press('Escape');
+    await expect(dialog).not.toHaveClass(/axo-dialog-open/);
+    await expect(dialogTrigger).toBeFocused();
+
+    const drawerTrigger = page.getByRole('button', { name: 'Open drawer' });
+    const drawer = page.locator('#behavior-main-drawer');
+
+    await drawerTrigger.click();
+    await expect(drawer).toHaveClass(/axo-drawer-open/);
+    await page.keyboard.press('Escape');
+    await expect(drawer).not.toHaveClass(/axo-drawer-open/);
+    await expect(drawerTrigger).toBeFocused();
   });
 });

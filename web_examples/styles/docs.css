@@ -308,6 +308,10 @@ body {
   margin-top: 1rem;
 }
 
+.code-grid > * {
+  min-width: 0;
+}
+
 .docs-detail-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(260px, 0.55fr);
@@ -429,6 +433,60 @@ body {
   flex-wrap: wrap;
   gap: 0.75rem;
   align-items: center;
+}
+
+.behavior-responsibility-grid article {
+  min-width: 0;
+}
+
+.behavior-callout,
+.behavior-status {
+  padding: 0.8rem 1rem;
+  border-inline-start: 3px solid var(--docs-accent);
+  color: var(--docs-text) !important;
+  background: var(--docs-accent-soft);
+}
+
+.behavior-status[data-state='ready'] {
+  border-inline-start-color: #16a34a;
+}
+
+.behavior-example-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  gap: 1rem;
+  align-items: start;
+  margin-top: 1rem;
+}
+
+.behavior-example-grid > * {
+  min-width: 0;
+}
+
+.behavior-demo {
+  --axo-surface-bg: var(--docs-panel);
+  --axo-surface-color: var(--docs-text);
+  --axo-surface-border: var(--docs-line);
+  --axo-surface-shadow: var(--docs-shadow);
+  --axo-focus-ring: 0 0 0 3px var(--docs-accent-soft);
+  min-height: 260px;
+}
+
+.behavior-demo :where(.axo-tab-panel, .axo-accordion-panel) {
+  color: var(--docs-muted);
+}
+
+.behavior-demo :where(.axo-dialog-panel, .axo-drawer) {
+  text-align: start;
+}
+
+.behavior-troubleshooting-list small code {
+  display: inline;
+  margin: 0;
+}
+
+body[data-docs-page='behavior'] {
+  overflow-x: clip;
 }
 
 pre {
@@ -573,6 +631,10 @@ td code {
   }
 
   .docs-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .behavior-example-grid {
     grid-template-columns: 1fr;
   }
 }
