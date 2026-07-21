@@ -14,6 +14,7 @@ web_examples/
 |-- scripts/behavior-guide.js
 |-- scripts/theme.js
 |-- data/examples.json
+|-- data/recipes.json
 |-- data/docs-nav.json
 |-- data/docs-pages.json
 |-- data/utilities.json
@@ -34,6 +35,10 @@ web_examples/
 |   |-- portfolio-grid/
 |   |-- settings-panel/
 |   `-- motion-showcase/
+|-- recipes/
+|   |-- media-hero/
+|   |-- editorial-split/
+|   `-- gallery-dialog/
 `-- assets/
 ```
 
@@ -101,6 +106,19 @@ version, sourced from `metadata/deprecations.json`.
 
 Each docs route should focus on one item only: overview, basic template,
 available classes, CSS variable options, code example, and live preview.
+
+## Composition Recipes
+
+Focused real-world compositions live under `recipes/` and are registered in
+`data/recipes.json`. Pack 1 includes:
+
+- `media-hero` - layered media, scrim, and content using pile, frame, and cover.
+- `editorial-split` - intrinsic long-form copy and portrait media using split and flow.
+- `gallery-dialog` - responsive auto-grid items connected to Axoloth dialog behavior.
+
+Every recipe documents complete HTML, the Axoloth classes and variables it uses, the CSS or
+content-binding logic that remains project-owned, and both mobile and desktop behavior. Recipe
+theme files are intentionally thin and do not add public Axoloth utilities.
 
 ## Visual Regression
 

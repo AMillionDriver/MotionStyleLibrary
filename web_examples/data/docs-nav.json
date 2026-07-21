@@ -59,6 +59,29 @@
       ]
     },
     {
+      "title": "Recipes",
+      "items": [
+        {
+          "id": "recipe-media-hero",
+          "label": "Media Hero",
+          "path": "recipes/media-hero/",
+          "badge": "recipe"
+        },
+        {
+          "id": "recipe-editorial-split",
+          "label": "Editorial Split",
+          "path": "recipes/editorial-split/",
+          "badge": "recipe"
+        },
+        {
+          "id": "recipe-gallery-dialog",
+          "label": "Gallery + Dialog",
+          "path": "recipes/gallery-dialog/",
+          "badge": "recipe"
+        }
+      ]
+    },
+    {
       "title": "Components",
       "items": [
         {

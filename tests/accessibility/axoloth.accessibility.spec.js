@@ -5,12 +5,19 @@ import { readFileSync } from 'node:fs';
 const examples = JSON.parse(
   readFileSync(new URL('../../web_examples/data/examples.json', import.meta.url), 'utf8')
 );
+const recipes = JSON.parse(
+  readFileSync(new URL('../../web_examples/data/recipes.json', import.meta.url), 'utf8')
+);
 const auditTargets = [
   { id: 'docs-hub', path: '/web_examples/' },
   { id: 'behavior-guide', path: '/web_examples/docs/behavior/' },
   ...examples.map((example) => ({
     id: example.id,
     path: `/web_examples/${example.previewUrl.replace(/^\.\//, '')}`,
+  })),
+  ...recipes.map((recipe) => ({
+    id: `recipe-${recipe.id}`,
+    path: `/web_examples/${recipe.previewUrl.replace(/^\.\//, '')}`,
   })),
 ];
 const viewports = [
@@ -124,5 +131,38 @@ test.describe('behavior guide interactions', () => {
     await page.keyboard.press('Escape');
     await expect(drawer).not.toHaveClass(/axo-drawer-open/);
     await expect(drawerTrigger).toBeFocused();
+  });
+});
+
+test.describe('gallery dialog recipe interactions', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto('/web_examples/recipes/gallery-dialog/', { waitUntil: 'networkidle' });
+    await expect(page.locator('[data-gallery-status]')).toHaveText('Dialog behavior initialized.');
+  });
+
+  test('updates selected content, dismisses, and restores focus', async ({ page }) => {
+    const chairTrigger = page.getByRole('button', { name: 'Open details for Low reading chair' });
+    const dialog = page.locator('#gallery-object-dialog');
+
+    await chairTrigger.click();
+    await expect(dialog).toHaveClass(/axo-dialog-open/);
+    await expect(dialog).toHaveAttribute('aria-hidden', 'false');
+    await expect(page.locator('[data-gallery-dialog-title]')).toHaveText('Low reading chair');
+    await expect(page.locator('[data-gallery-dialog-art]')).toHaveAttribute(
+      'aria-label',
+      'Low reading chair'
+    );
+
+    await page.keyboard.press('Escape');
+    await expect(dialog).not.toHaveClass(/axo-dialog-open/);
+    await expect(chairTrigger).toBeFocused();
+
+    const vesselTrigger = page.getByRole('button', {
+      name: 'Open details for Folded ceramic vessel',
+    });
+    await vesselTrigger.click();
+    await page.locator('.axo-dialog-backdrop').click({ position: { x: 4, y: 4 } });
+    await expect(dialog).not.toHaveClass(/axo-dialog-open/);
+    await expect(vesselTrigger).toBeFocused();
   });
 });

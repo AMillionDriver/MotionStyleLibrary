@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Build a responsive gallery with the existing Axoloth auto-grid and dialog APIs."
+    />
+    <link rel="stylesheet" href="../../../packages/axoloth-style/src/axoloth.css" />
+    <link rel="stylesheet" href="../../styles/docs.css" />
+    <link rel="stylesheet" href="./theme.css" />
+    <title>Gallery with Dialog Recipe - Axoloth Style Docs</title>
+  </head>
+  <body data-docs-active="recipe-gallery-dialog">
+    <header class="docs-topbar">
+      <a class="brand axo-link" href="../../#introduction">Axoloth Style</a>
+      <button
+        id="docs-sidebar-toggle"
+        class="docs-button docs-menu-button"
+        type="button"
+        aria-controls="docs-sidebar"
+        aria-expanded="false"
+      >
+        Menu
+      </button>
+      <label class="docs-search">
+        <span class="sr-only">Search docs</span>
+        <input id="example-search" type="search" placeholder="Search docs" autocomplete="off" />
+      </label>
+      <button id="theme-toggle" class="docs-button" type="button">Dark Mode</button>
+    </header>
+
+    <div class="docs-shell">
+      <aside id="docs-sidebar" class="docs-sidebar" data-docs-sidebar></aside>
+
+      <main class="docs-layout">
+        <section class="docs-section">
+          <p class="eyebrow">Composition Recipe 03</p>
+          <h1>Gallery with Dialog</h1>
+          <p>
+            Let <code>axo-auto-grid</code> choose the column count, then connect every item to one
+            accessible <code>axo-dialog</code>. Axoloth owns interaction state; project JavaScript
+            only supplies the selected object's content.
+          </p>
+          <div class="docs-page-meta">
+            <a class="docs-page-link" href="../../docs/composition/">Composition primitives</a>
+            <a class="docs-page-link" href="../../docs/behavior/">Behavior Guide</a>
+            <a class="docs-page-link" href="../../#composition-recipes">All recipes</a>
+          </div>
+        </section>
+
+        <section class="docs-section">
+          <p class="eyebrow">Live Preview</p>
+          <h2>Material studies</h2>
+          <p>
+            Open any object, close with Escape or the backdrop, and confirm focus returns to its
+            trigger.
+          </p>
+
+          <div class="recipe-gallery-live" data-gallery-dialog-recipe>
+            <header>
+              <p class="eyebrow">Studio Archive / 06 Objects</p>
+              <h2>Studies in material and quiet form.</h2>
+              <p>
+                Six objects collected through a season of prototypes, offcuts, and small
+                experiments.
+              </p>
+            </header>
+
+            <div class="recipe-gallery-grid axo-auto-grid">
+              <button
+                class="recipe-gallery-item axo-card axo-surface axo-flow"
+                type="button"
+                data-axo-dialog-toggle="gallery-object-dialog"
+                data-gallery-title="Folded ceramic vessel"
+                data-gallery-description="A hand-built stoneware study balancing a sharp folded rim with a softly weighted base."
+                data-gallery-position="0% 0%"
+                aria-label="Open details for Folded ceramic vessel"
+              >
+                <span
+                  class="recipe-gallery-art axo-frame"
+                  style="--recipe-art-position: 0% 0%"
+                ></span>
+                <strong>Folded ceramic vessel</strong>
+                <small>Stoneware / Study 01</small>
+              </button>
+              <button
+                class="recipe-gallery-item axo-card axo-surface axo-flow"
+                type="button"
+                data-axo-dialog-toggle="gallery-object-dialog"
+                data-gallery-title="Low reading chair"
+                data-gallery-description="A compact oak chair developed around a low seat, broad back, and repairable pinned joints."
+                data-gallery-position="50% 0%"
+                aria-label="Open details for Low reading chair"
+              >
+                <span
+                  class="recipe-gallery-art axo-frame"
+                  style="--recipe-art-position: 50% 0%"
+                ></span>
+                <strong>Low reading chair</strong>
+                <small>Oak / Study 02</small>
+              </button>
+              <button
+                class="recipe-gallery-item axo-card axo-surface axo-flow"
+                type="button"
+                data-axo-dialog-toggle="gallery-object-dialog"
+                data-gallery-title="Woven light volume"
+                data-gallery-description="Paper cord is wrapped around a spare wire frame to soften a point source without hiding its structure."
+                data-gallery-position="100% 0%"
+                aria-label="Open details for Woven light volume"
+              >
+                <span
+                  class="recipe-gallery-art axo-frame"
+                  style="--recipe-art-position: 100% 0%"
+                ></span>
+                <strong>Woven light volume</strong>
+                <small>Paper cord / Study 03</small>
+              </button>
+              <button
+                class="recipe-gallery-item axo-card axo-surface axo-flow"
+                type="button"
+                data-axo-dialog-toggle="gallery-object-dialog"
+                data-gallery-title="Cobalt balance"
+                data-gallery-description="Cast glass and river stone meet at a narrow contact point, held by weight rather than adhesive."
+                data-gallery-position="0% 100%"
+                aria-label="Open details for Cobalt balance"
+              >
+                <span
+                  class="recipe-gallery-art axo-frame"
+                  style="--recipe-art-position: 0% 100%"
+                ></span>
+                <strong>Cobalt balance</strong>
+                <small>Glass + stone / Study 04</small>
+              </button>
+              <button
+                class="recipe-gallery-item axo-card axo-surface axo-flow"
+                type="button"
+                data-axo-dialog-toggle="gallery-object-dialog"
+                data-gallery-title="Carved desk object"
+                data-gallery-description="A palm-sized object carved from a single offcut to study shadow, grip, and directional grain."
+                data-gallery-position="50% 100%"
+                aria-label="Open details for Carved desk object"
+              >
+                <span
+                  class="recipe-gallery-art axo-frame"
+                  style="--recipe-art-position: 50% 100%"
+                ></span>
+                <strong>Carved desk object</strong>
+                <small>Walnut / Study 05</small>
+              </button>
+              <button
+                class="recipe-gallery-item axo-card axo-surface axo-flow"
+                type="button"
+                data-axo-dialog-toggle="gallery-object-dialog"
+                data-gallery-title="Coral paper relief"
+                data-gallery-description="Layered cotton paper turns a flat offcut into a shallow relief that shifts throughout the day."
+                data-gallery-position="100% 100%"
+                aria-label="Open details for Coral paper relief"
+              >
+                <span
+                  class="recipe-gallery-art axo-frame"
+                  style="--recipe-art-position: 100% 100%"
+                ></span>
+                <strong>Coral paper relief</strong>
+                <small>Cotton paper / Study 06</small>
+              </button>
+            </div>
+
+            <p class="recipe-gallery-status" data-gallery-status role="status" aria-live="polite">
+              Initializing dialog behavior...
+            </p>
+
+            <div
+              id="gallery-object-dialog"
+              class="recipe-gallery-dialog axo-dialog axo-dialog-lg"
+              data-axo-dialog-id="gallery-object-dialog"
+              aria-labelledby="gallery-dialog-title"
+              aria-describedby="gallery-dialog-description"
+            >
+              <div
+                class="axo-dialog-backdrop"
+                data-axo-dialog-dismiss="gallery-object-dialog"
+                aria-hidden="true"
+              ></div>
+              <article class="recipe-gallery-dialog__panel axo-dialog-panel axo-surface">
+                <header class="axo-dialog-header">
+                  <div>
+                    <p class="eyebrow">Selected Object</p>
+                    <h2 id="gallery-dialog-title" data-gallery-dialog-title>
+                      Folded ceramic vessel
+                    </h2>
+                  </div>
+                  <button
+                    class="axo-button"
+                    type="button"
+                    data-axo-dialog-dismiss="gallery-object-dialog"
+                    aria-label="Close dialog"
+                    autofocus
+                  >
+                    Close
+                  </button>
+                </header>
+                <div class="axo-dialog-body axo-flow">
+                  <div
+                    class="recipe-gallery-art recipe-gallery-dialog__art axo-frame"
+                    style="--recipe-art-position: 0% 0%"
+                    role="img"
+                    aria-label="Folded ceramic vessel"
+                    data-gallery-dialog-art
+                  ></div>
+                  <p
+                    id="gallery-dialog-description"
+                    class="recipe-gallery-dialog__copy"
+                    data-gallery-dialog-description
+                  >
+                    A hand-built stoneware study balancing a sharp folded rim with a softly weighted
+                    base.
+                  </p>
+                </div>
+                <footer class="axo-dialog-footer">
+                  <button
+                    class="axo-button recipe-gallery-dialog__close"
+                    type="button"
+                    data-axo-dialog-dismiss="gallery-object-dialog"
+                  >
+                    Return to gallery
+                  </button>
+                </footer>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="gallery-code" class="docs-section">
+          <p class="eyebrow">Complete HTML</p>
+          <h2>A standalone gallery and dialog</h2>
+          <p>
+            Repeat the gallery item pattern for more objects. The complete document includes one
+            shared dialog and the official initializer; content binding remains a local concern.
+          </p>
+          <pre
+            class="copy-code"
+            data-copy-code
+            role="button"
+            aria-label="Copy complete Gallery with Dialog HTML"
+            tabindex="0"
+          ><code>&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@quertys/axoloth-style@0.9.0/src/axoloth.css" /&gt;
+    &lt;link rel="stylesheet" href="./theme.css" /&gt;
+    &lt;title&gt;Material Studies&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;main class="recipe-gallery-live" data-gallery-dialog-recipe&gt;
+      &lt;div class="recipe-gallery-grid axo-auto-grid"&gt;
+        &lt;button class="recipe-gallery-item axo-card axo-surface axo-flow"
+          type="button" data-axo-dialog-toggle="object-dialog"
+          data-gallery-title="Folded ceramic vessel"
+          data-gallery-description="A hand-built stoneware study."
+          data-gallery-position="0% 0%"&gt;
+          &lt;span class="recipe-gallery-art axo-frame"
+            style="--recipe-art-position: 0% 0%"&gt;&lt;/span&gt;
+          &lt;strong&gt;Folded ceramic vessel&lt;/strong&gt;
+          &lt;small&gt;Stoneware / Study 01&lt;/small&gt;
+        &lt;/button&gt;
+        &lt;button class="recipe-gallery-item axo-card axo-surface axo-flow"
+          type="button" data-axo-dialog-toggle="object-dialog"
+          data-gallery-title="Low reading chair"
+          data-gallery-description="A compact oak chair with repairable joints."
+          data-gallery-position="50% 0%"&gt;
+          &lt;span class="recipe-gallery-art axo-frame"
+            style="--recipe-art-position: 50% 0%"&gt;&lt;/span&gt;
+          &lt;strong&gt;Low reading chair&lt;/strong&gt;
+          &lt;small&gt;Oak / Study 02&lt;/small&gt;
+        &lt;/button&gt;
+      &lt;/div&gt;
+
+      &lt;div id="object-dialog" class="axo-dialog axo-dialog-lg"
+        data-axo-dialog-id="object-dialog"
+        aria-labelledby="object-title" aria-describedby="object-description"&gt;
+        &lt;div class="axo-dialog-backdrop" data-axo-dialog-dismiss="object-dialog"
+          aria-hidden="true"&gt;&lt;/div&gt;
+        &lt;article class="axo-dialog-panel axo-surface"&gt;
+          &lt;header class="axo-dialog-header"&gt;
+            &lt;h2 id="object-title" data-gallery-dialog-title&gt;Selected object&lt;/h2&gt;
+            &lt;button class="axo-button" type="button"
+              data-axo-dialog-dismiss="object-dialog" autofocus&gt;Close&lt;/button&gt;
+          &lt;/header&gt;
+          &lt;div class="axo-dialog-body axo-flow"&gt;
+            &lt;div class="recipe-gallery-art axo-frame" role="img"
+              data-gallery-dialog-art&gt;&lt;/div&gt;
+            &lt;p id="object-description" data-gallery-dialog-description&gt;&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/article&gt;
+      &lt;/div&gt;
+    &lt;/main&gt;
+
+    &lt;script type="module"&gt;
+      import { initDialog } from
+        'https://cdn.jsdelivr.net/npm/@quertys/axoloth-behavior@0.6.0/src/dialog.js';
+      const root = document.querySelector('[data-gallery-dialog-recipe]');
+      const dialog = initDialog(root);
+
+      root.querySelectorAll('[data-gallery-title]').forEach((trigger) =&gt; {
+        trigger.addEventListener('click', () =&gt; {
+          root.querySelector('[data-gallery-dialog-title]').textContent =
+            trigger.dataset.galleryTitle;
+          root.querySelector('[data-gallery-dialog-description]').textContent =
+            trigger.dataset.galleryDescription;
+          const artwork = root.querySelector('[data-gallery-dialog-art]');
+          artwork.style.setProperty('--recipe-art-position', trigger.dataset.galleryPosition);
+          artwork.setAttribute('aria-label', trigger.dataset.galleryTitle);
+        });
+      });
+
+      window.addEventListener('pagehide', () =&gt; dialog.destroy(), { once: true });
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code><span class="copy-code-status" aria-hidden="true">Copy</span></pre>
+        </section>
+
+        <section id="gallery-api" class="docs-section">
+          <div class="docs-detail-grid">
+            <div>
+              <p class="eyebrow">Axoloth Classes</p>
+              <h2>Structure supplied by the library</h2>
+              <ul class="docs-doc-list">
+                <li>
+                  <code>axo-auto-grid</code
+                  ><small>Chooses a responsive column count from available width.</small>
+                </li>
+                <li>
+                  <code>axo-frame</code
+                  ><small>Maintains stable thumbnail and dialog media ratios.</small>
+                </li>
+                <li>
+                  <code>axo-card</code> + <code>axo-surface</code
+                  ><small>Provide neutral item structure.</small>
+                </li>
+                <li>
+                  <code>axo-flow</code
+                  ><small>Maintains rhythm inside items and dialog content.</small>
+                </li>
+                <li>
+                  <code>axo-dialog*</code
+                  ><small>Provides the modal layer, panel, regions, and backdrop.</small>
+                </li>
+                <li><code>axo-button</code><small>Provides neutral dismiss controls.</small></li>
+              </ul>
+            </div>
+            <div>
+              <p class="eyebrow">Customizable Variables</p>
+              <h2>Supported tuning points</h2>
+              <ul class="docs-doc-list">
+                <li><code>--axo-item-min</code><small>Minimum gallery item width.</small></li>
+                <li><code>--axo-grid-gap</code><small>Grid rhythm.</small></li>
+                <li>
+                  <code>--axo-frame-ratio</code
+                  ><small>Thumbnail and detail media proportions.</small>
+                </li>
+                <li><code>--axo-dialog-width</code><small>Maximum detail panel width.</small></li>
+                <li><code>--axo-dialog-padding</code><small>Panel inset.</small></li>
+                <li>
+                  <code>--axo-dialog-backdrop</code><small>Backdrop color and opacity.</small>
+                </li>
+                <li>
+                  <code>--axo-dialog-duration</code><small>Open and close transition timing.</small>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="docs-section">
+          <div class="docs-detail-grid">
+            <div>
+              <p class="eyebrow">Project-owned CSS + JS</p>
+              <h2>Content remains application data</h2>
+              <p>
+                The image sprite, crop positions, card treatment, typography, and hover styling are
+                local CSS. The small script copies selected content into the shared dialog; Axoloth
+                Behavior still owns open state, ARIA, focus trap, Escape, dismissal, and cleanup.
+              </p>
+            </div>
+            <div>
+              <p class="eyebrow">Mobile + Desktop</p>
+              <h2>Columns respond to available width</h2>
+              <p>
+                Desktop naturally fits several cards. Mobile becomes one column through
+                <code>--axo-item-min</code>. The dialog uses viewport insets and scroll bounds, so
+                content remains reachable without a second mobile-only component.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="docs-footer">
+      <span>Axoloth Composition Recipes</span>
+      <a class="axo-link" href="../../#composition-recipes">Back to recipes</a>
+    </footer>
+
+    <div id="docs-snackbar" class="docs-snackbar" role="status" aria-live="polite"></div>
+    <script src="../../scripts/theme.js"></script>
+    <script src="../../scripts/docs-sidebar.js" data-docs-root="../.."></script>
+    <script src="../../scripts/docs-copy.js"></script>
+    <script type="module" src="./gallery-dialog.js"></script>
+  </body>
+</html>
