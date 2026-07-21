@@ -1,0 +1,93 @@
+.recipe-stage {
+  overflow: hidden;
+  border: 1px solid var(--docs-line);
+  border-radius: 0.75rem;
+  background: #111827;
+}
+
+.recipe-media-hero {
+  --axo-center-width: 38rem;
+  --axo-cover-height: clamp(32rem, 78dvh, 46rem);
+  --axo-cover-padding: clamp(1.25rem, 5vw, 4rem);
+  --axo-frame-position: 64% center;
+  --axo-frame-ratio: auto;
+  --axo-stack-gap: 1.25rem;
+
+  color: #f8fafc;
+  overflow: hidden;
+}
+
+.recipe-media-hero__media {
+  min-block-size: var(--axo-cover-height);
+}
+
+.recipe-media-hero__scrim {
+  background:
+    linear-gradient(90deg, rgb(3 7 18 / 0.9) 0%, rgb(3 7 18 / 0.62) 42%, transparent 78%),
+    linear-gradient(0deg, rgb(3 7 18 / 0.48), transparent 55%);
+}
+
+.recipe-media-hero__content {
+  position: relative;
+  z-index: 1;
+  align-self: center;
+  inline-size: 100%;
+}
+
+.recipe-media-hero__content h2 {
+  max-inline-size: 12ch;
+  color: #ffffff;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.65rem, 8vw, 5.75rem);
+  font-weight: 500;
+  line-height: 0.93;
+}
+
+.recipe-media-hero__content p {
+  max-inline-size: 36rem;
+  color: rgb(248 250 252 / 0.82);
+  font-size: clamp(1rem, 2vw, 1.15rem);
+}
+
+.recipe-media-hero__kicker {
+  color: #f6d68a;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.recipe-media-hero__primary,
+.recipe-media-hero__secondary {
+  min-inline-size: 9rem;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.recipe-media-hero__primary {
+  border-color: #f6d68a;
+  color: #111827;
+  background: #f6d68a;
+}
+
+.recipe-media-hero__secondary {
+  border-color: rgb(255 255 255 / 0.48);
+  color: #ffffff;
+  background: rgb(3 7 18 / 0.28);
+  backdrop-filter: blur(8px);
+}
+
+@media (max-width: 600px) {
+  .recipe-media-hero {
+    --axo-cover-height: 36rem;
+    --axo-frame-position: 70% center;
+  }
+
+  .recipe-media-hero__scrim {
+    background: linear-gradient(0deg, rgb(3 7 18 / 0.94) 0%, rgb(3 7 18 / 0.55) 72%);
+  }
+
+  .recipe-media-hero__content {
+    align-self: end;
+  }
+}

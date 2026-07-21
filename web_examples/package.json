@@ -4,6 +4,6 @@
   "private": true,
   "description": "Static documentation and integration examples for Axoloth Style.",
   "scripts": {
-    "check": "node --check scripts/examples.js && node --check scripts/theme.js && node --check scripts/docs-sidebar.js && node --check scripts/component-docs.js && node --check scripts/docs-copy.js && node scripts/verify-docs.mjs"
+    "check": "node --check scripts/examples.js && node --check scripts/theme.js && node --check scripts/docs-sidebar.js && node --check scripts/component-docs.js && node --check scripts/docs-copy.js && node --check recipes/gallery-dialog/gallery-dialog.js && node scripts/verify-docs.mjs"
   }
 }
