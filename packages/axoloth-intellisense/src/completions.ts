@@ -37,8 +37,9 @@ export function createCompletionProvider(registry: AxolothRegistry): vscode.Comp
         .filter((entry) => !usedClasses.has(entry.name))
         .map((entry) => {
           const item = new vscode.CompletionItem(entry.name, vscode.CompletionItemKind.Class);
-          item.detail = `Axoloth ${entry.category} utility`;
-          item.documentation = createClassDocumentation(entry);
+          const variableCount = entry.relatedVariables.length;
+          item.detail = `Axoloth ${entry.category} utility${variableCount ? ` - ${variableCount} customizable variable${variableCount === 1 ? '' : 's'}` : ''}`;
+          item.documentation = createClassDocumentation(entry, registry.variableMap);
           item.filterText = entry.name;
           item.insertText = entry.name;
           item.range = range;

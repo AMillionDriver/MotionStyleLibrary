@@ -1,6 +1,6 @@
 {
   "name": "@quertys/axoloth-style",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "prefix": "axo-",
   "classes": [
     {
@@ -9,6 +9,10 @@
       "category": "layout",
       "description": "Responsive bento grid container with mobile, tablet, and desktop columns.",
       "usage": "Use on the parent grid element.",
+      "relatedVariables": [
+        "--axo-row-min",
+        "--axo-gap"
+      ],
       "status": "active"
     },
     {
@@ -17,6 +21,7 @@
       "category": "responsive",
       "description": "Makes supported Axoloth components respond to an axo-container-query ancestor instead of only the viewport.",
       "usage": "Use on bento, app, header, form-grid, or vertical tabs inside a separate axo-container-query wrapper.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -25,6 +30,12 @@
       "category": "layout",
       "description": "Neutral structural card base with radius, border, padding, and transitions.",
       "usage": "Combine with size, surface, and motion utilities.",
+      "relatedVariables": [
+        "--axo-radius",
+        "--axo-border",
+        "--axo-card-padding",
+        "--axo-duration"
+      ],
       "status": "active"
     },
     {
@@ -33,6 +44,7 @@
       "category": "layout",
       "description": "One-by-one bento item span.",
       "usage": "Use on an item inside axo-bento.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -41,6 +53,7 @@
       "category": "layout",
       "description": "Bento item that spans two columns on tablet and desktop.",
       "usage": "Use on an item inside axo-bento.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -49,6 +62,7 @@
       "category": "layout",
       "description": "Bento item that spans two rows on tablet and desktop.",
       "usage": "Use on an item inside axo-bento.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -57,6 +71,7 @@
       "category": "layout",
       "description": "Bento item that spans two columns and two rows on tablet and desktop.",
       "usage": "Use on an item inside axo-bento.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -65,6 +80,9 @@
       "category": "layout",
       "description": "Vertical flex stack for card content.",
       "usage": "Customize spacing with --axo-stack-gap.",
+      "relatedVariables": [
+        "--axo-stack-gap"
+      ],
       "status": "active"
     },
     {
@@ -73,6 +91,9 @@
       "category": "layout",
       "description": "Horizontal flex row for compact inline content.",
       "usage": "Customize spacing with --axo-row-gap.",
+      "relatedVariables": [
+        "--axo-row-gap"
+      ],
       "status": "active"
     },
     {
@@ -81,6 +102,12 @@
       "category": "layout",
       "description": "Base appbar/header container.",
       "usage": "Combine with axo-header-grid or axo-header-flex.",
+      "relatedVariables": [
+        "--axo-header-gap",
+        "--axo-header-height",
+        "--axo-header-padding-block",
+        "--axo-header-padding-inline"
+      ],
       "status": "active"
     },
     {
@@ -89,6 +116,9 @@
       "category": "layout",
       "description": "Four-slot header grid for left, center, nav, and right areas.",
       "usage": "Use with axo-header-left, axo-header-center, axo-header-nav, and axo-header-right.",
+      "relatedVariables": [
+        "--axo-header-center-width"
+      ],
       "status": "active"
     },
     {
@@ -97,6 +127,7 @@
       "category": "layout",
       "description": "Simple flex header alternative.",
       "usage": "Use when a grid appbar is more structure than needed.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -105,6 +136,9 @@
       "category": "layout",
       "description": "Left header slot, usually for logo or brand icon.",
       "usage": "Use inside axo-header-grid.",
+      "relatedVariables": [
+        "--axo-header-slot-gap"
+      ],
       "status": "active"
     },
     {
@@ -113,6 +147,10 @@
       "category": "layout",
       "description": "Center header slot, usually for search or primary controls.",
       "usage": "Use inside axo-header-grid.",
+      "relatedVariables": [
+        "--axo-header-slot-gap",
+        "--axo-header-center-width"
+      ],
       "status": "active"
     },
     {
@@ -121,6 +159,9 @@
       "category": "layout",
       "description": "Header navigation slot that hides on mobile by default.",
       "usage": "Use inside axo-header-grid for nav links.",
+      "relatedVariables": [
+        "--axo-header-nav-gap"
+      ],
       "status": "active"
     },
     {
@@ -129,6 +170,9 @@
       "category": "layout",
       "description": "Right header slot, usually for actions or a menu button.",
       "usage": "Use inside axo-header-grid.",
+      "relatedVariables": [
+        "--axo-header-slot-gap"
+      ],
       "status": "active"
     },
     {
@@ -137,6 +181,12 @@
       "category": "layout",
       "description": "Inline search layout for icon/text plus input.",
       "usage": "Use on a label or wrapper around an input.",
+      "relatedVariables": [
+        "--axo-searchbar-gap",
+        "--axo-searchbar-width",
+        "--axo-searchbar-height",
+        "--axo-searchbar-padding-inline"
+      ],
       "status": "active"
     },
     {
@@ -145,6 +195,12 @@
       "category": "layout",
       "description": "Square icon button sizing and alignment.",
       "usage": "Bring your own icon from Lucide, Heroicons, Google Icons, SVG, or HTML.",
+      "relatedVariables": [
+        "--axo-icon-button-radius",
+        "--axo-icon-button-size",
+        "--axo-duration",
+        "--axo-icon-button-lift"
+      ],
       "status": "active"
     },
     {
@@ -153,6 +209,9 @@
       "category": "layout",
       "description": "Appbar height preset.",
       "usage": "Sets --axo-header-height to 4rem.",
+      "relatedVariables": [
+        "--axo-header-height"
+      ],
       "status": "active"
     },
     {
@@ -161,6 +220,10 @@
       "category": "layout",
       "description": "Sticky top positioning helper.",
       "usage": "Customize with --axo-sticky-offset and --axo-z-sticky.",
+      "relatedVariables": [
+        "--axo-sticky-offset",
+        "--axo-z-sticky"
+      ],
       "status": "active"
     },
     {
@@ -169,6 +232,7 @@
       "category": "layout",
       "description": "Hide an element below 768px.",
       "usage": "Useful for desktop navigation.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -177,6 +241,7 @@
       "category": "layout",
       "description": "Show an element below 768px.",
       "usage": "Useful for mobile menu buttons.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -185,6 +250,7 @@
       "category": "responsive",
       "description": "Hides an element when its axo-container-query ancestor is narrower than 40rem.",
       "usage": "Use inside axo-container-query for secondary navigation or optional content.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -193,6 +259,9 @@
       "category": "responsive",
       "description": "Shows an element when its axo-container-query ancestor is narrower than 40rem.",
       "usage": "Customize the visible display mode with --axo-show-compact-display.",
+      "relatedVariables": [
+        "--axo-show-compact-display"
+      ],
       "status": "active"
     },
     {
@@ -201,6 +270,9 @@
       "category": "layout",
       "description": "Flexible app shell wrapper for sidebar and main content layouts.",
       "usage": "Use around axo-sidebar and axo-sidebar-main.",
+      "relatedVariables": [
+        "--axo-sidebar-gap"
+      ],
       "status": "active"
     },
     {
@@ -209,6 +281,13 @@
       "category": "layout",
       "description": "Base sidebar container with column layout, width, padding, overflow, and transitions.",
       "usage": "Combine with axo-sidebar-left or axo-sidebar-right.",
+      "relatedVariables": [
+        "--axo-sidebar-width",
+        "--axo-sidebar-gap",
+        "--axo-sidebar-padding",
+        "--axo-sidebar-transition",
+        "--axo-sidebar-z"
+      ],
       "status": "active"
     },
     {
@@ -217,6 +296,7 @@
       "category": "layout",
       "description": "Places a sidebar before the main content inside axo-shell.",
       "usage": "Use on the same element as axo-sidebar.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -225,6 +305,7 @@
       "category": "layout",
       "description": "Places a sidebar after the main content inside axo-shell.",
       "usage": "Use on the same element as axo-sidebar.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -233,6 +314,10 @@
       "category": "layout",
       "description": "Uses the compact rail width for a sidebar.",
       "usage": "Combine with axo-sidebar-hover for hover expansion.",
+      "relatedVariables": [
+        "--axo-sidebar-rail-width",
+        "--axo-sidebar-width"
+      ],
       "status": "active"
     },
     {
@@ -241,6 +326,9 @@
       "category": "layout",
       "description": "Expands a rail sidebar on hover or keyboard focus within.",
       "usage": "Use with axo-sidebar-rail.",
+      "relatedVariables": [
+        "--axo-sidebar-width"
+      ],
       "status": "active"
     },
     {
@@ -249,6 +337,12 @@
       "category": "layout",
       "description": "Aligned sidebar menu item for links, buttons, and compact actions.",
       "usage": "Use inside axo-sidebar.",
+      "relatedVariables": [
+        "--axo-radius",
+        "--axo-sidebar-gap",
+        "--axo-sidebar-transition",
+        "--axo-icon-button-lift"
+      ],
       "status": "active"
     },
     {
@@ -257,6 +351,7 @@
       "category": "layout",
       "description": "Main content region that fills the remaining space in axo-shell.",
       "usage": "Use as the sibling of axo-sidebar.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -265,6 +360,9 @@
       "category": "layout",
       "description": "Makes a sidebar stick within the viewport while the main content scrolls.",
       "usage": "Customize with --axo-sticky-offset and --axo-sidebar-z.",
+      "relatedVariables": [
+        "--axo-sticky-offset"
+      ],
       "status": "active"
     },
     {
@@ -273,6 +371,10 @@
       "category": "layout",
       "description": "Fixes a sidebar to the viewport instead of the normal document flow.",
       "usage": "Combine with axo-sidebar-fixed-left or axo-sidebar-fixed-right.",
+      "relatedVariables": [
+        "--axo-sidebar-fixed-bottom",
+        "--axo-sidebar-fixed-top"
+      ],
       "status": "active"
     },
     {
@@ -281,6 +383,7 @@
       "category": "layout",
       "description": "Pins a fixed sidebar to the left edge of the viewport.",
       "usage": "Use with axo-sidebar-fixed.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -289,6 +392,7 @@
       "category": "layout",
       "description": "Pins a fixed sidebar to the right edge of the viewport.",
       "usage": "Use with axo-sidebar-fixed.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -297,6 +401,16 @@
       "category": "behavior",
       "description": "Viewport drawer foundation hidden beyond the left edge until opened.",
       "usage": "Combine with axo-sidebar and initialize @quertys/axoloth-behavior.",
+      "relatedVariables": [
+        "--axo-offcanvas-width",
+        "--axo-sidebar-width",
+        "--axo-offcanvas-max-width",
+        "--axo-offcanvas-inset-bottom",
+        "--axo-offcanvas-inset-top",
+        "--axo-offcanvas-duration",
+        "--axo-offcanvas-easing",
+        "--axo-offcanvas-z"
+      ],
       "status": "active"
     },
     {
@@ -305,6 +419,7 @@
       "category": "behavior",
       "description": "Moves an off-canvas sidebar to the right viewport edge.",
       "usage": "Use with axo-sidebar-offcanvas.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -313,6 +428,7 @@
       "category": "state",
       "description": "Open state applied to an off-canvas sidebar by Axoloth Behavior.",
       "usage": "Normally managed by initOffcanvas rather than written manually.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -321,6 +437,12 @@
       "category": "behavior",
       "description": "Fixed dismiss layer behind an off-canvas sidebar.",
       "usage": "Add data-axo-dismiss matching the sidebar identifier.",
+      "relatedVariables": [
+        "--axo-offcanvas-backdrop",
+        "--axo-offcanvas-duration",
+        "--axo-offcanvas-easing",
+        "--axo-offcanvas-z"
+      ],
       "status": "active"
     },
     {
@@ -329,6 +451,7 @@
       "category": "state",
       "description": "Visible backdrop state applied by Axoloth Behavior.",
       "usage": "Normally managed by initOffcanvas rather than written manually.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -337,6 +460,7 @@
       "category": "state",
       "description": "Body state that locks document scrolling while a drawer is open.",
       "usage": "Managed automatically by initOffcanvas.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -345,6 +469,20 @@
       "category": "behavior",
       "description": "Self-contained viewport drawer hidden beyond the left edge until opened.",
       "usage": "Use with @quertys/axoloth-behavior/drawer and data-axo-drawer-id.",
+      "relatedVariables": [
+        "--axo-sidebar-width",
+        "--axo-sidebar-gap",
+        "--axo-sidebar-padding",
+        "--axo-sidebar-transition",
+        "--axo-sidebar-z",
+        "--axo-drawer-width",
+        "--axo-drawer-max-width",
+        "--axo-drawer-inset-bottom",
+        "--axo-drawer-inset-top",
+        "--axo-drawer-duration",
+        "--axo-drawer-easing",
+        "--axo-drawer-z"
+      ],
       "status": "active"
     },
     {
@@ -353,6 +491,7 @@
       "category": "behavior",
       "description": "Moves a drawer to the right viewport edge.",
       "usage": "Use on the same element as axo-drawer.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -361,6 +500,7 @@
       "category": "state",
       "description": "Open state applied to a drawer by Axoloth Behavior.",
       "usage": "Normally managed by initDrawer rather than written manually.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -369,6 +509,12 @@
       "category": "behavior",
       "description": "Fixed dismiss layer behind an open drawer.",
       "usage": "Add data-axo-drawer-dismiss matching the drawer identifier.",
+      "relatedVariables": [
+        "--axo-drawer-backdrop",
+        "--axo-drawer-duration",
+        "--axo-drawer-easing",
+        "--axo-drawer-z"
+      ],
       "status": "active"
     },
     {
@@ -377,6 +523,7 @@
       "category": "state",
       "description": "Visible drawer backdrop state applied by Axoloth Behavior.",
       "usage": "Normally managed by initDrawer rather than written manually.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -385,6 +532,7 @@
       "category": "state",
       "description": "Body state that locks document scrolling while a drawer is open.",
       "usage": "Managed automatically by initDrawer.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -393,6 +541,12 @@
       "category": "behavior",
       "description": "Fixed viewport layer that centers an accessible dialog panel.",
       "usage": "Add data-axo-dialog-id and initialize initDialog.",
+      "relatedVariables": [
+        "--axo-dialog-inset",
+        "--axo-dialog-duration",
+        "--axo-dialog-easing",
+        "--axo-dialog-z"
+      ],
       "status": "active"
     },
     {
@@ -401,6 +555,7 @@
       "category": "state",
       "description": "Visible dialog state applied by Axoloth Behavior.",
       "usage": "Normally managed by initDialog rather than written manually.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -409,6 +564,11 @@
       "category": "behavior",
       "description": "Full viewport dismiss layer behind a dialog panel.",
       "usage": "Add data-axo-dialog-dismiss matching the dialog identifier.",
+      "relatedVariables": [
+        "--axo-dialog-backdrop",
+        "--axo-dialog-duration",
+        "--axo-dialog-easing"
+      ],
       "status": "active"
     },
     {
@@ -417,6 +577,7 @@
       "category": "state",
       "description": "Visible dialog backdrop state applied by Axoloth Behavior.",
       "usage": "Normally managed by initDialog rather than written manually.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -425,6 +586,20 @@
       "category": "layout",
       "description": "Scrollable, width-constrained content panel inside axo-dialog.",
       "usage": "Combine with axo-surface or axo-contrast for visual styling.",
+      "relatedVariables": [
+        "--axo-dialog-border",
+        "--axo-border",
+        "--axo-dialog-radius",
+        "--axo-radius",
+        "--axo-dialog-gap",
+        "--axo-dialog-width",
+        "--axo-dialog-inset",
+        "--axo-dialog-padding",
+        "--axo-dialog-enter-distance",
+        "--axo-dialog-enter-scale",
+        "--axo-dialog-duration",
+        "--axo-dialog-easing"
+      ],
       "status": "active"
     },
     {
@@ -433,6 +608,9 @@
       "category": "layout",
       "description": "Dialog heading row with space for a title and close action.",
       "usage": "Use as a direct section inside axo-dialog-panel.",
+      "relatedVariables": [
+        "--axo-dialog-gap"
+      ],
       "status": "active"
     },
     {
@@ -441,6 +619,7 @@
       "category": "layout",
       "description": "Main content region inside a dialog panel.",
       "usage": "Use between axo-dialog-header and axo-dialog-footer.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -449,6 +628,9 @@
       "category": "layout",
       "description": "Wrapping action row aligned to the end of a dialog panel.",
       "usage": "Place dismiss and confirmation actions inside it.",
+      "relatedVariables": [
+        "--axo-dialog-gap"
+      ],
       "status": "active"
     },
     {
@@ -457,6 +639,9 @@
       "category": "sizing",
       "description": "Sets a compact dialog panel width.",
       "usage": "Use with axo-dialog-panel.",
+      "relatedVariables": [
+        "--axo-dialog-width"
+      ],
       "status": "active"
     },
     {
@@ -465,6 +650,9 @@
       "category": "sizing",
       "description": "Sets a wide dialog panel width.",
       "usage": "Use with axo-dialog-panel.",
+      "relatedVariables": [
+        "--axo-dialog-width"
+      ],
       "status": "active"
     },
     {
@@ -473,6 +661,10 @@
       "category": "sizing",
       "description": "Expands a dialog panel to the available viewport width.",
       "usage": "Use with axo-dialog-panel for large workflows.",
+      "relatedVariables": [
+        "--axo-dialog-width",
+        "--axo-dialog-inset"
+      ],
       "status": "active"
     },
     {
@@ -481,6 +673,7 @@
       "category": "state",
       "description": "Body state that locks document scrolling while a dialog is open.",
       "usage": "Managed automatically by initDialog.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -489,6 +682,9 @@
       "category": "behavior",
       "description": "Layout boundary for an accessible tabbed interface.",
       "usage": "Add data-axo-tabs and initialize initTabs.",
+      "relatedVariables": [
+        "--axo-tabs-gap"
+      ],
       "status": "active"
     },
     {
@@ -497,6 +693,11 @@
       "category": "layout",
       "description": "Places the tab list beside its active panel on wide containers.",
       "usage": "Use with axo-tabs and set aria-orientation to vertical when writing ARIA manually.",
+      "relatedVariables": [
+        "--axo-tab-vertical-width",
+        "--axo-tab-indicator-size",
+        "--axo-tab-indicator-color"
+      ],
       "status": "active"
     },
     {
@@ -505,6 +706,11 @@
       "category": "layout",
       "description": "Scrollable row or column containing Axoloth tab controls.",
       "usage": "Place data-axo-tab controls directly inside it.",
+      "relatedVariables": [
+        "--axo-tab-list-gap",
+        "--axo-tab-indicator-size",
+        "--axo-tab-indicator-color"
+      ],
       "status": "active"
     },
     {
@@ -513,6 +719,13 @@
       "category": "control",
       "description": "Neutral tab control with selected and focus-visible states.",
       "usage": "Add data-axo-tab matching a data-axo-tab-panel identifier.",
+      "relatedVariables": [
+        "--axo-tab-indicator-size",
+        "--axo-tab-min-height",
+        "--axo-tab-padding-inline",
+        "--axo-tab-indicator-color",
+        "--axo-focus-ring"
+      ],
       "status": "active"
     },
     {
@@ -521,6 +734,9 @@
       "category": "state",
       "description": "Selected tab state managed by Axoloth Behavior.",
       "usage": "Normally managed by initTabs rather than written manually.",
+      "relatedVariables": [
+        "--axo-tab-indicator-color"
+      ],
       "status": "active"
     },
     {
@@ -529,6 +745,9 @@
       "category": "layout",
       "description": "Content region controlled by an Axoloth tab.",
       "usage": "Add data-axo-tab-panel matching a data-axo-tab identifier.",
+      "relatedVariables": [
+        "--axo-tab-panel-padding"
+      ],
       "status": "active"
     },
     {
@@ -537,6 +756,7 @@
       "category": "state",
       "description": "Visible tab panel state managed by Axoloth Behavior.",
       "usage": "Normally managed by initTabs rather than written manually.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -545,6 +765,9 @@
       "category": "behavior",
       "description": "Layout boundary for an accessible accordion group.",
       "usage": "Add data-axo-accordion and initialize initAccordion.",
+      "relatedVariables": [
+        "--axo-accordion-gap"
+      ],
       "status": "active"
     },
     {
@@ -553,6 +776,11 @@
       "category": "layout",
       "description": "Structural wrapper for one accordion trigger and panel.",
       "usage": "Combine with axo-surface when a filled item is desired.",
+      "relatedVariables": [
+        "--axo-accordion-border",
+        "--axo-accordion-radius",
+        "--axo-radius"
+      ],
       "status": "active"
     },
     {
@@ -561,6 +789,7 @@
       "category": "state",
       "description": "Expanded accordion item state managed by Axoloth Behavior.",
       "usage": "Normally managed by initAccordion rather than written manually.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -569,6 +798,11 @@
       "category": "control",
       "description": "Full-width disclosure button for an accordion item.",
       "usage": "Use on a button with data-axo-accordion-trigger.",
+      "relatedVariables": [
+        "--axo-accordion-trigger-min-height",
+        "--axo-accordion-trigger-padding",
+        "--axo-focus-ring"
+      ],
       "status": "active"
     },
     {
@@ -577,6 +811,9 @@
       "category": "control",
       "description": "Fixed-size indicator that rotates while an item is expanded.",
       "usage": "Place inside axo-accordion-trigger and mark decorative content aria-hidden.",
+      "relatedVariables": [
+        "--axo-accordion-transition"
+      ],
       "status": "active"
     },
     {
@@ -585,6 +822,10 @@
       "category": "layout",
       "description": "Collapsible content region controlled by an accordion trigger.",
       "usage": "Add data-axo-accordion-panel matching its trigger identifier.",
+      "relatedVariables": [
+        "--axo-accordion-panel-padding",
+        "--axo-accordion-transition"
+      ],
       "status": "active"
     },
     {
@@ -593,6 +834,9 @@
       "category": "state",
       "description": "Visible accordion panel state managed by Axoloth Behavior.",
       "usage": "Normally managed by initAccordion rather than written manually.",
+      "relatedVariables": [
+        "--axo-accordion-transition"
+      ],
       "status": "active"
     },
     {
@@ -601,6 +845,7 @@
       "category": "behavior",
       "description": "Positioning boundary for an accessible dropdown menu.",
       "usage": "Add data-axo-dropdown and initialize initDropdown.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -609,6 +854,7 @@
       "category": "state",
       "description": "Open dropdown group state managed by Axoloth Behavior.",
       "usage": "Normally managed by initDropdown rather than written manually.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -617,6 +863,7 @@
       "category": "control",
       "description": "Inline trigger alignment for a dropdown menu button.",
       "usage": "Use on a button with data-axo-dropdown-toggle.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -625,6 +872,20 @@
       "category": "layout",
       "description": "Absolutely positioned menu surface below a dropdown trigger.",
       "usage": "Add data-axo-dropdown-menu matching the trigger identifier.",
+      "relatedVariables": [
+        "--axo-surface-bg",
+        "--axo-dropdown-border",
+        "--axo-dropdown-radius",
+        "--axo-radius",
+        "--axo-dropdown-shadow",
+        "--axo-surface-color",
+        "--axo-dropdown-gap",
+        "--axo-dropdown-max-height",
+        "--axo-dropdown-min-width",
+        "--axo-dropdown-padding",
+        "--axo-dropdown-duration",
+        "--axo-dropdown-z"
+      ],
       "status": "active"
     },
     {
@@ -633,6 +894,7 @@
       "category": "state",
       "description": "Visible menu state managed by Axoloth Behavior.",
       "usage": "Normally managed by initDropdown rather than written manually.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -641,6 +903,12 @@
       "category": "control",
       "description": "Full-width action or link inside a dropdown menu.",
       "usage": "Use with data-axo-dropdown-item or role menuitem.",
+      "relatedVariables": [
+        "--axo-dropdown-radius",
+        "--axo-radius",
+        "--axo-dropdown-item-min-height",
+        "--axo-dropdown-item-padding"
+      ],
       "status": "active"
     },
     {
@@ -649,6 +917,7 @@
       "category": "layout",
       "description": "Non-interactive group label inside a dropdown menu.",
       "usage": "Use for short menu section labels.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -657,6 +926,7 @@
       "category": "layout",
       "description": "Subtle separator between groups of dropdown actions.",
       "usage": "Use on an hr element with role separator.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -665,6 +935,7 @@
       "category": "position",
       "description": "Aligns a dropdown menu to the trigger's inline end edge.",
       "usage": "Use on the axo-dropdown wrapper.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -673,6 +944,9 @@
       "category": "position",
       "description": "Places a dropdown menu above its trigger.",
       "usage": "Use on the axo-dropdown wrapper.",
+      "relatedVariables": [
+        "--axo-dropdown-gap"
+      ],
       "status": "active"
     },
     {
@@ -681,6 +955,12 @@
       "category": "behavior",
       "description": "Fixed live region that stacks Axoloth toast notifications.",
       "usage": "Add data-axo-toast-region and initialize initToast.",
+      "relatedVariables": [
+        "--axo-toast-region-gap",
+        "--axo-toast-region-inset",
+        "--axo-toast-width",
+        "--axo-toast-z"
+      ],
       "status": "active"
     },
     {
@@ -689,6 +969,9 @@
       "category": "position",
       "description": "Positions a toast region at the viewport top-start corner.",
       "usage": "Use with axo-toast-region.",
+      "relatedVariables": [
+        "--axo-toast-region-inset"
+      ],
       "status": "active"
     },
     {
@@ -697,6 +980,7 @@
       "category": "position",
       "description": "Positions a toast region at the viewport top-end corner.",
       "usage": "Use with axo-toast-region.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -705,6 +989,9 @@
       "category": "position",
       "description": "Positions a toast region at the viewport bottom-start corner.",
       "usage": "Use with axo-toast-region.",
+      "relatedVariables": [
+        "--axo-toast-region-inset"
+      ],
       "status": "active"
     },
     {
@@ -713,6 +1000,9 @@
       "category": "position",
       "description": "Positions a toast region at the viewport bottom-end corner.",
       "usage": "Use with axo-toast-region.",
+      "relatedVariables": [
+        "--axo-toast-region-inset"
+      ],
       "status": "active"
     },
     {
@@ -721,6 +1011,16 @@
       "category": "behavior",
       "description": "Responsive notification layout inside a toast region.",
       "usage": "Created by initToast.show or used with data-axo-toast.",
+      "relatedVariables": [
+        "--axo-toast-border",
+        "--axo-toast-radius",
+        "--axo-radius",
+        "--axo-toast-shadow",
+        "--axo-toast-gap",
+        "--axo-toast-padding",
+        "--axo-toast-distance",
+        "--axo-toast-duration"
+      ],
       "status": "active"
     },
     {
@@ -729,6 +1029,7 @@
       "category": "state",
       "description": "Visible toast state managed by Axoloth Behavior.",
       "usage": "Normally managed by initToast rather than written manually.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -737,6 +1038,9 @@
       "category": "state",
       "description": "Dismiss transition state managed by Axoloth Behavior.",
       "usage": "Normally managed by initToast rather than written manually.",
+      "relatedVariables": [
+        "--axo-toast-distance"
+      ],
       "status": "active"
     },
     {
@@ -745,6 +1049,7 @@
       "category": "layout",
       "description": "Flexible text content column inside a toast.",
       "usage": "Contains axo-toast-title and axo-toast-message.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -753,6 +1058,7 @@
       "category": "content",
       "description": "Short emphasized toast heading.",
       "usage": "Use inside axo-toast-content.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -761,6 +1067,7 @@
       "category": "content",
       "description": "Wrapping notification message inside a toast.",
       "usage": "Use inside axo-toast-content.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -769,6 +1076,7 @@
       "category": "layout",
       "description": "Inline action group inside a toast.",
       "usage": "Use for undo, retry, or related actions.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -777,6 +1085,7 @@
       "category": "control",
       "description": "Compact toast dismissal control.",
       "usage": "Use with data-axo-toast-dismiss.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -785,6 +1094,11 @@
       "category": "layout",
       "description": "Offsets main content by the expanded left sidebar width.",
       "usage": "Use with a left fixed sidebar.",
+      "relatedVariables": [
+        "--axo-sidebar-main-offset-start",
+        "--axo-sidebar-width",
+        "--axo-sidebar-main-offset-end"
+      ],
       "status": "active"
     },
     {
@@ -793,6 +1107,11 @@
       "category": "layout",
       "description": "Offsets main content by the expanded right sidebar width.",
       "usage": "Use with a right fixed sidebar.",
+      "relatedVariables": [
+        "--axo-sidebar-main-offset-end",
+        "--axo-sidebar-width",
+        "--axo-sidebar-main-offset-start"
+      ],
       "status": "active"
     },
     {
@@ -801,6 +1120,11 @@
       "category": "layout",
       "description": "Offsets main content by the compact left sidebar rail width.",
       "usage": "Use with a fixed left rail sidebar.",
+      "relatedVariables": [
+        "--axo-sidebar-main-offset-start",
+        "--axo-sidebar-rail-width",
+        "--axo-sidebar-main-offset-end"
+      ],
       "status": "active"
     },
     {
@@ -809,6 +1133,11 @@
       "category": "layout",
       "description": "Offsets main content by the compact right sidebar rail width.",
       "usage": "Use with a fixed right rail sidebar.",
+      "relatedVariables": [
+        "--axo-sidebar-main-offset-end",
+        "--axo-sidebar-rail-width",
+        "--axo-sidebar-main-offset-start"
+      ],
       "status": "active"
     },
     {
@@ -817,6 +1146,11 @@
       "category": "layout",
       "description": "Grid app shell for sidebar, header, main, and footer regions.",
       "usage": "Use with axo-app-sidebar, axo-app-header, axo-app-main, and axo-app-footer.",
+      "relatedVariables": [
+        "--axo-app-gap",
+        "--axo-sidebar-width",
+        "--axo-app-header-height"
+      ],
       "status": "active"
     },
     {
@@ -825,6 +1159,7 @@
       "category": "layout",
       "description": "Sidebar grid area inside axo-app.",
       "usage": "Combine with axo-sidebar for sidebar sizing and item layout.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -833,6 +1168,9 @@
       "category": "layout",
       "description": "Moves the axo-app sidebar area to the right side.",
       "usage": "Use on the same element as axo-app.",
+      "relatedVariables": [
+        "--axo-sidebar-width"
+      ],
       "status": "active"
     },
     {
@@ -841,6 +1179,7 @@
       "category": "layout",
       "description": "Header grid area inside axo-app.",
       "usage": "Can be combined with axo-header.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -849,6 +1188,9 @@
       "category": "layout",
       "description": "Scrollable main content grid area inside axo-app.",
       "usage": "Customize inner spacing with --axo-app-padding.",
+      "relatedVariables": [
+        "--axo-app-padding"
+      ],
       "status": "active"
     },
     {
@@ -857,6 +1199,10 @@
       "category": "layout",
       "description": "Footer grid area inside axo-app.",
       "usage": "Customize height with --axo-app-footer-height.",
+      "relatedVariables": [
+        "--axo-app-footer-height",
+        "--axo-app-padding"
+      ],
       "status": "active"
     },
     {
@@ -865,6 +1211,7 @@
       "category": "responsive",
       "description": "Named inline-size query container for adaptive Axoloth child layouts.",
       "usage": "Wrap axo-bento axo-container-responsive or another container-aware child.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -873,6 +1220,11 @@
       "category": "primitive",
       "description": "Auto-fitting grid that creates columns from available space without media queries.",
       "usage": "Customize minimum item width with --axo-item-min and gap with --axo-grid-gap.",
+      "relatedVariables": [
+        "--axo-grid-gap",
+        "--axo-gap",
+        "--axo-item-min"
+      ],
       "status": "active"
     },
     {
@@ -881,6 +1233,10 @@
       "category": "primitive",
       "description": "Container-aware flex layout that switches between rows and stacked items.",
       "usage": "Customize the switch point with --axo-switcher-threshold.",
+      "relatedVariables": [
+        "--axo-switcher-gap",
+        "--axo-switcher-threshold"
+      ],
       "status": "active"
     },
     {
@@ -889,6 +1245,10 @@
       "category": "primitive",
       "description": "Horizontally centered content region with a configurable maximum width and gutter.",
       "usage": "Customize with --axo-center-width and --axo-center-gutter.",
+      "relatedVariables": [
+        "--axo-center-width",
+        "--axo-center-gutter"
+      ],
       "status": "active"
     },
     {
@@ -897,6 +1257,10 @@
       "category": "primitive",
       "description": "Full-height flex section that vertically centers its content group.",
       "usage": "Customize height and padding with --axo-cover-height and --axo-cover-padding.",
+      "relatedVariables": [
+        "--axo-cover-height",
+        "--axo-cover-padding"
+      ],
       "status": "active"
     },
     {
@@ -905,6 +1269,11 @@
       "category": "primitive",
       "description": "Horizontal scrolling row with stable item widths and scroll snapping.",
       "usage": "Add tabindex=\"0\" and an accessible label when the reel can overflow, then customize item width, gap, and edge padding with Axoloth reel variables.",
+      "relatedVariables": [
+        "--axo-reel-item-width",
+        "--axo-reel-gap",
+        "--axo-reel-padding"
+      ],
       "status": "active"
     },
     {
@@ -913,6 +1282,7 @@
       "category": "behavior",
       "description": "Adds mandatory inline scroll snapping to a custom overflow container.",
       "usage": "Combine with axo-snap-start on child items.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -921,6 +1291,7 @@
       "category": "behavior",
       "description": "Aligns an item to the start edge of a scroll-snap container.",
       "usage": "Use on children of axo-scroll-snap.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -929,6 +1300,9 @@
       "category": "primitive",
       "description": "Creates predictable vertical rhythm while preserving normal document flow.",
       "usage": "Use for prose and semantic content that should not become a flex container.",
+      "relatedVariables": [
+        "--axo-flow-space"
+      ],
       "status": "active"
     },
     {
@@ -937,6 +1311,14 @@
       "category": "primitive",
       "description": "Two-region intrinsic layout that wraps when its children no longer fit.",
       "usage": "Use with exactly two direct children and customize their ratio with split grow variables.",
+      "relatedVariables": [
+        "--axo-split-align",
+        "--axo-split-gap",
+        "--axo-gap",
+        "--axo-split-min",
+        "--axo-split-leading-grow",
+        "--axo-split-trailing-grow"
+      ],
       "status": "active"
     },
     {
@@ -945,6 +1327,13 @@
       "category": "primitive",
       "description": "Intrinsic content layout with a narrow first region and fluid final region.",
       "usage": "Use with a sidebar as the first direct child and primary content as the final child.",
+      "relatedVariables": [
+        "--axo-sidebar-layout-align",
+        "--axo-sidebar-layout-gap",
+        "--axo-gap",
+        "--axo-sidebar-layout-width",
+        "--axo-sidebar-layout-content-min"
+      ],
       "status": "active"
     },
     {
@@ -953,6 +1342,11 @@
       "category": "primitive",
       "description": "Aspect-ratio frame that keeps media and content dimensions stable.",
       "usage": "Wrap one media or content element and customize ratio, fit, and position variables.",
+      "relatedVariables": [
+        "--axo-frame-ratio",
+        "--axo-frame-fit",
+        "--axo-frame-position"
+      ],
       "status": "active"
     },
     {
@@ -961,6 +1355,10 @@
       "category": "primitive",
       "description": "Overlays direct children in the same grid area without absolute positioning.",
       "usage": "Place the background first and overlays later so normal stacking order remains explicit.",
+      "relatedVariables": [
+        "--axo-pile-align",
+        "--axo-pile-justify"
+      ],
       "status": "active"
     },
     {
@@ -969,6 +1367,10 @@
       "category": "primitive",
       "description": "Extends content beyond its parent by a configurable logical inline distance.",
       "usage": "Use inside padded page or container regions and match the surrounding gutter.",
+      "relatedVariables": [
+        "--axo-bleed-space",
+        "--axo-page-padding"
+      ],
       "status": "active"
     },
     {
@@ -977,6 +1379,10 @@
       "category": "primitive",
       "description": "Bounded scroll container with stable gutters and contained overscroll.",
       "usage": "Use for long panels, menus, logs, and tables that need local scrolling.",
+      "relatedVariables": [
+        "--axo-scroll-height",
+        "--axo-scroll-gutter"
+      ],
       "status": "active"
     },
     {
@@ -985,6 +1391,9 @@
       "category": "layout",
       "description": "Page wrapper with full-width sizing, minimum viewport height, and page padding.",
       "usage": "Use as a top-level page or main wrapper.",
+      "relatedVariables": [
+        "--axo-page-padding"
+      ],
       "status": "active"
     },
     {
@@ -993,6 +1402,9 @@
       "category": "layout",
       "description": "Centered content container with configurable max width.",
       "usage": "Customize width with --axo-container-width.",
+      "relatedVariables": [
+        "--axo-container-width"
+      ],
       "status": "active"
     },
     {
@@ -1001,6 +1413,9 @@
       "category": "layout",
       "description": "Vertical section spacing helper.",
       "usage": "Customize spacing with --axo-section-gap.",
+      "relatedVariables": [
+        "--axo-section-gap"
+      ],
       "status": "active"
     },
     {
@@ -1009,6 +1424,9 @@
       "category": "layout",
       "description": "Wrapping inline group for nav items, tags, and action rows.",
       "usage": "Customize spacing with --axo-control-gap.",
+      "relatedVariables": [
+        "--axo-control-gap"
+      ],
       "status": "active"
     },
     {
@@ -1017,6 +1435,7 @@
       "category": "layout",
       "description": "Removes list margin, padding, and markers from ul or ol elements.",
       "usage": "Use when semantic lists should behave like layout groups.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -1025,6 +1444,9 @@
       "category": "layout",
       "description": "Structural navigation container.",
       "usage": "Use with axo-nav-list and axo-link.",
+      "relatedVariables": [
+        "--axo-control-gap"
+      ],
       "status": "active"
     },
     {
@@ -1033,6 +1455,9 @@
       "category": "layout",
       "description": "Reset and row layout for semantic nav lists.",
       "usage": "Use on ul or ol inside nav.",
+      "relatedVariables": [
+        "--axo-control-gap"
+      ],
       "status": "active"
     },
     {
@@ -1041,6 +1466,10 @@
       "category": "surface",
       "description": "Neutral link reset with inherited color, hover transition, and focus-visible ring.",
       "usage": "Use on anchors when browser default blue underline should be removed.",
+      "relatedVariables": [
+        "--axo-duration",
+        "--axo-focus-ring"
+      ],
       "status": "active"
     },
     {
@@ -1049,6 +1478,16 @@
       "category": "surface",
       "description": "Neutral button structure with sizing, border, alignment, hover, and focus-visible ring.",
       "usage": "Use on button or anchor elements.",
+      "relatedVariables": [
+        "--axo-border",
+        "--axo-radius",
+        "--axo-control-gap",
+        "--axo-control-height",
+        "--axo-control-padding-inline",
+        "--axo-duration",
+        "--axo-icon-button-lift",
+        "--axo-focus-ring"
+      ],
       "status": "active"
     },
     {
@@ -1057,6 +1496,7 @@
       "category": "layout",
       "description": "Makes an axo-button fill the available inline size.",
       "usage": "Use with axo-button.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -1065,6 +1505,7 @@
       "category": "layout",
       "description": "Vertical form field wrapper.",
       "usage": "Use around axo-label and axo-input.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -1073,6 +1514,7 @@
       "category": "layout",
       "description": "Label text layout helper for forms.",
       "usage": "Use inside axo-field.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -1081,6 +1523,15 @@
       "category": "surface",
       "description": "Neutral input, select, or textarea structure with border, padding, sizing, and focus-visible ring.",
       "usage": "Use on input, select, or textarea elements.",
+      "relatedVariables": [
+        "--axo-border",
+        "--axo-radius",
+        "--axo-control-height",
+        "--axo-control-padding-inline",
+        "--axo-duration",
+        "--axo-focus-ring",
+        "--axo-error-color"
+      ],
       "status": "active"
     },
     {
@@ -1089,6 +1540,9 @@
       "category": "layout",
       "description": "Vertical form layout with consistent control gaps.",
       "usage": "Customize spacing with --axo-control-gap.",
+      "relatedVariables": [
+        "--axo-control-gap"
+      ],
       "status": "active"
     },
     {
@@ -1097,6 +1551,9 @@
       "category": "layout",
       "description": "Responsive form grid: one column on mobile and two columns on wider screens.",
       "usage": "Use for grouped field layouts.",
+      "relatedVariables": [
+        "--axo-control-gap"
+      ],
       "status": "active"
     },
     {
@@ -1105,6 +1562,12 @@
       "category": "status",
       "description": "Compact inline status or metadata label with neutral structure.",
       "usage": "Combine with axo-badge-dot or user-defined colors.",
+      "relatedVariables": [
+        "--axo-border",
+        "--axo-badge-radius",
+        "--axo-badge-gap",
+        "--axo-badge-padding"
+      ],
       "status": "active"
     },
     {
@@ -1113,6 +1576,7 @@
       "category": "status",
       "description": "Current-color status dot sized for axo-badge.",
       "usage": "Place inside axo-badge before its label.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -1121,6 +1585,12 @@
       "category": "status",
       "description": "Neutral alert or notice container with structured spacing and border.",
       "usage": "Combine with axo-surface or custom status colors.",
+      "relatedVariables": [
+        "--axo-border",
+        "--axo-radius",
+        "--axo-alert-gap",
+        "--axo-alert-padding"
+      ],
       "status": "active"
     },
     {
@@ -1129,6 +1599,7 @@
       "category": "status",
       "description": "Strong title treatment for an Axoloth alert.",
       "usage": "Use inside axo-alert.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -1137,6 +1608,12 @@
       "category": "state",
       "description": "Centered empty-state layout for icon, title, description, and actions.",
       "usage": "Use axo-empty-state as a descriptive alias.",
+      "relatedVariables": [
+        "--axo-border",
+        "--axo-radius",
+        "--axo-empty-gap",
+        "--axo-empty-padding"
+      ],
       "status": "active"
     },
     {
@@ -1145,6 +1622,12 @@
       "category": "state",
       "description": "Descriptive alias for the centered axo-empty layout.",
       "usage": "Use with axo-empty-icon, axo-empty-title, and axo-empty-description.",
+      "relatedVariables": [
+        "--axo-border",
+        "--axo-radius",
+        "--axo-empty-gap",
+        "--axo-empty-padding"
+      ],
       "status": "active"
     },
     {
@@ -1153,6 +1636,9 @@
       "category": "state",
       "description": "Centered circular icon slot for an empty state.",
       "usage": "Place inside axo-empty or axo-empty-state.",
+      "relatedVariables": [
+        "--axo-border"
+      ],
       "status": "active"
     },
     {
@@ -1161,6 +1647,7 @@
       "category": "state",
       "description": "Title typography for an empty state.",
       "usage": "Place inside axo-empty or axo-empty-state.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -1169,6 +1656,7 @@
       "category": "state",
       "description": "Readable muted description for an empty state.",
       "usage": "Place inside axo-empty or axo-empty-state.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -1177,6 +1665,10 @@
       "category": "data",
       "description": "Responsive table wrapper with horizontal overflow safety.",
       "usage": "Wrap an axo-table so narrow viewports can scroll it.",
+      "relatedVariables": [
+        "--axo-table-border",
+        "--axo-radius"
+      ],
       "status": "active"
     },
     {
@@ -1185,6 +1677,10 @@
       "category": "data",
       "description": "Neutral full-width data table with consistent cell structure.",
       "usage": "Use on a semantic table inside axo-table-wrap.",
+      "relatedVariables": [
+        "--axo-table-border",
+        "--axo-table-cell-padding"
+      ],
       "status": "active"
     },
     {
@@ -1193,6 +1689,9 @@
       "category": "data",
       "description": "Compact cell-density preset for axo-table.",
       "usage": "Use on the same element as axo-table.",
+      "relatedVariables": [
+        "--axo-table-cell-padding"
+      ],
       "status": "active"
     },
     {
@@ -1201,6 +1700,10 @@
       "category": "data",
       "description": "Keeps table header cells visible inside a scrolling table wrapper.",
       "usage": "Use on the same element as axo-table.",
+      "relatedVariables": [
+        "--axo-table-header-bg",
+        "--axo-surface-bg"
+      ],
       "status": "active"
     },
     {
@@ -1209,6 +1712,7 @@
       "category": "accessibility",
       "description": "Visually hides content while keeping it available to assistive technology.",
       "usage": "Use for accessible labels or descriptions that should not be visible.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -1217,6 +1721,14 @@
       "category": "accessibility",
       "description": "Keyboard skip link that becomes visible when focused.",
       "usage": "Place as the first focusable link and point it to the main content id.",
+      "relatedVariables": [
+        "--axo-border",
+        "--axo-radius",
+        "--axo-skip-link-offset",
+        "--axo-duration",
+        "--axo-skip-link-z",
+        "--axo-focus-ring"
+      ],
       "status": "active"
     },
     {
@@ -1225,6 +1737,11 @@
       "category": "layout",
       "description": "Neutral full-width divider with configurable thickness, spacing, and opacity.",
       "usage": "Use on hr or a decorative separator.",
+      "relatedVariables": [
+        "--axo-divider-size",
+        "--axo-divider-gap",
+        "--axo-divider-opacity"
+      ],
       "status": "active"
     },
     {
@@ -1233,6 +1750,11 @@
       "category": "state",
       "description": "Accessible progress track wrapper for a child axo-progress-bar.",
       "usage": "Add progressbar ARIA attributes and set --axo-progress-value.",
+      "relatedVariables": [
+        "--axo-progress-track",
+        "--axo-progress-size",
+        "--axo-progress-radius"
+      ],
       "status": "active"
     },
     {
@@ -1241,6 +1763,12 @@
       "category": "state",
       "description": "Progress fill controlled by --axo-progress-value.",
       "usage": "Place as the direct child of axo-progress.",
+      "relatedVariables": [
+        "--axo-progress-fill",
+        "--axo-progress-value",
+        "--axo-progress-duration",
+        "--axo-progress-indeterminate-duration"
+      ],
       "status": "active"
     },
     {
@@ -1249,6 +1777,9 @@
       "category": "state",
       "description": "Looping indeterminate state for axo-progress with reduced-motion support.",
       "usage": "Use with axo-progress when completion percentage is unknown.",
+      "relatedVariables": [
+        "--axo-progress-indeterminate-duration"
+      ],
       "status": "active"
     },
     {
@@ -1257,6 +1788,12 @@
       "category": "state",
       "description": "Neutral loading placeholder with a reduced-motion-safe pulse.",
       "usage": "Mark decorative skeletons aria-hidden and customize their dimensions.",
+      "relatedVariables": [
+        "--axo-skeleton-duration",
+        "--axo-skeleton-color",
+        "--axo-skeleton-height",
+        "--axo-skeleton-radius"
+      ],
       "status": "active"
     },
     {
@@ -1265,6 +1802,9 @@
       "category": "state",
       "description": "Text-line width preset for axo-skeleton.",
       "usage": "Use on the same element as axo-skeleton.",
+      "relatedVariables": [
+        "--axo-skeleton-text-width"
+      ],
       "status": "active"
     },
     {
@@ -1273,6 +1813,9 @@
       "category": "state",
       "description": "Circular avatar-style preset for axo-skeleton.",
       "usage": "Use on the same element as axo-skeleton.",
+      "relatedVariables": [
+        "--axo-skeleton-size"
+      ],
       "status": "active"
     },
     {
@@ -1281,6 +1824,7 @@
       "category": "form",
       "description": "Muted helper text for a form field.",
       "usage": "Connect to its control with aria-describedby when it adds instructions.",
+      "relatedVariables": [],
       "status": "active"
     },
     {
@@ -1289,6 +1833,9 @@
       "category": "form",
       "description": "Readable validation error text with configurable error color.",
       "usage": "Connect to the invalid control with aria-describedby.",
+      "relatedVariables": [
+        "--axo-error-color"
+      ],
       "status": "active"
     },
     {
@@ -1297,6 +1844,9 @@
       "category": "form",
       "description": "Adds a visual required marker after label text.",
       "usage": "Still add the native required attribute to the associated control.",
+      "relatedVariables": [
+        "--axo-error-color"
+      ],
       "status": "active"
     },
     {
@@ -1305,6 +1855,9 @@
       "category": "form",
       "description": "Validation border and ring for an invalid axo-input.",
       "usage": "Use with aria-invalid=true and an associated axo-error message.",
+      "relatedVariables": [
+        "--axo-error-color"
+      ],
       "status": "active"
     },
     {
@@ -1313,6 +1866,12 @@
       "category": "form",
       "description": "Aligned label layout for a native checkbox and its text.",
       "usage": "Use on a label containing input type checkbox.",
+      "relatedVariables": [
+        "--axo-state-gap",
+        "--axo-control-accent",
+        "--axo-check-size",
+        "--axo-focus-ring"
+      ],
       "status": "active"
     },
     {
@@ -1321,6 +1880,12 @@
       "category": "form",
       "description": "Aligned label layout for a native radio and its text.",
       "usage": "Use on a label containing input type radio.",
+      "relatedVariables": [
+        "--axo-state-gap",
+        "--axo-control-accent",
+        "--axo-check-size",
+        "--axo-focus-ring"
+      ],
       "status": "active"
     },
     {
@@ -1329,6 +1894,19 @@
       "category": "form",
       "description": "Accessible switch layout built from a native checkbox.",
       "usage": "Use on a label whose direct child is input type checkbox.",
+      "relatedVariables": [
+        "--axo-state-gap",
+        "--axo-switch-track",
+        "--axo-switch-thumb",
+        "--axo-switch-padding",
+        "--axo-switch-thumb-size",
+        "--axo-switch-height",
+        "--axo-border",
+        "--axo-switch-width",
+        "--axo-switch-duration",
+        "--axo-switch-active",
+        "--axo-focus-ring"
+      ],
       "status": "active"
     },
     {
@@ -1337,6 +1915,10 @@
       "category": "motion",
       "description": "Fade-in entrance animation.",
       "usage": "Customize timing with --axo-duration and --axo-delay.",
+      "relatedVariables": [
+        "--axo-duration",
+        "--axo-delay"
+      ],
       "status": "active"
     },
     {
@@ -1345,6 +1927,10 @@
       "category": "motion",
       "description": "Fade and move upward into place.",
       "usage": "Customize distance with --axo-rise-distance.",
+      "relatedVariables": [
+        "--axo-duration",
+        "--axo-delay"
+      ],
       "status": "active"
     },
     {
@@ -1353,6 +1939,10 @@
       "category": "motion",
       "description": "Fade and scale into place.",
       "usage": "Customize start scale with --axo-pop-start.",
+      "relatedVariables": [
+        "--axo-duration",
+        "--axo-delay"
+      ],
       "status": "active"
     },
     {
@@ -1361,6 +1951,9 @@
       "category": "motion",
       "description": "Lift upward on hover.",
       "usage": "Customize distance with --axo-lift-distance.",
+      "relatedVariables": [
+        "--axo-lift-distance"
+      ],
       "status": "active"
     },
     {
@@ -1369,6 +1962,9 @@
       "category": "motion",
       "description": "Soft hover glow shadow.",
       "usage": "Customize shadow with --axo-glow-shadow.",
+      "relatedVariables": [
+        "--axo-glow-shadow"
+      ],
       "status": "active"
     },
     {
@@ -1377,6 +1973,10 @@
       "category": "motion",
       "description": "Looping shimmer overlay.",
       "usage": "Customize with --axo-shimmer-duration and --axo-shimmer-color.",
+      "relatedVariables": [
+        "--axo-shimmer-duration",
+        "--axo-shimmer-color"
+      ],
       "status": "active"
     },
     {
@@ -1385,6 +1985,16 @@
       "category": "surface",
       "description": "Light theme marker for Axoloth surface variables.",
       "usage": "Use on a parent wrapper.",
+      "relatedVariables": [
+        "--axo-surface-bg",
+        "--axo-surface-color",
+        "--axo-surface-border",
+        "--axo-surface-shadow",
+        "--axo-contrast-bg",
+        "--axo-contrast-color",
+        "--axo-contrast-border",
+        "--axo-contrast-shadow"
+      ],
       "status": "active"
     },
     {
@@ -1393,6 +2003,16 @@
       "category": "surface",
       "description": "Dark theme marker for Axoloth surface variables.",
       "usage": "Use on a parent wrapper.",
+      "relatedVariables": [
+        "--axo-surface-bg",
+        "--axo-surface-color",
+        "--axo-surface-border",
+        "--axo-surface-shadow",
+        "--axo-contrast-bg",
+        "--axo-contrast-color",
+        "--axo-contrast-border",
+        "--axo-contrast-shadow"
+      ],
       "status": "active"
     },
     {
@@ -1401,6 +2021,12 @@
       "category": "surface",
       "description": "Normal surface for the current theme marker.",
       "usage": "Use with axo-card or another structural element.",
+      "relatedVariables": [
+        "--axo-surface-bg",
+        "--axo-surface-border",
+        "--axo-surface-shadow",
+        "--axo-surface-color"
+      ],
       "status": "active"
     },
     {
@@ -1409,6 +2035,12 @@
       "category": "surface",
       "description": "Inverted contrast surface for the current theme marker.",
       "usage": "Use with axo-card when the card should stand out from the parent theme.",
+      "relatedVariables": [
+        "--axo-contrast-bg",
+        "--axo-contrast-border",
+        "--axo-contrast-shadow",
+        "--axo-contrast-color"
+      ],
       "status": "active"
     }
   ]
