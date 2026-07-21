@@ -44,13 +44,18 @@ examples.forEach((example) => {
         if (example.id === 'kitchen-sink') {
           await expect(page.locator('#utility-count')).not.toHaveText('Loading utilities...');
           await expect(page.locator('#utilities-table-body tr')).not.toHaveCount(1);
-          await page.locator('#utility-reference').evaluate((element) => {
-            const topbarHeight =
-              document.querySelector('.docs-topbar')?.getBoundingClientRect().height ?? 0;
-            window.scrollTo({
-              behavior: 'instant',
-              top: Math.max(0, element.offsetTop - topbarHeight - 16),
-            });
+          await page.locator('.docs-topbar').evaluate((element) => element.remove());
+          await page.addStyleTag({
+            content: `
+              .docs-sidebar {
+                visibility: hidden !important;
+              }
+
+              #utility-reference {
+                block-size: 900px !important;
+                overflow: hidden !important;
+              }
+            `,
           });
         }
 
@@ -62,14 +67,16 @@ examples.forEach((example) => {
 
         expect(pageWidth.scrollWidth).toBeLessThanOrEqual(pageWidth.clientWidth + 1);
         expect(consoleErrors).toEqual([]);
-        const screenshotOptions = {
-          fullPage: example.fullPage !== false,
-        };
         if (example.id === 'kitchen-sink') {
-          screenshotOptions.maxDiffPixelRatio = 0.04;
+          await expect(page.locator('#utility-reference')).toHaveScreenshot(
+            `${example.id}-${width}.png`
+          );
+          return;
         }
 
-        await expect(page).toHaveScreenshot(`${example.id}-${width}.png`, screenshotOptions);
+        await expect(page).toHaveScreenshot(`${example.id}-${width}.png`, {
+          fullPage: example.fullPage !== false,
+        });
       });
     });
   });

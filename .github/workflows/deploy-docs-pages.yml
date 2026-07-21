@@ -61,6 +61,7 @@ jobs:
           sed -i 's#../packages/axoloth-style/src/axoloth.css#./packages/axoloth-style/src/axoloth.css#g' dist-pages/index.html
           find dist-pages/examples -name index.html -print0 | xargs -0 sed -i 's#../../../packages/axoloth-style/src/axoloth.css#../../packages/axoloth-style/src/axoloth.css#g'
           find dist-pages/docs -name index.html -print0 | xargs -0 sed -i 's#../../../packages/axoloth-style/src/axoloth.css#../../packages/axoloth-style/src/axoloth.css#g'
+          find dist-pages/recipes -name index.html -print0 | xargs -0 sed -i 's#../../../packages/axoloth-style/src/axoloth.css#../../packages/axoloth-style/src/axoloth.css#g'
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5

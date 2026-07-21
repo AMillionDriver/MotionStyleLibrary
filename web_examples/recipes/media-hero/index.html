@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Build a full-bleed media hero from existing Axoloth composition primitives."
+    />
+    <link rel="stylesheet" href="../../../packages/axoloth-style/src/axoloth.css" />
+    <link rel="stylesheet" href="../../styles/docs.css" />
+    <link rel="stylesheet" href="./theme.css" />
+    <title>Media Hero Recipe - Axoloth Style Docs</title>
+  </head>
+  <body data-docs-active="recipe-media-hero">
+    <header class="docs-topbar">
+      <a class="brand axo-link" href="../../#introduction">Axoloth Style</a>
+      <button
+        id="docs-sidebar-toggle"
+        class="docs-button docs-menu-button"
+        type="button"
+        aria-controls="docs-sidebar"
+        aria-expanded="false"
+      >
+        Menu
+      </button>
+      <label class="docs-search">
+        <span class="sr-only">Search docs</span>
+        <input id="example-search" type="search" placeholder="Search docs" autocomplete="off" />
+      </label>
+      <button id="theme-toggle" class="docs-button" type="button">Dark Mode</button>
+    </header>
+
+    <div class="docs-shell">
+      <aside id="docs-sidebar" class="docs-sidebar" data-docs-sidebar></aside>
+
+      <main class="docs-layout">
+        <section class="docs-section">
+          <p class="eyebrow">Composition Recipe 01</p>
+          <h1>Media Hero</h1>
+          <p>
+            Layer real media, a project-owned scrim, and readable content without adding a hero
+            component to Axoloth. The composition comes from <code>axo-pile</code>,
+            <code>axo-frame</code>, and <code>axo-cover</code>.
+          </p>
+          <div class="docs-page-meta">
+            <a class="docs-page-link" href="../../docs/composition/">Composition primitives</a>
+            <a class="docs-page-link" href="../../#composition-recipes">All recipes</a>
+          </div>
+        </section>
+
+        <section class="docs-section">
+          <p class="eyebrow">Live Preview</p>
+          <h2>Coastal retreat hero</h2>
+          <p>
+            Resize the viewport to see the same intrinsic composition adapt without breakpoint
+            classes.
+          </p>
+
+          <div class="recipe-stage">
+            <section class="recipe-media-hero axo-pile" aria-labelledby="media-hero-title">
+              <div class="recipe-media-hero__media axo-frame">
+                <img
+                  src="../../assets/recipes/media-hero.png"
+                  alt="Modern coastal retreat set on dark volcanic rock above the ocean"
+                />
+              </div>
+              <div class="recipe-media-hero__scrim" aria-hidden="true"></div>
+              <div class="recipe-media-hero__content axo-cover">
+                <div class="axo-center axo-stack">
+                  <span class="recipe-media-hero__kicker">North Atlantic / Field Notes 04</span>
+                  <h2 id="media-hero-title">Stay where the land meets weather.</h2>
+                  <p>
+                    A quiet coastal retreat shaped around wind, stone, and the long northern light.
+                  </p>
+                  <div class="axo-cluster">
+                    <a class="axo-button axo-link recipe-media-hero__primary" href="#media-hero-api"
+                      >View the API</a
+                    >
+                    <a
+                      class="axo-button axo-link recipe-media-hero__secondary"
+                      href="#media-hero-code"
+                      >Read the HTML</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section id="media-hero-code" class="docs-section">
+          <p class="eyebrow">Complete HTML</p>
+          <h2>A standalone document</h2>
+          <p>
+            The theme file only supplies visual identity. The HTML below contains the complete
+            structural composition used by the live preview.
+          </p>
+          <pre
+            class="copy-code"
+            data-copy-code
+            role="button"
+            aria-label="Copy complete Media Hero HTML"
+            tabindex="0"
+          ><code>&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@quertys/axoloth-style@0.9.0/src/axoloth.css" /&gt;
+    &lt;link rel="stylesheet" href="./theme.css" /&gt;
+    &lt;title&gt;Coastal Retreat&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;main&gt;
+      &lt;section class="recipe-media-hero axo-pile" aria-labelledby="hero-title"&gt;
+        &lt;div class="recipe-media-hero__media axo-frame"&gt;
+          &lt;img src="./media-hero.png" alt="Coastal retreat above the ocean" /&gt;
+        &lt;/div&gt;
+        &lt;div class="recipe-media-hero__scrim" aria-hidden="true"&gt;&lt;/div&gt;
+        &lt;div class="recipe-media-hero__content axo-cover"&gt;
+          &lt;div class="axo-center axo-stack"&gt;
+            &lt;span class="recipe-media-hero__kicker"&gt;North Atlantic / Field Notes 04&lt;/span&gt;
+            &lt;h1 id="hero-title"&gt;Stay where the land meets weather.&lt;/h1&gt;
+            &lt;p&gt;A quiet coastal retreat shaped around wind, stone, and northern light.&lt;/p&gt;
+            &lt;div class="axo-cluster"&gt;
+              &lt;a class="axo-button axo-link recipe-media-hero__primary" href="#stay"&gt;
+                Explore the stay
+              &lt;/a&gt;
+              &lt;a class="axo-button axo-link recipe-media-hero__secondary" href="#journal"&gt;
+                Read the journal
+              &lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
+    &lt;/main&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code><span class="copy-code-status" aria-hidden="true">Copy</span></pre>
+        </section>
+
+        <section id="media-hero-api" class="docs-section">
+          <div class="docs-detail-grid">
+            <div>
+              <p class="eyebrow">Axoloth Classes</p>
+              <h2>Structure supplied by the library</h2>
+              <ul class="docs-doc-list">
+                <li>
+                  <code>axo-pile</code
+                  ><small>Places media, scrim, and content in one grid area.</small>
+                </li>
+                <li>
+                  <code>axo-frame</code><small>Owns media cropping and stable dimensions.</small>
+                </li>
+                <li>
+                  <code>axo-cover</code><small>Creates the vertically centered hero region.</small>
+                </li>
+                <li>
+                  <code>axo-center</code><small>Constrains readable copy inside the overlay.</small>
+                </li>
+                <li>
+                  <code>axo-stack</code
+                  ><small>Controls vertical rhythm between content elements.</small>
+                </li>
+                <li>
+                  <code>axo-cluster</code
+                  ><small>Wraps the calls to action without fragile widths.</small>
+                </li>
+                <li>
+                  <code>axo-button</code> + <code>axo-link</code
+                  ><small>Provide neutral control structure.</small>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p class="eyebrow">Customizable Variables</p>
+              <h2>Supported tuning points</h2>
+              <ul class="docs-doc-list">
+                <li><code>--axo-cover-height</code><small>Hero block size.</small></li>
+                <li><code>--axo-cover-padding</code><small>Safe content inset.</small></li>
+                <li><code>--axo-frame-ratio</code><small>Media aspect-ratio behavior.</small></li>
+                <li>
+                  <code>--axo-frame-position</code><small>Responsive image focal point.</small>
+                </li>
+                <li><code>--axo-center-width</code><small>Readable copy width.</small></li>
+                <li><code>--axo-stack-gap</code><small>Vertical content rhythm.</small></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="docs-section">
+          <div class="docs-detail-grid">
+            <div>
+              <p class="eyebrow">Project-owned CSS</p>
+              <h2>Visual identity stays local</h2>
+              <p>
+                <code>theme.css</code> chooses the image, scrim gradients, typography, button
+                colors, and text contrast. These decisions describe this retreat brand, not a
+                reusable Axoloth layout contract.
+              </p>
+            </div>
+            <div>
+              <p class="eyebrow">Mobile + Desktop</p>
+              <h2>One composition, two crops</h2>
+              <p>
+                Desktop keeps copy on the image's quiet side. Mobile moves content toward the bottom
+                and adjusts <code>--axo-frame-position</code>; pile, cover, stack, and cluster
+                continue to own the layout.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="docs-footer">
+      <span>Axoloth Composition Recipes</span>
+      <a class="axo-link" href="../../#composition-recipes">Back to recipes</a>
+    </footer>
+
+    <div id="docs-snackbar" class="docs-snackbar" role="status" aria-live="polite"></div>
+    <script src="../../scripts/theme.js"></script>
+    <script src="../../scripts/docs-sidebar.js" data-docs-root="../.."></script>
+    <script src="../../scripts/docs-copy.js"></script>
+  </body>
+</html>

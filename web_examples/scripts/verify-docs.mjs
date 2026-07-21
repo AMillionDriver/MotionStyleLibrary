@@ -4,15 +4,21 @@ import { fileURLToPath } from 'node:url';
 
 const docsDirectory = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const examples = JSON.parse(readFileSync(resolve(docsDirectory, 'data/examples.json'), 'utf8'));
+const recipes = JSON.parse(readFileSync(resolve(docsDirectory, 'data/recipes.json'), 'utf8'));
 const docsNav = JSON.parse(readFileSync(resolve(docsDirectory, 'data/docs-nav.json'), 'utf8'));
 const docsPages = JSON.parse(readFileSync(resolve(docsDirectory, 'data/docs-pages.json'), 'utf8'));
 const utilityIndex = JSON.parse(
   readFileSync(resolve(docsDirectory, 'data/utilities.json'), 'utf8')
 );
 const indexHtml = readFileSync(resolve(docsDirectory, 'index.html'), 'utf8');
+const examplesScript = readFileSync(resolve(docsDirectory, 'scripts/examples.js'), 'utf8');
 const behaviorGuideHtml = readFileSync(resolve(docsDirectory, 'docs/behavior/index.html'), 'utf8');
 const behaviorGuideScript = readFileSync(
   resolve(docsDirectory, 'scripts/behavior-guide.js'),
+  'utf8'
+);
+const galleryDialogScript = readFileSync(
+  resolve(docsDirectory, 'recipes/gallery-dialog/gallery-dialog.js'),
   'utf8'
 );
 const behaviorReadme = readFileSync(
@@ -35,6 +41,11 @@ assert(
 );
 assert(Array.isArray(docsNav.groups), 'Docs nav must expose a groups array.');
 assert(Array.isArray(docsPages), 'Docs pages must be an array.');
+assert(recipes.length === 3, `Expected exactly 3 composition recipes, found ${recipes.length}.`);
+assert(
+  new Set(recipes.map((recipe) => recipe.id)).size === recipes.length,
+  'Recipe IDs must be unique.'
+);
 
 examples.forEach((example) => {
   ['id', 'name', 'category', 'version', 'status', 'previewUrl', 'sourceUrl', 'description'].forEach(
@@ -47,7 +58,91 @@ examples.forEach((example) => {
 
 const docsPageIds = new Set(docsPages.map((page) => page.id));
 const utilityNames = new Set(utilityIndex.utilities.map((utility) => utility.name));
+const utilitiesByName = new Map(utilityIndex.utilities.map((utility) => [utility.name, utility]));
 assert(docsPageIds.size === docsPages.length, 'Docs page IDs must be unique.');
+
+const expectedRecipeIds = ['media-hero', 'editorial-split', 'gallery-dialog'];
+assert(
+  expectedRecipeIds.every((id) => recipes.some((recipe) => recipe.id === id)),
+  'Composition recipe pack must include Media Hero, Editorial Split, and Gallery with Dialog.'
+);
+
+recipes.forEach((recipe) => {
+  [
+    'id',
+    'name',
+    'category',
+    'version',
+    'status',
+    'previewUrl',
+    'sourceUrl',
+    'description',
+    'classes',
+    'variables',
+    'projectCss',
+    'responsive',
+  ].forEach((field) =>
+    assert(recipe[field], `Recipe ${recipe.id || '<unknown>'} is missing ${field}.`)
+  );
+
+  assert(recipe.status === 'ready', `Recipe ${recipe.id} must be ready.`);
+  assert(
+    Array.isArray(recipe.classes) && recipe.classes.length > 0,
+    `${recipe.id} has no classes.`
+  );
+  assert(
+    Array.isArray(recipe.variables) && recipe.variables.length > 0,
+    `${recipe.id} has no customizable variables.`
+  );
+
+  [recipe.previewUrl, recipe.sourceUrl].forEach((url) => {
+    assert(existsSync(resolve(docsDirectory, url)), `Broken recipe path: ${url}`);
+  });
+
+  const recipeDirectory = resolve(docsDirectory, `recipes/${recipe.id}`);
+  const recipeHtml = readFileSync(resolve(recipeDirectory, 'index.html'), 'utf8');
+  const recipeTheme = readFileSync(resolve(recipeDirectory, 'theme.css'), 'utf8');
+
+  [
+    'Live Preview',
+    'Complete HTML',
+    'Axoloth Classes',
+    'Customizable Variables',
+    'Project-owned CSS',
+    'Mobile + Desktop',
+  ].forEach((marker) =>
+    assert(recipeHtml.includes(marker), `Recipe ${recipe.id} is missing ${marker}.`)
+  );
+
+  assert(
+    recipeHtml.includes('&lt;!doctype html&gt;'),
+    `Recipe ${recipe.id} must include a complete HTML document.`
+  );
+  assert(
+    recipeHtml.includes(`data-docs-active="recipe-${recipe.id}"`),
+    `Recipe ${recipe.id} must expose its active docs navigation state.`
+  );
+  assert(
+    recipeHtml.includes('href="./theme.css"') && recipeTheme.trim().length > 0,
+    `Recipe ${recipe.id} must load non-empty thin theme CSS.`
+  );
+
+  recipe.classes.forEach((name) => {
+    assert(
+      utilitiesByName.get(name)?.kind === 'class',
+      `Recipe ${recipe.id} uses unknown class: ${name}`
+    );
+    assert(recipeHtml.includes(name), `Recipe ${recipe.id} does not document class ${name}.`);
+  });
+
+  recipe.variables.forEach((name) => {
+    assert(
+      utilitiesByName.get(name)?.kind === 'variable',
+      `Recipe ${recipe.id} uses unknown variable: ${name}`
+    );
+    assert(recipeHtml.includes(name), `Recipe ${recipe.id} does not document variable ${name}.`);
+  });
+});
 
 docsPages.forEach((page) => {
   [
@@ -99,6 +194,19 @@ docsNavItems.forEach((item) => {
     assert(docsPageIds.has(routeId), `Docs nav item ${item.id} has no page data.`);
     assert(existsSync(resolve(docsDirectory, item.path)), `Broken docs nav path: ${item.path}`);
   }
+
+  if (item.path.startsWith('recipes/')) {
+    assert(existsSync(resolve(docsDirectory, item.path)), `Broken recipe nav path: ${item.path}`);
+  }
+});
+
+recipes.forEach((recipe) => {
+  assert(
+    docsNavItems.some(
+      (item) => item.id === `recipe-${recipe.id}` && item.path === `recipes/${recipe.id}/`
+    ),
+    `Recipe ${recipe.id} must be discoverable from the docs navigation.`
+  );
 });
 
 assert(
@@ -133,6 +241,12 @@ utilityIndex.utilities
     );
   });
 assert(indexHtml.includes('id="examples-table-body"'), 'Docs example table target is missing.');
+assert(indexHtml.includes('id="recipes-table-body"'), 'Docs recipe table target is missing.');
+assert(
+  examplesScript.includes("loadJson('./data/recipes.json')") &&
+    examplesScript.includes('renderRecipes(query)'),
+  'Docs hub must load and render the composition recipe registry.'
+);
 assert(indexHtml.includes('id="utilities-table-body"'), 'Docs utility table target is missing.');
 assert(indexHtml.includes('data-docs-sidebar'), 'Docs sidebar target is missing.');
 assert(indexHtml.includes('scripts/docs-sidebar.js'), 'Docs sidebar script is missing.');
@@ -157,6 +271,10 @@ assert(
 assert(
   indexHtml.includes('href="./docs/behavior/"'),
   'The docs quick start must link to the complete Behavior Guide.'
+);
+assert(
+  indexHtml.includes('id="composition-recipes"'),
+  'The docs hub must expose the composition recipe directory.'
 );
 
 [
@@ -218,6 +336,14 @@ assert(
   'Behavior Guide live demos must clean up their controller.'
 );
 assert(
+  galleryDialogScript.includes('initDialog(galleryRoot)'),
+  'Gallery recipe must initialize the official dialog behavior.'
+);
+assert(
+  galleryDialogScript.includes('dialogController?.destroy()'),
+  'Gallery recipe must clean up its dialog controller.'
+);
+assert(
   behaviorReadme.includes('CSS alone never initializes JavaScript behavior') &&
     behaviorReadme.includes('## CDN / Native ES Modules') &&
     behaviorReadme.includes('## Troubleshooting'),
@@ -228,7 +354,11 @@ assert(
     deployWorkflow.includes('packages/axoloth-behavior/src'),
   'GitHub Pages must deploy the behavior source used by the live guide.'
 );
+assert(
+  deployWorkflow.includes('find dist-pages/recipes'),
+  'GitHub Pages must rewrite local style paths for composition recipes.'
+);
 
 console.log(
-  `Docs verified: ${examples.length} examples, ${docsPages.length} docs pages, and ${utilityIndex.utilities.length} generated utilities.`
+  `Docs verified: ${examples.length} examples, ${recipes.length} recipes, ${docsPages.length} docs pages, and ${utilityIndex.utilities.length} generated utilities.`
 );

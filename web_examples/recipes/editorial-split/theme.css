@@ -1,0 +1,96 @@
+.recipe-editorial {
+  --axo-flow-space: 1.2rem;
+  --axo-frame-position: center 35%;
+  --axo-frame-ratio: 4 / 5;
+  --axo-split-gap: clamp(1.5rem, 5vw, 5rem);
+  --axo-split-leading-grow: 6;
+  --axo-split-min: 20rem;
+  --axo-split-trailing-grow: 5;
+
+  padding: clamp(1.25rem, 5vw, 4rem);
+  border: 1px solid #c9c0b2;
+  border-radius: 0.75rem;
+  color: #24221e;
+  background: #f3efe7;
+}
+
+.recipe-editorial__copy {
+  align-self: center;
+}
+
+.recipe-editorial__copy h2 {
+  max-inline-size: 12ch;
+  color: #24221e;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 500;
+  line-height: 0.98;
+}
+
+.recipe-editorial__copy > p {
+  max-inline-size: 58ch;
+  color: #5c554b;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+}
+
+.recipe-editorial__meta {
+  color: #71695f;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.recipe-editorial__rule {
+  inline-size: 4rem;
+  block-size: 2px;
+  border: 0;
+  margin-inline: 0;
+  background: #b14f3d;
+}
+
+.recipe-editorial__quote {
+  padding-inline-start: 1rem;
+  border-inline-start: 2px solid #b14f3d;
+  color: #39342e;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.15rem, 2.5vw, 1.6rem);
+  font-style: italic;
+  line-height: 1.45;
+}
+
+.recipe-editorial__figure {
+  margin: 0;
+}
+
+.recipe-editorial__image {
+  border-radius: 0.25rem;
+  background: #d7d0c4;
+}
+
+.recipe-editorial__figure figcaption {
+  max-inline-size: 42ch;
+  margin-block-start: 0.75rem;
+  color: #71695f;
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.recipe-editorial__action {
+  border-color: #24221e;
+  color: #f8f5ee;
+  background: #24221e;
+  text-decoration: none;
+}
+
+@media (max-width: 720px) {
+  .recipe-editorial {
+    --axo-split-min: 100%;
+    --axo-split-gap: 2rem;
+  }
+
+  .recipe-editorial__figure {
+    order: -1;
+  }
+}
