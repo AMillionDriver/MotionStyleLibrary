@@ -1,11 +1,14 @@
 const searchInput = document.querySelector('#example-search');
 const examplesTableBody = document.querySelector('#examples-table-body');
+const recipesTableBody = document.querySelector('#recipes-table-body');
 const utilitiesTableBody = document.querySelector('#utilities-table-body');
 const exampleCount = document.querySelector('#example-count');
+const recipeCount = document.querySelector('#recipe-count');
 const utilityCount = document.querySelector('#utility-count');
 
 const catalogs = {
   examples: { items: [], status: 'loading' },
+  recipes: { items: [], status: 'loading' },
   utilities: { items: [], status: 'loading' },
 };
 
@@ -78,6 +81,61 @@ function renderExamples(query) {
   exampleCount.textContent = `${items.length} example${items.length === 1 ? '' : 's'}`;
 }
 
+function renderRecipes(query) {
+  if (catalogs.recipes.status === 'error') {
+    recipesTableBody.innerHTML = `
+      <tr>
+        <td class="empty-row" colspan="4">
+          Failed to load composition recipes. Use Live Server or another static server.
+        </td>
+      </tr>
+    `;
+    recipeCount.textContent = 'Recipes unavailable';
+    return;
+  }
+
+  const items = catalogs.recipes.items.filter((recipe) =>
+    matchesQuery(recipe, query, [
+      'name',
+      'category',
+      'version',
+      'status',
+      'description',
+      'classes',
+      'variables',
+      'projectCss',
+      'responsive',
+    ])
+  );
+
+  if (!items.length) {
+    recipesTableBody.innerHTML = `
+      <tr><td class="empty-row" colspan="4">No composition recipes found.</td></tr>
+    `;
+    recipeCount.textContent = '0 recipes';
+    return;
+  }
+
+  recipesTableBody.innerHTML = items
+    .map(
+      (recipe) => `
+        <tr>
+          <td>
+            <strong>${escapeHtml(recipe.name)}</strong>
+            <small>${escapeHtml(recipe.category)} / ${escapeHtml(recipe.status)}</small>
+            <small>${escapeHtml(recipe.description)}</small>
+          </td>
+          <td><a class="docs-link" href="${escapeHtml(recipe.previewUrl)}">Open recipe</a></td>
+          <td><a class="docs-link" href="${escapeHtml(recipe.sourceUrl)}">Open source</a></td>
+          <td>${escapeHtml(recipe.version)}</td>
+        </tr>
+      `
+    )
+    .join('');
+
+  recipeCount.textContent = `${items.length} recipe${items.length === 1 ? '' : 's'}`;
+}
+
 function renderUtilities(query) {
   if (catalogs.utilities.status === 'error') {
     utilitiesTableBody.innerHTML = `
@@ -139,6 +197,7 @@ function renderUtilities(query) {
 function renderCatalogs() {
   const query = normalize(searchInput.value);
   renderExamples(query);
+  renderRecipes(query);
   renderUtilities(query);
 }
 
@@ -156,6 +215,14 @@ async function loadCatalogs() {
       })
       .catch((error) => {
         catalogs.examples.status = 'error';
+        console.error(error);
+      }),
+    loadJson('./data/recipes.json')
+      .then((items) => {
+        catalogs.recipes = { items, status: 'ready' };
+      })
+      .catch((error) => {
+        catalogs.recipes.status = 'error';
         console.error(error);
       }),
     loadJson('./data/utilities.json')

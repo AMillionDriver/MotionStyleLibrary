@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Compose a responsive editorial feature with Axoloth split, flow, and frame primitives."
+    />
+    <link rel="stylesheet" href="../../../packages/axoloth-style/src/axoloth.css" />
+    <link rel="stylesheet" href="../../styles/docs.css" />
+    <link rel="stylesheet" href="./theme.css" />
+    <title>Editorial Split Recipe - Axoloth Style Docs</title>
+  </head>
+  <body data-docs-active="recipe-editorial-split">
+    <header class="docs-topbar">
+      <a class="brand axo-link" href="../../#introduction">Axoloth Style</a>
+      <button
+        id="docs-sidebar-toggle"
+        class="docs-button docs-menu-button"
+        type="button"
+        aria-controls="docs-sidebar"
+        aria-expanded="false"
+      >
+        Menu
+      </button>
+      <label class="docs-search">
+        <span class="sr-only">Search docs</span>
+        <input id="example-search" type="search" placeholder="Search docs" autocomplete="off" />
+      </label>
+      <button id="theme-toggle" class="docs-button" type="button">Dark Mode</button>
+    </header>
+
+    <div class="docs-shell">
+      <aside id="docs-sidebar" class="docs-sidebar" data-docs-sidebar></aside>
+
+      <main class="docs-layout">
+        <section class="docs-section">
+          <p class="eyebrow">Composition Recipe 02</p>
+          <h1>Editorial Split Layout</h1>
+          <p>
+            Pair a long-form story with portrait media using intrinsic widths rather than a fixed
+            column count. <code>axo-split</code> wraps only when the content actually needs it.
+          </p>
+          <div class="docs-page-meta">
+            <a class="docs-page-link" href="../../docs/composition/">Composition primitives</a>
+            <a class="docs-page-link" href="../../#composition-recipes">All recipes</a>
+          </div>
+        </section>
+
+        <section class="docs-section">
+          <p class="eyebrow">Live Preview</p>
+          <h2>Studio profile</h2>
+          <p>The media and article negotiate their own width, then become one reading column.</p>
+
+          <article class="recipe-editorial axo-split" aria-labelledby="editorial-title">
+            <div class="recipe-editorial__copy axo-flow">
+              <div class="recipe-editorial__meta axo-cluster">
+                <span>Studio Notes</span>
+                <span aria-hidden="true">/</span>
+                <time datetime="2026-07-21">21 July 2026</time>
+              </div>
+              <hr class="recipe-editorial__rule" />
+              <h2 id="editorial-title">Ink, pressure, and the patience of repetition.</h2>
+              <p>
+                Printmaker Mara Seno works slowly by design. Each block is cut by hand, proofed in
+                daylight, and revised until the image carries the grain of the material.
+              </p>
+              <blockquote class="recipe-editorial__quote">
+                “The press records every decision, including the ones I thought nobody would see.”
+              </blockquote>
+              <div class="axo-cluster">
+                <a class="axo-button axo-link recipe-editorial__action" href="#editorial-api"
+                  >Explore the structure</a
+                >
+                <a class="axo-link" href="#editorial-code">Read the HTML</a>
+              </div>
+            </div>
+
+            <figure class="recipe-editorial__figure">
+              <div class="recipe-editorial__image axo-frame">
+                <img
+                  src="../../assets/recipes/editorial-printmaker.png"
+                  alt="Printmaker standing beside a sunlit studio table with paper and carved blocks"
+                />
+              </div>
+              <figcaption>
+                Mara prepares a small edition beside the north-facing window of her shared studio.
+              </figcaption>
+            </figure>
+          </article>
+        </section>
+
+        <section id="editorial-code" class="docs-section">
+          <p class="eyebrow">Complete HTML</p>
+          <h2>A standalone editorial feature</h2>
+          <pre
+            class="copy-code"
+            data-copy-code
+            role="button"
+            aria-label="Copy complete Editorial Split HTML"
+            tabindex="0"
+          ><code>&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@quertys/axoloth-style@0.9.0/src/axoloth.css" /&gt;
+    &lt;link rel="stylesheet" href="./theme.css" /&gt;
+    &lt;title&gt;Studio Notes&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;main class="axo-page"&gt;
+      &lt;article class="recipe-editorial axo-split" aria-labelledby="story-title"&gt;
+        &lt;div class="recipe-editorial__copy axo-flow"&gt;
+          &lt;div class="recipe-editorial__meta axo-cluster"&gt;
+            &lt;span&gt;Studio Notes&lt;/span&gt;
+            &lt;time datetime="2026-07-21"&gt;21 July 2026&lt;/time&gt;
+          &lt;/div&gt;
+          &lt;hr class="recipe-editorial__rule" /&gt;
+          &lt;h1 id="story-title"&gt;Ink, pressure, and the patience of repetition.&lt;/h1&gt;
+          &lt;p&gt;Each block is cut by hand, proofed in daylight, and revised slowly.&lt;/p&gt;
+          &lt;blockquote class="recipe-editorial__quote"&gt;
+            The press records every decision, including the ones nobody sees.
+          &lt;/blockquote&gt;
+          &lt;a class="axo-button axo-link recipe-editorial__action" href="#story"&gt;
+            Read the full story
+          &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;figure class="recipe-editorial__figure"&gt;
+          &lt;div class="recipe-editorial__image axo-frame"&gt;
+            &lt;img src="./printmaker.png" alt="Printmaker working in a sunlit studio" /&gt;
+          &lt;/div&gt;
+          &lt;figcaption&gt;Preparing a small edition beside the studio window.&lt;/figcaption&gt;
+        &lt;/figure&gt;
+      &lt;/article&gt;
+    &lt;/main&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code><span class="copy-code-status" aria-hidden="true">Copy</span></pre>
+        </section>
+
+        <section id="editorial-api" class="docs-section">
+          <div class="docs-detail-grid">
+            <div>
+              <p class="eyebrow">Axoloth Classes</p>
+              <h2>Structure supplied by the library</h2>
+              <ul class="docs-doc-list">
+                <li>
+                  <code>axo-split</code
+                  ><small>Creates two intrinsic regions that wrap when space runs out.</small>
+                </li>
+                <li>
+                  <code>axo-flow</code
+                  ><small>Maintains readable vertical rhythm in the article.</small>
+                </li>
+                <li>
+                  <code>axo-frame</code><small>Stabilizes and crops the portrait media.</small>
+                </li>
+                <li><code>axo-cluster</code><small>Wraps metadata and actions cleanly.</small></li>
+                <li>
+                  <code>axo-button</code> + <code>axo-link</code
+                  ><small>Provide neutral calls to action.</small>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p class="eyebrow">Customizable Variables</p>
+              <h2>Supported tuning points</h2>
+              <ul class="docs-doc-list">
+                <li>
+                  <code>--axo-split-min</code><small>Minimum viable width of each region.</small>
+                </li>
+                <li><code>--axo-split-gap</code><small>Space between copy and media.</small></li>
+                <li>
+                  <code>--axo-split-leading-grow</code
+                  ><small>Relative growth of the article region.</small>
+                </li>
+                <li>
+                  <code>--axo-split-trailing-grow</code
+                  ><small>Relative growth of the media region.</small>
+                </li>
+                <li><code>--axo-flow-space</code><small>Article rhythm.</small></li>
+                <li>
+                  <code>--axo-frame-ratio</code> + <code>--axo-frame-position</code
+                  ><small>Portrait dimensions and crop.</small>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="docs-section">
+          <div class="docs-detail-grid">
+            <div>
+              <p class="eyebrow">Project-owned CSS</p>
+              <h2>The editorial voice remains yours</h2>
+              <p>
+                Serif typography, the red rule, quote treatment, paper palette, image radius, and
+                caption style live in <code>theme.css</code>. They are publication choices rather
+                than reusable layout API.
+              </p>
+            </div>
+            <div>
+              <p class="eyebrow">Mobile + Desktop</p>
+              <h2>Content determines the switch</h2>
+              <p>
+                Desktop gives the copy and portrait proportional space. On narrow screens the split
+                wraps, the image moves first for visual context, and the article remains a normal
+                document flow.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="docs-footer">
+      <span>Axoloth Composition Recipes</span>
+      <a class="axo-link" href="../../#composition-recipes">Back to recipes</a>
+    </footer>
+
+    <div id="docs-snackbar" class="docs-snackbar" role="status" aria-live="polite"></div>
+    <script src="../../scripts/theme.js"></script>
+    <script src="../../scripts/docs-sidebar.js" data-docs-root="../.."></script>
+    <script src="../../scripts/docs-copy.js"></script>
+  </body>
+</html>

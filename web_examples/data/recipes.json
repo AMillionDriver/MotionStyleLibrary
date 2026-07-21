@@ -1,0 +1,89 @@
+[
+  {
+    "id": "media-hero",
+    "name": "Media Hero",
+    "category": "Composition",
+    "version": "0.9.0",
+    "status": "ready",
+    "previewUrl": "./recipes/media-hero/",
+    "sourceUrl": "./recipes/media-hero/index.html",
+    "description": "A full-bleed image hero composed with pile, frame, cover, center, stack, and cluster primitives.",
+    "classes": [
+      "axo-pile",
+      "axo-frame",
+      "axo-cover",
+      "axo-center",
+      "axo-stack",
+      "axo-cluster",
+      "axo-button",
+      "axo-link"
+    ],
+    "variables": [
+      "--axo-frame-ratio",
+      "--axo-frame-position",
+      "--axo-cover-height",
+      "--axo-cover-padding",
+      "--axo-center-width",
+      "--axo-stack-gap"
+    ],
+    "projectCss": "Image choice, scrim color, typography, button treatment, and hero-specific contrast remain project-owned.",
+    "responsive": "The same overlay composition stays centered on desktop and mobile while Axoloth variables tune the media crop and hero height."
+  },
+  {
+    "id": "editorial-split",
+    "name": "Editorial Split Layout",
+    "category": "Composition",
+    "version": "0.9.0",
+    "status": "ready",
+    "previewUrl": "./recipes/editorial-split/",
+    "sourceUrl": "./recipes/editorial-split/index.html",
+    "description": "An editorial feature that pairs long-form copy with portrait media using intrinsic split and flow primitives.",
+    "classes": ["axo-split", "axo-flow", "axo-frame", "axo-cluster", "axo-link", "axo-button"],
+    "variables": [
+      "--axo-split-min",
+      "--axo-split-gap",
+      "--axo-split-leading-grow",
+      "--axo-split-trailing-grow",
+      "--axo-flow-space",
+      "--axo-frame-ratio",
+      "--axo-frame-position"
+    ],
+    "projectCss": "Editorial type scale, rules, caption style, color palette, and image treatment remain project-owned.",
+    "responsive": "The split wraps into one readable column when either region can no longer satisfy its intrinsic minimum width."
+  },
+  {
+    "id": "gallery-dialog",
+    "name": "Gallery with Dialog",
+    "category": "Composition + Behavior",
+    "version": "0.9.0",
+    "status": "ready",
+    "previewUrl": "./recipes/gallery-dialog/",
+    "sourceUrl": "./recipes/gallery-dialog/index.html",
+    "description": "A responsive object gallery that opens an accessible Axoloth dialog with project-owned content binding.",
+    "classes": [
+      "axo-auto-grid",
+      "axo-frame",
+      "axo-card",
+      "axo-surface",
+      "axo-flow",
+      "axo-dialog",
+      "axo-dialog-backdrop",
+      "axo-dialog-panel",
+      "axo-dialog-header",
+      "axo-dialog-body",
+      "axo-dialog-footer",
+      "axo-button"
+    ],
+    "variables": [
+      "--axo-item-min",
+      "--axo-grid-gap",
+      "--axo-frame-ratio",
+      "--axo-dialog-width",
+      "--axo-dialog-padding",
+      "--axo-dialog-backdrop",
+      "--axo-dialog-duration"
+    ],
+    "projectCss": "Artwork crops, gallery typography, hover treatment, and the tiny content-binding script remain project-owned.",
+    "responsive": "Auto-grid chooses the column count from available width, while the dialog remains viewport-bound with focus trapping and Escape dismissal."
+  }
+]
