@@ -1,5 +1,7 @@
 # Axoloth Style
 
+[![npm version](https://img.shields.io/npm/v/%40quertys%2Faxoloth-style)](https://www.npmjs.com/package/@quertys/axoloth-style) [![npm weekly downloads](https://img.shields.io/npm/dw/%40quertys%2Faxoloth-style?label=weekly%20downloads)](https://www.npmjs.com/package/@quertys/axoloth-style) [![license](https://img.shields.io/npm/l/%40quertys%2Faxoloth-style)](https://github.com/AMillionDriver/MotionStyleLibrary/blob/main/LICENSE) [![GitHub stars](https://img.shields.io/github/stars/AMillionDriver/MotionStyleLibrary?style=flat)](https://github.com/AMillionDriver/MotionStyleLibrary)
+
 Axoloth is a CSS-first utility library for building layout structure, simple motion, semantic controls, and accessible app patterns without locking a project into a specific frontend framework.
 
 The repository also includes optional JavaScript behaviors, a VS Code IntelliSense extension, visual/accessibility tests, and static example pages.
